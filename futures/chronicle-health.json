@@ -1,0 +1,85 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "health-1928-penicillin",
+      "type": "history",
+      "title": { "ko": "페니실린의 발견", "en": "The discovery of penicillin", "ja": "ペニシリンの発見", "zh": "青霉素的发现", "es": "El descubrimiento de la penicilina" },
+      "story": { "ko": "1928년 알렉산더 플레밍이 푸른곰팡이에서 세균을 죽이는 물질을 발견했다. 항생제가 널리 쓰이면서 작은 상처나 폐렴으로 목숨을 잃는 일이 크게 줄었다.", "en": "In 1928, Alexander Fleming discovered that a mold produced a substance that kills bacteria. Once antibiotics came into wide use, far fewer people died from small wounds or pneumonia.", "ja": "1928年、アレクサンダー・フレミングが青カビから細菌を殺す物質を発見した。抗生物質が広く使われるようになり、小さな傷や肺炎で命を落とすことは大きく減った。", "zh": "1928年，亚历山大·弗莱明从青霉菌中发现了一种能杀死细菌的物质。随着抗生素的广泛使用，因小伤口或肺炎而丧命的情况大大减少。", "es": "En 1928, Alexander Fleming descubrió en un moho una sustancia que mataba las bacterias. Con el uso generalizado de los antibióticos, morir por una pequeña herida o una neumonía se volvió mucho menos frecuente." },
+      "when": { "year": [1928, 1928] },
+      "tone": "bright",
+      "domains": ["health", "science"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Penicillin"]
+    },
+    {
+      "id": "health-1967-smallpox-eradication",
+      "type": "history",
+      "title": { "ko": "천연두를 지구에서 없애다", "en": "Smallpox wiped off the earth", "ja": "天然痘の根絶", "zh": "消灭天花", "es": "La erradicación de la viruela" },
+      "story": { "ko": "1967년 세계보건기구는 천연두 박멸 운동을 대대적으로 강화했다. 접종 요원들이 마을마다 환자를 찾아다니며 백신을 놓은 끝에, 1980년 천연두는 인류가 처음으로 완전히 없앤 전염병이 되었다.", "en": "In 1967, the World Health Organization stepped up its campaign to eradicate smallpox. Vaccinators went village by village tracking down cases and vaccinating the people around them, and in 1980 smallpox became the first human disease ever wiped out.", "ja": "1967年、世界保健機関は天然痘根絶の取り組みを大きく強化した。接種チームが村から村へ患者を探して回り、ワクチンを打ち続けた結果、1980年、天然痘は人類が初めて根絶した感染症となった。", "zh": "1967年，世界卫生组织大力加强了消灭天花的行动。接种人员挨村寻找病人，为他们周围的人接种疫苗。1980年，天花成为人类彻底消灭的第一种传染病。", "es": "En 1967, la Organización Mundial de la Salud intensificó su campaña para erradicar la viruela. Los vacunadores recorrieron aldea por aldea buscando casos y vacunando a su alrededor, y en 1980 la viruela se convirtió en la primera enfermedad humana eliminada del planeta." },
+      "when": { "year": [1967, 1980] },
+      "tone": "bright",
+      "domains": ["health", "science"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Smallpox", "https://en.wikipedia.org/wiki/History_of_smallpox"]
+    },
+    {
+      "id": "health-1977-korea-health-insurance",
+      "type": "history",
+      "title": { "ko": "모든 국민의 건강보험", "en": "Health insurance for everyone", "ja": "国民皆保険の実現", "zh": "全民医保的实现", "es": "Seguro médico para todos" },
+      "story": { "ko": "1977년 한국은 직원 500명 이상 사업장부터 의료보험 가입을 의무로 만들었다. 대상은 공무원과 자영업자로 차츰 넓어졌고, 12년 만인 1989년 모든 국민이 건강보험의 보호를 받게 되었다.", "en": "In 1977, South Korea made medical insurance compulsory, starting with workplaces of 500 or more employees. Coverage gradually widened to civil servants and the self-employed, and by 1989, just 12 years later, every citizen was covered.", "ja": "1977年、韓国は従業員500人以上の事業所から医療保険への加入を義務づけた。対象は公務員や自営業者へと少しずつ広がり、12年後の1989年には全国民が健康保険で守られるようになった。", "zh": "1977年，韩国规定员工500人以上的企业必须参加医疗保险。此后覆盖范围逐步扩大到公务员和个体经营者，仅仅12年后的1989年，全体国民都纳入了医疗保险。", "es": "En 1977, Corea del Sur hizo obligatorio el seguro médico, empezando por las empresas de 500 empleados o más. La cobertura se fue ampliando a funcionarios y autónomos, y en 1989, solo doce años después, toda la población quedó asegurada." },
+      "when": { "year": [1977, 1989] },
+      "tone": "bright",
+      "domains": ["health", "care"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Healthcare_in_South_Korea"]
+    },
+    {
+      "id": "health-2002-aids-treatment-africa",
+      "type": "history",
+      "title": { "ko": "아프리카에 닿은 에이즈 치료제", "en": "AIDS drugs reach Africa", "ja": "アフリカに届いたエイズ治療薬", "zh": "艾滋病药物来到非洲", "es": "El tratamiento del sida llega a África" },
+      "story": { "ko": "에이즈로 기대수명이 크게 줄었던 아프리카에 2002년 출범한 글로벌펀드 같은 국제 기금이 치료제를 보급하기 시작했다. 치료받는 사람은 2005년 100만 명에서 2012년 700만 명 넘게 늘었고, 에이즈로 숨지는 사람은 크게 줄었다.", "en": "In Africa, where AIDS had sharply cut life expectancy, international funds such as the Global Fund, launched in 2002, began to supply treatment. The number of people on antiretroviral drugs rose from 1 million in 2005 to over 7 million in 2012, and AIDS deaths fell sharply.", "ja": "エイズで平均寿命が大きく縮んでいたアフリカに、2002年に発足したグローバルファンドなどの国際基金が治療薬を届けはじめた。治療を受ける人は2005年の100万人から2012年には700万人を超え、エイズで亡くなる人は大きく減った。", "zh": "在艾滋病导致预期寿命大幅下降的非洲，2002年成立的全球基金等国际基金开始提供治疗药物。接受抗逆转录病毒治疗的人数从2005年的100万增加到2012年的700多万，死于艾滋病的人大幅减少。", "es": "En África, donde el sida había recortado mucho la esperanza de vida, fondos internacionales como el Fondo Mundial, creado en 2002, empezaron a llevar tratamiento. Las personas tratadas con antirretrovirales pasaron de 1 millón en 2005 a más de 7 millones en 2012, y las muertes por sida cayeron con fuerza." },
+      "when": { "year": [2002, 2012] },
+      "tone": "bright",
+      "domains": ["health", "rights"],
+      "region": "africa",
+      "sources": ["https://en.wikipedia.org/wiki/HIV/AIDS_in_Africa", "https://en.wikipedia.org/wiki/The_Global_Fund_to_Fight_AIDS,_Tuberculosis_and_Malaria"]
+    },
+    {
+      "id": "health-2020-covid-19",
+      "type": "history",
+      "title": { "ko": "코로나19 대유행", "en": "The COVID-19 pandemic", "ja": "新型コロナの世界的大流行", "zh": "新冠疫情大流行", "es": "La pandemia de COVID-19" },
+      "story": { "ko": "2020년 코로나19가 전 세계로 퍼지면서 학교와 가게가 문을 닫고, 마스크와 재택근무, 화상 수업이 일상이 되었다. 1년도 안 되어 백신이 나왔지만, 수백만 명이 목숨을 잃었다.", "en": "In 2020, COVID-19 spread across the world. Schools and shops closed, and masks, working from home and online classes became part of daily life. Vaccines arrived within a year, but millions of people died.", "ja": "2020年、新型コロナウイルス感染症が世界中に広がり、学校や店が閉まって、マスクや在宅勤務、オンライン授業が日常になった。1年足らずでワクチンが登場したが、数百万人が命を落とした。", "zh": "2020年，新冠疫情蔓延全球，学校和商店纷纷关门，口罩、居家办公和网课成了日常。不到一年疫苗就问世了，但仍有数百万人失去了生命。", "es": "En 2020, la COVID-19 se extendió por todo el mundo: cerraron escuelas y comercios, y las mascarillas, el teletrabajo y las clases en línea se volvieron parte de la vida diaria. Las vacunas llegaron en menos de un año, pero murieron millones de personas." },
+      "when": { "year": [2020, 2023] },
+      "tone": "dark",
+      "domains": ["health", "daily"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/COVID-19_pandemic"]
+    },
+    {
+      "id": "health-future-superbugs",
+      "title": { "ko": "항생제가 듣지 않는 시대", "en": "When antibiotics stop working", "ja": "抗生物質が効かない時代", "zh": "抗生素失灵的时代", "es": "Cuando los antibióticos ya no sirven" },
+      "story": { "ko": "흔한 세균에도 항생제가 듣지 않는 일이 잦아진다. 무릎 수술이나 출산 같은 평범한 일이 다시 목숨을 거는 일이 되고, 병원 입구에서는 감염 검사를 받아야 들어갈 수 있다.", "en": "Antibiotics fail more and more often, even against common bacteria. Ordinary things like knee surgery or childbirth become life-threatening again, and hospitals test everyone for infection at the door.", "ja": "ありふれた細菌にさえ抗生物質が効かないことが増えていく。膝の手術や出産のような当たり前のことが再び命がけになり、病院の入口では感染検査を受けなければ中に入れない。", "zh": "就连常见的细菌，抗生素也越来越常失效。膝盖手术、分娩这样平常的事又变得性命攸关，进医院前得先在门口接受感染检测。", "es": "Los antibióticos fallan cada vez más, incluso contra bacterias comunes. Algo tan corriente como una operación de rodilla o un parto vuelve a poner la vida en riesgo, y en la entrada de los hospitales hay que pasar una prueba de infección." },
+      "when": { "year": [2035, 2100], "tech": [0, 45], "solidarity": [0, 45] },
+      "tone": "dark",
+      "domains": ["health", "science"]
+    },
+    {
+      "id": "health-future-malaria-ends",
+      "title": { "ko": "말라리아가 사라진 날", "en": "The day malaria ended", "ja": "マラリアが消えた日", "zh": "疟疾消失的那一天", "es": "El día en que acabó la malaria" },
+      "story": { "ko": "여러 나라가 백신과 모기 퇴치에 함께 돈과 사람을 모은 끝에, 마지막 환자가 나은 날 말라리아가 지구에서 사라진다. 열대 마을의 아이들은 더 이상 열병으로 학교를 빠지지 않고, 병원 침대에도 여유가 생긴다.", "en": "After years of countries pooling money and people for vaccines and mosquito control, malaria vanishes from the earth the day its last patient recovers. Children in tropical villages no longer miss school with fever, and hospital beds free up.", "ja": "多くの国がワクチンと蚊の駆除に資金と人手を出し合った末、最後の患者が回復した日、マラリアは地球から姿を消す。熱帯の村の子どもたちはもう熱病で学校を休まず、病院のベッドにも余裕が生まれる。", "zh": "各国携手为疫苗和灭蚊投入资金和人力，最后一名患者康复的那天，疟疾从地球上消失了。热带村庄的孩子们不再因发烧缺课，医院的病床也宽松了起来。", "es": "Tras años en que los países unen dinero y personal para vacunas y control de mosquitos, la malaria desaparece del planeta el día en que se cura su último paciente. Los niños de los pueblos tropicales ya no faltan a la escuela por la fiebre, y quedan camas libres en los hospitales." },
+      "when": { "year": [2058, 2100], "peace": [55, 100], "solidarity": [50, 100] },
+      "tone": "bright",
+      "domains": ["health", "science"]
+    },
+    {
+      "id": "health-future-century-lives",
+      "title": { "ko": "백 살이 평범한 사회", "en": "When turning 100 is ordinary", "ja": "100歳が当たり前の社会", "zh": "百岁寻常的社会", "es": "Cuando cumplir cien años es normal" },
+      "story": { "ko": "노화를 늦추는 치료가 건강보험에 들어가면서 백 살 넘게 사는 것이 흔한 일이 된다. 일흔에 대학에 다시 들어가고 아흔에 새 일을 시작하는 사람도 많다. 다만 네 세대가 함께 일하는 직장에서 승진은 점점 느려진다.", "en": "Once treatments that slow aging are covered by public health insurance, living past 100 becomes common. Many go back to university at 70 or start a new career at 90. But in workplaces where four generations work side by side, promotions come ever more slowly.", "ja": "老化を遅らせる治療が健康保険の対象になり、100歳を超えて生きるのは珍しくなくなる。70歳で大学に入り直し、90歳で新しい仕事を始める人も多い。ただ、4世代が一緒に働く職場では、昇進はますます遅くなる。", "zh": "延缓衰老的治疗被纳入医保后，活过一百岁变得稀松平常。很多人七十岁重新上大学，九十岁开始新工作。只是，在四代人共事的职场里，升职变得越来越慢。", "es": "Cuando los tratamientos que frenan el envejecimiento entran en la sanidad pública, vivir más de cien años se vuelve habitual. Muchos vuelven a la universidad a los 70 o empiezan un nuevo oficio a los 90. Pero en los trabajos donde conviven cuatro generaciones, los ascensos llegan cada vez más despacio." },
+      "when": { "year": [2080, 2100], "tech": [65, 100], "equality": [50, 100] },
+      "tone": "mixed",
+      "domains": ["health", "work", "population"]
+    }
+  ]
+}

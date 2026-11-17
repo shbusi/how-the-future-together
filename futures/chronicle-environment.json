@@ -1,0 +1,87 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "environment-1930-dust-bowl",
+      "type": "history",
+      "title": { "ko": "모래폭풍이 삼킨 대평원", "en": "The Dust Bowl", "ja": "砂嵐にのまれた大平原", "zh": "沙尘暴吞没大平原", "es": "Las llanuras tragadas por el polvo" },
+      "story": { "ko": "1930년대 미국 대평원에 가뭄이 이어지자, 풀을 갈아엎은 밭의 흙이 거대한 모래폭풍이 되어 하늘을 뒤덮었다. 수만 가구의 농민이 땅을 버리고 서부로 떠났고, 정부는 흙을 지키는 농법을 널리 권하기 시작했다.", "en": "In the 1930s, drought hit the American Great Plains, and soil from fields stripped of their grass rose into huge dust storms that blackened the sky. Tens of thousands of farm families abandoned their land and headed west, and the government began promoting farming methods that protect the soil.", "ja": "1930年代、アメリカの大平原で干ばつが続くと、草をはぎ取られた畑の土が巨大な砂嵐となって空を覆った。何万もの農家が土地を捨てて西へ向かい、政府は土を守る農法を広く勧めはじめた。", "zh": "20世纪30年代，美国大平原持续干旱，草皮被翻耕殆尽的农田尘土飞扬，化作遮天蔽日的巨大沙尘暴。数以万计的农户弃田西迁，政府开始大力推广保护土壤的耕作方法。", "es": "En los años treinta, la sequía azotó las Grandes Llanuras de Estados Unidos y la tierra de los campos sin hierba se levantó en enormes tormentas de polvo que oscurecían el cielo. Decenas de miles de familias campesinas abandonaron sus granjas rumbo al oeste, y el Gobierno empezó a promover técnicas para proteger el suelo." },
+      "when": { "year": [1930, 1940] },
+      "tone": "dark",
+      "domains": ["environment", "food"],
+      "region": "north-america",
+      "sources": ["https://en.wikipedia.org/wiki/Dust_Bowl"]
+    },
+    {
+      "id": "environment-1952-london-smog",
+      "type": "history",
+      "title": { "ko": "런던을 덮은 죽음의 스모그", "en": "The Great Smog of London", "ja": "ロンドンを覆った死のスモッグ", "zh": "笼罩伦敦的致命烟雾", "es": "La gran niebla tóxica de Londres" },
+      "story": { "ko": "1952년 12월, 석탄 연기와 안개가 뒤섞인 짙은 스모그가 닷새 동안 런던을 뒤덮어 수천 명이 목숨을 잃었다. 이 일을 계기로 1956년 청정대기법이 만들어져 집과 공장의 석탄 연기를 줄이기 시작했다.", "en": "In December 1952, a thick smog of coal smoke and fog covered London for five days and killed thousands of people. It led to the Clean Air Act of 1956, which began to cut the coal smoke pouring from homes and factories.", "ja": "1952年12月、石炭の煙と霧が混じった濃いスモッグが5日間ロンドンを覆い、数千人が命を落とした。これをきっかけに1956年に大気浄化法が制定され、家庭や工場から出る石炭の煙が減らされはじめた。", "zh": "1952年12月，煤烟与雾气混合而成的浓重烟雾笼罩伦敦整整五天，夺去了数千人的生命。此事促成了1956年《清洁空气法》的出台，家庭和工厂排放的燃煤烟尘开始减少。", "es": "En diciembre de 1952, una espesa niebla de humo de carbón cubrió Londres durante cinco días y mató a miles de personas. A raíz de ello se aprobó en 1956 la Ley de Aire Limpio, que empezó a reducir el humo de carbón de hogares y fábricas." },
+      "when": { "year": [1952, 1952] },
+      "tone": "dark",
+      "domains": ["environment", "health"],
+      "region": "europe",
+      "scene": { "smog": 0.1 },
+      "sources": ["https://en.wikipedia.org/wiki/Great_Smog_of_London"]
+    },
+    {
+      "id": "environment-1987-montreal-protocol",
+      "type": "history",
+      "title": { "ko": "오존층을 지킨 약속", "en": "A pact to protect the ozone layer", "ja": "オゾン層を守った約束", "zh": "守护臭氧层的约定", "es": "Un pacto para proteger la capa de ozono" },
+      "story": { "ko": "1987년 세계 각국이 프레온가스처럼 오존층을 파괴하는 물질을 단계적으로 없애기로 한 몬트리올 의정서에 합의했다. 냉장고와 스프레이 속 물질이 바뀌었고, 남극 하늘의 오존 구멍은 서서히 메워지고 있다.", "en": "In 1987, countries agreed in the Montreal Protocol to phase out CFCs and other chemicals that destroy the ozone layer. The gases inside fridges and spray cans were replaced, and the ozone hole over Antarctica is slowly healing.", "ja": "1987年、世界各国はフロンなどオゾン層を破壊する物質を段階的に廃止するモントリオール議定書に合意した。冷蔵庫やスプレーの中身が切り替わり、南極上空のオゾンホールは少しずつ回復している。", "zh": "1987年，各国就《蒙特利尔议定书》达成一致，同意逐步淘汰氟利昂等破坏臭氧层的物质。冰箱和喷雾罐里的气体被替换，南极上空的臭氧空洞正在慢慢愈合。", "es": "En 1987, los países acordaron en el Protocolo de Montreal eliminar poco a poco los CFC y otras sustancias que destruyen la capa de ozono. Cambiaron los gases de neveras y aerosoles, y el agujero de ozono sobre la Antártida se va cerrando lentamente." },
+      "when": { "year": [1987, 1987] },
+      "tone": "bright",
+      "domains": ["environment", "politics"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Montreal_Protocol"]
+    },
+    {
+      "id": "environment-1995-waste-fee-bags",
+      "type": "history",
+      "title": { "ko": "쓰레기 종량제 봉투의 등장", "en": "Pay-as-you-throw trash bags", "ja": "ごみ従量制の袋が登場", "zh": "垃圾计量收费袋登场", "es": "Bolsas de basura de pago" },
+      "story": { "ko": "1995년 한국은 쓰레기 종량제를 시작했다. 사람들은 돈을 내고 산 규격 봉투에 쓰레기를 담아 버리고 재활용품은 따로 나누어 내놓게 되었으며, 그 뒤 버려지는 쓰레기는 줄고 재활용은 크게 늘었다.", "en": "In 1995, South Korea introduced a volume-based waste fee. People now had to buy official bags for their trash and sort recyclables separately, and in the years that followed, waste went down while recycling rose sharply.", "ja": "1995年、韓国はごみの従量制を始めた。人々はお金を払って買った指定袋にごみを入れ、資源ごみは分けて出すようになり、その後、捨てられるごみは減ってリサイクルは大きく増えた。", "zh": "1995年，韩国开始实行垃圾计量收费制度。人们必须花钱购买指定垃圾袋来装垃圾，可回收物则要分开投放。此后，丢弃的垃圾减少，回收率大幅提高。", "es": "En 1995, Corea del Sur implantó el pago por volumen de basura. La gente empezó a comprar bolsas oficiales para tirar sus residuos y a separar el material reciclable, y en los años siguientes la basura disminuyó mientras el reciclaje aumentaba con fuerza." },
+      "when": { "year": [1995, 1995] },
+      "tone": "bright",
+      "domains": ["environment", "daily"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Waste_management_in_South_Korea"]
+    },
+    {
+      "id": "environment-2015-paris-agreement",
+      "type": "history",
+      "title": { "ko": "파리협정", "en": "The Paris Agreement", "ja": "パリ協定", "zh": "《巴黎协定》", "es": "El Acuerdo de París" },
+      "story": { "ko": "2015년 거의 모든 나라가 지구 기온 상승 폭을 산업화 이전 대비 2도보다 한참 낮게, 되도록 1.5도 안으로 막자는 파리협정을 채택했다. 하지만 협정 뒤에도 온실가스 배출은 한동안 계속 늘었다.", "en": "In 2015, nearly every country adopted the Paris Agreement, aiming to keep global warming well below 2°C above pre-industrial levels, and ideally to 1.5°C. Yet greenhouse gas emissions kept rising for years afterward.", "ja": "2015年、ほぼすべての国が、気温上昇を産業革命前より2度を十分に下回る水準、できれば1.5度以内に抑えるパリ協定を採択した。しかし協定の後も、温室効果ガスの排出はしばらく増え続けた。", "zh": "2015年，几乎所有国家通过了《巴黎协定》，承诺把全球升温控制在比工业化前高出远低于2摄氏度的水平，并力争限制在1.5摄氏度以内。然而协定达成后，温室气体排放仍持续增加了好几年。", "es": "En 2015, casi todos los países aprobaron el Acuerdo de París para mantener el calentamiento global muy por debajo de 2 °C respecto a la era preindustrial, y a ser posible en 1,5 °C. Sin embargo, las emisiones de gases de efecto invernadero siguieron creciendo durante años." },
+      "when": { "year": [2015, 2015] },
+      "tone": "mixed",
+      "domains": ["environment", "politics"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Paris_Agreement"]
+    },
+    {
+      "id": "environment-future-rivers-unbound",
+      "title": { "ko": "다시 굽이치는 강", "en": "Rivers that bend again", "ja": "再び蛇行する川", "zh": "重新蜿蜒的河流", "es": "Ríos que vuelven a serpentear" },
+      "story": { "ko": "콘크리트 둑과 낡은 보가 하나둘 헐리고, 도로 밑에 묻혀 있던 동네 개천이 다시 하늘을 본다. 여름이면 아이들이 냇가에서 물장구를 치고, 사라졌던 수달과 물고기가 강을 거슬러 돌아온다.", "en": "Concrete embankments and old weirs come down one by one, and neighborhood streams buried under roads see the sky again. In summer, children splash in the shallows, and otters and fish that had vanished find their way back upstream.", "ja": "コンクリートの堤防や古い堰が一つずつ取り壊され、道路の下に埋められていた街の小川が再び空を見る。夏には子どもたちが川辺で水遊びをし、姿を消していたカワウソや魚が川をさかのぼって戻ってくる。", "zh": "混凝土堤岸和老旧的拦河坝一座座被拆除，埋在马路下的社区小溪重见天日。夏天，孩子们在溪边戏水，消失已久的水獭和鱼儿逆流而上，重新回到河里。", "es": "Los muros de hormigón y las viejas presas caen uno tras otro, y los arroyos enterrados bajo las calles vuelven a ver el cielo. En verano, los niños chapotean en la orilla, y las nutrias y los peces que habían desaparecido regresan río arriba." },
+      "when": { "year": [2032, 2100], "climate": [55, 100], "solidarity": [50, 100] },
+      "tone": "bright",
+      "domains": ["environment", "cities"],
+      "scene": { "green": 0.1, "community": 0.05 }
+    },
+    {
+      "id": "environment-future-hand-pollination",
+      "title": { "ko": "붓으로 꽃가루를 옮기는 봄", "en": "A spring of hand pollination", "ja": "筆で花粉を運ぶ春", "zh": "用毛笔授粉的春天", "es": "Primaveras de polinización a mano" },
+      "story": { "ko": "벌과 나비가 눈에 띄게 줄어든 봄, 과수원마다 사람들이 붓을 들고 꽃송이에 꽃가루를 하나하나 묻힌다. 손이 많이 가는 사과와 배는 귀한 선물이 되고, 아이들은 꿀벌을 도감으로만 배운다.", "en": "With bees and butterflies grown scarce, orchard workers spend each spring dabbing pollen onto blossoms one by one with brushes. Apples and pears, now so labor-intensive, become precious gifts, and children know honeybees only from picture books.", "ja": "ハチやチョウがめっきり減った春、果樹園では人々が筆を手に、花の一つひとつに花粉をつけていく。手間のかかるリンゴやナシは貴重な贈り物となり、子どもたちはミツバチを図鑑でしか知らない。", "zh": "蜜蜂和蝴蝶越来越少见。每到春天，果园里的人们手拿毛笔，把花粉一朵一朵地点到花上。费工费时的苹果和梨成了珍贵的礼物，孩子们只能在图鉴里认识蜜蜂。", "es": "Con las abejas y las mariposas cada vez más escasas, cada primavera los trabajadores de los huertos llevan el polen de flor en flor con pinceles. Las manzanas y las peras, tan costosas de cultivar, se vuelven regalos de lujo, y los niños solo conocen las abejas por los libros." },
+      "when": { "year": [2055, 2100], "climate": [0, 35] },
+      "tone": "dark",
+      "domains": ["environment", "food"]
+    },
+    {
+      "id": "environment-future-jellyfish-seas",
+      "title": { "ko": "해파리의 바다", "en": "A sea of jellyfish", "ja": "クラゲの海", "zh": "水母之海", "es": "Un mar de medusas" },
+      "story": { "ko": "뜨거워지고 마구잡이로 잡혀 텅 빈 바다를 해파리가 채운다. 어촌의 배들은 그물 가득 해파리를 건져 말리고, 식당에는 해파리 국수와 튀김이 오른다. 고등어 굽는 냄새는 할머니의 옛이야기 속에만 남는다.", "en": "Warmed and overfished, the emptied seas fill up with jellyfish. Fishing boats haul in nets full of them to dry, and restaurants serve jellyfish noodles and fritters. The smell of grilled mackerel survives only in grandmothers' stories.", "ja": "温暖化と乱獲で空っぽになった海を、クラゲが埋めつくす。漁村の船は網いっぱいのクラゲを引き揚げて干し、食堂にはクラゲの麺や揚げ物が並ぶ。サバを焼くにおいは、祖母の昔話の中にだけ残っている。", "zh": "海水变暖、过度捕捞，空荡荡的大海被水母占满。渔村的船只拖回满网的水母晾晒，餐馆里端上水母面和炸水母。烤青花鱼的香味，只留在奶奶讲的老故事里。", "es": "Calentado y sobreexplotado, el mar vacío se llena de medusas. Los barcos pesqueros recogen redes repletas para secarlas, y los restaurantes sirven fideos y frituras de medusa. El olor de la caballa asada solo sobrevive en los relatos de las abuelas." },
+      "when": { "year": [2076, 2100], "climate": [0, 40], "solidarity": [0, 45] },
+      "tone": "mixed",
+      "domains": ["environment", "work"]
+    }
+  ]
+}

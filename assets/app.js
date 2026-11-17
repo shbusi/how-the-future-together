@@ -562,8 +562,28 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
   document.querySelectorAll('input[name="ptype"]').forEach(r => r.addEventListener('change', () => {
     followType = false;
     if (followConditions) fillFrom(state);
+    else fitYearToType();
     changed();
   }));
+  /** 역사↔미래를 바꿨을 때 연도 범위가 그 종류에 맞지 않으면 지금 고른 해에 맞춰 다시 채운다. */
+  function fitYearToType() {
+    const history = typeIs() === 'history';
+    const lo = history ? yearCfg.min : NOW_YEAR;
+    const hi = history ? NOW_YEAR : yearCfg.max;
+    const yr = rows.year;
+    const a = Number(yr.min.value);
+    const b = Number(yr.max.value);
+    if (yr.use.checked && a >= lo && b <= hi && a <= b) return;
+    yr.use.checked = true;
+    if (history) {
+      const y = Math.min(state.year, NOW_YEAR - 1);
+      yr.min.value = Math.max(lo, y - HISTORY_WINDOW);
+      yr.max.value = Math.min(hi, y + HISTORY_WINDOW);
+    } else {
+      yr.min.value = Math.max(lo, state.year - 10);
+      yr.max.value = hi;
+    }
+  }
   if (saved.when) {
     for (const [id, r] of Object.entries(rows)) {
       const v = saved.when[id];

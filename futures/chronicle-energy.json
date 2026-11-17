@@ -1,0 +1,88 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "energy-1936-rural-electrification",
+      "type": "history",
+      "title": { "ko": "시골에 들어온 전깃불", "en": "Electric light comes to the farm", "ja": "農村に灯った電気", "zh": "电灯照进乡村", "es": "La luz eléctrica llega al campo" },
+      "story": { "ko": "1936년 미국은 농촌전력화법을 만들어 외딴 시골에 전선을 놓을 돈을 빌려주었다. 도시에만 있던 전깃불과 전기 펌프, 냉장고가 농가에도 들어오면서 등잔과 손펌프에 기대던 생활이 바뀌었다.", "en": "In 1936, the United States passed the Rural Electrification Act, lending money to run power lines out to remote farms. Electric lights, pumps and refrigerators, once found mostly in cities, reached farmhouses, and life by oil lamp and hand pump began to change.", "ja": "1936年、アメリカは農村電化法を制定し、人里離れた農村に電線を引くための資金を貸し出した。都市にしかなかった電灯や電動ポンプ、冷蔵庫が農家にも届き、ランプと手押しポンプに頼る暮らしが変わった。", "zh": "1936年，美国通过《农村电气化法》，为偏远乡村架设电线提供贷款。原本只有城市才有的电灯、电动水泵和冰箱走进了农家，靠油灯和手压泵过日子的生活从此改变。", "es": "En 1936, Estados Unidos aprobó la Ley de Electrificación Rural, que prestaba dinero para tender cables hasta las granjas aisladas. La luz eléctrica, las bombas de agua y las neveras, hasta entonces cosa de ciudad, llegaron al campo, y la vida de candiles y bombas manuales empezó a cambiar." },
+      "when": { "year": [1936, 1936] },
+      "tone": "bright",
+      "domains": ["energy", "daily"],
+      "region": "north-america",
+      "sources": ["https://en.wikipedia.org/wiki/Rural_Electrification_Act"]
+    },
+    {
+      "id": "energy-1953-yeontan-briquettes",
+      "type": "history",
+      "title": { "ko": "연탄으로 데운 겨울", "en": "Winters warmed by coal briquettes", "ja": "練炭で温めた冬", "zh": "蜂窝煤温暖的冬天", "es": "Inviernos al calor del carbón" },
+      "story": { "ko": "한국전쟁 뒤 구멍 뚫린 연탄이 집집마다 난방과 밥 짓기를 책임지는 연료로 자리 잡았다. 1988년에는 열 집 가운데 여덟 집 가까이가 연탄을 땠지만, 겨울마다 연탄가스 중독 사고도 끊이지 않았다.", "en": "After the Korean War, the hole-punched coal briquette, or yeontan, became the fuel that heated homes and cooked meals. By 1988, nearly eight in ten South Korean households burned them, but every winter also brought cases of carbon monoxide poisoning.", "ja": "朝鮮戦争の後、韓国では穴のあいた練炭が家庭の暖房と炊事を担う燃料として定着した。1988年には10軒のうち8軒近くが練炭を使っていたが、冬が来るたびに一酸化炭素中毒の事故が絶えなかった。", "zh": "朝鲜战争之后，带孔的蜂窝煤成了韩国家庭取暖做饭的主要燃料。到1988年，近八成家庭烧蜂窝煤，但每到冬天，煤气中毒事故总是接连不断。", "es": "Tras la guerra de Corea, la briqueta de carbón agujereada, el yeontan, se convirtió en el combustible para calentar las casas y cocinar. En 1988, casi ocho de cada diez hogares surcoreanos la usaban, pero cada invierno traía intoxicaciones por monóxido de carbono." },
+      "when": { "year": [1953, 1988] },
+      "tone": "mixed",
+      "domains": ["energy", "daily", "health"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/East_Asian_coal_briquettes"]
+    },
+    {
+      "id": "energy-1973-oil-crisis",
+      "type": "history",
+      "title": { "ko": "1차 석유 파동", "en": "The 1973 oil shock", "ja": "第一次オイルショック", "zh": "第一次石油危机", "es": "La crisis del petróleo de 1973" },
+      "story": { "ko": "1973년 아랍 산유국들이 석유 생산을 줄이고 일부 나라에 수출을 막자, 몇 달 만에 기름값이 네 배 가까이 뛰었다. 주유소 앞에 긴 줄이 늘어섰고, 세계 곳곳에서 에너지 절약 운동이 벌어졌다.", "en": "In 1973, Arab oil producers cut output and embargoed several countries, and within months the price of oil nearly quadrupled. Long lines formed at gas stations, and energy-saving campaigns spread around the world.", "ja": "1973年、アラブの産油国が石油の生産を減らし、一部の国への輸出を止めると、数か月で原油価格は4倍近くに跳ね上がった。ガソリンスタンドには長い列ができ、世界各地で省エネ運動が広がった。", "zh": "1973年，阿拉伯产油国削减石油产量，并对部分国家实行禁运，几个月内油价飙升到原来的近四倍。加油站前排起长队，节约能源运动在世界各地兴起。", "es": "En 1973, los países árabes productores recortaron la producción de petróleo y embargaron a varios países, y en pocos meses el precio del crudo casi se cuadruplicó. Se formaron largas colas en las gasolineras y las campañas de ahorro de energía se extendieron por el mundo." },
+      "when": { "year": [1973, 1974] },
+      "tone": "dark",
+      "domains": ["energy", "economy"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/1973_oil_crisis"]
+    },
+    {
+      "id": "energy-1994-three-gorges-dam",
+      "type": "history",
+      "title": { "ko": "싼샤댐과 떠나간 마을들", "en": "The Three Gorges Dam", "ja": "三峡ダムと消えた村", "zh": "三峡大坝与远去的家园", "es": "La presa de las Tres Gargantas" },
+      "story": { "ko": "1994년 중국 양쯔강에서 훗날 세계 최대 발전소가 될 싼샤댐 공사가 시작되었다. 댐은 막대한 전기를 만들고 홍수를 줄였지만, 100만 명이 넘는 주민이 물에 잠길 고향을 떠나야 했다.", "en": "In 1994, work began on the Three Gorges Dam on China's Yangtze River, which would become the world's largest power station. It brought huge amounts of electricity and flood control, but more than a million people had to leave hometowns that would end up underwater.", "ja": "1994年、中国の長江で、のちに世界最大の発電所となる三峡ダムの建設が始まった。ダムは大量の電気を生み、洪水を減らしたが、100万人を超える住民が水に沈む故郷を離れなければならなかった。", "zh": "1994年，中国长江上的三峡大坝开工建设，后来成为世界上装机容量最大的电站。大坝带来了巨量电力，也减轻了洪灾，但有一百多万居民不得不离开即将被淹没的家园。", "es": "En 1994 empezó a construirse en el río Yangtsé, en China, la presa de las Tres Gargantas, que llegaría a ser la mayor central eléctrica del mundo. Trajo enormes cantidades de electricidad y menos inundaciones, pero más de un millón de personas tuvieron que abandonar pueblos que quedarían bajo el agua." },
+      "when": { "year": [1994, 2012] },
+      "tone": "mixed",
+      "domains": ["energy", "environment", "population"],
+      "region": "china",
+      "sources": ["https://en.wikipedia.org/wiki/Three_Gorges_Dam"]
+    },
+    {
+      "id": "energy-2010-cheap-solar",
+      "type": "history",
+      "title": { "ko": "값싸진 햇빛 전기", "en": "Solar power gets cheap", "ja": "安くなった太陽光発電", "zh": "太阳能发电变便宜了", "es": "La energía solar se abarata" },
+      "story": { "ko": "2010년대 태양광 패널 값이 빠르게 떨어지면서 지붕과 들판에 패널이 빠르게 늘어났다. 많은 나라에서 태양광은 새 발전소로 전기를 만드는 가장 값싼 방법 가운데 하나가 되었다.", "en": "In the 2010s, the price of solar panels fell fast, and panels spread quickly across rooftops and fields. In many countries, solar became one of the cheapest ways to generate electricity from new power plants.", "ja": "2010年代、太陽光パネルの価格が急速に下がり、屋根や畑にパネルが一気に広がった。多くの国で、太陽光は新しい発電所で電気をつくる最も安い方法の一つになった。", "zh": "2010年代，太阳能电池板价格迅速下降，屋顶和田野上的电池板快速增多。在许多国家，太阳能成了新建电站中发电成本最低的方式之一。", "es": "En la década de 2010, el precio de los paneles solares cayó en picado y se multiplicaron sobre tejados y campos. En muchos países, la solar pasó a ser una de las formas más baratas de producir electricidad con centrales nuevas." },
+      "when": { "year": [2010, 2020] },
+      "tone": "bright",
+      "domains": ["energy", "technology"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Growth_of_photovoltaics", "https://en.wikipedia.org/wiki/Solar_power"]
+    },
+    {
+      "id": "energy-future-wind-laundry",
+      "title": { "ko": "바람 부는 날의 빨래", "en": "Laundry when the wind blows", "ja": "風の吹く日の洗濯", "zh": "起风的日子洗衣服", "es": "La colada cuando sopla el viento" },
+      "story": { "ko": "전기 요금이 한 시간마다 바뀐다. 바람이 세고 햇볕이 좋은 시간이 되면 휴대폰에 알림이 뜨고, 세탁기와 전기차 충전기가 알아서 돌아간다. 사람들은 다시 날씨를 보며 빨래할 때를 고른다.", "en": "The price of electricity changes every hour. When the wind is strong and the sun is bright, phones buzz with an alert and washing machines and car chargers switch on by themselves. Once again, people check the weather to decide when to do the laundry.", "ja": "電気料金が1時間ごとに変わる。風が強く日差しのよい時間になるとスマホに通知が届き、洗濯機や電気自動車の充電器がひとりでに動き出す。人々は再び、天気を見て洗濯の時間を決める。", "zh": "电价每小时都在变。风大、阳光好的时段一到，手机就会收到提醒，洗衣机和电动车充电桩自动开始运转。人们又像从前一样，看着天气决定什么时候洗衣服。", "es": "El precio de la luz cambia cada hora. Cuando sopla fuerte el viento y brilla el sol, el móvil avisa y las lavadoras y los cargadores del coche se encienden solos. La gente vuelve a mirar el cielo para decidir cuándo poner la colada." },
+      "when": { "year": [2030, 2100], "climate": [55, 100], "tech": [45, 100] },
+      "tone": "bright",
+      "domains": ["energy", "daily"],
+      "scene": { "solar": 0.1 }
+    },
+    {
+      "id": "energy-future-severed-pipelines",
+      "title": { "ko": "가스관이 끊긴 겨울", "en": "The winter the pipelines closed", "ja": "ガス管が止まった冬", "zh": "输气管道断开的冬天", "es": "El invierno sin gasoducto" },
+      "story": { "ko": "이웃 나라들과의 갈등이 길어지면서 국경을 넘어오던 가스관과 송전선이 끊긴다. 난방비가 몇 배로 뛰자 사람들은 낡은 석탄 난로를 다시 꺼내고, 겨울밤이면 온 가족이 방 한 칸에 모여 잠을 잔다.", "en": "As conflict with neighboring countries drags on, the pipelines and power lines that once crossed the border are cut. Heating bills multiply, people drag old coal stoves back out, and on winter nights whole families sleep together in a single room.", "ja": "隣国との対立が長引き、国境を越えて届いていたガス管と送電線が断たれる。暖房費が何倍にも跳ね上がると、人々は古い石炭ストーブを引っぱり出し、冬の夜には家族全員が一部屋に集まって眠る。", "zh": "与邻国的冲突旷日持久，跨境而来的输气管道和输电线路被切断。取暖费翻了好几倍，人们重新搬出旧煤炉，冬夜里一家人挤在一个房间里睡觉。", "es": "Con el conflicto con los países vecinos alargándose, se cortan los gasoductos y las líneas eléctricas que cruzaban la frontera. Las facturas de calefacción se multiplican, la gente rescata viejas estufas de carbón y, en las noches de invierno, familias enteras duermen juntas en una sola habitación." },
+      "when": { "year": [2052, 2100], "peace": [0, 30], "climate": [0, 50] },
+      "tone": "dark",
+      "domains": ["energy", "peace"],
+      "scene": { "smog": 0.05, "decay": 0.05 }
+    },
+    {
+      "id": "energy-future-meterless-homes",
+      "title": { "ko": "계량기가 사라진 집", "en": "Homes without meters", "ja": "メーターのない家", "zh": "没有电表的家", "es": "Casas sin contador" },
+      "story": { "ko": "핵융합 발전소가 곳곳에서 돌아가면서 전기가 공기처럼 흔해진다. 집집마다 전기 계량기가 사라지고, 사막에서는 바닷물을 민물로 바꿔 농사를 짓는다. 다만 발전소를 가진 몇몇 기업은 웬만한 정부보다 힘이 세진다.", "en": "With fusion plants running everywhere, electricity becomes as plentiful as air. Meters disappear from homes, and in the deserts seawater is turned into fresh water for farming. But the handful of companies that own the plants grow more powerful than most governments.", "ja": "各地で核融合発電所が動き出し、電気は空気のようにありふれたものになる。家々から電気メーターが消え、砂漠では海水を真水に変えて農業が営まれる。ただし発電所を持つ一握りの企業が、たいていの政府よりも強い力を持つようになる。", "zh": "核聚变电站在各地运转，电变得像空气一样充足。家家户户的电表消失了，沙漠里用淡化后的海水种起了庄稼。只是，拥有电站的少数几家公司，权力比大多数政府还大。", "es": "Con centrales de fusión funcionando por todas partes, la electricidad se vuelve tan abundante como el aire. Los contadores desaparecen de las casas y en los desiertos se cultiva con agua de mar desalinizada. Pero las pocas empresas dueñas de las centrales acaban teniendo más poder que la mayoría de los gobiernos." },
+      "when": { "year": [2080, 2100], "tech": [80, 100], "equality": [0, 40] },
+      "tone": "mixed",
+      "domains": ["energy", "technology", "economy"],
+      "scene": { "tech": 0.1 }
+    }
+  ]
+}

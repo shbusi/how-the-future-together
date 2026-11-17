@@ -1,0 +1,87 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "food-1916-self-service-grocery",
+      "type": "history",
+      "title": {"ko": "손님이 직접 고르는 가게", "en": "The first self-service grocery", "ja": "客が自分で選ぶ店", "zh": "顾客自己挑选的商店", "es": "La primera tienda de autoservicio"},
+      "story": {"ko": "1916년 미국 멤피스에 손님이 선반에서 물건을 직접 골라 계산대로 가져가는 첫 셀프서비스 식료품점 ‘피글리 위글리’가 문을 열었다. 점원이 물건을 꺼내 주던 가게가 계산대와 가격표가 붙은 상품이 있는 오늘날의 슈퍼마켓으로 바뀌기 시작했다.", "en": "In 1916 Piggly Wiggly opened in Memphis, the first grocery store where shoppers took goods from the shelves themselves and brought them to a checkout. Shops where a clerk fetched every item began turning into today's supermarkets, with checkout stands and price tags on each product.", "ja": "1916年、アメリカのメンフィスに、客が棚から商品を自分で選んでレジまで持っていく初のセルフサービスの食料品店「ピグリー・ウィグリー」が開店した。店員が商品を取って渡していた店は、レジと値札のついた商品が並ぶ今のスーパーマーケットへと変わり始めた。", "zh": "1916年，美国孟菲斯开了第一家让顾客自己从货架上挑选商品、再拿到收银台结账的自助式食品杂货店“小猪扭扭”。由店员取货的商店开始变成今天这样设有收银台、每件商品都标有价签的超市。", "es": "En 1916 abrió en Memphis Piggly Wiggly, la primera tienda de comestibles donde los clientes tomaban los productos de los estantes y los llevaban a una caja. Las tiendas en las que un dependiente alcanzaba cada artículo empezaron a convertirse en los supermercados de hoy, con cajas y precios en cada producto."},
+      "when": {"year": [1916, 1916]},
+      "tone": "bright",
+      "domains": ["food", "daily", "economy"],
+      "region": "north-america",
+      "sources": ["https://en.wikipedia.org/wiki/Piggly_Wiggly"]
+    },
+    {
+      "id": "food-1966-green-revolution-india",
+      "type": "history",
+      "title": {"ko": "인도의 녹색혁명", "en": "India's Green Revolution", "ja": "インドの緑の革命", "zh": "印度的绿色革命", "es": "La revolución verde en la India"},
+      "story": {"ko": "잇단 가뭄으로 식량난을 겪던 인도는 1960년대 후반 펀자브 지방부터 수확량이 많은 밀 품종과 화학비료, 관개 시설을 들여왔다. 곡물 생산이 크게 늘어 기근의 공포가 줄었지만, 땅과 지하수에는 부담이 쌓였다.", "en": "Hit by droughts and food shortages, India began in the late 1960s to bring high-yield wheat, chemical fertilizer and irrigation to its farms, starting in Punjab. Grain harvests soared and the fear of famine eased, though the soil and groundwater paid a price.", "ja": "干ばつが続き食料不足に苦しんでいたインドは、1960年代後半、パンジャーブ地方を皮切りに多収量の小麦品種や化学肥料、灌漑設備を導入した。穀物の生産は大きく伸びて飢饉の恐れは薄れたが、土と地下水には負担が積み重なった。", "zh": "因接连干旱而陷入粮荒的印度，从20世纪60年代后期开始，以旁遮普邦为起点引进高产小麦品种、化肥和灌溉设施。粮食产量大幅增长，饥荒的阴影渐渐散去，但土壤和地下水承受的压力越来越大。", "es": "Golpeada por las sequías y la escasez de alimentos, la India empezó a finales de los sesenta a llevar a sus campos trigo de alto rendimiento, fertilizantes químicos y riego, comenzando por el Punyab. Las cosechas se dispararon y se alejó el miedo al hambre, aunque el suelo y las aguas subterráneas pagaron el precio."},
+      "when": {"year": [1966, 1970]},
+      "tone": "bright",
+      "domains": ["food", "technology"],
+      "region": "south-asia",
+      "sources": ["https://en.wikipedia.org/wiki/Green_Revolution_in_India"]
+    },
+    {
+      "id": "food-1983-ethiopia-famine",
+      "type": "history",
+      "title": {"ko": "에티오피아 대기근", "en": "The Ethiopian famine", "ja": "エチオピア大飢饉", "zh": "埃塞俄比亚大饥荒", "es": "La hambruna de Etiopía"},
+      "story": {"ko": "1983~1985년 에티오피아에 가뭄과 내전이 겹쳐 100년 만의 최악의 기근이 들었고, 적어도 30만 명이 목숨을 잃었다. 텔레비전으로 전해진 참상은 1985년 라이브 에이드 같은 세계적인 구호 모금으로 이어졌다.", "en": "From 1983 to 1985, drought and civil war brought Ethiopia its worst famine in a century, killing at least 300,000 people. Televised images of the suffering spurred worldwide relief efforts such as the 1985 Live Aid concerts.", "ja": "1983年から1985年にかけて、エチオピアでは干ばつと内戦が重なってこの100年で最悪の飢饉が起こり、少なくとも30万人が亡くなった。テレビで伝えられた惨状は、1985年のライブエイドのような世界規模の救援募金につながった。", "zh": "1983年至1985年，干旱与内战交织，埃塞俄比亚遭遇百年来最严重的饥荒，至少30万人丧生。电视画面把惨状传遍世界，促成了1985年“拯救生命”（Live Aid）演唱会等全球募捐救援行动。", "es": "Entre 1983 y 1985, la sequía y la guerra civil provocaron en Etiopía la peor hambruna en un siglo, que mató al menos a 300.000 personas. Las imágenes difundidas por televisión impulsaron una ayuda mundial, como los conciertos Live Aid de 1985."},
+      "when": {"year": [1983, 1985]},
+      "tone": "dark",
+      "domains": ["food", "peace"],
+      "region": "africa",
+      "sources": ["https://en.wikipedia.org/wiki/1983%E2%80%931985_famine_in_Ethiopia", "https://en.wikipedia.org/wiki/Live_Aid"]
+    },
+    {
+      "id": "food-2007-food-price-crisis",
+      "type": "history",
+      "title": {"ko": "세계 식량 가격 위기", "en": "The world food price crisis", "ja": "世界食料価格危機", "zh": "全球粮价危机", "es": "La crisis mundial de los alimentos"},
+      "story": {"ko": "2007~2008년 가뭄과 유가 상승 등이 겹치며 세계 곡물 값이 치솟아, 쌀과 밀 값이 두 배 넘게 뛰었다. 가난한 나라 사람들은 끼니를 줄여야 했고, 여러 나라에서 식량 폭동이 일어났다.", "en": "In 2007 and 2008, drought, rising oil prices and other pressures sent world grain prices soaring, with rice and wheat more than doubling. People in poor countries had to cut back on meals, and food riots broke out in many countries.", "ja": "2007年から2008年にかけて、干ばつや原油高などが重なって世界の穀物価格が急騰し、コメや小麦の値段は2倍以上になった。貧しい国の人々は食事を減らさざるをえず、各地で食料暴動が起きた。", "zh": "2007至2008年，干旱和油价上涨等因素叠加，全球粮价飞涨，大米和小麦价格翻了一倍多。贫穷国家的人们不得不减少每天的饭量，多个国家爆发了粮食骚乱。", "es": "En 2007 y 2008, la sequía, la subida del petróleo y otros factores dispararon el precio mundial de los cereales: el arroz y el trigo costaban más del doble. En los países pobres la gente tuvo que comer menos y estallaron disturbios por el hambre en muchos países."},
+      "when": {"year": [2007, 2008]},
+      "tone": "dark",
+      "domains": ["food", "economy"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/2007%E2%80%932008_world_food_price_crisis"]
+    },
+    {
+      "id": "food-2010-delivery-apps",
+      "type": "history",
+      "title": {"ko": "앱으로 시키는 저녁", "en": "Dinner by app", "ja": "アプリで頼む夕食", "zh": "用手机点的晚饭", "es": "La cena, por aplicación"},
+      "story": {"ko": "2010년 배달 앱 '배달의민족'이 나온 뒤, 한국인은 휴대폰을 몇 번 눌러 음식을 시켜 먹는 데 익숙해졌다. 무엇이든 집 앞까지 빠르게 왔지만, 오토바이 배달 노동자의 안전과 일회용 포장 쓰레기가 새 문제로 떠올랐다.", "en": "After the delivery app Baedal Minjok launched in 2010, Koreans grew used to ordering meals with a few taps on their phones. Almost anything could arrive at the door fast, but the safety of motorbike couriers and the waste from disposable packaging became new problems.", "ja": "2010年に出前アプリ「配達の民族」が登場すると、韓国の人々はスマホを数回タップして料理を頼むことに慣れていった。何でも素早く玄関先まで届くようになったが、バイク配達員の安全や使い捨て容器のごみが新たな問題となった。", "zh": "2010年外卖应用“配达的民族”上线后，韩国人渐渐习惯了在手机上点几下就叫外卖。几乎什么都能很快送到家门口，但骑摩托车的外卖员的安全和一次性包装垃圾成了新问题。", "es": "Desde que en 2010 se lanzó la aplicación de reparto Baedal Minjok, los coreanos se acostumbraron a pedir comida con unos pocos toques en el móvil. Casi todo llegaba rápido a la puerta, pero la seguridad de los repartidores en moto y los residuos de los envases desechables se convirtieron en nuevos problemas."},
+      "when": {"year": [2010, 2020]},
+      "tone": "mixed",
+      "domains": ["food", "daily", "work"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Baedal_Minjok"]
+    },
+    {
+      "id": "food-future-vertical-farms",
+      "title": {"ko": "빌딩 속 농장", "en": "Farms inside office towers", "ja": "ビルの中の農場", "zh": "大楼里的农场", "es": "Granjas dentro de los edificios"},
+      "story": {"ko": "비어 있던 사무실 빌딩이 층층이 채소밭으로 바뀐다. LED 불빛 아래서 자란 상추와 딸기를 아침에 따서 1층 가게에서 바로 팔고, 동네 아이들은 견학 삼아 수확을 돕는다.", "en": "Empty office towers turn into vegetable farms, floor by floor. Lettuce and strawberries grown under LED lights are picked in the morning and sold straight from the shop on the ground floor, and neighborhood kids drop by to help with the harvest.", "ja": "空いていたオフィスビルが、フロアごとに野菜畑へと生まれ変わる。LEDの光で育ったレタスやイチゴは朝に収穫されて1階の店ですぐに売られ、近所の子どもたちは見学がてら収穫を手伝う。", "zh": "闲置的写字楼一层层变成了菜园。在LED灯下长大的生菜和草莓清晨采摘，直接在一楼的店里出售，附近的孩子们来参观，顺便帮忙收菜。", "es": "Los edificios de oficinas vacíos se convierten, planta a planta, en huertos. La lechuga y las fresas cultivadas bajo luz LED se recogen por la mañana y se venden en la tienda de la planta baja, y los niños del barrio vienen a ayudar con la cosecha."},
+      "when": {"year": [2035, 2100], "tech": [60, 100], "climate": [40, 100]},
+      "tone": "bright",
+      "domains": ["food", "technology"],
+      "scene": {"green": 0.1}
+    },
+    {
+      "id": "food-future-breadbaskets-fail",
+      "title": {"ko": "곡창지대가 함께 무너진 해", "en": "The year the breadbaskets failed", "ja": "穀倉地帯が一斉に崩れた年", "zh": "各大粮仓同时歉收的那一年", "es": "El año en que fallaron los graneros"},
+      "story": {"ko": "가뭄과 폭염이 세계 여러 곡창지대를 한꺼번에 덮쳐 밀과 옥수수 수확이 동시에 무너진다. 곡물 수출을 막는 나라가 줄을 잇고 빵값이 하루가 다르게 오르자, 정부는 쌀과 밀가루 배급표를 나눠 준다.", "en": "Drought and heat waves strike several of the world's breadbaskets at once, and wheat and corn harvests collapse together. One country after another bans grain exports, bread prices climb by the day, and the government hands out ration coupons for rice and flour.", "ja": "干ばつと熱波が世界のいくつもの穀倉地帯を同時に襲い、小麦とトウモロコシの収穫が一斉に落ち込む。穀物の輸出を止める国が相次ぎ、パンの値段が日に日に上がると、政府は米と小麦粉の配給券を配りはじめる。", "zh": "干旱和热浪同时袭击世界上多个粮仓地带，小麦和玉米一齐歉收。禁止粮食出口的国家接连出现，面包价格一天一个样，政府开始发放大米和面粉的配给券。", "es": "La sequía y las olas de calor golpean a la vez varios graneros del mundo, y las cosechas de trigo y maíz se hunden al mismo tiempo. Un país tras otro prohíbe exportar grano, el pan sube de precio cada día y el Gobierno reparte cartillas de racionamiento para arroz y harina."},
+      "when": {"year": [2055, 2100], "climate": [0, 35], "peace": [0, 45]},
+      "tone": "dark",
+      "domains": ["food", "economy"]
+    },
+    {
+      "id": "food-future-kimjang-without-cabbage",
+      "title": {"ko": "배추 없는 김장", "en": "Kimjang without cabbage", "ja": "白菜のないキムジャン", "zh": "没有白菜的越冬泡菜", "es": "El kimjang sin col"},
+      "story": {"ko": "여름이 길고 뜨거워지면서 고랭지 배추밭이 거의 사라진다. 사람들은 실내 농장에서 키운 비싼 배추 대신 더위에 강한 채소로 김치를 담근다. 맛은 달라졌지만, 이웃이 모여 김장을 하고 김치를 나누는 날은 이어진다.", "en": "As summers grow longer and hotter, Korea's highland cabbage fields all but disappear. Instead of pricey cabbage from indoor farms, people make kimchi from heat-tolerant vegetables. It tastes different, but neighbors still gather before winter to make it together and share it.", "ja": "夏が長く暑くなるにつれ、高原の白菜畑はほとんど姿を消す。人々は屋内農場で育った高価な白菜の代わりに、暑さに強い野菜でキムチを漬ける。味は変わったが、近所の人が集まってキムジャンをし、キムチを分け合う日は今も続いている。", "zh": "夏天越来越长、越来越热，韩国高山上的白菜田几乎消失殆尽。人们不再买室内农场种出的昂贵白菜，而是用耐热的蔬菜腌泡菜。味道变了，但邻居们在入冬前聚在一起腌泡菜、分泡菜的日子依然延续。", "es": "A medida que los veranos se alargan y se vuelven más calurosos, los campos de col de las montañas coreanas casi desaparecen. En lugar de la cara col de las granjas interiores, la gente prepara el kimchi con verduras resistentes al calor. Sabe distinto, pero los vecinos siguen reuniéndose antes del invierno para hacerlo juntos y repartirlo."},
+      "when": {"year": [2080, 2100], "climate": [0, 50], "solidarity": [45, 100]},
+      "tone": "mixed",
+      "domains": ["food", "culture"],
+      "region": "korea"
+    }
+  ]
+}
