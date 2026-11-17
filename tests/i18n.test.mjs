@@ -29,7 +29,7 @@ test('조건, 분야, 지역, 그림 항목, 분위기는 기준 번역에 이�
   for (const r of cfg.regions) assert.ok(`region.${r.id}` in ko && `region.${r.id}` in cfg.locales.en, `region.${r.id}`);
   for (const p of cfg.conditions.presets) assert.ok(`preset.${p.id}` in ko, `preset.${p.id}`);
   for (const key of SCENE_KEYS) assert.ok(`fx.${key}` in ko, `fx.${key}`);
-  for (const tone of TONES) assert.ok(`tone.${tone}` in ko, `tone.${tone}`);
+  for (const tone of TONES) assert.ok(`tone.${tone}` in ko && `toneH.${tone}` in ko, `tone.${tone}`);
 });
 
 test('언어 목록의 코드마다 번역 파일과 HTML 언어 코드가 있다', () => {

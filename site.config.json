@@ -1,5 +1,12 @@
 {
   "title": "함께 그리는 미래",
   "repo": "shbusi/how-the-future-together",
-  "branch": "main"
+  "branch": "main",
+  "discussions": {
+    "giscus": {
+      "repoId": "",
+      "category": "분야 토론",
+      "categoryId": ""
+    }
+  }
 }

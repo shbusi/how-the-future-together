@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { imagine, matches, baseScene, historyScene, coverageGrid, chronicle, regionFilter, SCENE_KEYS, NOW_YEAR, describe as describeScene } from '../assets/engine.js';
-import { loadModel } from '../scripts/build.mjs';
+import { loadModel, mergeContributors } from '../scripts/build.mjs';
 
 const { bundle, problems } = await loadModel();
 const model = { year: bundle.year, conditions: bundle.conditions, futures: bundle.futures };
@@ -140,4 +140,20 @@ test('프리셋은 정의된 조건만 쓰고, 모든 언어에 이름이 있다
     for (const k of Object.keys(p.values)) assert.ok(ids.has(k), `${p.id}: ${k}`);
     for (const { code } of bundle.languages) assert.ok(`preset.${p.id}` in bundle.locales[code], `${code}: preset.${p.id}`);
   }
+});
+
+test('기여자: 처음 쓴 사람은 조각 수로, 남의 파일을 고친 사람은 다듬은 파일 수로 센다', () => {
+  const pieces = [
+    { author: 'ana', file: 'ana-a.json' }, { author: 'ana', file: 'ana-a.json' },
+    { author: 'seed', file: 'chronicle-food.json' },
+  ];
+  const people = mergeContributors(pieces, {
+    'ana-a.json': ['ana', 'bo'],               // ana가 자기 파일을 고친 것은 세지 않는다
+    'chronicle-food.json': ['bo', 'chen', 'bo'], // 같은 사람이 여러 번 고쳐도 파일 하나
+  });
+  const by = Object.fromEntries(people.map(p => [p.author, p]));
+  assert.deepEqual(by.ana, { author: 'ana', count: 2, edited: 0 });
+  assert.deepEqual(by.bo, { author: 'bo', count: 0, edited: 2 });
+  assert.deepEqual(by.chen, { author: 'chen', count: 0, edited: 1 });
+  assert.equal(people[0].author, 'ana');
 });

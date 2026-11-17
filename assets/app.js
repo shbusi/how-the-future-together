@@ -111,6 +111,8 @@ async function boot() {
   const condLabel = id => (id === 'year' ? t('f.year') : t(`cond.${id}.label`));
   const regionName = id => (id === 'world' ? t('region.all') : t(`region.${id}`));
   const historyCount = model.futures.filter(isHistory).length;
+  const editors = bundle.editors || {};
+  const editorsOf = f => (f.file ? editors[f.file] || [] : []).filter(login => login !== f.author);
 
   // ----- 상태 (?lang=..&year=..&region=..&climate=.. 로 공유 가능) -----
   const state = { year: yearCfg.default, region: 'world' };
@@ -223,7 +225,13 @@ async function boot() {
   const editUrl = f => `${repoUrl}/edit/${site.branch}/futures/${f.file}`;
   const issueUrl = params => `${repoUrl}/issues/new?${new URLSearchParams(params)}`;
 
-  function cardBody(f, { full = false } = {}) {
+  const condSummary = f => {
+    const parts = Object.entries(f.when || {}).filter(([k]) => k !== 'year').map(([k, [a, b]]) => `${condLabel(k)} ${a}–${b}`);
+    return parts.length ? parts.join(' · ') : t('field.anyCond');
+  };
+  const person = login => h('a', { href: `https://github.com/${login}`, target: '_blank', rel: 'noopener' }, `@${login}`);
+
+  function cardBody(f, { full = false, conds = false } = {}) {
     const title = textOf(f, 'title');
     const story = textOf(f, 'story');
     const domainLine = (f.domains || []).map(id => t(`domain.${id}`)).join(' · ');
@@ -236,16 +244,19 @@ async function boot() {
     return [
       h('div', { class: 'card-top' },
         isHistory(f) ? h('span', { class: 'kind' }, t('card.history')) : null,
-        h('span', { class: `tone tone-${f.tone}` }, t(`tone.${f.tone}`)),
+        h('span', { class: `tone tone-${f.tone}` }, t(`${isHistory(f) ? 'toneH' : 'tone'}.${f.tone}`)),
         f.region && f.region !== 'world' && h('span', { class: 'region' }, t(`region.${f.region}`)),
         title.missing && h('span', { class: 'orig' }, t('card.original', { lang: langName(title.lang) })),
         h('span', { class: 'years' }, yearsLabel(f) ?? t('card.anytime'))),
       h(full ? 'h2' : 'h3', { lang: langMeta(title.lang)?.html, id: full ? 'dlg-title' : null }, title.text),
       h('p', { lang: langMeta(story.lang)?.html }, story.text),
+      conds && !isHistory(f) && h('p', { class: 'conds' },
+        matches(f, state, { ignoreYear: true }) && h('span', { class: 'match' }, t('field.matchNow')), condSummary(f)),
+      (full || conds) && editorsOf(f).length > 0 && h('p', { class: 'eds' }, `${t('field.editors')}: `, ...editorsOf(f).flatMap((l, i) => (i ? [', ', person(l)] : [person(l)]))),
       h('div', { class: 'card-foot' },
         h('span', { class: 'who' }, who(f.author)),
         domainLine && h('span', { class: 'tags' }, domainLine),
-        sources.length && h('span', { class: 'src' }, `${t('card.sources')}: `, ...sources.flatMap((a, i) => (i ? [', ', a] : [a]))),
+        sources.length > 0 && h('span', { class: 'src' }, `${t('card.sources')}: `, ...sources.flatMap((a, i) => (i ? [', ', a] : [a]))),
         acts),
     ];
   }
@@ -316,7 +327,7 @@ async function boot() {
         },
       }, eraLabel([a, b])))));
     const body = rows.map(r => h('tr', {},
-      h('th', { scope: 'row' }, h('span', { class: 'dname' }, t(`domain.${r.domain}`)), h('span', { class: 'dcount' }, String(r.cells.reduce((n, c) => n + c.length, 0)))),
+      h('th', { scope: 'row' }, h('a', { class: 'dname', href: `#field-${r.domain}` }, t(`domain.${r.domain}`)), h('span', { class: 'dcount' }, String(r.cells.reduce((n, c) => n + c.length, 0)))),
       ...r.cells.map((cell, i) => h('td', { class: `${i === here ? 'here' : ''}${i === firstFuture ? ' split' : ''}${i >= firstFuture ? ' fut' : ''}` },
         cell.length
           ? h('ul', {}, ...cell.map(f => {
@@ -390,7 +401,7 @@ async function boot() {
         c.author === 'seed'
           ? h('span', { class: 'name' }, t('people.seed'))
           : h('a', { class: 'name', href: `https://github.com/${c.author}`, target: '_blank', rel: 'noopener' }, `@${c.author}`),
-        h('span', { class: 'n' }, t('people.count', { n: c.count })),
+        h('span', { class: 'n' }, [c.count ? t('people.count', { n: c.count }) : '', c.edited ? t('people.edited', { n: c.edited }) : ''].filter(Boolean).join(' · ')),
       )),
       h('li', { class: 'you' }, h('span', { class: 'avatar', 'aria-hidden': 'true' }, '+'), h('a', { class: 'name', href: '#write' }, t('people.you'))),
     );
@@ -432,6 +443,7 @@ async function boot() {
     renderPath(result);
     renderChronicle(pieces);
     renderAtlas(pieces);
+    if (currentField) renderField(currentField, pieces);
     writer.refresh();
     try { history.replaceState(null, '', `?${shareQuery()}${location.hash}`); } catch { /* 주소를 못 바꾸는 환경 */ }
   }
@@ -446,10 +458,92 @@ async function boot() {
     document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.description'));
     langSelect.value = code;
     applyStatic();
+    mountedTerm = null; // 토론방도 새 언어로
     render();
   }
 
+  // ----- 분야 페이지 (#field-<분야>) -----
+  let currentField = null;
+  let mountedTerm = null;
+  const fieldTerm = id => `field: ${id}`;
+  const fieldSwitch = domains.map(id => h('a', { href: `#field-${id}`, class: 'chip', 'data-i18n': `domain.${id}` }));
+  $('#fv-switch').replaceChildren(...fieldSwitch);
+  $('#fv-write').addEventListener('click', () => {
+    writer.prefill({ type: isPast(state.year) ? 'history' : 'future', from: isPast(state.year) ? state.year - HISTORY_WINDOW : NOW_YEAR, to: isPast(state.year) ? Math.min(NOW_YEAR, state.year + HISTORY_WINDOW) : yearCfg.max, domain: currentField });
+    location.hash = 'write';
+  });
+
+  function renderField(id, pieces) {
+    const mine = pieces.filter(f => f.domains?.includes(id));
+    const history = mine.filter(isHistory).sort((a, b) => startYear(a) - startYear(b) || a.id.localeCompare(b.id));
+    const futures = mine.filter(f => !isHistory(f)).sort((a, b) => startYear(a) - startYear(b) || a.id.localeCompare(b.id));
+    const people = new Set(mine.flatMap(f => [f.author, ...editorsOf(f)]));
+    $('#fv-title').textContent = t(`domain.${id}`);
+    $('#fv-stats').textContent = t('field.stats', { history: history.length, futures: futures.length, people: people.size });
+    fieldSwitch.forEach((a, i) => a.setAttribute('aria-current', domains[i] === id ? 'page' : 'false'));
+    $('#fv-history').replaceChildren(...(history.length ? history.map(f => h('li', { class: 'card history' }, ...cardBody(f, { conds: true }))) : [h('li', { class: 'muted' }, t('field.historyEmpty'))]));
+    $('#fv-futures').replaceChildren(...futures.map(f => h('li', { class: 'card' }, ...cardBody(f, { conds: true }))));
+    // 아무도 쓰지 않은 시대 (이 분야를 첫 번째로 둔 조각 기준, 미래는 조건과 상관없이)
+    const filled = eras.map(() => false);
+    for (const f of mine.filter(x => x.domains[0] === id)) {
+      const y = isHistory(f) ? f.when.year[0] : Math.max(NOW_YEAR + 1, startYear(f));
+      const i = eras.findIndex(([a, b]) => y >= a && y <= b);
+      if (i >= 0) filled[i] = true;
+    }
+    const gaps = eras.map((era, i) => ({ era, i })).filter(g => !filled[g.i]);
+    $('#fv-gaps-desc').textContent = t(gaps.length ? 'field.gapsDesc' : 'field.gapsNone');
+    $('#fv-gaps').replaceChildren(...gaps.map(({ era: [a, b], i }) => h('button', {
+      type: 'button', class: `gap-btn${i >= firstFuture ? ' fut' : ''}`,
+      'aria-label': t('chron.add', { domain: t(`domain.${id}`), era: `${a}–${b}` }),
+      onclick: () => {
+        writer.prefill({ type: i < firstFuture ? 'history' : 'future', from: a, to: b, domain: id });
+        location.hash = 'write';
+      },
+    }, `+ ${a}–${b}`)));
+    mountDiscussion(id);
+  }
+
+  /** 분야 토론방: giscus가 설정돼 있으면 사이트 안에, 아니면 GitHub Discussions 링크만. */
+  function mountDiscussion(id) {
+    const term = fieldTerm(id);
+    $('#fv-discuss-link').href = `${repoUrl}/discussions?discussions_q=${encodeURIComponent(`"${term}"`)}`;
+    const box = $('#fv-discuss-box');
+    const g = site.discussions?.giscus;
+    if (!g) {
+      box.replaceChildren(h('p', { class: 'pending' }, t('field.discussPending')));
+      return;
+    }
+    if (mountedTerm === `${term}|${i18n.lang}`) return;
+    mountedTerm = `${term}|${i18n.lang}`;
+    const giscusLang = { zh: 'zh-CN' }[i18n.lang] || i18n.lang;
+    box.replaceChildren(h('script', {
+      src: 'https://giscus.app/client.js', 'data-repo': site.repo, 'data-repo-id': g.repoId,
+      'data-category': g.category, 'data-category-id': g.categoryId,
+      'data-mapping': 'specific', 'data-term': term, 'data-strict': '1',
+      'data-reactions-enabled': '1', 'data-emit-metadata': '0', 'data-input-position': 'top',
+      'data-theme': 'preferred_color_scheme', 'data-lang': giscusLang, 'data-loading': 'lazy',
+      crossorigin: 'anonymous', async: true,
+    }));
+  }
+
+  function route() {
+    const m = location.hash.match(/^#field-([a-z-]+)$/);
+    const id = m && domains.includes(m[1]) ? m[1] : null;
+    const changed = id !== currentField;
+    currentField = id;
+    $('#top').hidden = Boolean(id);
+    $('#field-view').hidden = !id;
+    if (id) {
+      renderField(id, pool());
+      if (changed) window.scrollTo(0, 0);
+    } else if (changed && location.hash.length > 1) {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView();
+    }
+  }
+  window.addEventListener('hashchange', route);
+
   setLanguage(i18n.lang);
+  route();
 }
 
 // ---------- 조각 쓰기 폼 ----------
@@ -602,6 +696,11 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
     yr.min.max = yr.max.max = String(history ? NOW_YEAR : yearCfg.max);
     if (history) yr.use.checked = true;
     $('#f-history-hint').hidden = !history;
+    for (const tone of TONES) {
+      const label = $(`#f-tone-${tone}`).nextElementSibling;
+      label.dataset.i18n = `${history ? 'toneH' : 'tone'}.${tone}`;
+      label.textContent = t(label.dataset.i18n);
+    }
     $('#f-when-hint').hidden = history;
     $('#f-when-label').textContent = t(history ? 'f.whenHistory' : 'f.when');
   }

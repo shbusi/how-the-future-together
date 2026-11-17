@@ -26,6 +26,8 @@
 - **미래 조각**: `futures/` 폴더의 JSON 파일. 누구나 Pull Request로 보탤 수 있습니다. 형식은 [CONTRIBUTING.md](CONTRIBUTING.md).
 - **여러 언어**: 브라우저 언어를 따라 자동으로 고르고, 오른쪽 위에서 바꿀 수 있습니다. 조각은 아무 언어로 써도 되고, 번역이 없으면 원문과 **번역하기** 링크가 보입니다.
 - **미래 조각 쓰기**: 웹사이트 안의 폼에서 쓰면 바로 풍경에 미리 넣어 볼 수 있고, 버튼 하나로 GitHub Pull Request나 이슈를 엽니다.
+- **분야 페이지** (`#field-politics` 같은 주소): 한 분야의 역사 전체, 상상된 미래 전체, 아직 비어 있는 시대, 그리고 **분야 토론방**(GitHub Discussions, giscus)을 한 곳에 모읍니다.
+- **함께 고친 사람 표시**: 배포할 때 GitHub 기록에서 조각 파일을 고친 사람을 모아, 조각과 기여자 목록에 함께 보여 줍니다.
 - **분야별 연대기**: 20개 분야 × 8개 시대 표. 과거 칸은 실제 역사, 미래 칸은 지금 조건의 미래이고, 빈 칸의 **+**로 바로 조각을 씁니다.
 - **지역**: 세계 전체나 한국·일본·유럽·라틴아메리카 같은 지역으로 좁혀 볼 수 있습니다.
 - **상상의 지도**와 **언어별 번역 현황**: 아직 비어 있는 미래와 번역을 보여 줘서, 다음 기여자가 빈 곳을 채우게 합니다.
@@ -37,7 +39,14 @@
 2. **GitHub Pages 켜기**: Settings → Pages → Build and deployment → Source를 **GitHub Actions**로 바꿉니다.
 3. **라벨 만들기**: Issues → Labels에서 `미래 조각 제안`, `의견`, `채택`을 만듭니다.
 4. **Actions가 PR을 열 수 있게 하기**: Settings → Actions → General → Workflow permissions에서 **Allow GitHub Actions to create and approve pull requests**를 켭니다.
-5. (권장) Settings → Branches에서 `main`에 **미래 조각 검사** 통과를 필수로 겁니다.
+5. **분야별 토론방 켜기** (선택, 몇 분):
+   1. Settings → General → Features에서 **Discussions**를 켭니다.
+   2. Discussions 탭에서 카테고리 `분야 토론`을 만듭니다 (형식: Open-ended discussion).
+   3. [giscus 앱](https://github.com/apps/giscus)을 이 저장소에 설치합니다.
+   4. [giscus.app](https://giscus.app/ko)에 저장소 이름과 카테고리를 넣으면 `data-repo-id`, `data-category-id` 값이 나옵니다.
+      이 두 값을 `site.config.json`의 `discussions.giscus`에 넣고 `main`에 커밋하면, 20개 분야 페이지마다 토론방이 붙습니다.
+   켜기 전까지 분야 페이지에는 "토론방이 아직 연결되지 않았어요" 안내와 GitHub 링크가 보입니다.
+6. (권장) Settings → Branches에서 `main`에 **미래 조각 검사** 통과를 필수로 겁니다.
 
 ## 로컬에서 실행
 

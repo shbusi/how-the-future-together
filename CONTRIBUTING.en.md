@@ -24,6 +24,14 @@ You don't need to know how to code.
 | **4. Comment or edit** | Use **Comment** or **Edit** on any piece. |
 | **5. Extend the drawing, engine or languages** | Edit `assets/engine.js` (the model), `assets/scene.js` (the drawing), `config/` (conditions, tags, languages) or `locales/` (interface text) and open a pull request. |
 
+## Field discussions and credit
+
+- **Field pages**: click a field's name in the chronicle to see every piece in that field, the eras still empty, and its discussion on one page.
+- **Field discussions**: each field has its own GitHub Discussions thread, and you can comment right on the site (GitHub sign-in).
+  Talk about what's missing in a field or whether a piece's tone is right, then turn the ideas into pieces.
+- **Credit**: every change is recorded on GitHub. The site's contributor list and each piece show both the original author and the people who **also edited** it,
+  so editing or translating someone else's piece counts too.
+
 ## What a piece looks like
 
 Pieces live in JSON files in the `futures/` folder. One file can hold several pieces.

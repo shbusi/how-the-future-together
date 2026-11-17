@@ -69,9 +69,7 @@ export async function loadModel() {
   const base = Object.keys(cfg.locales.ko);
   const missing = Object.fromEntries(cfg.languages.map(({ code }) => [code, base.filter(k => !(k in cfg.locales[code]))]));
 
-  const contributors = [...futures.reduce((m, f) => m.set(f.author, (m.get(f.author) || 0) + 1), new Map())]
-    .map(([author, count]) => ({ author, count }))
-    .sort((a, b) => b.count - a.count || a.author.localeCompare(b.author));
+  const contributors = mergeContributors(futures, {});
 
   return {
     problems,
@@ -81,6 +79,7 @@ export async function loadModel() {
       site: {
         repo: process.env.GITHUB_REPOSITORY || cfg.site.repo,
         branch: process.env.SITE_BRANCH || cfg.site.branch,
+        discussions: discussionsConfig(cfg.site.discussions),
       },
       generatedAt: new Date().toISOString(),
       year: c.year,
@@ -93,9 +92,63 @@ export async function loadModel() {
       locales: cfg.locales,
       futures,
       contributors,
+      editors: {},
     },
     fileCount: files.length,
   };
+}
+
+/**
+ * 기여자 목록: 조각을 처음 쓴 사람(author)과, GitHub 기록에서 그 파일을 고친 사람(editors)을 합친다.
+ * @param {{author:string, file:string}[]} futures
+ * @param {Record<string, string[]>} editors  파일 이름 → 그 파일을 고친 GitHub 아이디들
+ */
+export function mergeContributors(futures, editors) {
+  const people = new Map();
+  const get = name => people.get(name) ?? people.set(name, { author: name, count: 0, edited: 0 }).get(name);
+  for (const f of futures) get(f.author).count++;
+  const authorsOf = new Map();
+  for (const f of futures) authorsOf.set(f.file, (authorsOf.get(f.file) ?? new Set()).add(f.author));
+  for (const [file, logins] of Object.entries(editors)) {
+    for (const login of new Set(logins)) {
+      if (authorsOf.get(file)?.has(login)) continue; // 자기 파일을 고친 것은 따로 세지 않는다
+      get(login).edited++;
+    }
+  }
+  return [...people.values()].sort((a, b) => b.count - a.count || b.edited - a.edited || a.author.localeCompare(b.author));
+}
+
+/** 토론방(giscus) 설정. 아이디가 다 채워졌을 때만 사이트에 붙인다. */
+function discussionsConfig(d) {
+  const g = d?.giscus;
+  return g?.repoId && g?.categoryId && g?.category ? { giscus: { repoId: g.repoId, category: g.category, categoryId: g.categoryId } } : null;
+}
+
+/**
+ * GitHub 기록에서 futures/ 파일마다 고친 사람의 아이디를 모은다.
+ * GitHub Actions에서 GITHUB_TOKEN이 있을 때만 동작하고, 실패해도 빌드는 계속한다.
+ */
+async function fetchEditors(files, repo) {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    console.log('· 고친 사람 기록: GITHUB_TOKEN이 없어 건너뜁니다 (배포할 때만 모읍니다).');
+    return {};
+  }
+  const editors = {};
+  try {
+    for (const file of files) {
+      const res = await fetch(`https://api.github.com/repos/${repo}/commits?path=${encodeURIComponent(`futures/${file}`)}&per_page=100`, {
+        headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
+      });
+      if (!res.ok) throw new Error(`${res.status} ${file}`);
+      const logins = (await res.json()).map(c => c.author?.login).filter(l => l && !l.endsWith('[bot]'));
+      if (logins.length) editors[file] = [...new Set(logins)];
+    }
+  } catch (e) {
+    console.warn(`! 고친 사람 기록을 가져오지 못했습니다: ${e.message}`);
+    return {};
+  }
+  return editors;
 }
 
 async function report(problems, locales) {
@@ -124,6 +177,9 @@ async function main() {
   console.log(summary);
   if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   if (checkOnly) return;
+
+  bundle.editors = await fetchEditors([...new Set(bundle.futures.map(f => f.file))], bundle.site.repo);
+  bundle.contributors = mergeContributors(bundle.futures, bundle.editors);
 
   const dist = join(root, 'dist');
   await rm(dist, { recursive: true, force: true });

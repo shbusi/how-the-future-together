@@ -100,6 +100,7 @@
     <div class="section-head">
       <h2 id="chron-title" data-i18n="chron.title">분야별 연대기</h2>
       <p class="muted" id="chron-desc"></p>
+      <p class="muted small" data-i18n="chron.fieldsHint">분야 이름을 누르면 그 분야의 모든 조각과 토론이 모인 페이지로 갑니다.</p>
     </div>
     <div class="chron-wrap" tabindex="0" aria-labelledby="chron-title">
       <table class="chron" id="chron"></table>
@@ -229,6 +230,46 @@
     </div>
   </section>
 </main>
+
+<!-- 분야 페이지: 주소가 #field-<분야>일 때 main 대신 보인다 -->
+<section class="field-view" id="field-view" aria-labelledby="fv-title" hidden>
+  <div class="wrap">
+    <a class="back" href="#chronicle" data-i18n="field.back">← 전체 보기</a>
+    <header class="fv-head">
+      <p class="eyebrow" data-i18n="field.eyebrow">분야</p>
+      <h1 id="fv-title"></h1>
+      <p class="muted" id="fv-stats"></p>
+      <div class="fv-actions">
+        <button type="button" class="btn" id="fv-write" data-i18n="field.write">이 분야에 조각 쓰기</button>
+      </div>
+      <nav class="fv-switch" id="fv-switch" data-i18n-aria="field.switch" aria-label="다른 분야로"></nav>
+    </header>
+    <div class="fv-grid">
+      <div class="fv-main">
+        <section aria-labelledby="fv-h-history">
+          <h2 id="fv-h-history" data-i18n="field.history">지나온 길</h2>
+          <ol class="cards" id="fv-history"></ol>
+        </section>
+        <section aria-labelledby="fv-h-futures">
+          <h2 id="fv-h-futures" data-i18n="field.futures">상상한 미래들</h2>
+          <p class="muted" data-i18n="field.futuresDesc">조건에 따라 서로 다른 미래가 펼쳐집니다.</p>
+          <ol class="cards" id="fv-futures"></ol>
+        </section>
+        <section aria-labelledby="fv-h-gaps">
+          <h2 id="fv-h-gaps" data-i18n="field.gaps">아직 비어 있는 시대</h2>
+          <p class="muted" id="fv-gaps-desc"></p>
+          <div class="fv-gaps" id="fv-gaps"></div>
+        </section>
+      </div>
+      <aside class="fv-discuss" aria-labelledby="fv-h-discuss">
+        <h2 id="fv-h-discuss" data-i18n="field.discuss">이 분야 토론</h2>
+        <p class="muted" data-i18n="field.discussDesc">이 분야가 어떻게 바뀌어 왔고 바뀌어 갈지 자유롭게 이야기해 주세요.</p>
+        <div id="fv-discuss-box"></div>
+        <a id="fv-discuss-link" href="#" target="_blank" rel="noopener" data-i18n="field.discussOpen">GitHub에서 토론 보기</a>
+      </aside>
+    </div>
+  </div>
+</section>
 
 <dialog class="piece-dialog" id="piece-dialog" aria-labelledby="dlg-title">
   <div class="dlg-body" id="dlg-body"></div>
