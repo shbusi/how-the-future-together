@@ -1,0 +1,61 @@
+# 관리자가 이슈에 "채택" 라벨을 붙이면, 이슈 본문의 미래 조각 JSON을
+# futures/ 파일로 옮겨 Pull Request를 자동으로 연다.
+# 필요한 설정: Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests"
+name: 채택된 아이디어를 조각으로
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  convert:
+    if: github.event.label.name == '채택'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: convert
+        name: 이슈에서 미래 조각 꺼내기
+        run: node scripts/issue-to-future.mjs
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+      - run: npm run check
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: future/issue-${{ github.event.issue.number }}
+          add-paths: futures/*.json
+          commit-message: "미래 조각 추가 (#${{ github.event.issue.number }})"
+          title: "미래 조각: ${{ github.event.issue.title }}"
+          body: |
+            #${{ github.event.issue.number }}에서 채택된 아이디어를 미래 조각 파일로 옮겼습니다.
+            작성자: @${{ github.event.issue.user.login }}
+
+            Closes #${{ github.event.issue.number }}
+      - name: 옮기지 못한 이유를 이슈에 남기기
+        if: failure() && steps.convert.outputs.errors != ''
+        uses: actions/github-script@v7
+        env:
+          ERRORS: ${{ steps.convert.outputs.errors }}
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: [
+                '채택 라벨을 확인했지만 미래 조각 파일로 옮기지 못했어요.',
+                '',
+                process.env.ERRORS,
+                '',
+                "웹사이트의 '미래 조각 쓰기'에서 JSON을 만들어 이 이슈 본문의 '미래 조각 JSON' 칸에 붙인 뒤, 라벨을 다시 붙여 주세요.",
+              ].join('\n'),
+            });

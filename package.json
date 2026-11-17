@@ -1,0 +1,13 @@
+{
+  "name": "how-the-future-together",
+  "private": true,
+  "description": "조건을 고르면 미래가 그려지고, 그 미래를 모두가 함께 쓰는 웹사이트",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/build.mjs --check",
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

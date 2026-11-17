@@ -1,0 +1,20 @@
+name: 미래 조각 검사
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 미래 조각 형식 검사
+        run: npm run check
+      - name: 엔진 테스트
+        run: npm test

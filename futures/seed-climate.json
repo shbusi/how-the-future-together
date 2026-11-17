@@ -1,0 +1,121 @@
+{
+  "author": "seed",
+  "futures": [
+    {
+      "id": "coastal-retreat",
+      "title": "해안에서의 후퇴",
+      "story": "해수면이 높아지자 해안 마을들이 하나둘 내륙으로 이사를 떠난다. 옛 해수욕장 자리에는 '이곳에 마을이 있었다'는 표지판만 남는다.",
+      "when": { "climate": [0, 35], "year": [2055, 2100] },
+      "tone": "dark",
+      "tags": ["기후", "이주"],
+      "scene": { "sea": 0.15, "decay": 0.1 }
+    },
+    {
+      "id": "seawall-megaproject",
+      "title": "거대 방조제의 시대",
+      "story": "물을 막을 수 있는 도시만 살아남는다. 높이 20미터의 방조제가 해안선을 따라 세워지고, 공사비를 누가 낼지를 두고 지역끼리 다툰다.",
+      "when": { "climate": [0, 45], "tech": [55, 100], "year": [2045, 2100] },
+      "tone": "mixed",
+      "tags": ["기후", "도시"],
+      "scene": { "divide": 0.1 }
+    },
+    {
+      "id": "heat-night-life",
+      "title": "밤에 사는 사람들",
+      "story": "한낮 기온이 45도를 넘는 날이 이어지면서 학교와 시장은 해가 진 뒤에 문을 연다. 도시의 하루는 저녁 7시에 시작된다.",
+      "when": { "climate": [0, 40], "year": [2045, 2100] },
+      "tone": "mixed",
+      "tags": ["기후", "일상"],
+      "scene": { "heat": 0.1 }
+    },
+    {
+      "id": "green-corridor",
+      "title": "도시를 가로지르는 숲길",
+      "story": "차도 절반을 걷어낸 자리에 숲길이 이어진다. 여름 한낮에도 숲길 그늘 아래는 도심보다 4도 낮다.",
+      "when": { "climate": [60, 100], "solidarity": [50, 100], "year": [2035, 2100] },
+      "tone": "bright",
+      "tags": ["기후", "도시"],
+      "scene": { "green": 0.15, "smog": -0.1 }
+    },
+    {
+      "id": "rooftop-solar-coop",
+      "title": "지붕 위 햇빛 협동조합",
+      "story": "아파트 단지마다 지붕 태양광 협동조합이 생긴다. 주민들은 매달 전기 요금 고지서 대신 배당금 통지서를 받는다.",
+      "when": { "climate": [55, 100], "solidarity": [55, 100] },
+      "tone": "bright",
+      "tags": ["에너지", "공동체"],
+      "scene": { "solar": 0.15, "community": 0.1 }
+    },
+    {
+      "id": "climate-refugee-welcome",
+      "title": "기후 이주민을 맞는 동네",
+      "story": "남쪽에서 올라온 기후 이주민을 위해 빈집을 고쳐 내어 준다. 새 이웃이 들어오면서 사라져 가던 동네에 다시 아이 소리가 난다.",
+      "when": { "climate": [0, 40], "solidarity": [60, 100], "year": [2050, 2100] },
+      "tone": "mixed",
+      "tags": ["기후", "이주"],
+      "scene": { "community": 0.1, "decay": -0.1 }
+    },
+    {
+      "id": "climate-checkpoints",
+      "title": "출입증이 필요한 도시",
+      "story": "기후 이주민이 늘어나자 도시들이 출입증을 발급하기 시작한다. 도시 입구의 검문소 앞에는 늘 긴 줄이 서 있다.",
+      "when": { "climate": [0, 40], "solidarity": [0, 40], "year": [2050, 2100] },
+      "tone": "dark",
+      "tags": ["기후", "국경"],
+      "scene": { "divide": 0.2 }
+    },
+    {
+      "id": "milky-way-returns",
+      "title": "다시 보이는 은하수",
+      "story": "석탄 발전소가 모두 멈춘 뒤 처음 맞는 겨울, 서울 하늘에서 은하수가 보였다는 소식이 뉴스 첫 줄을 장식한다.",
+      "when": { "climate": [70, 100], "year": [2040, 2100] },
+      "tone": "bright",
+      "tags": ["기후", "하늘"],
+      "scene": { "smog": -0.2 }
+    },
+    {
+      "id": "dome-city",
+      "title": "돔 아래의 삶",
+      "story": "공기를 걸러 주는 거대한 돔이 도시를 덮는다. 돔 안의 하늘은 언제나 맑지만, 돔 밖으로 나가려면 허가가 필요하다.",
+      "when": { "climate": [0, 30], "tech": [65, 100], "year": [2070, 2100] },
+      "tone": "dark",
+      "tags": ["기후", "기술"],
+      "scene": { "dome": 0.3, "divide": 0.1 }
+    },
+    {
+      "id": "rewilding-villages",
+      "title": "야생으로 돌아간 마을",
+      "story": "사람이 떠난 산골 마을에 숲이 돌아오고, 반달가슴곰과 수달의 흔적이 다시 발견된다. 남은 주민들은 숲 해설가가 된다.",
+      "when": { "population": [0, 35], "climate": [50, 100], "year": [2045, 2100] },
+      "tone": "bright",
+      "tags": ["생태", "지역"],
+      "scene": { "green": 0.2 }
+    },
+    {
+      "id": "water-rationing",
+      "title": "물 배급의 여름",
+      "story": "가뭄이 이어지는 여름, 수돗물은 하루 네 시간만 나온다. 개인 정수 탱크를 살 수 있는 집과 없는 집의 여름은 전혀 다르다.",
+      "when": { "climate": [0, 35], "equality": [0, 40], "year": [2040, 2100] },
+      "tone": "dark",
+      "tags": ["기후", "불평등"],
+      "scene": { "divide": 0.1, "green": -0.1 }
+    },
+    {
+      "id": "heat-shelter-map",
+      "title": "무더위 쉼터 지도",
+      "story": "여름마다 무더위 쉼터 지도가 휴대폰 첫 화면에 뜬다. 은행과 도서관, 편의점이 돌아가며 쉼터 역할을 맡는다.",
+      "when": { "climate": [0, 60], "year": [2026, 2045] },
+      "tone": "mixed",
+      "tags": ["기후", "일상"]
+    },
+    {
+      "id": "green-gentrification",
+      "title": "숲 공원 옆 집값",
+      "story": "강변에 숲 공원이 생기자 주변 집값이 두 배로 뛴다. 공원을 만들자고 했던 오래된 주민들은 더 이상 그 동네에 살지 못한다.",
+      "when": { "climate": [55, 100], "equality": [0, 35], "year": [2035, 2100] },
+      "tone": "mixed",
+      "tags": ["기후", "주거"],
+      "scene": { "green": 0.05, "divide": 0.1 }
+    }
+  ]
+}

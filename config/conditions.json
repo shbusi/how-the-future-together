@@ -1,0 +1,17 @@
+{
+  "year": { "min": 2030, "max": 2100, "step": 5, "default": 2060, "label": "언제의 미래인가요?" },
+  "conditions": [
+    { "id": "climate",    "label": "기후 대응",   "low": "방관",       "high": "총력 대응",  "default": 40 },
+    { "id": "tech",       "label": "기술 발전",   "low": "정체",       "high": "폭발적 가속", "default": 70 },
+    { "id": "solidarity", "label": "사회적 연대", "low": "각자도생",   "high": "함께 결정",  "default": 45 },
+    { "id": "equality",   "label": "부의 분배",   "low": "극단적 격차", "high": "고른 분배",  "default": 35 },
+    { "id": "population", "label": "인구 변화",   "low": "급감",       "high": "증가",       "default": 30 }
+  ],
+  "presets": [
+    { "name": "지금 이대로",   "values": { "year": 2050, "climate": 40, "tech": 60, "solidarity": 40, "equality": 35, "population": 25 } },
+    { "name": "녹색 연대",     "values": { "year": 2070, "climate": 85, "tech": 60, "solidarity": 80, "equality": 75, "population": 45 } },
+    { "name": "빛나는 탑",     "values": { "year": 2080, "climate": 35, "tech": 90, "solidarity": 20, "equality": 15, "population": 50 } },
+    { "name": "잠기는 해안",   "values": { "year": 2100, "climate": 10, "tech": 30, "solidarity": 30, "equality": 30, "population": 20 } },
+    { "name": "느린 마을",     "values": { "year": 2070, "climate": 70, "tech": 20, "solidarity": 75, "equality": 60, "population": 15 } }
+  ]
+}

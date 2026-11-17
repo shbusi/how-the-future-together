@@ -1,0 +1,76 @@
+{
+  "author": "seed",
+  "futures": [
+    {
+      "id": "empty-schools",
+      "title": "아이 없는 학교",
+      "story": "입학생이 없는 초등학교가 해마다 늘어난다. 빈 교실은 노인 주간보호센터와 마을 도서관으로 바뀐다.",
+      "when": { "population": [0, 30], "year": [2026, 2070] },
+      "tone": "mixed",
+      "tags": ["인구", "교육"],
+      "scene": { "decay": 0.1 }
+    },
+    {
+      "id": "compact-shrinking-city",
+      "title": "작아지되 단단하게",
+      "story": "인구가 줄어든 도시들은 중심부로 모여 산다. 비워진 외곽은 숲과 농지로 돌려 놓는다.",
+      "when": { "population": [0, 40], "solidarity": [55, 100], "year": [2045, 2100] },
+      "tone": "bright",
+      "tags": ["인구", "도시"],
+      "scene": { "green": 0.1, "decay": -0.15 }
+    },
+    {
+      "id": "ghost-new-towns",
+      "title": "유령 신도시",
+      "story": "한때 분양 경쟁이 치열했던 신도시 아파트의 절반이 비어 있다. 관리비를 낼 사람이 없어 엘리베이터가 멈춘 동도 있다.",
+      "when": { "population": [0, 35], "solidarity": [0, 45], "year": [2045, 2100] },
+      "tone": "dark",
+      "tags": ["인구", "주거"],
+      "scene": { "decay": 0.2 }
+    },
+    {
+      "id": "robot-caregivers",
+      "title": "돌봄 로봇과 함께 늙어 가기",
+      "story": "혼자 사는 노인의 집마다 돌봄 로봇이 있다. 로봇은 약 먹을 시간을 알려 주고, 자녀에게 매일 안부 영상을 보낸다.",
+      "when": { "population": [0, 40], "tech": [60, 100], "year": [2040, 2100] },
+      "tone": "mixed",
+      "tags": ["인구", "돌봄"]
+    },
+    {
+      "id": "migrant-nation",
+      "title": "함께 쓰는 나라",
+      "story": "새로 태어나는 아이 다섯 명 중 한 명은 부모 중 한 사람이 다른 나라에서 왔다. 학교 급식에 쌀국수와 쿠스쿠스가 올라온다.",
+      "when": { "population": [45, 100], "solidarity": [50, 100], "year": [2040, 2100] },
+      "tone": "bright",
+      "tags": ["인구", "이주"],
+      "scene": { "community": 0.1 }
+    },
+    {
+      "id": "capital-crush",
+      "title": "끝없이 커지는 수도권",
+      "story": "인구의 60퍼센트가 수도권에 산다. 출퇴근에 왕복 세 시간이 걸리고, 지방 소도시에서는 버스 노선부터 사라진다.",
+      "when": { "population": [55, 100], "equality": [0, 45] },
+      "tone": "dark",
+      "tags": ["인구", "지역"],
+      "scene": { "density": 0.15, "smog": 0.05 }
+    },
+    {
+      "id": "playgrounds-loud-again",
+      "title": "다시 시끄러운 놀이터",
+      "story": "집 걱정과 돌봄 걱정이 줄어들자 출생아 수가 30년 만에 늘어난다. 동네 놀이터가 다시 시끄러워진다.",
+      "when": { "population": [65, 100], "equality": [50, 100], "year": [2045, 2100] },
+      "tone": "bright",
+      "tags": ["인구", "돌봄"],
+      "scene": { "community": 0.05 }
+    },
+    {
+      "id": "seaside-remote-towns",
+      "title": "바닷가 소도시로 간 사람들",
+      "story": "원격 근무가 자리 잡자 젊은이들이 바닷가 소도시로 옮겨 간다. 폐교를 고친 공유 오피스가 마을의 중심이 된다.",
+      "when": { "population": [30, 70], "tech": [50, 100], "solidarity": [50, 100], "year": [2040, 2100] },
+      "tone": "bright",
+      "tags": ["지역", "노동"],
+      "scene": { "decay": -0.1 }
+    }
+  ]
+}

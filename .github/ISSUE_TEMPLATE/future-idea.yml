@@ -1,0 +1,28 @@
+name: 미래 조각 제안
+description: 이런 조건에서는 이런 미래가 펼쳐질 것 같아요.
+title: "[미래 조각] "
+labels: ["미래 조각 제안"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        웹사이트의 **미래 조각 쓰기**에서 ‘아이디어로만 남기기’를 누르면 아래 칸이 자동으로 채워집니다.
+        다른 사람들이 👍 반응과 댓글로 의견을 보태고, 관리자가 `채택` 라벨을 붙이면 자동으로 Pull Request가 만들어집니다.
+  - type: textarea
+    id: story
+    attributes:
+      label: 이야기
+      description: 그 미래의 한 장면을 구체적으로 보여 주세요. 누가, 어디서, 무엇을 하고 있나요?
+    validations:
+      required: true
+  - type: textarea
+    id: when
+    attributes:
+      label: 어떤 조건에서 일어나나요?
+      description: "예: 기후 대응이 낮고(0~30) 기술 발전이 빠를 때(70~100), 2050년 이후"
+  - type: textarea
+    id: future_json
+    attributes:
+      label: 미래 조각 JSON
+      description: 웹사이트에서 자동으로 채워집니다. 비워 두면 관리자나 다른 기여자가 채워 줄 수 있습니다.
+      render: json
