@@ -1,0 +1,83 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "care-1935-social-security-act",
+      "type": "history",
+      "title": { "ko": "나이 들어도, 일자리를 잃어도", "en": "When you grow old or lose your job", "ja": "年をとっても、職を失っても", "zh": "无论年老还是失业", "es": "Al envejecer o al perder el trabajo" },
+      "story": { "ko": "1935년 대공황 속에서 미국이 사회보장법을 만들었다. 은퇴한 노인에게는 연금을, 일자리를 잃은 사람에게는 실업 수당을 주는 제도가 생겨, 노후와 실직을 가족이 혼자 감당하지 않아도 되었다.", "en": "In 1935, in the middle of the Great Depression, the United States passed the Social Security Act. It created pensions for retirees and unemployment benefits for people who lost their jobs, so families no longer had to face old age and joblessness alone.", "ja": "1935年、大恐慌のさなかにアメリカで社会保障法が成立した。引退した高齢者には年金を、職を失った人には失業手当を支給する制度ができ、老後や失業を家族だけで背負わなくてもよくなった。", "zh": "1935年，大萧条之中，美国通过了《社会保障法》。退休老人可以领取养老金，失业的人可以领取失业救济，养老和失业不再只由家庭独自承担。", "es": "En 1935, en plena Gran Depresión, Estados Unidos aprobó la Ley de Seguridad Social. Creó pensiones para los jubilados y un seguro de desempleo para quienes perdían el trabajo, de modo que las familias ya no tenían que afrontar solas la vejez y el paro." },
+      "when": { "year": [1935, 1935] },
+      "tone": "bright",
+      "domains": ["care", "economy"],
+      "region": "north-america",
+      "sources": ["https://en.wikipedia.org/wiki/Social_Security_Act"]
+    },
+    {
+      "id": "care-1961-japan-universal-coverage",
+      "type": "history",
+      "title": { "ko": "모두가 가입하는 보험과 연금", "en": "Insurance and pensions for everyone", "ja": "国民皆保険・皆年金", "zh": "全民医保与全民养老金", "es": "Seguro médico y pensión para todos" },
+      "story": { "ko": "1961년 일본은 거의 모든 국민이 건강보험에 가입하는 '국민개보험'을 이루었다. 같은 해 국민연금이 시행되어 농민과 자영업자도 연금에 들 수 있게 되었고, 회사원이 아니어도 병원비와 노후 걱정을 덜 수 있었다.", "en": "In 1961, Japan achieved universal health insurance, with almost everyone enrolled. The same year, the National Pension opened pensions to farmers and the self-employed, so people without company jobs could worry less about medical bills and old age.", "ja": "1961年、日本はほぼすべての国民が健康保険に加入する「国民皆保険」を実現した。同じ年に国民年金が始まって農家や自営業者も年金に入れるようになり、会社員でなくても医療費や老後の不安が和らいだ。", "zh": "1961年，日本实现了几乎人人参保的“全民医保”。同年，国民年金开始实施，农民和个体经营者也能加入养老金，即使不是公司职员，也不必那么担心医药费和养老问题。", "es": "En 1961, Japón logró que casi toda la población tuviera seguro médico. Ese mismo año, la Pensión Nacional abrió las pensiones a agricultores y trabajadores independientes, y quienes no trabajaban en una empresa pudieron preocuparse menos por las facturas médicas y la vejez." },
+      "when": { "year": [1961, 1961] },
+      "tone": "bright",
+      "domains": ["care", "health"],
+      "region": "japan",
+      "sources": ["https://en.wikipedia.org/wiki/Healthcare_in_Japan", "https://en.wikipedia.org/wiki/National_Pension_(Japan)"]
+    },
+    {
+      "id": "care-1988-national-pension",
+      "type": "history",
+      "title": { "ko": "국민연금의 시작", "en": "Korea's national pension begins", "ja": "韓国で国民年金が始まる", "zh": "韩国国民年金起步", "es": "Nace la pensión nacional coreana" },
+      "story": { "ko": "1988년 한국에서 국민연금이 시작되었다. 처음에는 직원 10명 이상인 사업장만 가입했지만 1995년 농어민, 1999년 도시 자영업자로 넓어졌다. 노후를 자식에게 기대던 사회가 연금으로 준비하는 사회로 바뀌기 시작했다.", "en": "South Korea's National Pension began in 1988. At first it covered only workplaces with ten or more employees, but it expanded to farmers and fishers in 1995 and to the urban self-employed in 1999. A society that relied on children in old age began to prepare for it with pensions.", "ja": "1988年、韓国で国民年金が始まった。当初は従業員10人以上の事業所だけが対象だったが、1995年に農漁民、1999年に都市の自営業者へと広がった。老後を子どもに頼ってきた社会が、年金で備える社会へと変わり始めた。", "zh": "1988年，韩国开始实施国民年金。起初只覆盖员工10人以上的单位，1995年扩大到农渔民，1999年又扩大到城市个体经营者。一个靠子女养老的社会，开始转向用养老金为晚年做准备。", "es": "En 1988 comenzó en Corea del Sur la Pensión Nacional. Al principio solo cubría a las empresas con diez o más empleados, pero en 1995 se amplió a agricultores y pescadores, y en 1999 a los trabajadores independientes de las ciudades. Una sociedad que dependía de los hijos en la vejez empezó a prepararse con pensiones." },
+      "when": { "year": [1988, 1999] },
+      "tone": "bright",
+      "domains": ["care", "economy"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/National_Pension_Service"]
+    },
+    {
+      "id": "care-2006-disability-rights-convention",
+      "type": "history",
+      "title": { "ko": "장애는 권리의 문제", "en": "Disability as a matter of rights", "ja": "障害は権利の問題", "zh": "残障是权利问题", "es": "La discapacidad, cuestión de derechos" },
+      "story": { "ko": "2006년 유엔이 장애인권리협약을 채택했다. 장애인을 보호받는 대상이 아니라 권리를 가진 사람으로 보고, 시설이 아닌 지역사회에서 스스로 선택하며 살 권리를 분명히 적었다.", "en": "In 2006, the UN adopted the Convention on the Rights of Persons with Disabilities. It treated disabled people not as objects of protection but as people with rights, including the right to live independently and be included in the community rather than in institutions.", "ja": "2006年、国連が障害者権利条約を採択した。障害のある人を保護される対象ではなく権利を持つ人ととらえ、施設ではなく地域社会で自ら選んで暮らす権利を明記した。", "zh": "2006年，联合国通过了《残疾人权利公约》。公约不再把残障人士视为被保护的对象，而是拥有权利的人，并明确写下他们有权在社区而不是在机构里自主选择生活。", "es": "En 2006, la ONU aprobó la Convención sobre los Derechos de las Personas con Discapacidad. Dejó de verlas como objeto de protección y las reconoció como titulares de derechos, incluido el de vivir de forma independiente en la comunidad y no en instituciones." },
+      "when": { "year": [2006, 2008] },
+      "tone": "bright",
+      "domains": ["care", "rights"],
+      "sources": ["https://en.wikipedia.org/wiki/Convention_on_the_Rights_of_Persons_with_Disabilities"]
+    },
+    {
+      "id": "care-2011-domestic-workers-convention",
+      "type": "history",
+      "title": { "ko": "가사노동자도 노동자다", "en": "Domestic workers are workers too", "ja": "家事労働者も労働者だ", "zh": "家政工也是劳动者", "es": "El trabajo doméstico también es trabajo" },
+      "story": { "ko": "2011년 국제노동기구(ILO)가 가사노동자 협약을 채택했다. 남의 집에서 아이와 노인을 돌보고 살림을 하는 사람도 주 1회 이상의 휴식, 최저임금, 분명한 근로 조건을 보장받아야 한다는 국제 기준이 처음 생겼다.", "en": "In 2011, the International Labour Organization adopted the Domestic Workers Convention. For the first time, an international standard said that people who cook, clean and care for children and older people in other people's homes are owed weekly rest, the minimum wage and clear terms of employment.", "ja": "2011年、国際労働機関（ILO）が家事労働者条約を採択した。他人の家で子どもや高齢者の世話をし、家事を担う人にも、週1回以上の休息、最低賃金、はっきりした労働条件を保障すべきだという国際基準が初めて生まれた。", "zh": "2011年，国际劳工组织通过了《家政工人公约》。在别人家里照顾孩子和老人、操持家务的人，也应享有每周休息、最低工资和明确的劳动条件——这样的国际标准第一次出现了。", "es": "En 2011, la Organización Internacional del Trabajo aprobó el Convenio sobre las trabajadoras y los trabajadores domésticos. Por primera vez, una norma internacional estableció que quienes cuidan de niños y mayores y llevan la casa de otros tienen derecho a descanso semanal, salario mínimo y condiciones de trabajo claras." },
+      "when": { "year": [2011, 2013] },
+      "tone": "bright",
+      "domains": ["care", "work"],
+      "sources": ["https://en.wikipedia.org/wiki/Domestic_Workers_Convention"]
+    },
+    {
+      "id": "care-future-care-counts",
+      "title": { "ko": "돌봄도 경력이 된다", "en": "Care counts as a career", "ja": "ケアもキャリアになる", "zh": "照护也算工作经历", "es": "Cuidar también cuenta como trabajo" },
+      "story": { "ko": "아이나 부모를 돌본 시간이 연금과 경력에 그대로 쌓인다. 아빠들도 엄마만큼 돌봄 휴직을 쓰고, 이력서의 돌봄 기간은 공백이 아니라 경험으로 읽힌다.", "en": "Time spent caring for children or parents counts toward pensions and careers. Fathers take as much care leave as mothers, and a stretch of caregiving on a résumé reads as experience, not a gap.", "ja": "子どもや親の世話をした時間が、そのまま年金と職歴に積み上がる。父親も母親と同じだけケア休業を取り、履歴書のケア期間は空白ではなく経験として読まれる。", "zh": "照顾孩子或父母的时间，会如实计入养老金和工作经历。爸爸和妈妈一样休照护假，简历上的照护时期不再被看作空白，而是一段经验。", "es": "El tiempo dedicado a cuidar de hijos o padres suma para la pensión y la carrera profesional. Los padres se toman tantos permisos de cuidado como las madres, y un periodo de cuidados en el currículum se lee como experiencia, no como un vacío." },
+      "when": { "year": [2032, 2100], "equality": [50, 100], "solidarity": [50, 100] },
+      "tone": "bright",
+      "domains": ["care", "work"]
+    },
+    {
+      "id": "care-future-care-deserts",
+      "title": { "ko": "돌봄 사막", "en": "Care deserts", "ja": "ケア砂漠", "zh": "照护荒漠", "es": "Desiertos de cuidados" },
+      "story": { "ko": "요양보호사를 구하지 못한 요양원이 하나둘 문을 닫는다. 지방에서는 빈자리를 기다리다 해를 넘기는 노인이 많고, 결국 자녀 한 명이 일을 그만두고 집으로 돌아온다.", "en": "Nursing homes that cannot find care workers close one after another. Outside the big cities, many older people wait more than a year for a place, until one of their children quits work and moves back home to look after them.", "ja": "介護職員が見つからない介護施設が次々と閉じていく。地方では空きを待つうちに年を越す高齢者が多く、結局、子どもの一人が仕事を辞めて家に戻ってくる。", "zh": "招不到护理员的养老院一家接一家关门。在小城和乡村，许多老人排队等床位一等就是一年多，最后只好由一个子女辞掉工作，回家照顾。", "es": "Las residencias que no consiguen cuidadores cierran una tras otra. Fuera de las grandes ciudades, muchas personas mayores esperan más de un año por una plaza, hasta que uno de sus hijos deja el trabajo y vuelve a casa para cuidarlas." },
+      "when": { "year": [2055, 2100], "population": [0, 35], "solidarity": [0, 40], "equality": [0, 40] },
+      "tone": "dark",
+      "domains": ["care", "population"]
+    },
+    {
+      "id": "care-future-care-service-year",
+      "title": { "ko": "스무 살의 돌봄 복무", "en": "A care year at twenty", "ja": "二十歳のケア奉仕", "zh": "二十岁的照护服务年", "es": "Un año de cuidados a los veinte" },
+      "story": { "ko": "스무 살이 되면 누구나 1년 동안 요양원이나 어린이집에서 일한다. 노인의 손을 처음 잡아 본 청년들이 돌봄을 직업으로 택하기도 하지만, '강제 노동'이라며 거부하는 목소리도 여전하다.", "en": "At twenty, everyone spends a year working in a nursing home or a daycare center. Some young people, holding an old person's hand for the first time, go on to make care their profession, but others still reject it as forced labor.", "ja": "二十歳になると、誰もが1年間、介護施設や保育園で働く。初めてお年寄りの手を握った若者がケアを仕事に選ぶこともあるが、「強制労働だ」と拒む声も根強い。", "zh": "年满二十岁的人都要在养老院或托儿所工作一年。有些第一次握住老人手的年轻人从此以照护为业，但也有人始终斥之为“强制劳动”。", "es": "Al cumplir veinte años, todo el mundo trabaja un año en una residencia de mayores o en una guardería. Algunos jóvenes, que toman por primera vez la mano de una persona mayor, acaban dedicándose a los cuidados, pero otros lo siguen rechazando como trabajo forzoso." },
+      "when": { "year": [2076, 2100], "population": [0, 35], "solidarity": [55, 100] },
+      "tone": "mixed",
+      "domains": ["care", "daily"]
+    }
+  ]
+}

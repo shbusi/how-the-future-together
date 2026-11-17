@@ -1,0 +1,84 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "family-1926-turkish-civil-code",
+      "type": "history",
+      "title": { "ko": "일부다처제가 금지되다", "en": "Polygamy is banned", "ja": "一夫多妻制の禁止", "zh": "一夫多妻制被废除", "es": "Se prohíbe la poligamia" },
+      "story": { "ko": "1926년 튀르키예가 스위스 민법을 본뜬 새 민법을 시행했다. 일부다처제가 금지되고 관청에 신고하는 민사혼이 의무가 되었으며, 여성도 어떤 직업이든 고를 권리를 얻었다.", "en": "In 1926, Turkey adopted a new civil code modeled on Switzerland's. Polygamy was banned, civil marriage registered with the state became compulsory, and women gained the right to choose any profession.", "ja": "1926年、トルコはスイス民法を手本にした新しい民法を施行した。一夫多妻制が禁止され、役所に届け出る民事婚が義務となり、女性もどんな職業でも選べる権利を得た。", "zh": "1926年，土耳其以瑞士民法为蓝本颁布了新的民法典。一夫多妻制被禁止，婚姻必须在政府登记，女性也获得了自由选择职业的权利。", "es": "En 1926, Turquía adoptó un nuevo código civil inspirado en el suizo. Se prohibió la poligamia, el matrimonio civil inscrito ante el Estado pasó a ser obligatorio y las mujeres obtuvieron el derecho a elegir cualquier profesión." },
+      "when": { "year": [1926, 1926] },
+      "tone": "bright",
+      "domains": ["family", "rights"],
+      "region": "middle-east",
+      "sources": ["https://en.wikipedia.org/wiki/Turkish_civil_code_(1926)"]
+    },
+    {
+      "id": "family-1960-birth-control-pill",
+      "type": "history",
+      "title": { "ko": "아이를 언제 낳을지 스스로", "en": "Choosing when to have children", "ja": "子どもを産む時期を自分で", "zh": "自己决定何时生孩子", "es": "Decidir cuándo tener hijos" },
+      "story": { "ko": "1960년 미국에서 먹는 피임약이 처음 승인되었고, 곧 세계 여러 나라로 퍼졌다. 여성이 아이를 언제, 몇 명 낳을지 스스로 정할 수 있게 되면서 공부와 일, 결혼의 계획이 달라졌다.", "en": "In 1960, the first birth control pill was approved in the United States, and it soon spread to many other countries. Once women could decide for themselves when to have children and how many, their plans for study, work and marriage changed.", "ja": "1960年、アメリカで初めて経口避妊薬が承認され、まもなく世界各国に広がった。女性が子どもを産む時期や人数を自分で決められるようになり、学業や仕事、結婚の計画が変わった。", "zh": "1960年，美国批准了第一种口服避孕药，它很快传到世界许多国家。女性能自己决定何时生、生几个孩子，学习、工作和婚姻的规划也随之改变。", "es": "En 1960 se aprobó en Estados Unidos la primera píldora anticonceptiva, que pronto llegó a muchos otros países. Al poder decidir cuándo y cuántos hijos tener, las mujeres cambiaron sus planes de estudio, trabajo y matrimonio." },
+      "when": { "year": [1960, 1960] },
+      "tone": "bright",
+      "domains": ["family", "health"],
+      "sources": ["https://en.wikipedia.org/wiki/Combined_oral_contraceptive_pill"]
+    },
+    {
+      "id": "family-1979-cedaw",
+      "type": "history",
+      "title": { "ko": "결혼과 가족 안의 평등", "en": "Equality in marriage and family", "ja": "結婚と家族の中の平等", "zh": "婚姻与家庭中的平等", "es": "Igualdad en el matrimonio y la familia" },
+      "story": { "ko": "1979년 유엔이 여성차별철폐협약을 채택했다. 결혼 상대를 자유롭게 고를 권리와 부모로서의 권리와 책임을 남녀가 똑같이 가져야 한다고 정했고, 이후 189개국이 이 협약을 비준했다.", "en": "In 1979, the UN adopted the Convention on the Elimination of All Forms of Discrimination Against Women. It said women and men must have the same right to freely choose a spouse and the same rights and responsibilities as parents. It has since been ratified by 189 countries.", "ja": "1979年、国連が女性差別撤廃条約を採択した。結婚相手を自由に選ぶ権利や、親としての権利と責任を男女が等しく持つべきだと定め、その後189か国が批准した。", "zh": "1979年，联合国通过了《消除对妇女一切形式歧视公约》。公约规定，男女在自由选择配偶以及作为父母的权利和责任方面一律平等。此后已有189个国家批准了该公约。", "es": "En 1979, la ONU aprobó la Convención sobre la eliminación de todas las formas de discriminación contra la mujer. Estableció que mujeres y hombres deben tener el mismo derecho a elegir libremente cónyuge y los mismos derechos y deberes como progenitores. Desde entonces la han ratificado 189 países." },
+      "when": { "year": [1979, 1981] },
+      "tone": "bright",
+      "domains": ["family", "rights"],
+      "sources": ["https://en.wikipedia.org/wiki/Convention_on_the_Elimination_of_All_Forms_of_Discrimination_Against_Women"]
+    },
+    {
+      "id": "family-2005-hoju-system-abolished",
+      "type": "history",
+      "title": { "ko": "호주제가 사라지다", "en": "The end of the household-head system", "ja": "戸主制の廃止", "zh": "户主制度的废除", "es": "Fin del sistema de cabeza de familia" },
+      "story": { "ko": "2005년 헌법재판소가 호주제에 헌법불합치 결정을 내렸고, 2008년 호주제가 폐지되었다. 남성 가장 아래 온 가족을 올리던 호적 대신 한 사람씩 기록하는 가족관계등록부가 생겼고, 자녀가 어머니의 성을 따를 길도 열렸다.", "en": "In 2005, South Korea's Constitutional Court ruled the hoju (household-head) system incompatible with the constitution, and it was abolished in 2008. Registers that listed a whole family under a male head gave way to individual records, and children could now take their mother's surname.", "ja": "2005年、韓国の憲法裁判所が戸主制を憲法に合わないと判断し、2008年に戸主制は廃止された。男性の家長の下に家族全員を載せる戸籍に代わって一人ひとりを記録する家族関係登録簿ができ、子どもが母親の姓を名乗る道も開かれた。", "zh": "2005年，韩国宪法法院裁定户主制与宪法不符，2008年户主制被正式废除。把全家人登记在男性户主名下的户籍，被逐人登记的家庭关系登记簿取代，孩子也可以随母亲的姓了。", "es": "En 2005, el Tribunal Constitucional de Corea del Sur declaró incompatible con la Constitución el sistema hoju de cabeza de familia, que se abolió en 2008. El registro que inscribía a toda la familia bajo un varón dio paso a registros individuales, y los hijos pudieron llevar el apellido de la madre." },
+      "when": { "year": [2005, 2008] },
+      "tone": "bright",
+      "domains": ["family", "rights"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Hoju"]
+    },
+    {
+      "id": "family-2019-taiwan-same-sex-marriage",
+      "type": "history",
+      "title": { "ko": "아시아 첫 동성 결혼", "en": "Asia's first same-sex marriages", "ja": "アジア初の同性婚", "zh": "亚洲首次同性婚姻合法化", "es": "Primer matrimonio igualitario de Asia" },
+      "story": { "ko": "2019년 5월 대만이 아시아에서 처음으로 동성 결혼을 법으로 인정했다. 법이 시행된 첫날 500쌍이 넘는 커플이 혼인 신고를 했고, 오래 함께 살아온 동반자들이 병원과 상속 문제에서 가족으로 인정받게 되었다.", "en": "In May 2019, Taiwan became the first place in Asia to legalize same-sex marriage. More than 500 couples registered on the first day, and partners who had long shared their lives were recognized as family in hospitals and in matters of inheritance.", "ja": "2019年5月、台湾がアジアで初めて同性婚を法的に認めた。施行初日には500組を超えるカップルが婚姻届を出し、長く人生を共にしてきたパートナーが、病院や相続の場面で家族として認められるようになった。", "zh": "2019年5月，台湾成为亚洲第一个让同性婚姻合法化的地方。法律生效第一天就有500多对伴侣登记结婚，长期共同生活的伴侣在医院和继承问题上终于被承认为家人。", "es": "En mayo de 2019, Taiwán se convirtió en el primer lugar de Asia en legalizar el matrimonio entre personas del mismo sexo. Más de 500 parejas se casaron el primer día, y quienes llevaban años compartiendo su vida pasaron a ser familia en el hospital y en las herencias." },
+      "when": { "year": [2019, 2019] },
+      "tone": "bright",
+      "domains": ["family", "rights"],
+      "region": "east-asia",
+      "sources": ["https://en.wikipedia.org/wiki/Same-sex_marriage_in_Taiwan"]
+    },
+    {
+      "id": "family-future-chosen-families",
+      "title": { "ko": "친구와 가족이 되는 법", "en": "Becoming family with friends", "ja": "友だちと家族になる", "zh": "和朋友成为家人", "es": "Ser familia con los amigos" },
+      "story": { "ko": "혈연이나 결혼이 아니어도 함께 사는 사람을 가족으로 등록할 수 있다. 30년 지기 친구 셋이 서로의 수술 동의서에 서명하고, 한집에 살며 함께 늙어 간다.", "en": "You can register the people you live with as family, even without blood ties or marriage. Three friends of thirty years sign each other's surgery consent forms and grow old together under one roof.", "ja": "血縁や結婚がなくても、一緒に暮らす人を家族として登録できる。30年来の友人3人が互いの手術同意書に署名し、ひとつ屋根の下で年を重ねていく。", "zh": "即使没有血缘或婚姻关系，也能把一起生活的人登记为家人。相识三十年的三个朋友互相在手术同意书上签字，在同一个屋檐下一起慢慢变老。", "es": "Se puede registrar como familia a las personas con quienes se convive, aunque no haya lazos de sangre ni matrimonio. Tres amigos que se conocen desde hace treinta años firman los consentimientos quirúrgicos de los otros y envejecen juntos bajo el mismo techo." },
+      "when": { "year": [2033, 2100], "solidarity": [55, 100], "population": [0, 50] },
+      "tone": "bright",
+      "domains": ["family", "daily"],
+      "scene": { "community": 0.1 }
+    },
+    {
+      "id": "family-future-divided-by-borders",
+      "title": { "ko": "국경이 갈라놓은 가족", "en": "Families divided by borders", "ja": "国境に引き裂かれた家族", "zh": "被国境分开的家庭", "es": "Familias separadas por fronteras" },
+      "story": { "ko": "국경이 닫히면서 부모와 자식이 서로 다른 나라에 남겨진다. 손주의 첫걸음은 화면으로만 보고, 명절이면 검문소 철망 사이로 서로 손을 흔드는 가족들이 모여든다.", "en": "As borders close, parents and children are left stranded in different countries. Grandparents see a grandchild's first steps only on a screen, and on holidays families gather at the checkpoint to wave to each other through the wire fence.", "ja": "国境が閉ざされ、親と子が別々の国に取り残される。孫の初めての一歩は画面越しにしか見られず、祝日には検問所の金網越しに手を振り合う家族が集まってくる。", "zh": "边境关闭后，父母和子女被困在不同的国家。祖父母只能在屏幕上看孙子迈出第一步。每逢节日，许多家庭聚到检查站，隔着铁丝网向对方挥手。", "es": "Al cerrarse las fronteras, padres e hijos quedan atrapados en países distintos. Los abuelos ven los primeros pasos de sus nietos solo en una pantalla, y en las fiestas las familias se reúnen en el puesto fronterizo para saludarse a través de la alambrada." },
+      "when": { "year": [2053, 2100], "peace": [0, 30], "solidarity": [0, 45] },
+      "tone": "dark",
+      "domains": ["family", "peace"]
+    },
+    {
+      "id": "family-future-artificial-wombs",
+      "title": { "ko": "몸 밖에서 자라는 아기", "en": "Babies grown outside the body", "ja": "体の外で育つ赤ちゃん", "zh": "在母体外长大的婴儿", "es": "Bebés que crecen fuera del cuerpo" },
+      "story": { "ko": "인공 자궁이 흔해져 임신 때문에 일을 그만두는 사람이 사라진다. 아빠 둘, 엄마 둘인 집도 아기를 기다린다. 하지만 기계를 빌릴 돈이 없는 사람은 여전히 몸으로 낳고, '어떻게 태어났느냐'가 새로운 꼬리표가 된다.", "en": "Artificial wombs have become common, and no one has to quit work because of a pregnancy. Homes with two dads or two moms are expecting babies too. But those who cannot afford the machines still give birth the old way, and “How were you born?” becomes a new kind of label.", "ja": "人工子宮が当たり前になり、妊娠のために仕事を辞める人はいなくなる。父親が二人、母親が二人の家庭も赤ちゃんの誕生を待つ。だが機械を借りるお金のない人は今も自分の体で産み、「どうやって生まれたか」が新しいレッテルになる。", "zh": "人造子宫普及后，再也没有人因为怀孕而辞职。有两个爸爸或两个妈妈的家庭也在期待宝宝出生。但租不起机器的人仍然只能亲身生产，“你是怎么出生的”成了一种新的标签。", "es": "Los úteros artificiales se han vuelto habituales y ya nadie deja el trabajo por un embarazo. Los hogares con dos padres o dos madres también esperan bebés. Pero quien no puede pagar las máquinas sigue dando a luz como siempre, y «¿cómo naciste?» se convierte en una nueva etiqueta." },
+      "when": { "year": [2080, 2100], "tech": [75, 100], "population": [0, 40] },
+      "tone": "mixed",
+      "domains": ["family", "technology", "health"]
+    }
+  ]
+}
