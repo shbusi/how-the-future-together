@@ -1,0 +1,86 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "science-1913-haber-bosch",
+      "type": "history",
+      "title": { "ko": "공기로 만든 비료", "en": "Fertilizer made from air", "ja": "空気から作った肥料", "zh": "用空气制造的化肥", "es": "Fertilizante hecho del aire" },
+      "story": { "ko": "1913년 독일에서 공기 중의 질소로 암모니아를 대량 생산하는 하버-보슈 공정의 첫 공장이 가동되었다. 값싼 화학 비료 덕분에 식량 생산이 크게 늘었지만, 같은 기술은 전쟁에 쓰일 폭약을 만드는 데도 쓰였다.", "en": "In 1913, the first factory using the Haber–Bosch process, which mass-produces ammonia from nitrogen in the air, began running in Germany. Cheap chemical fertilizer greatly increased food production, but the same technology was also used to make explosives for war.", "ja": "1913年、空気中の窒素からアンモニアを大量生産するハーバー・ボッシュ法の最初の工場がドイツで稼働した。安い化学肥料のおかげで食料生産は大きく増えたが、同じ技術は戦争に使う爆薬づくりにも使われた。", "zh": "1913年，利用空气中的氮大量生产氨的哈伯-博施法首座工厂在德国投产。廉价的化肥让粮食产量大幅增加，但同样的技术也被用来制造战争用的炸药。", "es": "En 1913 comenzó a funcionar en Alemania la primera fábrica del proceso Haber-Bosch, que produce amoníaco en masa a partir del nitrógeno del aire. El fertilizante químico barato aumentó mucho la producción de alimentos, pero la misma técnica sirvió también para fabricar explosivos de guerra." },
+      "when": { "year": [1913, 1913] },
+      "tone": "mixed",
+      "domains": ["science", "food"],
+      "region": "europe",
+      "sources": ["https://en.wikipedia.org/wiki/Haber_process"]
+    },
+    {
+      "id": "science-1969-moon-landing",
+      "type": "history",
+      "title": { "ko": "달에 내린 사람", "en": "People on the Moon", "ja": "月に降り立った人間", "zh": "登上月球的人", "es": "Personas en la Luna" },
+      "story": { "ko": "1969년 아폴로 11호의 우주비행사들이 달에 발을 디뎠다. 전 세계 수억 명이 같은 순간 텔레비전으로 그 장면을 지켜보았다.", "en": "In 1969, the astronauts of Apollo 11 set foot on the Moon. Hundreds of millions of people around the world watched the moment on television at the same time.", "ja": "1969年、アポロ11号の宇宙飛行士たちが月面に降り立った。世界中で何億人もの人々が、その瞬間を同時にテレビで見守った。", "zh": "1969年，阿波罗11号的宇航员踏上了月球。全世界数亿人在同一时刻通过电视观看了这一幕。", "es": "En 1969, los astronautas del Apolo 11 pisaron la Luna. Cientos de millones de personas en todo el mundo vieron el momento por televisión al mismo tiempo." },
+      "when": { "year": [1969, 1969] },
+      "tone": "bright",
+      "domains": ["science", "media"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Apollo_11"]
+    },
+    {
+      "id": "science-1972-artemisinin",
+      "type": "history",
+      "title": { "ko": "약초에서 찾은 말라리아 약", "en": "A malaria cure from an old herb", "ja": "薬草から見つけたマラリアの薬", "zh": "从草药中找到的疟疾良药", "es": "Una cura contra la malaria en una hierba" },
+      "story": { "ko": "1972년 중국의 투유유 연구팀이 옛 의학서를 실마리 삼아 개똥쑥에서 말라리아 치료 물질인 아르테미시닌을 순수하게 얻어냈다. 이 약은 아프리카와 아시아에서 수많은 생명을 구했고, 투유유는 2015년 노벨상을 받았다.", "en": "In 1972, Tu Youyou's team in China, taking clues from an ancient medical text, isolated artemisinin, a malaria treatment, from sweet wormwood. The drug went on to save countless lives in Africa and Asia, and Tu received the Nobel Prize in 2015.", "ja": "1972年、中国の屠呦呦（ト・ユウユウ）の研究チームが古い医学書を手がかりに、クソニンジンからマラリア治療薬となるアルテミシニンを取り出した。この薬はアフリカやアジアで数えきれない命を救い、屠呦呦は2015年にノーベル賞を受賞した。", "zh": "1972年，中国屠呦呦团队以古代医书为线索，从青蒿中提取出治疗疟疾的青蒿素。这种药在非洲和亚洲挽救了无数生命，屠呦呦于2015年获得诺贝尔奖。", "es": "En 1972, el equipo de Tu Youyou en China, guiado por un antiguo texto médico, aisló la artemisinina, un tratamiento contra la malaria, del ajenjo dulce. El fármaco salvó incontables vidas en África y Asia, y Tu recibió el Premio Nobel en 2015." },
+      "when": { "year": [1972, 1972] },
+      "tone": "bright",
+      "domains": ["science", "health"],
+      "region": "china",
+      "sources": ["https://en.wikipedia.org/wiki/Tu_Youyou", "https://en.wikipedia.org/wiki/Artemisinin"]
+    },
+    {
+      "id": "science-2005-hwang-scandal",
+      "type": "history",
+      "title": { "ko": "무너진 줄기세포의 꿈", "en": "The stem cell dream collapses", "ja": "崩れた幹細胞の夢", "zh": "破灭的干细胞之梦", "es": "Cae el sueño de las células madre" },
+      "story": { "ko": "2005년 말 황우석 연구팀의 인간 배아 줄기세포 논문이 조작된 것으로 드러났다. 난치병 치료의 희망에 들떴던 사람들은 큰 충격을 받았고, 연구 윤리와 과학 검증이 사회적 문제로 떠올랐다.", "en": "In late 2005, the human embryonic stem cell papers of Hwang Woo-suk's team were revealed to be fabricated. People who had pinned their hopes on cures for incurable diseases were deeply shocked, and research ethics and scientific verification became a public issue.", "ja": "2005年末、黄禹錫（ファン・ウソク）研究チームのヒト胚性幹細胞の論文が捏造だったことが明らかになった。難病治療への希望に沸いていた人々は大きな衝撃を受け、研究倫理と科学の検証が社会の問題として浮かび上がった。", "zh": "2005年底，黄禹锡团队关于人类胚胎干细胞的论文被揭露造假。曾对治愈疑难病症满怀希望的人们深受震惊，科研伦理和科学验证成为社会关注的问题。", "es": "A finales de 2005 se reveló que los artículos del equipo de Hwang Woo-suk sobre células madre embrionarias humanas eran fraudulentos. Quienes habían puesto sus esperanzas en curar enfermedades incurables quedaron conmocionados, y la ética de la investigación y la verificación científica se volvieron un asunto público." },
+      "when": { "year": [2005, 2006] },
+      "tone": "dark",
+      "domains": ["science", "health"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Hwang_Woo-suk"]
+    },
+    {
+      "id": "science-2020-mrna-vaccines",
+      "type": "history",
+      "title": { "ko": "1년 만에 나온 백신", "en": "A vaccine within a year", "ja": "1年で生まれたワクチン", "zh": "一年内问世的疫苗", "es": "Una vacuna en menos de un año" },
+      "story": { "ko": "2020년 코로나19가 세계를 덮치자 mRNA 기술을 쓴 백신이 1년도 안 되어 개발되어 그해 말 접종이 시작되었다. 수많은 사람이 중증과 죽음을 피했지만, 부유한 나라가 백신을 먼저 차지하면서 나라 사이의 격차도 드러났다.", "en": "When COVID-19 swept the world in 2020, vaccines using mRNA technology were developed in less than a year, and vaccinations began by the end of that year. Countless people were spared severe illness and death, but as rich countries secured doses first, the gap between nations was laid bare.", "ja": "2020年に新型コロナウイルスが世界を襲うと、mRNA技術を使ったワクチンが1年足らずで開発され、その年の末には接種が始まった。多くの人が重症化や死を免れたが、豊かな国が先にワクチンを確保したことで、国と国の格差もあらわになった。", "zh": "2020年新冠疫情席卷全球，采用mRNA技术的疫苗在不到一年内研制成功，当年年底便开始接种。许多人因此免于重症和死亡，但富裕国家抢先获得疫苗，也暴露出国家之间的差距。", "es": "Cuando la COVID-19 azotó el mundo en 2020, se desarrollaron en menos de un año vacunas con tecnología de ARNm, y la vacunación empezó a finales de ese año. Muchísimas personas se libraron de la enfermedad grave y la muerte, pero los países ricos acapararon primero las dosis y quedó expuesta la brecha entre naciones." },
+      "when": { "year": [2020, 2021] },
+      "tone": "mixed",
+      "domains": ["science", "health"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/MRNA_vaccine", "https://en.wikipedia.org/wiki/COVID-19_vaccine"]
+    },
+    {
+      "id": "science-future-vaccine-in-100-days",
+      "title": { "ko": "100일 만의 백신", "en": "A vaccine in 100 days", "ja": "100日でできるワクチン", "zh": "百日疫苗", "es": "Una vacuna en 100 días" },
+      "story": { "ko": "새로운 전염병이 나타나자 세계 곳곳의 연구소가 바이러스 정보를 실시간으로 공유한다. 100일 만에 백신이 나오고, 가난한 나라의 공장에서도 같은 날 생산이 시작된다.", "en": "When a new infectious disease appears, labs around the world share data on the virus in real time. A vaccine is ready in 100 days, and factories in poorer countries start making it on the same day.", "ja": "新しい感染症が現れると、世界中の研究所がウイルスの情報をリアルタイムで共有する。100日でワクチンが完成し、貧しい国の工場でも同じ日に生産が始まる。", "zh": "新的传染病一出现，世界各地的研究机构便实时共享病毒信息。疫苗在100天内问世，贫穷国家的工厂也在同一天开始生产。", "es": "Cuando aparece una nueva enfermedad infecciosa, laboratorios de todo el mundo comparten en tiempo real los datos del virus. En 100 días hay una vacuna, y las fábricas de los países más pobres empiezan a producirla el mismo día." },
+      "when": { "year": [2030, 2100], "peace": [55, 100], "solidarity": [50, 100], "tech": [45, 100] },
+      "tone": "bright",
+      "domains": ["science", "health"]
+    },
+    {
+      "id": "science-future-pale-sky",
+      "title": { "ko": "햇빛을 가린 하늘", "en": "A sky that blocks the sun", "ja": "日差しを遮る空", "zh": "遮住阳光的天空", "es": "Un cielo que tapa el sol" },
+      "story": { "ko": "더위를 견디지 못한 몇몇 나라가 성층권에 미세한 입자를 뿌려 햇빛을 가린다. 하늘은 늘 희뿌옇게 바래고, 비가 줄어든 이웃 나라들은 누가 날씨를 망쳤는지 따진다.", "en": "Unable to bear the heat any longer, a few countries spray fine particles into the stratosphere to block sunlight. The sky is always a washed-out white, and neighboring countries that now get less rain demand to know who ruined the weather.", "ja": "暑さに耐えきれなくなったいくつかの国が、成層圏に微粒子をまいて日差しを遮る。空はいつも白くかすみ、雨が減った隣国は、誰が天気を壊したのかと責任を問う。", "zh": "几个再也忍受不了酷热的国家向平流层喷洒微粒，遮挡阳光。天空总是灰白一片，降雨减少的邻国纷纷追问：究竟是谁毁了天气？", "es": "Incapaces de soportar más el calor, algunos países rocían partículas finas en la estratosfera para tapar la luz del sol. El cielo luce siempre blanquecino, y los países vecinos, donde ahora llueve menos, exigen saber quién arruinó el clima." },
+      "when": { "year": [2055, 2100], "climate": [0, 35], "tech": [55, 100] },
+      "tone": "dark",
+      "domains": ["science", "environment"],
+      "scene": { "smog": 0.1 }
+    },
+    {
+      "id": "science-future-born-on-the-moon",
+      "title": { "ko": "달에서 태어난 아이", "en": "A child born on the Moon", "ja": "月で生まれた子ども", "zh": "在月球出生的孩子", "es": "Un bebé nacido en la Luna" },
+      "story": { "ko": "여러 나라가 함께 세운 달 기지에서 첫 아이가 태어난다. 지구의 사람들은 축하를 보내면서도, 약한 중력 속에서 자란 아이가 언젠가 지구 땅을 밟을 수 있을지 걱정한다.", "en": "The first child is born at a Moon base built by several countries together. People on Earth send their congratulations but also worry whether a child raised in such weak gravity will ever be able to walk on Earth.", "ja": "複数の国が共同で建設した月面基地で、初めての子どもが生まれる。地球の人々は祝福を送りながらも、弱い重力の中で育つその子が、いつか地球の大地を踏めるのかと心配する。", "zh": "在多国合建的月球基地里，第一个孩子出生了。地球上的人们送上祝福，同时也担心：在微弱重力中长大的孩子，将来能否踏上地球的土地。", "es": "Nace el primer bebé en una base lunar construida por varios países. En la Tierra la gente lo celebra, pero también se pregunta si un niño criado con tan poca gravedad podrá algún día caminar sobre la Tierra." },
+      "when": { "year": [2080, 2100], "tech": [70, 100], "peace": [50, 100], "growth": [45, 100] },
+      "tone": "mixed",
+      "domains": ["science", "family"]
+    }
+  ]
+}

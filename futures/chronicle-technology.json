@@ -1,0 +1,86 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "technology-1907-bakelite",
+      "type": "history",
+      "title": { "ko": "최초의 합성 플라스틱", "en": "The first synthetic plastic", "ja": "最初の合成プラスチック", "zh": "第一种合成塑料", "es": "El primer plástico sintético" },
+      "story": { "ko": "1907년 미국에서 최초의 합성 플라스틱인 베이클라이트가 개발되었다. 전화기와 라디오, 주방용품을 싸고 가볍게 대량으로 만들 수 있게 되었지만, 썩지 않는 플라스틱 시대의 시작이기도 했다.", "en": "In 1907, Bakelite, the first fully synthetic plastic, was developed in the United States. Telephones, radios, and kitchenware became cheap, light, and easy to mass-produce, but it also marked the start of an age of plastics that do not decay.", "ja": "1907年、アメリカで最初の合成プラスチックであるベークライトが開発された。電話機やラジオ、台所用品を安く軽く大量に作れるようになったが、それは腐らないプラスチックの時代の始まりでもあった。", "zh": "1907年，美国研制出第一种全合成塑料——酚醛塑料（电木）。电话机、收音机和厨房用品从此可以廉价、轻便地大量生产，但这也开启了不会腐烂的塑料时代。", "es": "En 1907 se desarrolló en Estados Unidos la baquelita, el primer plástico totalmente sintético. Teléfonos, radios y utensilios de cocina pudieron fabricarse en masa, baratos y ligeros, pero también comenzó la era de un plástico que no se descompone." },
+      "when": { "year": [1907, 1907] },
+      "tone": "mixed",
+      "domains": ["technology", "daily"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Bakelite"]
+    },
+    {
+      "id": "technology-1947-transistor",
+      "type": "history",
+      "title": { "ko": "트랜지스터의 탄생", "en": "The birth of the transistor", "ja": "トランジスタの誕生", "zh": "晶体管诞生", "es": "Nace el transistor" },
+      "story": { "ko": "1947년 미국 벨 연구소에서 트랜지스터가 발명되었다. 진공관보다 작고 전기를 덜 쓰는 이 부품 덕분에 주머니에 들어가는 라디오가 나왔고, 훗날 컴퓨터와 휴대전화도 가능해졌다.", "en": "In 1947, the transistor was invented at Bell Labs in the United States. Smaller than a vacuum tube and using less power, it made pocket radios possible, and later computers and mobile phones.", "ja": "1947年、アメリカのベル研究所でトランジスタが発明された。真空管より小さく電力も少なくてすむこの部品のおかげでポケットに入るラジオが生まれ、のちにコンピューターや携帯電話も可能になった。", "zh": "1947年，美国贝尔实验室发明了晶体管。它比真空管更小、更省电，让装进口袋的收音机成为可能，后来又催生了计算机和手机。", "es": "En 1947 se inventó el transistor en los Laboratorios Bell de Estados Unidos. Más pequeño que un tubo de vacío y con menor consumo, hizo posibles las radios de bolsillo y, más tarde, las computadoras y los teléfonos móviles." },
+      "when": { "year": [1947, 1947] },
+      "tone": "bright",
+      "domains": ["technology", "daily"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Transistor"]
+    },
+    {
+      "id": "technology-1984-india-phone-booths",
+      "type": "history",
+      "title": { "ko": "골목마다 생긴 전화 가게", "en": "A phone shop on every corner", "ja": "路地ごとにできた電話屋", "zh": "街角的公用电话铺", "es": "Un locutorio en cada esquina" },
+      "story": { "ko": "1984년 인도는 통신 연구소 C-DOT를 세워 자국 실정에 맞는 디지털 전화 교환기를 만들었다. 시골까지 전화망이 넓어졌고, 집에 전화가 없는 사람들도 거리의 공중전화 가게(PCO)에서 멀리 사는 가족에게 전화를 걸게 되었다.", "en": "In 1984, India set up the C-DOT telecom research center to build digital telephone exchanges suited to local conditions. The phone network reached into the countryside, and people without a home phone could call distant family from street-side public call offices (PCOs).", "ja": "1984年、インドは通信研究機関C-DOTを設立し、国内の実情に合ったデジタル電話交換機を開発した。電話網は農村にまで広がり、家に電話のない人々も街角の公衆電話店（PCO）から遠くに住む家族に電話をかけられるようになった。", "zh": "1984年，印度成立了通信研究机构C-DOT，研发适合本国国情的数字电话交换机。电话网络延伸到农村，家里没有电话的人也能在街边的公用电话铺（PCO）给远方的家人打电话。", "es": "En 1984, la India creó el centro de investigación C-DOT para fabricar centrales telefónicas digitales adaptadas al país. La red llegó al campo, y quienes no tenían teléfono en casa pudieron llamar a su familia lejana desde los locutorios públicos (PCO) de la calle." },
+      "when": { "year": [1984, 1999] },
+      "tone": "bright",
+      "domains": ["technology", "daily"],
+      "region": "south-asia",
+      "sources": ["https://en.wikipedia.org/wiki/Centre_for_Development_of_Telematics", "https://en.wikipedia.org/wiki/Telephone_booth"]
+    },
+    {
+      "id": "technology-1998-korea-broadband",
+      "type": "history",
+      "title": { "ko": "초고속 인터넷과 PC방", "en": "High-speed internet and PC bangs", "ja": "高速インターネットとPCバン", "zh": "宽带与网吧", "es": "Banda ancha y PC bang" },
+      "story": { "ko": "1990년대 말 한국에 초고속 인터넷이 빠르게 퍼져, 한국은 세계에서 가장 먼저 광대역 인터넷이 보편화된 나라 가운데 하나가 되었다. 동네마다 PC방이 생겼고, 온라인 게임과 인터넷 뱅킹이 일상이 되었다.", "en": "In the late 1990s, high-speed internet spread rapidly in South Korea, making it one of the first countries where broadband became universal. PC bangs opened in every neighborhood, and online games and internet banking became part of daily life.", "ja": "1990年代末、韓国では高速インターネットが急速に広まり、世界で最も早くブロードバンドが普及した国の一つとなった。町ごとにPCバン（ネットカフェ）ができ、オンラインゲームやネットバンキングが日常になった。", "zh": "20世纪90年代末，高速互联网在韩国迅速普及，韩国成为世界上最早普及宽带的国家之一。每个街区都开起了网吧，网络游戏和网上银行成了日常生活的一部分。", "es": "A finales de los años noventa, el internet de alta velocidad se extendió rápidamente en Corea del Sur, uno de los primeros países donde la banda ancha llegó a casi todos. Abrieron cibercafés (PC bang) en cada barrio, y los juegos en línea y la banca por internet se volvieron cotidianos." },
+      "when": { "year": [1998, 2002] },
+      "tone": "bright",
+      "domains": ["technology", "daily"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Internet_in_South_Korea", "https://en.wikipedia.org/wiki/PC_bang"]
+    },
+    {
+      "id": "technology-2022-chatgpt",
+      "type": "history",
+      "title": { "ko": "누구나 AI와 대화하는 시대", "en": "Everyone starts talking to AI", "ja": "誰もがAIと話す時代", "zh": "人人都与AI对话的时代", "es": "Todos empiezan a hablar con la IA" },
+      "story": { "ko": "2022년 말 대화형 AI인 챗GPT가 공개되어 짧은 시간에 수많은 사람이 쓰기 시작했다. 사람들은 글쓰기와 공부, 업무에 AI의 도움을 받게 되었고, 일자리와 저작권, 가짜 정보를 둘러싼 걱정도 커졌다.", "en": "In late 2022, the conversational AI ChatGPT was released, and vast numbers of people started using it within a short time. People began getting help from AI with writing, studying, and work, while worries grew over jobs, copyright, and misinformation.", "ja": "2022年末、対話型AIのChatGPTが公開され、短期間で非常に多くの人が使い始めた。人々は文章作成や勉強、仕事にAIの助けを借りるようになり、雇用や著作権、偽情報をめぐる懸念も高まった。", "zh": "2022年底，对话式AI ChatGPT发布，短时间内就有大量用户开始使用。人们在写作、学习和工作中借助AI，围绕就业、版权和虚假信息的担忧也随之增加。", "es": "A finales de 2022 se lanzó ChatGPT, una IA conversacional, y en poco tiempo muchísimas personas empezaron a usarla. La gente comenzó a apoyarse en la IA para escribir, estudiar y trabajar, y crecieron las preocupaciones por el empleo, los derechos de autor y la desinformación." },
+      "when": { "year": [2022, 2022] },
+      "tone": "mixed",
+      "domains": ["technology", "work"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/ChatGPT"]
+    },
+    {
+      "id": "technology-future-split-internet",
+      "title": { "ko": "갈라진 인터넷", "en": "A split internet", "ja": "分断されたインターネット", "zh": "分裂的互联网", "es": "Un internet partido en dos" },
+      "story": { "ko": "나라들이 진영을 나눠 서로 다른 인터넷과 반도체 규격을 쓴다. 국경을 넘으면 휴대전화 앱이 먹통이 되고, 해외에 사는 가족과 영상 통화를 하려면 허가받은 중계 서버를 거쳐야 한다.", "en": "Countries split into blocs, each with its own internet and chip standards. Cross a border and your phone apps stop working, and a video call with family abroad has to go through an approved relay server.", "ja": "国々が陣営に分かれ、それぞれ別のインターネットと半導体の規格を使う。国境を越えるとスマホのアプリは動かなくなり、海外に住む家族とビデオ通話をするには、許可された中継サーバーを通さなければならない。", "zh": "各国分成不同阵营，使用各自的互联网和芯片标准。一过国境，手机应用就无法使用；想和住在国外的家人视频通话，必须经过获批的中转服务器。", "es": "Los países se dividen en bloques, cada uno con su propio internet y sus propios estándares de chips. Al cruzar una frontera, las aplicaciones del móvil dejan de funcionar, y una videollamada con la familia en el extranjero debe pasar por un servidor autorizado." },
+      "when": { "year": [2030, 2100], "peace": [0, 35], "tech": [40, 100] },
+      "tone": "dark",
+      "domains": ["technology", "peace"]
+    },
+    {
+      "id": "technology-future-neighborhood-fab-lab",
+      "title": { "ko": "동네마다 공공 제작소", "en": "A maker workshop on every block", "ja": "町ごとの公共工房", "zh": "每个街区的公共制造坊", "es": "Un taller de fabricación en cada barrio" },
+      "story": { "ko": "동네마다 누구나 쓰는 공공 제작소가 있다. 필요한 물건은 공개된 설계도를 내려받아 그 자리에서 만들고, 고장 난 물건의 부품도 새로 찍어 낸다. 택배 상자와 버려지는 물건이 눈에 띄게 줄어든다.", "en": "Every neighborhood has a public workshop open to all. People download open designs and make what they need on the spot, and print new parts for broken things. Delivery boxes and thrown-away goods visibly dwindle.", "ja": "どの町にも、誰でも使える公共の工房がある。必要な物は公開された設計図をダウンロードしてその場で作り、壊れた物の部品も新しく出力する。宅配の箱や捨てられる物は目に見えて減っていく。", "zh": "每个街区都有人人可用的公共制造坊。需要什么东西，就下载公开的设计图当场做出来，坏掉的东西也能重新打印零件。快递纸箱和被扔掉的东西明显减少。", "es": "Cada barrio tiene un taller público abierto a todos. La gente descarga diseños libres y fabrica allí mismo lo que necesita, e imprime piezas nuevas para lo que se rompe. Las cajas de envío y los objetos desechados disminuyen a ojos vista." },
+      "when": { "year": [2055, 2100], "tech": [55, 100], "solidarity": [50, 100], "climate": [45, 100] },
+      "tone": "bright",
+      "domains": ["technology", "daily"],
+      "scene": { "community": 0.05 }
+    },
+    {
+      "id": "technology-future-talking-with-the-dead",
+      "title": { "ko": "떠난 이와 나누는 대화", "en": "Talking with those who are gone", "ja": "旅立った人との会話", "zh": "与逝者对话", "es": "Conversar con quienes se fueron" },
+      "story": { "ko": "세상을 떠난 사람의 목소리와 말투, 기억을 익힌 AI가 흔하다. 저녁마다 돌아가신 할머니와 이야기하는 아이도 있고, 이별을 끝없이 미루는 일에 지쳐 결국 전원을 끄는 가족도 있다.", "en": "AIs that have learned the voices, ways of speaking, and memories of the dead are commonplace. Some children chat with their late grandmother every evening, while some families, worn out by endlessly putting off goodbye, finally switch them off.", "ja": "亡くなった人の声や話し方、記憶を学んだAIが当たり前になっている。毎晩亡き祖母と話す子どももいれば、別れを先延ばしにし続けることに疲れて、ついに電源を切る家族もいる。", "zh": "学会了逝者声音、说话方式和记忆的AI随处可见。有的孩子每天晚上都和已故的奶奶聊天，也有的家庭厌倦了无休止地推迟告别，最终关掉了电源。", "es": "Las IA que han aprendido la voz, la forma de hablar y los recuerdos de los difuntos son algo común. Hay niños que charlan cada noche con su abuela fallecida, y familias que, cansadas de aplazar sin fin la despedida, acaban apagándolas." },
+      "when": { "year": [2076, 2100], "tech": [75, 100] },
+      "tone": "mixed",
+      "domains": ["technology", "family"]
+    }
+  ]
+}

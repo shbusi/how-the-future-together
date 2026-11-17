@@ -1,0 +1,86 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "media-1920-radio-broadcasting",
+      "type": "history",
+      "title": { "ko": "집 안으로 들어온 라디오", "en": "Radio comes into the home", "ja": "家の中にやってきたラジオ", "zh": "收音机走进家庭", "es": "La radio llega a los hogares" },
+      "story": { "ko": "1920년대 세계 여러 나라에서 정기 라디오 방송이 시작되었다. 사람들은 집에 앉아 뉴스와 음악, 스포츠 중계를 실시간으로 듣게 되었고, 먼 곳의 소식이 같은 순간에 퍼지기 시작했다.", "en": "In the 1920s, regular radio broadcasting began in countries around the world. People could sit at home and hear news, music, and live sports as they happened, and news from far away began to spread in the same instant.", "ja": "1920年代、世界各国で定期的なラジオ放送が始まった。人々は家にいながらニュースや音楽、スポーツ中継をリアルタイムで聞けるようになり、遠くの出来事が同じ瞬間に広まるようになった。", "zh": "20世纪20年代，世界许多国家开始了定期无线电广播。人们坐在家里就能实时收听新闻、音乐和体育转播，远方的消息开始在同一时刻传遍各地。", "es": "En la década de 1920 comenzaron las emisiones regulares de radio en muchos países. La gente pudo escuchar desde casa noticias, música y deportes en directo, y las noticias lejanas empezaron a difundirse al instante." },
+      "when": { "year": [1920, 1929] },
+      "tone": "bright",
+      "domains": ["media", "daily"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/History_of_radio", "https://en.wikipedia.org/wiki/Radio_broadcasting"]
+    },
+    {
+      "id": "media-1951-telenovelas",
+      "type": "history",
+      "title": { "ko": "저녁마다 기다리는 텔레노벨라", "en": "Waiting for the telenovela each night", "ja": "毎晩待ちわびるテレノベラ", "zh": "每晚守候的拉美连续剧", "es": "La telenovela de cada noche" },
+      "story": { "ko": "1951년 브라질에서 세계 첫 텔레노벨라가 방송되었고, 1950년대 말 멕시코에서는 평일마다 이어지는 형식이 자리 잡았다. 저녁이면 많은 가정이 같은 이야기를 기다렸고, 텔레노벨라는 훗날 세계 여러 나라로 수출되었다.", "en": "In 1951, the world's first telenovela aired in Brazil, and by the late 1950s Mexico had settled on a format that continued every weekday. Each evening, many households waited for the same story, and telenovelas were later exported around the world.", "ja": "1951年、ブラジルで世界初のテレノベラが放送され、1950年代末にはメキシコで平日毎日続く形式が定着した。夕方になると多くの家庭が同じ物語を待ちわび、テレノベラはのちに世界各国へ輸出された。", "zh": "1951年，巴西播出了世界上第一部电视小说剧（telenovela）；50年代末，墨西哥确立了工作日每天连播的形式。每到傍晚，许多家庭都等着同一个故事，这类连续剧后来还出口到世界各地。", "es": "En 1951 se emitió en Brasil la primera telenovela del mundo, y a finales de los años cincuenta México consolidó el formato de capítulos de lunes a viernes. Cada tarde, muchos hogares esperaban la misma historia, y las telenovelas se exportaron después a todo el mundo." },
+      "when": { "year": [1951, 1958] },
+      "tone": "bright",
+      "domains": ["media", "culture"],
+      "region": "latin-america",
+      "sources": ["https://en.wikipedia.org/wiki/Telenovela"]
+    },
+    {
+      "id": "media-1980-korea-color-tv",
+      "type": "history",
+      "title": { "ko": "컬러로 바뀐 안방극장", "en": "Television turns to color", "ja": "カラーになったお茶の間", "zh": "客厅电视变彩色", "es": "La televisión se vuelve a color" },
+      "story": { "ko": "1980년 12월 한국에서 컬러 텔레비전 방송이 시작되었다. 수출용으로만 만들던 컬러 TV가 안방에 들어와 화면 속 세상이 총천연색이 되었지만, 같은 해 신군부의 언론 통폐합으로 민영 방송사 TBC가 KBS에 흡수되었다.", "en": "In December 1980, color television broadcasting began in South Korea. Color TVs once made only for export entered living rooms and the world on screen burst into color, but that same year the military-backed government's forced media mergers folded the private broadcaster TBC into KBS.", "ja": "1980年12月、韓国でカラーテレビ放送が始まった。輸出用にしか作られていなかったカラーテレビが茶の間に入り、画面の中の世界は色鮮やかになったが、同じ年、軍部主導の政権による言論統廃合で民放のTBCはKBSに吸収された。", "zh": "1980年12月，韩国开始播出彩色电视节目。原本只供出口的彩色电视机走进了千家万户，屏幕上的世界变得五彩缤纷；但同年，军方主导的政权强行整合媒体，民营电视台TBC被并入KBS。", "es": "En diciembre de 1980 comenzaron las emisiones de televisión en color en Corea del Sur. Los televisores en color, antes fabricados solo para exportar, llegaron a los hogares y la pantalla se llenó de color; pero ese mismo año, la fusión forzosa de medios impuesta por el gobierno respaldado por los militares hizo que la cadena privada TBC fuera absorbida por KBS." },
+      "when": { "year": [1980, 1980] },
+      "tone": "mixed",
+      "domains": ["media", "politics"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Television_in_South_Korea"]
+    },
+    {
+      "id": "media-1991-world-wide-web",
+      "type": "history",
+      "title": { "ko": "누구나 쓰는 월드와이드웹", "en": "The web opens to everyone", "ja": "誰もが使えるウェブ", "zh": "向所有人开放的万维网", "es": "La web se abre a todos" },
+      "story": { "ko": "1991년 팀 버너스리가 만든 월드와이드웹이 일반에 공개되었다. 누구나 웹페이지를 만들고 링크를 따라 세계 곳곳의 정보를 읽을 수 있게 되면서, 신문과 방송만 소식을 전하던 시대가 바뀌기 시작했다.", "en": "In 1991, the World Wide Web created by Tim Berners-Lee was opened to the public. As anyone could make a web page and follow links to information from all over the world, the era when only newspapers and broadcasters delivered the news began to change.", "ja": "1991年、ティム・バーナーズ＝リーが作ったワールド・ワイド・ウェブが一般に公開された。誰もがウェブページを作り、リンクをたどって世界中の情報を読めるようになり、新聞や放送だけがニュースを伝える時代は変わり始めた。", "zh": "1991年，蒂姆·伯纳斯-李创建的万维网向公众开放。人人都可以制作网页，顺着链接阅读世界各地的信息，只有报纸和广播电视传递消息的时代开始改变。", "es": "En 1991, la World Wide Web creada por Tim Berners-Lee se abrió al público. Como cualquiera podía crear una página y seguir enlaces a información de todo el mundo, empezó a cambiar la época en que solo los periódicos y las emisoras daban las noticias." },
+      "when": { "year": [1991, 1991] },
+      "tone": "bright",
+      "domains": ["media", "technology"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/World_Wide_Web"]
+    },
+    {
+      "id": "media-2010-arab-spring-social-media",
+      "type": "history",
+      "title": { "ko": "소셜 미디어로 번진 아랍의 봄", "en": "The Arab Spring spreads online", "ja": "SNSで広がったアラブの春", "zh": "社交媒体上蔓延的阿拉伯之春", "es": "La Primavera Árabe se extiende en redes" },
+      "story": { "ko": "2010년 말 튀니지에서 시작된 시위가 이집트를 비롯한 아랍 여러 나라로 번졌다. 사람들은 휴대전화와 소셜 미디어로 현장 영상을 나누며 모였지만, 이후 여러 나라에서 내전과 탄압이 이어졌다.", "en": "Protests that began in Tunisia in late 2010 spread to Egypt and many other Arab countries. People shared footage and organized through mobile phones and social media, but civil war and crackdowns followed in several countries.", "ja": "2010年末にチュニジアで始まった抗議運動は、エジプトをはじめアラブの多くの国へ広がった。人々は携帯電話やSNSで現場の映像を共有して集まったが、その後いくつもの国で内戦や弾圧が続いた。", "zh": "2010年底始于突尼斯的抗议浪潮蔓延到埃及等多个阿拉伯国家。人们通过手机和社交媒体分享现场视频、组织集会，但此后多个国家陷入内战或遭到镇压。", "es": "Las protestas que comenzaron en Túnez a finales de 2010 se extendieron a Egipto y a muchos otros países árabes. La gente compartía videos y se organizaba con teléfonos móviles y redes sociales, pero después llegaron guerras civiles y represión en varios países." },
+      "when": { "year": [2010, 2012] },
+      "tone": "mixed",
+      "domains": ["media", "politics"],
+      "region": "middle-east",
+      "sources": ["https://en.wikipedia.org/wiki/Arab_Spring", "https://en.wikipedia.org/wiki/Social_media%27s_role_in_the_Arab_Spring"]
+    },
+    {
+      "id": "media-future-proof-of-human",
+      "title": { "ko": "사람이 만들었다는 증명", "en": "Proof a human made it", "ja": "人間が作ったという証明", "zh": "“人类制作”的证明", "es": "Prueba de que lo hizo un humano" },
+      "story": { "ko": "인터넷에 올라오는 글과 영상의 대부분을 AI가 만든다. 사람들은 '사람이 만듦' 인증이 붙은 것만 골라 보려 하지만, 인증을 받으려면 실명과 얼굴을 등록해야 한다.", "en": "Most of the writing and videos posted online are made by AI. People try to pick only content with a “made by a human” badge, but to get the badge you have to register your real name and face.", "ja": "ネットに上がる文章や動画の大半をAIが作っている。人々は「人間が制作」の認証がついたものだけを選んで見ようとするが、認証を受けるには実名と顔を登録しなければならない。", "zh": "网上发布的文章和视频大多由AI生成。人们只想看带有“人类制作”认证的内容，但要获得认证，必须登记真实姓名和面部信息。", "es": "La mayoría de los textos y videos que se publican en internet los hace la IA. La gente intenta ver solo lo que lleva el sello «hecho por un humano», pero para obtenerlo hay que registrar el nombre real y el rostro." },
+      "when": { "year": [2030, 2100], "tech": [65, 100], "solidarity": [0, 50] },
+      "tone": "mixed",
+      "domains": ["media", "technology"]
+    },
+    {
+      "id": "media-future-algorithm-by-vote",
+      "title": { "ko": "투표로 정하는 알고리즘", "en": "An algorithm chosen by vote", "ja": "投票で決めるアルゴリズム", "zh": "投票决定的算法", "es": "Un algoritmo elegido por votación" },
+      "story": { "ko": "가장 많은 사람이 쓰는 소셜 미디어는 이용자들이 함께 소유한 공공 플랫폼이다. 피드에 무엇을 먼저 보여 줄지는 해마다 이용자 투표로 정하고, 분노를 부추기는 글은 더 이상 위로 올라가지 않는다.", "en": "The most widely used social media is a public platform owned jointly by its users. What appears first in the feed is decided by a user vote every year, and posts that stir up anger no longer rise to the top.", "ja": "最も多くの人が使うSNSは、利用者が共同で所有する公共のプラットフォームだ。フィードに何を先に表示するかは毎年利用者の投票で決まり、怒りをあおる投稿はもう上位に上がらない。", "zh": "使用人数最多的社交媒体是由用户共同拥有的公共平台。信息流优先显示什么内容，每年由用户投票决定，煽动愤怒的帖子不再被推到最前面。", "es": "La red social más usada es una plataforma pública que pertenece a sus propios usuarios. Lo que aparece primero en el muro se decide cada año por votación, y las publicaciones que avivan la ira ya no suben a lo más alto." },
+      "when": { "year": [2055, 2100], "solidarity": [60, 100], "tech": [40, 100] },
+      "tone": "bright",
+      "domains": ["media", "politics"]
+    },
+    {
+      "id": "media-future-lost-records",
+      "title": { "ko": "사라진 기록의 시대", "en": "The age of lost records", "ja": "失われた記録の時代", "zh": "记录消失的时代", "es": "La era de los registros perdidos" },
+      "story": { "ko": "오랜 불황으로 데이터센터가 하나둘 문을 닫는다. 수십 년 치 사진과 영상, 기사가 한꺼번에 사라지고, 사람들은 지켜야 할 기록을 다시 종이에 적어 서랍에 넣는다.", "en": "After a long slump, data centers shut down one after another. Decades' worth of photos, videos, and news articles vanish at once, and people go back to writing what they must keep on paper and putting it in a drawer.", "ja": "長い不況で、データセンターが一つまた一つと閉鎖される。数十年分の写真や動画、記事が一度に消え、人々は残すべき記録を再び紙に書いて引き出しにしまう。", "zh": "长期萧条之下，数据中心一家接一家关闭。几十年的照片、视频和新闻报道一下子消失了，人们又开始把需要保存的记录写在纸上，放进抽屉。", "es": "Tras una larga crisis, los centros de datos cierran uno tras otro. Décadas de fotos, videos y noticias desaparecen de golpe, y la gente vuelve a escribir en papel lo que debe conservar y a guardarlo en un cajón." },
+      "when": { "year": [2076, 2100], "growth": [0, 30], "tech": [0, 40] },
+      "tone": "dark",
+      "domains": ["media", "culture"],
+      "scene": { "decay": 0.05 }
+    }
+  ]
+}

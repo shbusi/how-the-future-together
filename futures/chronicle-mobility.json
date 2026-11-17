@@ -1,0 +1,87 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "mobility-1908-model-t",
+      "type": "history",
+      "title": { "ko": "모두의 자동차, 모델 T", "en": "The Model T, a car for everyone", "ja": "みんなの自動車、T型フォード", "zh": "人人买得起的T型车", "es": "El Modelo T, un auto para todos" },
+      "story": { "ko": "1908년 미국 포드사가 모델 T를 내놓았다. 1913년부터 움직이는 조립 라인으로 만들면서 값이 크게 내려갔고, 자동차는 부자의 사치품에서 보통 가정의 탈것이 되었다.", "en": "In 1908, Ford in the United States launched the Model T. Once it was built on a moving assembly line from 1913, its price fell sharply, and the car went from a luxury of the rich to transport for ordinary families.", "ja": "1908年、アメリカのフォード社がT型フォードを発売した。1913年から動く組み立てラインで作られるようになると値段は大きく下がり、自動車は金持ちのぜいたく品から普通の家庭の乗り物になった。", "zh": "1908年，美国福特公司推出T型车。1913年起采用移动装配线生产后，价格大幅下降，汽车从富人的奢侈品变成了普通家庭的代步工具。", "es": "En 1908, Ford lanzó en Estados Unidos el Modelo T. Al fabricarse desde 1913 en una cadena de montaje móvil, su precio bajó mucho, y el automóvil pasó de ser un lujo de ricos a un medio de transporte para familias comunes." },
+      "when": { "year": [1908, 1927] },
+      "tone": "bright",
+      "domains": ["mobility", "daily"],
+      "region": "north-america",
+      "sources": ["https://en.wikipedia.org/wiki/Ford_Model_T"]
+    },
+    {
+      "id": "mobility-1964-shinkansen",
+      "type": "history",
+      "title": { "ko": "세계 첫 고속철도, 신칸센", "en": "The bullet train arrives", "ja": "世界初の高速鉄道、新幹線", "zh": "世界首条高铁：新干线", "es": "Llega el tren bala" },
+      "story": { "ko": "1964년 도쿄와 오사카를 잇는 세계 최초의 고속철도 도카이도 신칸센이 개통했다. 두 도시 사이가 4시간 거리로 가까워졌고, 고속철도는 이후 유럽과 아시아 여러 나라로 퍼져 나갔다.", "en": "In 1964, the Tokaido Shinkansen, the world's first high-speed rail line, opened between Tokyo and Osaka. The two cities were now just four hours apart, and high-speed rail later spread to many countries in Europe and Asia.", "ja": "1964年、東京と大阪を結ぶ世界初の高速鉄道、東海道新幹線が開業した。二つの都市は4時間で行き来できるほど近くなり、高速鉄道はその後ヨーロッパやアジアの多くの国へ広がっていった。", "zh": "1964年，连接东京和大阪的世界首条高速铁路——东海道新干线开通。两座城市之间缩短为4小时车程，此后高速铁路扩展到欧洲和亚洲的许多国家。", "es": "En 1964 se inauguró entre Tokio y Osaka el Tokaido Shinkansen, la primera línea de alta velocidad del mundo. Las dos ciudades quedaron a solo cuatro horas, y el tren de alta velocidad se extendió después a muchos países de Europa y Asia." },
+      "when": { "year": [1964, 1964] },
+      "tone": "bright",
+      "domains": ["mobility", "technology"],
+      "region": "japan",
+      "sources": ["https://en.wikipedia.org/wiki/Tokaido_Shinkansen"]
+    },
+    {
+      "id": "mobility-1970-gyeongbu-expressway",
+      "type": "history",
+      "title": { "ko": "서울과 부산을 이은 고속도로", "en": "An expressway from Seoul to Busan", "ja": "ソウルと釜山を結んだ高速道路", "zh": "连接首尔与釜山的高速公路", "es": "Una autopista de Seúl a Busan" },
+      "story": { "ko": "1970년 서울과 부산을 잇는 경부고속도로가 완전히 개통했다. 전국이 하루 생활권으로 가까워지기 시작했고, 사람과 화물이 빠르게 오가면서 산업화에도 속도가 붙었다.", "en": "In 1970, the Gyeongbu Expressway linking Seoul and Busan opened along its full length. The country began to shrink into a single-day travel zone, and as people and freight moved faster, industrialization picked up speed.", "ja": "1970年、ソウルと釜山を結ぶ京釜高速道路が全線開通した。国中が日帰りで行き来できる距離に近づき始め、人と貨物が速く行き交うことで工業化にも弾みがついた。", "zh": "1970年，连接首尔和釜山的京釜高速公路全线通车。全国开始进入“一日生活圈”，人员和货物往来加快，工业化也随之提速。", "es": "En 1970 se abrió en toda su longitud la autopista Gyeongbu, que une Seúl y Busan. El país empezó a recorrerse en un solo día, y con personas y mercancías moviéndose más rápido, la industrialización se aceleró." },
+      "when": { "year": [1970, 1970] },
+      "tone": "bright",
+      "domains": ["mobility", "economy"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Gyeongbu_Expressway"]
+    },
+    {
+      "id": "mobility-2000-gps-for-everyone",
+      "type": "history",
+      "title": { "ko": "누구나 쓰는 GPS 길 찾기", "en": "GPS navigation for everyone", "ja": "誰もが使えるGPSナビ", "zh": "人人可用的GPS导航", "es": "Navegación GPS para todos" },
+      "story": { "ko": "2000년 미국이 민간용 GPS 신호에 일부러 넣던 오차를 없앴다. 위치를 몇 미터 안으로 알 수 있게 되면서 자동차 내비게이션과 휴대전화 지도가 널리 퍼졌고, 사람들은 낯선 길도 쉽게 찾게 되었다.", "en": "In 2000, the United States stopped deliberately degrading the civilian GPS signal. With locations now accurate to within a few meters, car navigation systems and phone maps spread widely, and people could easily find their way even on unfamiliar roads.", "ja": "2000年、アメリカは民間向けGPS信号にわざと加えていた誤差をなくした。位置が数メートル以内でわかるようになり、カーナビや携帯電話の地図が広く普及して、人々は知らない道でも簡単に目的地を探せるようになった。", "zh": "2000年，美国取消了在民用GPS信号中故意加入的误差。定位精确到几米之内，汽车导航和手机地图迅速普及，人们即使走在陌生的路上也能轻松找到方向。", "es": "En 2000, Estados Unidos dejó de degradar a propósito la señal civil del GPS. Con una precisión de pocos metros, los navegadores de los autos y los mapas del teléfono se difundieron ampliamente, y la gente pudo orientarse con facilidad incluso en calles desconocidas." },
+      "when": { "year": [2000, 2000] },
+      "tone": "bright",
+      "domains": ["mobility", "technology"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Global_Positioning_System"]
+    },
+    {
+      "id": "mobility-2010-ride-hailing-apps",
+      "type": "history",
+      "title": { "ko": "앱으로 부르는 차", "en": "Hailing a ride with an app", "ja": "アプリで呼ぶクルマ", "zh": "用App叫车", "es": "Pedir un auto con una app" },
+      "story": { "ko": "2010년대 스마트폰 앱으로 차를 부르는 서비스가 세계 곳곳의 도시로 퍼졌다. 차를 잡기는 쉬워졌지만, 운전기사들은 앱이 정하는 요금과 평점 아래에서 일하게 되었고 여러 나라에서 기존 택시와 갈등을 빚었다.", "en": "In the 2010s, services for calling a car with a smartphone app spread to cities around the world. Getting a ride became easier, but drivers ended up working under fares and ratings set by the app, and in many countries the services clashed with existing taxis.", "ja": "2010年代、スマートフォンのアプリで車を呼ぶサービスが世界中の都市に広がった。車をつかまえるのは簡単になったが、運転手はアプリが決める料金や評価のもとで働くことになり、多くの国で既存のタクシーと対立した。", "zh": "2010年代，用智能手机App叫车的服务扩展到世界各地的城市。打车变得容易了，但司机们要在App设定的价格和评分规则下工作，许多国家还出现了与传统出租车的冲突。", "es": "En la década de 2010, los servicios para pedir un auto con una aplicación del móvil se extendieron por ciudades de todo el mundo. Conseguir transporte se volvió más fácil, pero los conductores pasaron a trabajar bajo tarifas y calificaciones fijadas por la app, y en muchos países hubo choques con los taxis tradicionales." },
+      "when": { "year": [2010, 2026] },
+      "tone": "mixed",
+      "domains": ["mobility", "work"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Ridesharing_company", "https://en.wikipedia.org/wiki/Uber"]
+    },
+    {
+      "id": "mobility-future-car-free-centers",
+      "title": { "ko": "자가용이 사라진 도심", "en": "City centers without private cars", "ja": "マイカーが消えた都心", "zh": "没有私家车的市中心", "es": "Centros urbanos sin autos privados" },
+      "story": { "ko": "도심에서 자가용이 사라진다. 차로였던 자리에는 나무와 자전거 길, 노천 식당이 들어서고, 아이들은 다시 골목에서 공을 찬다. 짐은 작은 전기 화물차가 정해진 시간에만 나른다.", "en": "Private cars disappear from city centers. Former traffic lanes fill with trees, bike paths, and open-air restaurants, and children play ball in the side streets again. Goods are carried by small electric vans, only at set hours.", "ja": "都心からマイカーが姿を消す。車道だった場所には木々や自転車道、屋外の食堂が並び、子どもたちは再び路地でボールを蹴る。荷物は小さな電動の配送車が決まった時間にだけ運ぶ。", "zh": "私家车从市中心消失了。原来的车道上种起了树，修了自行车道，开起了露天餐馆，孩子们又在小巷里踢起了球。货物只在规定时间由小型电动货车运送。", "es": "Los autos privados desaparecen de los centros urbanos. Donde había carriles ahora hay árboles, ciclovías y terrazas, y los niños vuelven a jugar a la pelota en las calles. Las mercancías las llevan pequeñas furgonetas eléctricas, solo en horarios fijos." },
+      "when": { "year": [2035, 2100], "climate": [60, 100], "solidarity": [50, 100] },
+      "tone": "bright",
+      "domains": ["mobility", "cities"],
+      "scene": { "green": 0.1, "community": 0.05 }
+    },
+    {
+      "id": "mobility-future-pay-to-pass-lanes",
+      "title": { "ko": "돈 내는 차만 달리는 길", "en": "Fast lanes for those who pay", "ja": "お金を払う車だけが走る道", "zh": "只有付费车辆能走的快车道", "es": "Carriles rápidos para quien paga" },
+      "story": { "ko": "자율주행차 전용 고속 차로에는 요금을 낸 차만 달린다. 예산이 깎인 버스 노선은 하나둘 사라지고, 변두리에 사는 사람들은 몇 번씩 갈아타며 두 시간 걸려 일터에 간다.", "en": "Only cars that have paid can use the express lanes reserved for self-driving vehicles. Underfunded bus routes disappear one by one, and people on the outskirts spend two hours and several transfers getting to work.", "ja": "自動運転車専用の高速レーンは、料金を払った車しか走れない。予算を削られたバス路線は一つずつ消え、郊外に住む人々は何度も乗り換えて2時間かけて職場へ通う。", "zh": "自动驾驶专用快车道只允许付费车辆通行。经费被削减的公交线路一条条取消，住在城郊的人们要换乘好几次，花两个小时才能到达工作地点。", "es": "Por los carriles rápidos reservados a vehículos autónomos solo circulan los que pagan. Las líneas de autobús, sin fondos, desaparecen una a una, y quienes viven en las afueras tardan dos horas y varios transbordos en llegar al trabajo." },
+      "when": { "year": [2055, 2100], "equality": [0, 35], "tech": [55, 100] },
+      "tone": "dark",
+      "domains": ["mobility", "cities"],
+      "scene": { "divide": 0.1 }
+    },
+    {
+      "id": "mobility-future-few-flights",
+      "title": { "ko": "평생 몇 번뿐인 비행", "en": "Only a few flights in a lifetime", "ja": "一生に数回だけの空の旅", "zh": "一生只坐几次飞机", "es": "Pocos vuelos en toda una vida" },
+      "story": { "ko": "비행기는 사람마다 정해진 탄소 할당량 안에서만 탈 수 있다. 사람들은 해외여행을 몇 년씩 아껴 두었다가, 배와 야간열차를 갈아타며 몇 주에 걸쳐 천천히 다녀온다.", "en": "People can fly only within their personal carbon allowance. They save up for trips abroad over several years, then travel slowly for weeks, switching between ships and night trains.", "ja": "飛行機には、一人ひとりに割り当てられた炭素の枠の中でしか乗れない。人々は海外旅行を何年も温めておき、船と夜行列車を乗り継いで数週間かけてゆっくり出かける。", "zh": "每个人只能在个人碳配额内乘坐飞机。人们把出国旅行攒上好几年，然后换乘轮船和夜班火车，花上几个星期慢慢往返。", "es": "Solo se puede volar dentro de la cuota personal de carbono. La gente ahorra durante años para viajar al extranjero y luego va despacio, durante semanas, combinando barcos y trenes nocturnos." },
+      "when": { "year": [2076, 2100], "climate": [65, 100], "tech": [0, 55] },
+      "tone": "mixed",
+      "domains": ["mobility", "environment"]
+    }
+  ]
+}
