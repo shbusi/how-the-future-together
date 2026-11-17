@@ -1,0 +1,89 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "economy-1929-great-depression",
+      "type": "history",
+      "title": { "ko": "대공황", "en": "The Great Depression", "ja": "世界恐慌", "zh": "大萧条", "es": "La Gran Depresión" },
+      "story": { "ko": "1929년 미국 뉴욕 증시가 폭락하며 대공황이 시작되었다. 세계 곳곳에서 공장과 은행이 문을 닫았고, 일자리를 잃은 사람들이 무료 급식소 앞에 길게 줄을 섰다.", "en": "In 1929 the New York stock market crashed and the Great Depression began. Factories and banks closed around the world, and people who had lost their jobs waited in long lines at soup kitchens.", "ja": "1929年、ニューヨークの株式市場が暴落し、世界恐慌が始まった。世界各地で工場や銀行が閉鎖され、職を失った人々が無料の炊き出しに長い列を作った。", "zh": "1929年，纽约股市崩盘，大萧条由此开始。世界各地的工厂和银行纷纷倒闭，失业的人们在救济厨房前排起长队。", "es": "En 1929 se desplomó la bolsa de Nueva York y comenzó la Gran Depresión. En todo el mundo cerraron fábricas y bancos, y quienes se habían quedado sin trabajo hacían largas colas en los comedores populares." },
+      "when": { "year": [1929, 1939] },
+      "tone": "dark",
+      "domains": ["economy", "work"],
+      "region": "world",
+      "scene": { "decay": 0.1 },
+      "sources": ["https://en.wikipedia.org/wiki/Great_Depression", "https://en.wikipedia.org/wiki/Wall_Street_crash_of_1929"]
+    },
+    {
+      "id": "economy-1962-five-year-plan",
+      "type": "history",
+      "title": { "ko": "경제개발 5개년 계획", "en": "Korea’s first five-year plan", "ja": "経済開発5か年計画", "zh": "韩国经济开发五年计划", "es": "El primer plan quinquenal de Corea" },
+      "story": { "ko": "1962년 한국이 첫 경제개발 5개년 계획을 시작했다. 수출 공장이 늘면서 농촌을 떠나 도시로 일하러 가는 사람이 많아졌고, 가난한 나라가 빠르게 성장하기 시작했다.", "en": "In 1962 South Korea launched its first five-year economic development plan. As export factories multiplied, many people left farming villages for jobs in the cities, and a poor country began to grow fast.", "ja": "1962年、韓国が初の経済開発5か年計画を始めた。輸出向けの工場が増え、農村を離れて都市へ働きに出る人が多くなり、貧しかった国が急速に成長し始めた。", "zh": "1962年，韩国启动了第一个经济开发五年计划。出口工厂越来越多，许多人离开农村到城市打工，这个贫穷的国家开始快速发展。", "es": "En 1962 Corea del Sur puso en marcha su primer plan quinquenal de desarrollo económico. Con la multiplicación de las fábricas exportadoras, mucha gente dejó el campo para trabajar en las ciudades, y un país pobre empezó a crecer con rapidez." },
+      "when": { "year": [1962, 1966] },
+      "tone": "bright",
+      "domains": ["economy", "work"],
+      "region": "korea",
+      "scene": { "industry": 0.1 },
+      "sources": ["https://en.wikipedia.org/wiki/Five-Year_Plans_of_South_Korea", "https://en.wikipedia.org/wiki/Miracle_on_the_Han_River"]
+    },
+    {
+      "id": "economy-1978-reform-and-opening",
+      "type": "history",
+      "title": { "ko": "중국의 개혁개방", "en": "China’s reform and opening up", "ja": "中国の改革開放", "zh": "中国改革开放", "es": "La reforma y apertura de China" },
+      "story": { "ko": "1978년 중국이 개혁개방을 시작했다. 농민은 정해진 몫을 국가에 내고 남은 수확을 시장에 팔 수 있게 되었고, 이후 수억 명이 극심한 가난에서 벗어났다.", "en": "In 1978 China began its reform and opening up. After delivering a fixed share to the state, farmers could sell the rest of their harvest on the market, and in the decades that followed hundreds of millions of people escaped extreme poverty.", "ja": "1978年、中国が改革開放を始めた。農民は決められた分を国に納めれば残りの収穫を市場で売れるようになり、その後、数億人が極度の貧困から抜け出した。", "zh": "1978年，中国开始改革开放。农民向国家交够规定的份额后，剩下的收成可以拿到市场上卖，此后数亿人摆脱了极端贫困。", "es": "En 1978 China inició su política de reforma y apertura. Tras entregar al Estado una cuota fija, los campesinos podían vender el resto de su cosecha en el mercado, y en las décadas siguientes cientos de millones de personas salieron de la pobreza extrema." },
+      "when": { "year": [1978, 1978] },
+      "tone": "bright",
+      "domains": ["economy", "food"],
+      "region": "china",
+      "sources": ["https://en.wikipedia.org/wiki/Chinese_economic_reform", "https://en.wikipedia.org/wiki/Household_responsibility_system"]
+    },
+    {
+      "id": "economy-2008-global-financial-crisis",
+      "type": "history",
+      "title": { "ko": "세계 금융위기", "en": "The global financial crisis", "ja": "世界金融危機", "zh": "全球金融危机", "es": "La crisis financiera mundial" },
+      "story": { "ko": "2008년 미국 투자은행 리먼 브라더스가 파산하며 금융위기가 전 세계로 번졌다. 집값 거품이 꺼지면서 수많은 사람이 집과 일자리를 잃었다.", "en": "In 2008 the US investment bank Lehman Brothers went bankrupt, and the financial crisis spread around the world. As the housing bubble burst, millions of people lost their homes and their jobs.", "ja": "2008年、アメリカの投資銀行リーマン・ブラザーズが破綻し、金融危機が世界中に広がった。住宅バブルがはじけ、数多くの人々が家と仕事を失った。", "zh": "2008年，美国投资银行雷曼兄弟破产，金融危机蔓延全球。房地产泡沫破裂，无数人失去了房子和工作。", "es": "En 2008 quebró el banco de inversión estadounidense Lehman Brothers y la crisis financiera se extendió por todo el mundo. Al estallar la burbuja inmobiliaria, millones de personas perdieron su casa y su empleo." },
+      "when": { "year": [2008, 2009] },
+      "tone": "dark",
+      "domains": ["economy", "work"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/2007%E2%80%932008_financial_crisis", "https://en.wikipedia.org/wiki/Bankruptcy_of_Lehman_Brothers"]
+    },
+    {
+      "id": "economy-2016-india-upi",
+      "type": "history",
+      "title": { "ko": "인도의 휴대전화 결제망", "en": "India’s phone payment network", "ja": "インドのスマホ決済網", "zh": "印度的手机支付网络", "es": "La red de pagos móviles de la India" },
+      "story": { "ko": "2016년 인도가 스마트폰으로 은행 계좌 사이에 바로 돈을 보내는 공공 결제망 UPI를 열었다. 길거리 채소 노점에서도 QR코드로 돈을 주고받는 것이 일상이 되었다.", "en": "In 2016 India opened UPI, a public payment network that lets people send money instantly between bank accounts from a smartphone. Even at street vegetable stalls, paying by QR code became part of everyday life.", "ja": "2016年、インドはスマートフォンから銀行口座の間で即座に送金できる公共の決済網UPIを開始した。路上の野菜売りでも、QRコードでお金をやりとりするのが日常になった。", "zh": "2016年，印度推出公共支付网络UPI，人们用智能手机就能在银行账户之间即时转账。连街边的菜摊也用二维码收付款，这成了日常。", "es": "En 2016 la India abrió UPI, una red pública de pagos que permite enviar dinero al instante entre cuentas bancarias desde el móvil. Hasta en los puestos callejeros de verdura, pagar con un código QR se volvió algo cotidiano." },
+      "when": { "year": [2016, 2016] },
+      "tone": "bright",
+      "domains": ["economy", "technology", "daily"],
+      "region": "south-asia",
+      "sources": ["https://en.wikipedia.org/wiki/Unified_Payments_Interface"]
+    },
+    {
+      "id": "economy-future-personal-prices",
+      "title": { "ko": "나에게만 매겨진 가격", "en": "A price just for you", "ja": "自分だけの値段", "zh": "专门为你定的价格", "es": "Un precio solo para ti" },
+      "story": { "ko": "가게의 가격표가 모두 화면으로 바뀌고, AI가 손님마다 다른 값을 매긴다. 비 오는 날 급해 보이는 사람에게는 우산이 비싸지고, 같은 우유도 사는 동네와 휴대전화 기종에 따라 값이 다르다.", "en": "Every price tag in the store becomes a screen, and an AI sets a different price for each customer. On a rainy day, umbrellas cost more for people who look in a hurry, and the same carton of milk costs more or less depending on your neighborhood and your phone model.", "ja": "店の値札はすべて画面に変わり、AIが客ごとに違う値段をつける。雨の日に急いでいそうな人には傘が高くなり、同じ牛乳でも住んでいる地域やスマホの機種によって値段が違う。", "zh": "商店里的价签全都换成了屏幕，AI给每位顾客定不同的价格。下雨天，看上去着急的人买伞要多付钱；同样一盒牛奶，价格也因住在哪个街区、用什么型号的手机而不同。", "es": "Todas las etiquetas de precio de las tiendas se convierten en pantallas, y una IA fija un precio distinto para cada cliente. Un día de lluvia, el paraguas cuesta más a quien parece tener prisa, y el mismo cartón de leche cambia de precio según tu barrio y el modelo de tu móvil." },
+      "when": { "year": [2030, 2100], "tech": [60, 100], "equality": [0, 40] },
+      "tone": "dark",
+      "domains": ["economy", "technology", "daily"]
+    },
+    {
+      "id": "economy-future-beyond-gdp",
+      "title": { "ko": "성장률 대신 삶의 질", "en": "Well-being instead of growth", "ja": "成長率より暮らしの質", "zh": "不看增长率，看生活质量", "es": "Bienestar en lugar de crecimiento" },
+      "story": { "ko": "저녁 뉴스가 경제성장률 대신 '삶의 질 지표'를 먼저 전한다. 오늘 머리기사는 출퇴근 시간이 줄고 혼자 밥 먹는 노인이 줄었다는 소식이다. 경제는 거의 자라지 않지만, 그 사실을 크게 걱정하는 사람은 드물다.", "en": "The evening news leads with the well-being index instead of the growth rate. Today’s top story: commutes are shorter, and fewer older people are eating alone. The economy is barely growing, but few people are very worried about it.", "ja": "夕方のニュースは、経済成長率より先に「暮らしの質の指標」を伝える。今日のトップニュースは、通勤時間が短くなり、一人で食事をするお年寄りが減ったという話題だ。経済はほとんど成長していないが、それをひどく心配する人は少ない。", "zh": "晚间新闻最先播报的不再是经济增长率，而是“生活质量指数”。今天的头条是：通勤时间缩短了，独自吃饭的老人也少了。经济几乎没有增长，但很少有人为此担心。", "es": "El noticiero de la noche abre con el índice de bienestar en lugar de la tasa de crecimiento. El titular de hoy: los trayectos al trabajo son más cortos y hay menos personas mayores que comen solas. La economía apenas crece, pero a pocos les preocupa demasiado." },
+      "when": { "year": [2055, 2100], "growth": [0, 40], "solidarity": [55, 100] },
+      "tone": "bright",
+      "domains": ["economy", "daily"],
+      "scene": { "green": 0.1, "community": 0.1 }
+    },
+    {
+      "id": "economy-future-company-city",
+      "title": { "ko": "회사가 세운 도시", "en": "The company city", "ja": "会社が建てた都市", "zh": "公司建起的城市", "es": "La ciudad de la empresa" },
+      "story": { "ko": "거대 기업이 도시 하나를 통째로 운영한다. 직원은 집과 학교, 병원을 공짜로 쓰고 월급 일부를 회사 포인트로 받는다. 삶은 넉넉하지만, 회사를 그만두는 날에는 집도 아이의 학교도 함께 떠나야 한다.", "en": "A giant corporation runs an entire city. Employees get housing, schools and hospitals for free, and part of their pay comes in company points. Life is comfortable, but the day you quit, you lose your home and your child’s school along with your job.", "ja": "巨大企業が都市をまるごと運営する。社員は住宅も学校も病院も無料で使え、給料の一部は会社のポイントで受け取る。暮らしは豊かだが、会社を辞める日には、家も子どもの学校も手放さなければならない。", "zh": "一家巨型企业运营着整座城市。员工免费使用住房、学校和医院，工资的一部分以公司积分发放。日子过得宽裕，可一旦辞职，房子和孩子的学校也要一起失去。", "es": "Una gran corporación gestiona una ciudad entera. Sus empleados tienen vivienda, escuelas y hospitales gratis, y cobran parte del sueldo en puntos de la empresa. Se vive con holgura, pero el día que renuncias pierdes también tu casa y la escuela de tus hijos." },
+      "when": { "year": [2080, 2100], "growth": [60, 100], "equality": [0, 40] },
+      "tone": "mixed",
+      "domains": ["economy", "cities", "work"],
+      "scene": { "divide": 0.15, "tech": 0.05 }
+    }
+  ]
+}

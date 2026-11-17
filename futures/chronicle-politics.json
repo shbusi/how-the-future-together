@@ -1,0 +1,85 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "politics-1919-provisional-government",
+      "type": "history",
+      "title": { "ko": "민주공화국을 선언한 임시정부", "en": "Korea is declared a democratic republic", "ja": "民主共和制をうたった臨時政府", "zh": "宣布民主共和的临时政府", "es": "Corea se proclama república democrática" },
+      "story": { "ko": "1919년 3·1 운동이 전국으로 번진 뒤 상하이에 대한민국 임시정부가 세워졌다. 임시헌장 제1조는 나라의 주인이 왕이 아닌 국민이라는 '민주공화제'를 선언했다.", "en": "In 1919, after the March 1st Movement swept across Korea, the Provisional Government of the Republic of Korea was founded in Shanghai. The first article of its charter declared a democratic republic: a country belonging to its people, not a king.", "ja": "1919年、三・一独立運動が全国に広がった後、上海に大韓民国臨時政府が樹立された。臨時憲章の第1条は、国の主人は王ではなく国民だとする「民主共和制」を宣言した。", "zh": "1919年，三一运动席卷朝鲜半岛之后，大韩民国临时政府在上海成立。临时宪章第一条宣布实行“民主共和制”：国家的主人不再是君王，而是人民。", "es": "En 1919, tras extenderse el Movimiento del 1 de Marzo por toda Corea, se fundó en Shanghái el Gobierno Provisional de la República de Corea. El primer artículo de su carta proclamó una república democrática: el país pertenecía al pueblo, no a un rey." },
+      "when": { "year": [1919, 1919] },
+      "tone": "bright",
+      "domains": ["politics", "rights"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/March_1st_Movement", "https://en.wikipedia.org/wiki/Provisional_Government_of_the_Republic_of_Korea"]
+    },
+    {
+      "id": "politics-1960-year-of-africa",
+      "type": "history",
+      "title": { "ko": "아프리카의 해", "en": "The Year of Africa", "ja": "アフリカの年", "zh": "非洲独立年", "es": "El Año de África" },
+      "story": { "ko": "1960년 한 해에만 아프리카에서 17개 나라가 식민 지배를 끝내고 독립했다. 수많은 사람이 식민지 주민에서 자기 나라의 시민이 되었다.", "en": "In 1960 alone, 17 African countries threw off colonial rule and became independent. Millions of people went from being colonial subjects to citizens of their own nations.", "ja": "1960年の1年だけで、アフリカの17か国が植民地支配を終えて独立した。数多くの人々が、植民地の住民から自分の国の市民になった。", "zh": "仅在1960年一年，非洲就有17个国家摆脱殖民统治、宣告独立。无数人从殖民地的臣民变成了自己国家的公民。", "es": "Solo en 1960, 17 países africanos pusieron fin al dominio colonial y se independizaron. Millones de personas pasaron de ser súbditos coloniales a ciudadanos de sus propios países." },
+      "when": { "year": [1960, 1960] },
+      "tone": "bright",
+      "domains": ["politics", "rights"],
+      "region": "africa",
+      "sources": ["https://en.wikipedia.org/wiki/Year_of_Africa", "https://en.wikipedia.org/wiki/Decolonisation_of_Africa"]
+    },
+    {
+      "id": "politics-1989-fall-of-berlin-wall",
+      "type": "history",
+      "title": { "ko": "베를린 장벽이 무너지다", "en": "The Berlin Wall falls", "ja": "ベルリンの壁の崩壊", "zh": "柏林墙倒塌", "es": "Cae el Muro de Berlín" },
+      "story": { "ko": "1989년 베를린 장벽이 무너졌다. 세계를 동서로 가르던 냉전이 끝나 가기 시작했고, 동유럽 사람들은 자유선거와 국경 너머 여행을 할 수 있게 되었다.", "en": "In 1989 the Berlin Wall fell. The Cold War that had split the world into East and West began to end, and people in Eastern Europe won free elections and the freedom to travel abroad.", "ja": "1989年、ベルリンの壁が崩壊した。世界を東西に分けていた冷戦が終わりに向かい、東ヨーロッパの人々は自由選挙と国境を越えた旅行ができるようになった。", "zh": "1989年，柏林墙倒塌。把世界分成东西两半的冷战开始走向终结，东欧人民迎来了自由选举，也可以跨越国境自由旅行了。", "es": "En 1989 cayó el Muro de Berlín. La Guerra Fría, que había dividido el mundo entre Este y Oeste, empezó a terminar, y los habitantes de Europa del Este conquistaron elecciones libres y la libertad de viajar al extranjero." },
+      "when": { "year": [1989, 1989] },
+      "tone": "bright",
+      "domains": ["politics", "peace"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall", "https://en.wikipedia.org/wiki/Revolutions_of_1989"]
+    },
+    {
+      "id": "politics-2001-september-11",
+      "type": "history",
+      "title": { "ko": "9·11과 테러와의 전쟁", "en": "9/11 and the war on terror", "ja": "9・11と「テロとの戦い」", "zh": "“9·11”与反恐战争", "es": "El 11-S y la guerra contra el terror" },
+      "story": { "ko": "2001년 9월 11일 미국에서 동시다발 테러가 일어났다. 곧 '테러와의 전쟁'이 시작되었고, 공항의 엄격한 보안 검색과 정부의 감시가 세계 곳곳의 일상이 되었다.", "en": "On September 11, 2001, coordinated terrorist attacks struck the United States. The “war on terror” soon followed, and strict airport screening and government surveillance became part of everyday life around the world.", "ja": "2001年9月11日、アメリカで同時多発テロが起きた。まもなく「テロとの戦い」が始まり、空港の厳しい保安検査と政府による監視が、世界各地で日常の一部になった。", "zh": "2001年9月11日，美国遭到连环恐怖袭击。“反恐战争”随即展开，严格的机场安检和政府监控成了世界各地的日常。", "es": "El 11 de septiembre de 2001, una serie de atentados terroristas coordinados golpeó Estados Unidos. Pronto comenzó la «guerra contra el terror», y los estrictos controles en los aeropuertos y la vigilancia gubernamental pasaron a formar parte de la vida cotidiana en todo el mundo." },
+      "when": { "year": [2001, 2001] },
+      "tone": "dark",
+      "domains": ["politics", "peace", "rights"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/September_11_attacks", "https://en.wikipedia.org/wiki/War_on_terror"]
+    },
+    {
+      "id": "politics-2016-candlelight-protests",
+      "type": "history",
+      "title": { "ko": "광장을 밝힌 촛불", "en": "Candles in the square", "ja": "広場を照らしたろうそく", "zh": "点亮广场的烛光", "es": "Velas en la plaza" },
+      "story": { "ko": "2016년 가을부터 이듬해 봄까지 시민들이 주말마다 촛불을 들고 서울 광화문 광장과 전국 곳곳에 모였다. 2017년 3월 헌법재판소가 박근혜 대통령의 파면을 결정했고, 평화로운 시위가 헌법 절차를 거쳐 대통령을 물러나게 했다.", "en": "From the autumn of 2016 to the following spring, citizens gathered every weekend with candles in Seoul’s Gwanghwamun Square and across the country. In March 2017 the Constitutional Court removed President Park Geun-hye from office: peaceful protest had ended a presidency through constitutional means.", "ja": "2016年秋から翌年の春まで、市民が週末ごとにろうそくを手に、ソウルの光化門広場や全国各地に集まった。2017年3月、憲法裁判所は朴槿恵大統領の罷免を決定し、平和的なデモが憲法の手続きを通じて大統領を退かせた。", "zh": "从2016年秋天到第二年春天，市民们每个周末手持烛光，聚集在首尔光化门广场和全国各地。2017年3月，宪法法院裁定罢免朴槿惠总统，和平的抗议通过宪法程序让总统下了台。", "es": "Desde el otoño de 2016 hasta la primavera siguiente, la ciudadanía se reunió cada fin de semana con velas en la plaza Gwanghwamun de Seúl y en todo el país. En marzo de 2017 el Tribunal Constitucional destituyó a la presidenta Park Geun-hye: la protesta pacífica había puesto fin a una presidencia por la vía constitucional." },
+      "when": { "year": [2016, 2017] },
+      "tone": "bright",
+      "domains": ["politics", "rights"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/2016%E2%80%932017_South_Korean_protests", "https://en.wikipedia.org/wiki/Impeachment_of_Park_Geun-hye"]
+    },
+    {
+      "id": "politics-future-votes-for-children",
+      "title": { "ko": "아이 몫의 한 표", "en": "A vote for every child", "ja": "子どもの分の一票", "zh": "孩子的那一票", "es": "Un voto por cada niño" },
+      "story": { "ko": "아이는 줄고 60세 이상이 유권자의 절반을 넘자, 부모가 미성년 자녀 몫의 표를 대신 던지는 제도가 생긴다. 놀이터 예산이 처음으로 경로당 예산을 앞지르고, 아이가 없는 사람들은 불공평하다며 헌법소원을 낸다.", "en": "With fewer children and more than half of voters over 60, a new rule lets parents cast an extra vote on behalf of each minor child. Playground budgets overtake senior-center budgets for the first time, and people without children go to the constitutional court, calling it unfair.", "ja": "子どもが減り、60歳以上が有権者の半分を超えると、親が未成年の子どもの分の票を代わりに投じる制度ができる。遊び場の予算が初めて高齢者の集会所の予算を上回り、子どものいない人々は不公平だとして憲法訴訟を起こす。", "zh": "孩子越来越少，60岁以上的选民超过一半，于是出现了一项新制度：父母可以代未成年子女多投一票。儿童游乐场的预算第一次超过了老年活动中心的预算，没有孩子的人则以不公平为由提起违宪诉讼。", "es": "Con cada vez menos niños y más de la mitad del electorado por encima de los 60 años, se aprueba que los padres emitan un voto adicional por cada hijo menor de edad. Por primera vez, el presupuesto para parques infantiles supera al de los centros de mayores, y quienes no tienen hijos lo recurren ante el Tribunal Constitucional por injusto." },
+      "when": { "year": [2035, 2100], "population": [0, 30], "solidarity": [40, 100] },
+      "tone": "mixed",
+      "domains": ["politics", "population", "family"]
+    },
+    {
+      "id": "politics-future-endless-emergency",
+      "title": { "ko": "끝나지 않는 비상사태", "en": "The emergency that never ends", "ja": "終わらない非常事態", "zh": "永不结束的紧急状态", "es": "La emergencia que nunca termina" },
+      "story": { "ko": "폭염과 홍수가 해마다 덮치자 정부는 비상사태를 1년씩 연장한다. 집회는 재난 대응을 이유로 금지되고, 선거는 '복구가 끝난 뒤'로 미뤄졌다. 열 살 아이들은 비상사태가 아니던 시절을 모른다.", "en": "As heat waves and floods strike every year, the government extends the state of emergency one year at a time. Rallies are banned in the name of disaster response, and elections are postponed until “after the recovery.” Ten-year-olds have never known a time without the emergency.", "ja": "猛暑と洪水が毎年のように襲い、政府は非常事態を1年ずつ延長する。集会は災害対応を理由に禁止され、選挙は「復旧が終わってから」と先送りされた。10歳の子どもたちは、非常事態でなかった時代を知らない。", "zh": "热浪和洪水年年来袭，政府把紧急状态一年一年地延长下去。集会以救灾为由被禁止，选举被推迟到“灾后重建完成之后”。十岁的孩子们从没见过没有紧急状态的日子。", "es": "Con olas de calor e inundaciones cada año, el gobierno prorroga el estado de emergencia año tras año. Las manifestaciones se prohíben en nombre de la respuesta a los desastres y las elecciones se aplazan hasta «después de la reconstrucción». Los niños de diez años nunca han conocido una época sin emergencia." },
+      "when": { "year": [2055, 2100], "climate": [0, 35], "solidarity": [0, 40] },
+      "tone": "dark",
+      "domains": ["politics", "rights", "environment"]
+    },
+    {
+      "id": "politics-future-earth-parliament",
+      "title": { "ko": "지구 의회", "en": "A parliament for the planet", "ja": "地球議会", "zh": "地球议会", "es": "Un parlamento para el planeta" },
+      "story": { "ko": "세계 시민이 직접 뽑은 의원들이 모이는 지구 의회가 열린다. 바다와 대기, 우주 궤도처럼 어느 나라의 것도 아닌 것들을 이곳에서 함께 정한다. 오늘 회의는 태평양 섬나라 출신 의원이 이끈다.", "en": "A planetary parliament opens, its members elected directly by people all over the world. Here they decide together on things that belong to no single country, like the oceans, the air and orbital space. Today’s session is led by a member from a Pacific island nation.", "ja": "世界中の市民が直接選んだ議員が集まる「地球議会」が開かれる。海や大気、宇宙の軌道のように、どの国のものでもないものをここで一緒に決める。今日の会議を率いるのは、太平洋の島国出身の議員だ。", "zh": "由全世界公民直接选出的议员组成的“地球议会”开幕了。海洋、大气、太空轨道这些不属于任何一个国家的东西，都在这里共同决定。今天的会议由一位来自太平洋岛国的议员主持。", "es": "Se inaugura un parlamento planetario cuyos miembros elige directamente la ciudadanía de todo el mundo. Allí se decide en común sobre lo que no pertenece a ningún país, como los océanos, la atmósfera y las órbitas espaciales. La sesión de hoy la preside una diputada de un país insular del Pacífico." },
+      "when": { "year": [2080, 2100], "peace": [70, 100], "solidarity": [60, 100] },
+      "tone": "bright",
+      "domains": ["politics", "peace", "environment"]
+    }
+  ]
+}

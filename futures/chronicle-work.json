@@ -1,0 +1,87 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "work-1919-ilo-eight-hour-day",
+      "type": "history",
+      "title": { "ko": "하루 8시간 노동", "en": "The eight-hour day", "ja": "1日8時間労働", "zh": "八小时工作制", "es": "La jornada de ocho horas" },
+      "story": { "ko": "1919년 국제노동기구(ILO)가 세워지고, 첫 국제 협약으로 산업 현장의 노동 시간을 하루 8시간, 주 48시간으로 제한했다. '8시간 노동, 8시간 휴식, 8시간 자유'라는 노동자들의 오랜 요구가 국제 기준이 되었다.", "en": "In 1919 the International Labour Organization was founded, and its very first convention limited working hours in industry to eight a day and 48 a week. Workers’ long-standing demand of “eight hours for work, eight hours for rest, eight hours for what we will” became an international standard.", "ja": "1919年、国際労働機関（ILO）が設立され、最初の国際条約で工業部門の労働時間を1日8時間、週48時間に制限した。「8時間の労働、8時間の休息、8時間の自由」という労働者の長年の要求が、国際的な基準になった。", "zh": "1919年，国际劳工组织（ILO）成立，第一项国际公约就把工业部门的工作时间限定为每天8小时、每周48小时。“8小时工作、8小时休息、8小时自由支配”这一工人的长期诉求，成了国际标准。", "es": "En 1919 se fundó la Organización Internacional del Trabajo (OIT), y su primer convenio limitó la jornada en la industria a ocho horas diarias y 48 semanales. La vieja reivindicación obrera de «ocho horas de trabajo, ocho de descanso y ocho de libre disposición» se convirtió en una norma internacional." },
+      "when": { "year": [1919, 1919] },
+      "tone": "bright",
+      "domains": ["work", "rights"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/International_Labour_Organization", "https://en.wikipedia.org/wiki/Hours_of_Work_(Industry)_Convention,_1919"]
+    },
+    {
+      "id": "work-1955-gastarbeiter",
+      "type": "history",
+      "title": { "ko": "서독으로 간 손님 노동자", "en": "Guest workers in West Germany", "ja": "西ドイツへ渡った労働者たち", "zh": "远赴西德的外籍劳工", "es": "Trabajadores invitados en Alemania" },
+      "story": { "ko": "1955년부터 1973년까지 서독은 부족한 일손을 채우려고 이탈리아, 터키 등과 노동자 모집 협정을 맺었다. 한국에서도 1963년부터 광부가, 뒤이어 간호사가 서독으로 떠나 낯선 땅의 탄광과 병원에서 일했다.", "en": "From 1955 to 1973, West Germany signed labor recruitment agreements with Italy, Turkey and other countries to fill its labor shortage. From 1963, Korean miners and later nurses also left for West Germany, working in mines and hospitals in an unfamiliar land.", "ja": "1955年から1973年まで、西ドイツは人手不足を補うため、イタリアやトルコなどと労働者募集協定を結んだ。韓国からも1963年から炭鉱労働者が、続いて看護師が西ドイツへ渡り、見知らぬ土地の炭鉱や病院で働いた。", "zh": "1955年至1973年，西德为弥补劳动力短缺，与意大利、土耳其等国签订了招募劳工的协议。从1963年起，韩国的矿工以及随后的护士也前往西德，在陌生土地上的煤矿和医院里工作。", "es": "Entre 1955 y 1973, Alemania Occidental firmó acuerdos de contratación de trabajadores con Italia, Turquía y otros países para cubrir la falta de mano de obra. Desde 1963 también llegaron mineros y, más tarde, enfermeras de Corea del Sur, que trabajaron en minas y hospitales de una tierra desconocida." },
+      "when": { "year": [1955, 1973] },
+      "tone": "mixed",
+      "domains": ["work", "population"],
+      "region": "europe",
+      "sources": ["https://en.wikipedia.org/wiki/Gastarbeiter", "https://en.wikipedia.org/wiki/Koreans_in_Germany"]
+    },
+    {
+      "id": "work-1970-jeon-tae-il",
+      "type": "history",
+      "title": { "ko": "전태일의 외침", "en": "Jeon Tae-il’s cry", "ja": "全泰壱の叫び", "zh": "全泰壹的呐喊", "es": "El grito de Jeon Tae-il" },
+      "story": { "ko": "1970년 서울 평화시장의 스물두 살 재단사 전태일이 '근로기준법을 준수하라'라고 외치며 스스로 몸에 불을 붙였다. 좁고 먼지 많은 작업장에서 밤낮없이 일하던 어린 노동자들의 현실이 알려지며 한국 노동운동이 본격적으로 시작되었다.", "en": "In 1970, Jeon Tae-il, a 22-year-old tailor at Seoul’s Peace Market, set himself on fire, crying out “Obey the Labor Standards Act!” The plight of young workers toiling day and night in cramped, dusty workshops came to light, and Korea’s labor movement began in earnest.", "ja": "1970年、ソウル・平和市場の22歳の裁断師、全泰壱が「勤労基準法を守れ」と叫びながら自らの体に火を放った。狭くほこりだらけの作業場で昼夜を問わず働く若い労働者たちの現実が知られ、韓国の労働運動が本格的に始まった。", "zh": "1970年，首尔和平市场22岁的裁缝全泰壹高喊“遵守劳动基准法”，引火自焚。在狭窄、满是灰尘的作坊里没日没夜劳作的年轻工人的处境由此为人所知，韩国劳工运动正式兴起。", "es": "En 1970, Jeon Tae-il, un sastre de 22 años del Mercado de la Paz de Seúl, se prendió fuego al grito de «¡Cumplan la Ley de Normas Laborales!». Salió a la luz la realidad de jóvenes trabajadores que se agotaban día y noche en talleres estrechos y polvorientos, y el movimiento obrero coreano cobró verdadera fuerza." },
+      "when": { "year": [1970, 1970] },
+      "tone": "mixed",
+      "domains": ["work", "rights"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Jeon_Tae-il"]
+    },
+    {
+      "id": "work-1997-imf-layoffs",
+      "type": "history",
+      "title": { "ko": "외환위기와 사라진 평생직장", "en": "The crisis that ended jobs for life", "ja": "通貨危機と消えた終身雇用", "zh": "金融危机与消失的“铁饭碗”", "es": "Adiós al empleo de por vida" },
+      "story": { "ko": "1997년 외환위기로 한국이 IMF 구제금융을 받았다. 기업이 잇따라 무너지며 대량 해고와 명예퇴직이 쏟아졌고, '평생직장'이라는 말이 사라지며 비정규직이 크게 늘었다.", "en": "In 1997 the Asian financial crisis forced South Korea to accept an IMF bailout. As companies collapsed one after another, mass layoffs and early retirements followed, the idea of a job for life faded, and temporary and contract work grew sharply.", "ja": "1997年の通貨危機で、韓国はIMFの救済融資を受けた。企業が次々と倒れて大量解雇や希望退職が相次ぎ、「終身雇用」という言葉が消えて非正規雇用が大きく増えた。", "zh": "1997年，亚洲金融危机迫使韩国接受国际货币基金组织（IMF）的救助贷款。企业接连倒闭，大规模裁员和提前退休接踵而至，“终身雇佣”一词渐渐消失，非正式雇佣大幅增加。", "es": "En 1997 la crisis financiera asiática obligó a Corea del Sur a aceptar un rescate del FMI. Las empresas quebraron una tras otra, llegaron los despidos masivos y las jubilaciones anticipadas, la idea de un empleo para toda la vida se desvaneció y el trabajo temporal creció con fuerza." },
+      "when": { "year": [1997, 1998] },
+      "tone": "dark",
+      "domains": ["work", "economy"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/1997_Asian_financial_crisis"]
+    },
+    {
+      "id": "work-2020-remote-work",
+      "type": "history",
+      "title": { "ko": "집이 사무실이 되다", "en": "When home became the office", "ja": "家がオフィスになった", "zh": "家成了办公室", "es": "Cuando la casa se volvió oficina" },
+      "story": { "ko": "2020년 코로나19가 대유행하자 세계 곳곳의 사무실이 문을 닫고 수많은 사람이 집에서 일하게 되었다. 화상회의가 일상이 되었지만, 배달·돌봄·병원 노동자들은 위험 속에서도 현장을 지켜야 했다.", "en": "When COVID-19 became a pandemic in 2020, offices around the world closed and huge numbers of people began working from home. Video calls became routine, but delivery, care and hospital workers had to stay on the front line despite the risks.", "ja": "2020年、新型コロナウイルスが世界的に大流行すると、各地のオフィスが閉まり、非常に多くの人が自宅で働くようになった。ビデオ会議が日常になる一方、配達や介護、病院で働く人々は危険の中でも現場を守らなければならなかった。", "zh": "2020年新冠疫情全球大流行，世界各地的办公室纷纷关闭，大量人员开始居家办公。视频会议成了家常便饭，而快递、护理和医院的工作者却不得不冒着风险坚守岗位。", "es": "Cuando la COVID-19 se convirtió en pandemia en 2020, las oficinas de todo el mundo cerraron y una enorme cantidad de personas pasó a trabajar desde casa. Las videollamadas se volvieron rutina, pero los trabajadores de reparto, cuidados y hospitales tuvieron que seguir en primera línea pese a los riesgos." },
+      "when": { "year": [2020, 2022] },
+      "tone": "mixed",
+      "domains": ["work", "technology", "health"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Remote_work", "https://en.wikipedia.org/wiki/Essential_worker"]
+    },
+    {
+      "id": "work-future-guild-platforms",
+      "title": { "ko": "노동자가 주인인 앱", "en": "Apps owned by their workers", "ja": "働く人が持ち主のアプリ", "zh": "劳动者自己的应用", "es": "Apps en manos de sus trabajadores" },
+      "story": { "ko": "배달 기사와 가사 노동자들이 협동조합을 만들어 자기들의 앱을 직접 운영한다. 수수료는 낮아지고, 일감을 나누는 규칙은 조합원 투표로 정한다. 일하다 다치면 조합 기금이 치료비를 낸다.", "en": "Delivery riders and domestic workers form cooperatives and run their own apps. Fees drop, and the rules for handing out jobs are set by a members’ vote. If someone gets hurt on the job, the co-op fund pays for treatment.", "ja": "配達員や家事労働者が協同組合をつくり、自分たちのアプリを自ら運営する。手数料は下がり、仕事を割り振るルールは組合員の投票で決める。仕事中にけがをすれば、組合の基金が治療費を払う。", "zh": "外卖骑手和家政工人组建合作社，自己运营自己的应用。抽成降低了，派单规则由社员投票决定。工作中受了伤，由合作社的基金支付医药费。", "es": "Repartidores y trabajadoras del hogar forman cooperativas y gestionan sus propias aplicaciones. Las comisiones bajan y las reglas para repartir los encargos se deciden en votación entre los socios. Si alguien se lesiona trabajando, el fondo de la cooperativa paga el tratamiento." },
+      "when": { "year": [2035, 2100], "tech": [60, 100], "solidarity": [55, 100] },
+      "tone": "bright",
+      "domains": ["work", "economy", "technology"],
+      "scene": { "community": 0.1 }
+    },
+    {
+      "id": "work-future-rookie-at-seventy",
+      "title": { "ko": "일흔 살 신입 사원", "en": "A new hire at seventy", "ja": "七十歳の新入社員", "zh": "七十岁的新员工", "es": "Nuevo empleado a los setenta" },
+      "story": { "ko": "일할 사람이 모자라 정년이 사라진다. 일흔 살 신입 사원이 스물다섯 살 팀장에게 일을 배우고, 사무실마다 낮잠 의자와 큰 글씨 화면이 놓인다. 쉬고 싶어도 연금만으로는 살기 어려워 일을 놓지 못하는 사람도 많다.", "en": "With too few workers to go around, mandatory retirement disappears. A 70-year-old new hire learns the ropes from a 25-year-old team leader, and every office has nap chairs and large-print screens. Many would like to stop, but they can’t live on their pension alone.", "ja": "働き手が足りず、定年がなくなる。七十歳の新入社員が二十五歳のチームリーダーに仕事を教わり、どのオフィスにも昼寝用の椅子と大きな文字の画面が置かれる。休みたくても年金だけでは暮らせず、仕事を手放せない人も多い。", "zh": "劳动力短缺，退休年龄被取消了。七十岁的新员工向二十五岁的组长学习业务，每间办公室都摆上了午睡椅和大字屏幕。很多人想歇下来，却因为光靠养老金难以生活，只能继续工作。", "es": "Faltan trabajadores y desaparece la edad de jubilación obligatoria. Un empleado recién contratado de 70 años aprende el oficio con una jefa de equipo de 25, y en cada oficina hay sillones para la siesta y pantallas con letra grande. Muchos querrían parar, pero no les alcanza con la pensión." },
+      "when": { "year": [2055, 2100], "population": [0, 30], "tech": [0, 60] },
+      "tone": "mixed",
+      "domains": ["work", "population"]
+    },
+    {
+      "id": "work-future-hired-by-ai",
+      "title": { "ko": "AI가 사람을 고용한다", "en": "Hired by an AI", "ja": "AIに雇われる人々", "zh": "被AI雇用的人", "es": "Contratados por una IA" },
+      "story": { "ko": "회사를 굴리는 것은 AI이고, 사람은 AI가 못 하는 '몸 쓰는 일'에 시간 단위로 고용된다. 이어폰 속 AI의 지시에 따라 물건을 옮기고 기계를 고친다. 사고가 나도 책임질 사람이 아무도 없다.", "en": "AI agents run the companies, and people are hired by the hour for the physical work machines still can’t do. Following instructions from an AI in their earbuds, they move goods and fix equipment. When there’s an accident, no human is responsible.", "ja": "会社を動かすのはAIで、人はAIにできない「体を使う仕事」に時間単位で雇われる。イヤホンから聞こえるAIの指示どおりに荷物を運び、機械を直す。事故が起きても、責任を取る人間は誰もいない。", "zh": "经营公司的是AI，人只被按小时雇来做AI做不了的“体力活”。他们按耳机里AI的指令搬运货物、修理机器。出了事故，也没有一个人来负责。", "es": "Las empresas las dirige la IA, y a las personas se las contrata por horas para el trabajo físico que las máquinas aún no pueden hacer. Siguen las órdenes de una IA en sus auriculares para mover mercancías y reparar equipos. Si hay un accidente, no hay ningún humano responsable." },
+      "when": { "year": [2078, 2100], "tech": [75, 100], "equality": [0, 40] },
+      "tone": "dark",
+      "domains": ["work", "technology"],
+      "scene": { "tech": 0.1, "divide": 0.1 }
+    }
+  ]
+}
