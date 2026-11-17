@@ -73,12 +73,12 @@
       "scene": { "green": 0.05 }
     },
     {
-      "id": "population-future-commuting-at-100",
-      "title": { "ko": "백 살의 출근길", "en": "Commuting at one hundred", "ja": "百歳の通勤路", "zh": "百岁老人的上班路", "es": "Ir a trabajar a los cien años" },
-      "story": { "ko": "백 살을 넘긴 사람이 흔해졌지만 연금은 여든다섯이 되어야 나온다. 새벽 첫차는 아흔 넘은 경비원과 청소 노동자로 가득하고, 오래 사는 것이 정말 축복인지 묻는 사람이 늘어난다.", "en": "Living past one hundred has become common, but pensions start only at eighty-five. The first trains of the morning are full of security guards and cleaners in their nineties, and more and more people ask whether a long life is really a blessing.", "ja": "百歳を超える人が珍しくなくなったが、年金は八十五歳にならないと出ない。早朝の始発電車は九十歳を超えた警備員や清掃員でいっぱいで、長生きは本当に幸せなのかと問う人が増えていく。", "zh": "活过一百岁已不稀奇，可养老金要到八十五岁才能领取。清晨的头班车上挤满了九十多岁的保安和保洁员，越来越多的人开始怀疑：长寿真的是福气吗？", "es": "Pasar de los cien años se ha vuelto habitual, pero la pensión no llega hasta los ochenta y cinco. Los primeros trenes de la mañana van llenos de vigilantes y limpiadoras de más de noventa años, y cada vez más gente se pregunta si vivir tanto es de verdad una bendición." },
-      "when": { "year": [2080, 2100], "tech": [55, 100], "equality": [0, 35], "growth": [0, 40] },
+      "id": "population-future-inheritance-at-75",
+      "title": { "ko": "일흔다섯에 받는 유산", "en": "An inheritance at seventy-five", "ja": "七十五歳で受け取る遺産", "zh": "七十五岁才继承的遗产", "es": "Heredar a los setenta y cinco" },
+      "story": { "ko": "부모가 백 살을 훌쩍 넘겨 살면서 자녀는 일흔다섯이 되어서야 유산을 받는다. 집과 땅은 대부분 아흔 넘은 노인의 이름으로 묶여 있고, 집을 살 수 없는 서른 살들은 할머니 집 작은방에 산다.", "en": "Parents now live well past one hundred, so their children inherit only at seventy-five. Most homes and land are held in the names of people over ninety, and thirty-year-olds who cannot buy a home live in the spare room at their grandmother's.", "ja": "親が百歳をゆうに超えて生きるようになり、子どもが遺産を受け取るのは七十五歳になってからだ。家や土地の多くは九十歳を超えた人の名義のままで、家を買えない三十歳の若者は祖母の家の小部屋で暮らす。", "zh": "父母普遍活过一百岁，子女要到七十五岁才能继承遗产。房子和土地大多登记在九十多岁的老人名下，买不起房的三十岁年轻人只能住在奶奶家的小房间里。", "es": "Los padres viven ya mucho más allá de los cien años, así que los hijos no heredan hasta los setenta y cinco. Casi todas las casas y tierras están a nombre de personas de más de noventa, y quienes tienen treinta años y no pueden comprar vivienda viven en el cuarto pequeño de casa de su abuela." },
+      "when": { "year": [2080, 2100], "tech": [60, 100], "equality": [0, 40], "growth": [0, 45] },
       "tone": "dark",
-      "domains": ["population", "work"]
+      "domains": ["population", "economy", "family"]
     }
   ]
 }
