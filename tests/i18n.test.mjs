@@ -23,9 +23,11 @@ test('어느 번역 파일에도 모르는 키가 없고, {자리표시}가 한�
   }
 });
 
-test('조건, 태그, 그림 항목, 분위기는 기준 번역에 이름이 있다', () => {
+test('조건, 분야, 지역, 그림 항목, 분위기는 기준 번역에 이름이 있다', () => {
   for (const c of cfg.conditions.conditions) for (const part of ['label', 'low', 'high']) assert.ok(`cond.${c.id}.${part}` in ko, `cond.${c.id}.${part}`);
-  for (const tag of cfg.tags) assert.ok(`tag.${tag}` in ko && `tag.${tag}` in cfg.locales.en, `tag.${tag}`);
+  for (const d of cfg.domains) assert.ok(`domain.${d}` in ko && `domain.${d}` in cfg.locales.en, `domain.${d}`);
+  for (const r of cfg.regions) assert.ok(`region.${r.id}` in ko && `region.${r.id}` in cfg.locales.en, `region.${r.id}`);
+  for (const p of cfg.conditions.presets) assert.ok(`preset.${p.id}` in ko, `preset.${p.id}`);
   for (const key of SCENE_KEYS) assert.ok(`fx.${key}` in ko, `fx.${key}`);
   for (const tone of TONES) assert.ok(`tone.${tone}` in ko, `tone.${tone}`);
 });

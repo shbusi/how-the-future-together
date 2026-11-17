@@ -4,74 +4,77 @@
   "futures": [
     {
       "id": "empty-schools",
-      "title": { "ko": "아이 없는 학교", "en": "Schools without children", "ja": "子どものいない学校", "zh": "没有孩子的学校", "es": "Escuelas sin niños" },
-      "story": { "ko": "입학생이 없는 초등학교가 해마다 늘어난다. 빈 교실은 노인 주간보호센터와 마을 도서관으로 바뀐다.", "en": "Every year, more elementary schools have no new students enrolling. Empty classrooms are turned into day-care centers for older people and community libraries.", "ja": "新入生のいない小学校が年々増えていく。空いた教室は、高齢者のデイサービスセンターや地域の図書館に生まれ変わる。", "zh": "没有新生入学的小学一年比一年多。空出来的教室被改成了老年人日间照料中心和社区图书馆。", "es": "Cada año hay más escuelas primarias sin alumnos nuevos. Las aulas vacías se convierten en centros de día para personas mayores y en bibliotecas de barrio." },
-      "when": { "population": [0, 30], "year": [2026, 2070] },
+      "title": {"ko": "아이 없는 학교", "en": "Schools without children", "ja": "子どものいない学校", "zh": "没有孩子的学校", "es": "Escuelas sin niños"},
+      "story": {"ko": "입학생이 없는 초등학교가 해마다 늘어난다. 빈 교실은 노인 주간보호센터와 마을 도서관으로 바뀐다.", "en": "Every year, more elementary schools have no new students enrolling. Empty classrooms are turned into day-care centers for older people and community libraries.", "ja": "新入生のいない小学校が年々増えていく。空いた教室は、高齢者のデイサービスセンターや地域の図書館に生まれ変わる。", "zh": "没有新生入学的小学一年比一年多。空出来的教室被改成了老年人日间照料中心和社区图书馆。", "es": "Cada año hay más escuelas primarias sin alumnos nuevos. Las aulas vacías se convierten en centros de día para personas mayores y en bibliotecas de barrio."},
+      "when": {"population": [0, 30], "year": [2026, 2070]},
       "tone": "mixed",
-      "tags": ["population", "education"],
-      "scene": { "decay": 0.1 }
+      "domains": ["population", "education"],
+      "region": "east-asia",
+      "scene": {"decay": 0.1}
     },
     {
       "id": "compact-shrinking-city",
-      "title": { "ko": "작아지되 단단하게", "en": "Smaller but stronger", "ja": "小さく、けれど強く", "zh": "变小，但更坚实", "es": "Más pequeñas, pero más sólidas" },
-      "story": { "ko": "인구가 줄어든 도시들은 중심부로 모여 산다. 비워진 외곽은 숲과 농지로 돌려 놓는다.", "en": "Cities with shrinking populations draw their residents together into the center. The emptied outskirts are returned to forest and farmland.", "ja": "人口が減った都市では、人々が中心部に集まって暮らす。空になった郊外は森や農地に戻す。", "zh": "人口减少的城市里，人们集中住到市中心。空出来的郊区则还原为森林和农田。", "es": "Las ciudades que pierden población concentran a sus habitantes en el centro. Las afueras que quedan vacías se devuelven al bosque y a los campos de cultivo." },
-      "when": { "population": [0, 40], "solidarity": [55, 100], "year": [2045, 2100] },
+      "title": {"ko": "작아지되 단단하게", "en": "Smaller but stronger", "ja": "小さく、けれど強く", "zh": "变小，但更坚实", "es": "Más pequeñas, pero más sólidas"},
+      "story": {"ko": "인구가 줄어든 도시들은 중심부로 모여 산다. 비워진 외곽은 숲과 농지로 돌려 놓는다.", "en": "Cities with shrinking populations draw their residents together into the center. The emptied outskirts are returned to forest and farmland.", "ja": "人口が減った都市では、人々が中心部に集まって暮らす。空になった郊外は森や農地に戻す。", "zh": "人口减少的城市里，人们集中住到市中心。空出来的郊区则还原为森林和农田。", "es": "Las ciudades que pierden población concentran a sus habitantes en el centro. Las afueras que quedan vacías se devuelven al bosque y a los campos de cultivo."},
+      "when": {"population": [0, 40], "solidarity": [55, 100], "year": [2045, 2100]},
       "tone": "bright",
-      "tags": ["population", "city"],
-      "scene": { "green": 0.1, "decay": -0.15 }
+      "domains": ["population", "cities"],
+      "scene": {"green": 0.1, "decay": -0.15}
     },
     {
       "id": "ghost-new-towns",
-      "title": { "ko": "유령 신도시", "en": "Ghost new towns", "ja": "ゴーストニュータウン", "zh": "鬼城新区", "es": "Ciudades nuevas fantasma" },
-      "story": { "ko": "한때 분양 경쟁이 치열했던 신도시 아파트의 절반이 비어 있다. 관리비를 낼 사람이 없어 엘리베이터가 멈춘 동도 있다.", "en": "Half the apartments in the new towns, where buyers once competed fiercely for a unit, now stand empty. In some buildings, the elevators have stopped because no one is left to pay the maintenance fees.", "ja": "かつて購入希望者が殺到したニュータウンのマンションは、半分が空き家になっている。管理費を払う人がいなくなり、エレベーターが止まった棟もある。", "zh": "曾经认购火爆的新城公寓，如今有一半空置。因为没人交物业费，有些楼的电梯已经停了。", "es": "La mitad de los apartamentos de las ciudades nuevas, por los que antes se peleaban los compradores, está vacía. En algunos edificios los ascensores se han parado porque ya nadie paga los gastos de mantenimiento." },
-      "when": { "population": [0, 35], "solidarity": [0, 45], "year": [2045, 2100] },
+      "title": {"ko": "유령 신도시", "en": "Ghost new towns", "ja": "ゴーストニュータウン", "zh": "鬼城新区", "es": "Ciudades nuevas fantasma"},
+      "story": {"ko": "한때 분양 경쟁이 치열했던 신도시 아파트의 절반이 비어 있다. 관리비를 낼 사람이 없어 엘리베이터가 멈춘 동도 있다.", "en": "Half the apartments in the new towns, where buyers once competed fiercely for a unit, now stand empty. In some buildings, the elevators have stopped because no one is left to pay the maintenance fees.", "ja": "かつて購入希望者が殺到したニュータウンのマンションは、半分が空き家になっている。管理費を払う人がいなくなり、エレベーターが止まった棟もある。", "zh": "曾经认购火爆的新城公寓，如今有一半空置。因为没人交物业费，有些楼的电梯已经停了。", "es": "La mitad de los apartamentos de las ciudades nuevas, por los que antes se peleaban los compradores, está vacía. En algunos edificios los ascensores se han parado porque ya nadie paga los gastos de mantenimiento."},
+      "when": {"population": [0, 35], "solidarity": [0, 45], "year": [2045, 2100]},
       "tone": "dark",
-      "tags": ["population", "housing"],
-      "scene": { "decay": 0.2 }
+      "domains": ["population", "cities"],
+      "region": "korea",
+      "scene": {"decay": 0.2}
     },
     {
       "id": "robot-caregivers",
-      "title": { "ko": "돌봄 로봇과 함께 늙어 가기", "en": "Growing old with a care robot", "ja": "ケアロボットと年を重ねる", "zh": "与陪护机器人一起变老", "es": "Envejecer con un robot cuidador" },
-      "story": { "ko": "혼자 사는 노인의 집마다 돌봄 로봇이 있다. 로봇은 약 먹을 시간을 알려 주고, 자녀에게 매일 안부 영상을 보낸다.", "en": "Every older person who lives alone has a care robot at home. It reminds them when to take their medicine and sends their children a check-in video every day.", "ja": "一人暮らしのお年寄りの家には、どこにもケアロボットがいる。ロボットは薬を飲む時間を知らせ、子どもたちに毎日、様子を伝える動画を送る。", "zh": "每位独居老人的家里都有一台陪护机器人。它会提醒老人按时吃药，每天还给子女发一段报平安的视频。", "es": "En cada casa de una persona mayor que vive sola hay un robot cuidador. Le recuerda la hora de las medicinas y cada día envía a sus hijos un video para contarles cómo está." },
-      "when": { "population": [0, 40], "tech": [60, 100], "year": [2040, 2100] },
+      "title": {"ko": "돌봄 로봇과 함께 늙어 가기", "en": "Growing old with a care robot", "ja": "ケアロボットと年を重ねる", "zh": "与陪护机器人一起变老", "es": "Envejecer con un robot cuidador"},
+      "story": {"ko": "혼자 사는 노인의 집마다 돌봄 로봇이 있다. 로봇은 약 먹을 시간을 알려 주고, 자녀에게 매일 안부 영상을 보낸다.", "en": "Every older person who lives alone has a care robot at home. It reminds them when to take their medicine and sends their children a check-in video every day.", "ja": "一人暮らしのお年寄りの家には、どこにもケアロボットがいる。ロボットは薬を飲む時間を知らせ、子どもたちに毎日、様子を伝える動画を送る。", "zh": "每位独居老人的家里都有一台陪护机器人。它会提醒老人按时吃药，每天还给子女发一段报平安的视频。", "es": "En cada casa de una persona mayor que vive sola hay un robot cuidador. Le recuerda la hora de las medicinas y cada día envía a sus hijos un video para contarles cómo está."},
+      "when": {"population": [0, 40], "tech": [60, 100], "year": [2040, 2100]},
       "tone": "mixed",
-      "tags": ["population", "care"]
+      "domains": ["population", "care"]
     },
     {
       "id": "migrant-nation",
-      "title": { "ko": "함께 쓰는 나라", "en": "A country we share", "ja": "みんなで分かち合う国", "zh": "大家共有的国家", "es": "Un país compartido" },
-      "story": { "ko": "새로 태어나는 아이 다섯 명 중 한 명은 부모 중 한 사람이 다른 나라에서 왔다. 학교 급식에 쌀국수와 쿠스쿠스가 올라온다.", "en": "One in five newborns has a parent who came from another country. Rice noodles and couscous show up on school lunch trays.", "ja": "新しく生まれる子どもの5人に1人は、親のどちらかが外国から来た人だ。学校給食にフォーやクスクスが並ぶ。", "zh": "每五个新生儿中，就有一个的父母有一方来自其他国家。学校午餐里出现了米粉和库斯库斯。", "es": "Uno de cada cinco recién nacidos tiene un padre o una madre que llegó de otro país. En los comedores escolares se sirven fideos de arroz y cuscús." },
-      "when": { "population": [45, 100], "solidarity": [50, 100], "year": [2040, 2100] },
+      "title": {"ko": "함께 쓰는 나라", "en": "A country we share", "ja": "みんなで分かち合う国", "zh": "大家共有的国家", "es": "Un país compartido"},
+      "story": {"ko": "새로 태어나는 아이 다섯 명 중 한 명은 부모 중 한 사람이 다른 나라에서 왔다. 학교 급식에 쌀국수와 쿠스쿠스가 올라온다.", "en": "One in five newborns has a parent who came from another country. Rice noodles and couscous show up on school lunch trays.", "ja": "新しく生まれる子どもの5人に1人は、親のどちらかが外国から来た人だ。学校給食にフォーやクスクスが並ぶ。", "zh": "每五个新生儿中，就有一个的父母有一方来自其他国家。学校午餐里出现了米粉和库斯库斯。", "es": "Uno de cada cinco recién nacidos tiene un padre o una madre que llegó de otro país. En los comedores escolares se sirven fideos de arroz y cuscús."},
+      "when": {"population": [45, 100], "solidarity": [50, 100], "year": [2040, 2100]},
       "tone": "bright",
-      "tags": ["population", "migration"],
-      "scene": { "community": 0.1 }
+      "domains": ["population"],
+      "scene": {"community": 0.1}
     },
     {
       "id": "capital-crush",
-      "title": { "ko": "끝없이 커지는 수도권", "en": "The ever-growing capital region", "ja": "膨らみ続ける首都圏", "zh": "无限膨胀的首都圈", "es": "La capital que no deja de crecer" },
-      "story": { "ko": "인구의 60퍼센트가 수도권에 산다. 출퇴근에 왕복 세 시간이 걸리고, 지방 소도시에서는 버스 노선부터 사라진다.", "en": "Sixty percent of the population lives in the capital region. The commute takes three hours round trip, and in small provincial towns the bus routes are the first thing to disappear.", "ja": "人口の60パーセントが首都圏に住む。通勤には往復3時間かかり、地方の小さな町ではまずバス路線から消えていく。", "zh": "60%的人口住在首都圈。通勤往返要花三个小时，而在地方小城，最先消失的是公交线路。", "es": "El 60 % de la población vive en el área metropolitana de la capital. Ir al trabajo y volver lleva tres horas, y en las pequeñas ciudades de provincia lo primero que desaparece son las líneas de autobús." },
-      "when": { "population": [55, 100], "equality": [0, 45] },
+      "title": {"ko": "끝없이 커지는 수도권", "en": "The ever-growing capital region", "ja": "膨らみ続ける首都圏", "zh": "无限膨胀的首都圈", "es": "La capital que no deja de crecer"},
+      "story": {"ko": "인구의 60퍼센트가 수도권에 산다. 출퇴근에 왕복 세 시간이 걸리고, 지방 소도시에서는 버스 노선부터 사라진다.", "en": "Sixty percent of the population lives in the capital region. The commute takes three hours round trip, and in small provincial towns the bus routes are the first thing to disappear.", "ja": "人口の60パーセントが首都圏に住む。通勤には往復3時間かかり、地方の小さな町ではまずバス路線から消えていく。", "zh": "60%的人口住在首都圈。通勤往返要花三个小时，而在地方小城，最先消失的是公交线路。", "es": "El 60 % de la población vive en el área metropolitana de la capital. Ir al trabajo y volver lleva tres horas, y en las pequeñas ciudades de provincia lo primero que desaparece son las líneas de autobús."},
+      "when": {"population": [55, 100], "equality": [0, 45]},
       "tone": "dark",
-      "tags": ["population", "regions"],
-      "scene": { "density": 0.15, "smog": 0.05 }
+      "domains": ["population", "cities"],
+      "region": "korea",
+      "scene": {"density": 0.15, "smog": 0.05}
     },
     {
       "id": "playgrounds-loud-again",
-      "title": { "ko": "다시 시끄러운 놀이터", "en": "Noisy playgrounds again", "ja": "にぎやかさが戻った遊び場", "zh": "重新热闹起来的游乐场", "es": "Parques infantiles ruidosos otra vez" },
-      "story": { "ko": "집 걱정과 돌봄 걱정이 줄어들자 출생아 수가 30년 만에 늘어난다. 동네 놀이터가 다시 시끄러워진다.", "en": "As worries about housing and childcare ease, the number of births rises for the first time in 30 years. Neighborhood playgrounds are noisy again.", "ja": "住まいの心配と子育ての心配が減ると、出生数が30年ぶりに増える。近所の遊び場が再びにぎやかになる。", "zh": "住房和育儿方面的担忧减轻后，新生儿数量30年来首次回升。小区的游乐场又热闹起来了。", "es": "Al disminuir las preocupaciones por la vivienda y el cuidado de los hijos, los nacimientos aumentan por primera vez en 30 años. Los parques infantiles del barrio vuelven a llenarse de ruido." },
-      "when": { "population": [65, 100], "equality": [50, 100], "year": [2045, 2100] },
+      "title": {"ko": "다시 시끄러운 놀이터", "en": "Noisy playgrounds again", "ja": "にぎやかさが戻った遊び場", "zh": "重新热闹起来的游乐场", "es": "Parques infantiles ruidosos otra vez"},
+      "story": {"ko": "집 걱정과 돌봄 걱정이 줄어들자 출생아 수가 30년 만에 늘어난다. 동네 놀이터가 다시 시끄러워진다.", "en": "As worries about housing and childcare ease, the number of births rises for the first time in 30 years. Neighborhood playgrounds are noisy again.", "ja": "住まいの心配と子育ての心配が減ると、出生数が30年ぶりに増える。近所の遊び場が再びにぎやかになる。", "zh": "住房和育儿方面的担忧减轻后，新生儿数量30年来首次回升。小区的游乐场又热闹起来了。", "es": "Al disminuir las preocupaciones por la vivienda y el cuidado de los hijos, los nacimientos aumentan por primera vez en 30 años. Los parques infantiles del barrio vuelven a llenarse de ruido."},
+      "when": {"population": [65, 100], "equality": [50, 100], "year": [2045, 2100]},
       "tone": "bright",
-      "tags": ["population", "care"],
-      "scene": { "community": 0.05 }
+      "domains": ["population", "care"],
+      "scene": {"community": 0.05}
     },
     {
       "id": "seaside-remote-towns",
-      "title": { "ko": "바닷가 소도시로 간 사람들", "en": "Moving to small towns by the sea", "ja": "海辺の小さな町へ移った人々", "zh": "搬到海边小城的人们", "es": "Rumbo a los pueblos junto al mar" },
-      "story": { "ko": "원격 근무가 자리 잡자 젊은이들이 바닷가 소도시로 옮겨 간다. 폐교를 고친 공유 오피스가 마을의 중심이 된다.", "en": "Once remote work takes hold, young people move to small seaside towns. A shared office in a renovated closed-down school becomes the heart of the town.", "ja": "リモートワークが定着すると、若者たちは海辺の小さな町へ移り住む。廃校を改装したシェアオフィスが町の中心になる。", "zh": "远程办公普及后，年轻人纷纷搬到海边小城。由废弃学校改建的共享办公室成了镇上的中心。", "es": "Cuando el teletrabajo se asienta, los jóvenes se mudan a pequeños pueblos junto al mar. Una escuela cerrada, reformada como oficina compartida, se convierte en el centro del pueblo." },
-      "when": { "population": [30, 70], "tech": [50, 100], "solidarity": [50, 100], "year": [2040, 2100] },
+      "title": {"ko": "바닷가 소도시로 간 사람들", "en": "Moving to small towns by the sea", "ja": "海辺の小さな町へ移った人々", "zh": "搬到海边小城的人们", "es": "Rumbo a los pueblos junto al mar"},
+      "story": {"ko": "원격 근무가 자리 잡자 젊은이들이 바닷가 소도시로 옮겨 간다. 폐교를 고친 공유 오피스가 마을의 중심이 된다.", "en": "Once remote work takes hold, young people move to small seaside towns. A shared office in a renovated closed-down school becomes the heart of the town.", "ja": "リモートワークが定着すると、若者たちは海辺の小さな町へ移り住む。廃校を改装したシェアオフィスが町の中心になる。", "zh": "远程办公普及后，年轻人纷纷搬到海边小城。由废弃学校改建的共享办公室成了镇上的中心。", "es": "Cuando el teletrabajo se asienta, los jóvenes se mudan a pequeños pueblos junto al mar. Una escuela cerrada, reformada como oficina compartida, se convierte en el centro del pueblo."},
+      "when": {"population": [30, 70], "tech": [50, 100], "solidarity": [50, 100], "year": [2040, 2100]},
       "tone": "bright",
-      "tags": ["regions", "work"],
-      "scene": { "decay": -0.1 }
+      "domains": ["cities", "work"],
+      "scene": {"decay": -0.1}
     }
   ]
 }

@@ -2,6 +2,8 @@
 // 오류는 { code, params, at } 모양으로 돌려주고, 문장은 locales/*.json의 "err.<code>"에서 고른다.
 import { SCENE_KEYS, TONES, NOW_YEAR } from './engine.js';
 
+export const TYPES = ['future', 'history'];
+
 export const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const AUTHOR_PATTERN = /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$/;
 
@@ -29,14 +31,15 @@ export function normalizeContribution(data, file) {
 
 /**
  * @param {unknown} data  파일 하나의 JSON
- * @param {{conditions: {id:string}[], year: {max:number}, languages: string[], tags: string[]}} config
+ * @param {{conditions: {id:string}[], year: {min:number, max:number}, languages: string[], domains: string[], regions: {id:string}[]}} config
  * @returns {{code:string, params:object, at?:string}[]} 오류 목록 (비어 있으면 통과)
  */
 export function validateContribution(data, config) {
   const errors = [];
   const condIds = new Set(config.conditions.map(c => c.id));
   const langs = new Set(config.languages);
-  const tagSet = new Set(config.tags);
+  const domainSet = new Set(config.domains);
+  const regionSet = new Set(config.regions.map(r => r.id));
   const langList = [...langs].join(', ');
 
   if (!isObject(data)) return [err('shape')];
@@ -57,8 +60,10 @@ export function validateContribution(data, config) {
       return;
     }
     for (const key of Object.keys(f)) {
-      if (!['id', 'title', 'story', 'when', 'tone', 'tags', 'scene', 'sources'].includes(key)) errors.push(err('unknownKey', { key }, at));
+      if (!['id', 'type', 'title', 'story', 'when', 'tone', 'domains', 'region', 'scene', 'sources'].includes(key)) errors.push(err('unknownKey', { key }, at));
     }
+    if (f.type !== undefined && !TYPES.includes(f.type)) errors.push(err('type', { types: TYPES.join(', ') }, at));
+    const history = f.type === 'history';
     if (typeof f.id !== 'string' || !ID_PATTERN.test(f.id) || f.id.length > 60) errors.push(err('id', {}, at));
 
     const title = textMap(f.title, data.lang);
@@ -77,7 +82,14 @@ export function validateContribution(data, config) {
 
     if (!TONES.includes(f.tone)) errors.push(err('tone', { tones: TONES.join(', ') }, at));
 
-    if (!isObject(f.when) || Object.keys(f.when).length === 0) {
+    if (history) {
+      // 역사 조각: 실제로 있었던 일. 조건 없이 연도만, 근거 자료는 꼭.
+      if (!isObject(f.when) || Object.keys(f.when).some(k => k !== 'year') || !f.when.year) errors.push(err('historyWhen', {}, at));
+      else if (!isRange(f.when.year) || f.when.year[0] > f.when.year[1] || f.when.year[0] < config.year.min || f.when.year[1] > NOW_YEAR) {
+        errors.push(err('historyYear', { min: config.year.min, max: NOW_YEAR }, at));
+      }
+      if (!Array.isArray(f.sources) || f.sources.length === 0) errors.push(err('historySources', {}, at));
+    } else if (!isObject(f.when) || Object.keys(f.when).length === 0) {
       errors.push(err('when', {}, at));
     } else {
       for (const [key, range] of Object.entries(f.when)) {
@@ -93,10 +105,12 @@ export function validateContribution(data, config) {
       }
     }
 
-    if (f.tags !== undefined) {
-      if (!Array.isArray(f.tags) || f.tags.length > 5 || !f.tags.every(t => typeof t === 'string')) errors.push(err('tags', {}, at));
-      else for (const tag of f.tags) if (!tagSet.has(tag)) errors.push(err('tagUnknown', { tag }, at));
+    if (!Array.isArray(f.domains) || f.domains.length < 1 || f.domains.length > 3 || !f.domains.every(d => typeof d === 'string') || new Set(f.domains).size !== f.domains.length) {
+      errors.push(err('domains', {}, at));
+    } else {
+      for (const d of f.domains) if (!domainSet.has(d)) errors.push(err('domainUnknown', { domain: d, domains: config.domains.join(', ') }, at));
     }
+    if (f.region !== undefined && !regionSet.has(f.region)) errors.push(err('region', { region: f.region, regions: [...regionSet].join(', ') }, at));
     if (f.scene !== undefined) {
       if (!isObject(f.scene)) {
         errors.push(err('sceneShape', {}, at));

@@ -23,6 +23,7 @@
     <div class="masthead-end">
       <nav class="nav" data-i18n-aria="nav.label" aria-label="바로가기">
         <a href="#imagine" data-i18n="nav.imagine">미래 보기</a>
+        <a href="#chronicle" data-i18n="nav.chronicle">연대기</a>
         <a href="#write" data-i18n="nav.write">조각 쓰기</a>
         <a href="#people" data-i18n="nav.people">함께 그린 사람들</a>
       </nav>
@@ -52,12 +53,14 @@
       </div>
       <div class="year-control">
         <div class="year-row">
-          <label for="c-year" data-i18n="year.label">언제의 미래인가요?</label>
-          <output id="year-out" class="year-out" for="c-year">2060</output>
+          <label for="c-year" data-i18n="year.label">언제를 볼까요?</label>
+          <span class="year-read"><span class="era-badge" id="era-badge"></span><output id="year-out" class="year-out" for="c-year">2060</output></span>
         </div>
-        <input type="range" id="c-year" min="2030" max="2100" step="5" value="2060">
-        <div class="ticks" aria-hidden="true"><span>2030</span><span>2050</span><span>2075</span><span>2100</span></div>
+        <input type="range" id="c-year" min="1900" max="2100" step="5" value="2060">
+        <div class="ticks" id="year-ticks" aria-hidden="true"></div>
+        <p class="past-note" id="past-note" data-i18n="controls.pastNote" hidden>과거는 이미 일어난 일이라 조건으로 바꿀 수 없어요.</p>
       </div>
+      <label class="region-pick" for="c-region"><span data-i18n="controls.region">지역</span> <select id="c-region"></select></label>
       <div class="sliders" id="sliders"></div>
     </aside>
     <div class="view">
@@ -75,12 +78,12 @@
 
   <section class="wrap block" id="pieces" aria-labelledby="pieces-title">
     <div class="section-head">
-      <h2 id="pieces-title" data-i18n="pieces.title">이 미래의 조각들</h2>
+      <h2 id="pieces-title">이 미래의 조각들</h2>
       <p id="pieces-note" class="muted"></p>
     </div>
     <ol class="cards" id="now"></ol>
     <div class="gap" id="gap" hidden>
-      <p><strong id="gap-lead"></strong> <span data-i18n="gap.body">이런 세상에서는 어떤 일이 일어날까요? 다음 조각을 써 주세요.</span></p>
+      <p><strong id="gap-lead"></strong> <span id="gap-body">이런 세상에서는 어떤 일이 일어날까요? 다음 조각을 써 주세요.</span></p>
       <a class="btn" href="#write" id="gap-cta" data-i18n="gap.cta">이 조건으로 조각 쓰기</a>
     </div>
   </section>
@@ -88,9 +91,19 @@
   <section class="wrap block" id="road" aria-labelledby="road-title">
     <div class="section-head">
       <h2 id="road-title" data-i18n="road.title">여기까지 오는 길</h2>
-      <p class="muted" data-i18n="road.desc">지금(2026년)부터 고른 해까지, 같은 조건에서 차례로 일어나는 일들입니다. 이미 지나간 일은 흐리게 표시됩니다.</p>
+      <p class="muted" id="road-desc"></p>
     </div>
     <ol class="timeline" id="path"></ol>
+  </section>
+
+  <section class="wrap block" id="chronicle" aria-labelledby="chron-title">
+    <div class="section-head">
+      <h2 id="chron-title" data-i18n="chron.title">분야별 연대기</h2>
+      <p class="muted" id="chron-desc"></p>
+    </div>
+    <div class="chron-wrap" tabindex="0" aria-labelledby="chron-title">
+      <table class="chron" id="chron"></table>
+    </div>
   </section>
 
   <section class="band" id="write" aria-labelledby="write-title">
@@ -115,6 +128,14 @@
               <select id="f-lang" name="lang"></select>
             </div>
           </div>
+          <fieldset class="field">
+            <legend data-i18n="f.type">어떤 조각인가요?</legend>
+            <div class="tone-pick">
+              <label><input type="radio" name="ptype" value="future" id="f-type-future" checked> <span data-i18n="f.typeFuture">올 수 있는 미래 (상상)</span></label>
+              <label><input type="radio" name="ptype" value="history" id="f-type-history"> <span data-i18n="f.typeHistory">지나간 일 (역사)</span></label>
+            </div>
+            <p class="hint" id="f-history-hint" data-i18n="f.historyHint" hidden>역사 조각은 실제로 있었던 일이어야 하고, 근거 자료 주소를 하나 이상 적어야 합니다.</p>
+          </fieldset>
           <div class="field">
             <label for="f-title" data-i18n="f.title">제목</label>
             <input id="f-title" name="title" maxlength="40" data-i18n-ph="f.titlePh" placeholder="예: 밤에 여는 시장">
@@ -132,14 +153,18 @@
             </div>
           </fieldset>
           <fieldset class="field">
-            <legend><span data-i18n="f.when">언제 일어나나요?</span> <button type="button" class="link-btn" id="f-fill" data-i18n="f.fill">지금 고른 조건으로 채우기</button></legend>
-            <p class="hint" data-i18n="f.whenHint">체크한 조건이 모두 맞을 때 이 조각이 나타납니다.</p>
+            <legend><span id="f-when-label">언제 일어나나요?</span> <button type="button" class="link-btn" id="f-fill" data-i18n="f.fill">지금 고른 조건으로 채우기</button></legend>
+            <p class="hint" id="f-when-hint" data-i18n="f.whenHint">체크한 조건이 모두 맞을 때 이 조각이 나타납니다.</p>
             <div class="when-rows" id="f-when"></div>
           </fieldset>
           <fieldset class="field">
-            <legend><span data-i18n="f.tags">태그</span> <span class="hint-inline" data-i18n="f.tagsHint">5개까지</span></legend>
-            <div class="tag-pick" id="f-tags"></div>
+            <legend><span data-i18n="f.domains">분야</span> <span class="hint-inline" data-i18n="f.domainsHint">1~3개, 첫 번째가 대표 분야</span></legend>
+            <div class="tag-pick" id="f-domains"></div>
           </fieldset>
+          <div class="field narrow">
+            <label for="f-region" data-i18n="f.region">지역</label>
+            <select id="f-region"></select>
+          </div>
           <details class="field fold" id="f-tr-box">
             <summary data-i18n="f.translations">다른 언어로도 쓰기 (선택)</summary>
             <p class="hint" data-i18n="f.translationsHint">여러 언어를 쓸 수 있다면 번역도 함께 넣어 주세요.</p>
@@ -204,6 +229,11 @@
     </div>
   </section>
 </main>
+
+<dialog class="piece-dialog" id="piece-dialog" aria-labelledby="dlg-title">
+  <div class="dlg-body" id="dlg-body"></div>
+  <form method="dialog" class="dlg-actions"><button class="btn ghost" data-i18n="dialog.close">닫기</button></form>
+</dialog>
 
 <footer class="footer">
   <div class="wrap footer-grid">

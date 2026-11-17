@@ -1,4 +1,4 @@
-import { imagine, coverageGrid, SCENE_KEYS, TONES, NOW_YEAR, matches } from './engine.js';
+import { imagine, coverageGrid, chronicle, regionFilter, isHistory, isPast, startYear, SCENE_KEYS, TONES, NOW_YEAR, HISTORY_WINDOW, matches } from './engine.js';
 import { validateContribution, formatError, interpolate } from './validate.js';
 import { createScene } from './scene.js';
 
@@ -22,6 +22,7 @@ const store = {
 async function copy(text) {
   try { await navigator.clipboard.writeText(text); return true; } catch { return false; }
 }
+const clampTo = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 
 // ---------- 번역 ----------
 // 문장은 locales/<언어>.json에 있다. 빠진 문장은 영어, 그다음 한국어로 대신 보인다.
@@ -56,7 +57,7 @@ function loadFonts(meta) {
   document.head.append(h('link', { rel: 'stylesheet', href }));
 }
 
-/** 미래 조각의 제목·이야기를 지금 언어로. 번역이 없으면 원문을 돌려주고 missing 표시. */
+/** 조각의 제목·이야기를 지금 언어로. 번역이 없으면 원문을 돌려주고 missing 표시. */
 function textOf(f, field) {
   const map = f[field] || {};
   if (map[i18n.lang]) return { text: map[i18n.lang], lang: i18n.lang, missing: false };
@@ -76,6 +77,13 @@ function pickLanguage(codes) {
   return 'en';
 }
 
+const yearsLabel = f => {
+  if (!f.when?.year) return null;
+  const [a, b] = f.when.year;
+  return a === b ? String(a) : `${a}–${b}`;
+};
+const host = url => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return url; } };
+
 // ---------- 시작 ----------
 async function boot() {
   let bundle;
@@ -84,7 +92,7 @@ async function boot() {
     if (!res.ok) throw new Error(res.status);
     bundle = await res.json();
   } catch {
-    $('#headline').textContent = '미래 조각을 불러오지 못했어요. · Couldn’t load the future pieces.';
+    $('#headline').textContent = '조각을 불러오지 못했어요. · Couldn’t load the pieces.';
     $('#picture').textContent = 'npm run dev → data/futures.json';
     return;
   }
@@ -94,21 +102,24 @@ async function boot() {
   const codes = bundle.languages.map(l => l.code);
   i18n.lang = pickLanguage(codes);
 
-  const { site, conditions, year: yearCfg, presets, tags } = bundle;
+  const { site, conditions, year: yearCfg, presets, eras, domains, regions } = bundle;
   const model = { year: yearCfg, conditions, futures: bundle.futures };
-  const config = { conditions, year: yearCfg, languages: codes, tags };
+  const config = { conditions, year: yearCfg, languages: codes, domains, regions };
   const repoUrl = `https://github.com/${site.repo}`;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const scene = createScene($('#scene'), { reducedMotion });
   const condLabel = id => (id === 'year' ? t('f.year') : t(`cond.${id}.label`));
+  const regionName = id => (id === 'world' ? t('region.all') : t(`region.${id}`));
+  const historyCount = model.futures.filter(isHistory).length;
 
-  // ----- 조건 상태 (?lang=..&year=..&climate=.. 로 공유 가능) -----
-  const state = { year: yearCfg.default };
+  // ----- 상태 (?lang=..&year=..&region=..&climate=.. 로 공유 가능) -----
+  const state = { year: yearCfg.default, region: 'world' };
   for (const c of conditions) state[c.id] = c.default;
   const query = new URLSearchParams(location.search);
-  const clampTo = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
   if (query.has('year')) state.year = clampTo(Math.round(Number(query.get('year')) / yearCfg.step) * yearCfg.step || yearCfg.default, yearCfg.min, yearCfg.max);
+  if (regions.some(r => r.id === query.get('region'))) state.region = query.get('region');
   for (const c of conditions) if (query.has(c.id)) state[c.id] = clampTo(Number(query.get(c.id)) || 0, 0, 100);
+  const pool = () => model.futures.filter(regionFilter(regions, state.region));
 
   // ----- 언어 고르기 -----
   const langSelect = $('#lang');
@@ -120,7 +131,10 @@ async function boot() {
   const stamp = new Date(bundle.generatedAt);
   L(() => {
     const date = new Intl.DateTimeFormat(langMeta(i18n.lang).html, { dateStyle: 'medium' }).format(stamp);
-    $('#stat').textContent = t('intro.stat', { pieces: model.futures.length, people: bundle.contributors.length, langs: codes.length, date });
+    $('#stat').textContent = t('intro.stat', {
+      pieces: model.futures.length, history: historyCount, futures: model.futures.length - historyCount,
+      people: bundle.contributors.length, langs: codes.length, date,
+    });
   });
 
   // ----- 계기판 -----
@@ -128,25 +142,48 @@ async function boot() {
   Object.assign(yearInput, { min: yearCfg.min, max: yearCfg.max, step: yearCfg.step, value: state.year });
   const setFill = input => input.style.setProperty('--fill', `${((input.value - input.min) / (input.max - input.min)) * 100}%`);
   yearInput.addEventListener('input', () => { state.year = Number(yearInput.value); render(); });
+  const pos = y => `${((y - yearCfg.min) / (yearCfg.max - yearCfg.min)) * 100}%`;
+  const nowTick = h('span', { class: 'tick now', style: `left:${pos(NOW_YEAR)}` });
+  $('#year-ticks').replaceChildren(
+    ...[yearCfg.min, 1950, 2000, 2050, yearCfg.max].map(y => h('span', { class: 'tick', style: `left:${pos(y)}` }, String(y))),
+    nowTick,
+  );
+  document.querySelector('.year-control').style.setProperty('--now', pos(NOW_YEAR));
+  L(() => { nowTick.textContent = t('year.now'); });
+
+  const regionSelect = $('#c-region');
+  const depth = id => { let d = 0; for (let r = regions.find(x => x.id === id); r?.parent; r = regions.find(x => x.id === r.parent)) d++; return d; };
+  const regionOptions = regions.map(r => h('option', { value: r.id }));
+  regionSelect.replaceChildren(...regionOptions);
+  L(() => regionOptions.forEach((o, i) => { o.textContent = `${' '.repeat(Math.max(0, depth(regions[i].id) - 1))}${regionName(regions[i].id)}`; }));
+  regionSelect.addEventListener('change', () => { state.region = regionSelect.value; render(); });
 
   const sliders = {};
   for (const c of conditions) {
     const input = h('input', { type: 'range', id: `c-${c.id}`, min: '0', max: '100', step: '5', value: String(state[c.id]) });
     const out = h('output', { for: `c-${c.id}` }, String(state[c.id]));
     input.addEventListener('input', () => { state[c.id] = Number(input.value); render(); });
-    sliders[c.id] = { input, out };
-    $('#sliders').append(h('div', { class: 'slider' },
+    const wrap = h('div', { class: 'slider' },
       h('div', { class: 'slider-top' }, h('label', { for: `c-${c.id}`, 'data-i18n': `cond.${c.id}.label` }), out),
       input,
       h('div', { class: 'slider-ends', 'aria-hidden': 'true' }, h('span', { 'data-i18n': `cond.${c.id}.low` }), h('span', { 'data-i18n': `cond.${c.id}.high` })),
-    ));
+    );
+    sliders[c.id] = { input, out, wrap };
+    $('#sliders').append(wrap);
   }
   function syncControls() {
+    const past = isPast(state.year);
     yearInput.value = state.year;
     $('#year-out').textContent = state.year;
+    $('#era-badge').textContent = t(past ? 'year.past' : 'year.future');
+    $('#era-badge').className = `era-badge ${past ? 'past' : 'future'}`;
+    $('#past-note').hidden = !past;
+    $('#sliders').classList.toggle('locked', past);
     setFill(yearInput);
+    regionSelect.value = state.region;
     for (const c of conditions) {
       sliders[c.id].input.value = state[c.id];
+      sliders[c.id].input.disabled = past;
       sliders[c.id].out.textContent = state[c.id];
       setFill(sliders[c.id].input);
     }
@@ -175,53 +212,77 @@ async function boot() {
   $('#share').addEventListener('click', async () => toast(t((await copy(shareUrl())) ? 'toast.copied' : 'toast.copyFail')));
   function shareQuery() {
     const q = new URLSearchParams({ lang: i18n.lang, year: state.year });
+    if (state.region !== 'world') q.set('region', state.region);
     for (const c of conditions) q.set(c.id, state[c.id]);
     return q;
   }
   const shareUrl = () => `${location.origin}${location.pathname}?${shareQuery()}`;
 
-  // ----- 조각 카드와 연표 -----
+  // ----- 조각 카드 -----
   const who = a => (a === 'seed' ? t('who.seed') : `@${a}`);
   const editUrl = f => `${repoUrl}/edit/${site.branch}/futures/${f.file}`;
   const issueUrl = params => `${repoUrl}/issues/new?${new URLSearchParams(params)}`;
 
-  function card(f) {
+  function cardBody(f, { full = false } = {}) {
     const title = textOf(f, 'title');
     const story = textOf(f, 'story');
-    const years = f.when?.year ? `${f.when.year[0]}–${f.when.year[1]}` : t('card.anytime');
-    const tagLine = (f.tags || []).map(id => `#${t(`tag.${id}`)}`).join(' ');
-    const html = langMeta(title.lang)?.html;
+    const domainLine = (f.domains || []).map(id => t(`domain.${id}`)).join(' · ');
     const acts = f.draft ? h('span', { class: 'badge' }, t('card.preview')) : h('span', { class: 'acts' },
       title.missing && h('a', { href: editUrl(f), target: '_blank', rel: 'noopener', class: 'strong' }, t('card.translate')),
       h('a', { href: issueUrl({ template: 'opinion.yml', title: t('opinion.title', { title: title.text }), piece: `${title.text} (${f.id}, futures/${f.file})` }), target: '_blank', rel: 'noopener' }, t('card.opinion')),
       !title.missing && h('a', { href: editUrl(f), target: '_blank', rel: 'noopener' }, t('card.edit')),
     );
-    return h('li', { class: `card${f.draft ? ' draft' : ''}` },
+    const sources = (f.sources || []).map(u => h('a', { href: u, target: '_blank', rel: 'noopener' }, host(u)));
+    return [
       h('div', { class: 'card-top' },
+        isHistory(f) ? h('span', { class: 'kind' }, t('card.history')) : null,
         h('span', { class: `tone tone-${f.tone}` }, t(`tone.${f.tone}`)),
+        f.region && f.region !== 'world' && h('span', { class: 'region' }, t(`region.${f.region}`)),
         title.missing && h('span', { class: 'orig' }, t('card.original', { lang: langName(title.lang) })),
-        h('span', { class: 'years' }, years)),
-      h('h3', { lang: html }, title.text),
+        h('span', { class: 'years' }, yearsLabel(f) ?? t('card.anytime'))),
+      h(full ? 'h2' : 'h3', { lang: langMeta(title.lang)?.html, id: full ? 'dlg-title' : null }, title.text),
       h('p', { lang: langMeta(story.lang)?.html }, story.text),
-      h('div', { class: 'card-foot' }, h('span', { class: 'who' }, who(f.author)), tagLine && h('span', { class: 'tags' }, tagLine), acts),
-    );
+      h('div', { class: 'card-foot' },
+        h('span', { class: 'who' }, who(f.author)),
+        domainLine && h('span', { class: 'tags' }, domainLine),
+        sources.length && h('span', { class: 'src' }, `${t('card.sources')}: `, ...sources.flatMap((a, i) => (i ? [', ', a] : [a]))),
+        acts),
+    ];
   }
+  const card = f => h('li', { class: `card${f.draft ? ' draft' : ''}${isHistory(f) ? ' history' : ''}` }, ...cardBody(f));
+
+  const dialog = $('#piece-dialog');
+  function openPiece(f) {
+    $('#dlg-body').replaceChildren(h('article', { class: `card${isHistory(f) ? ' history' : ''}` }, ...cardBody(f, { full: true })));
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open', '');
+  }
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
 
   function renderPieces(result) {
+    const past = result.past;
+    $('#pieces-title').textContent = t(past ? 'pieces.titlePast' : 'pieces.title');
     $('#now').replaceChildren(...result.now.map(card));
-    $('#pieces-note').textContent = result.now.length ? t('pieces.note', { n: result.now.length, ...result.tones }) : '';
-    $('#gap').hidden = result.now.length >= 2;
-    $('#gap-lead').textContent = t(result.now.length === 0 ? 'gap.empty' : 'gap.one');
+    const n = result.now.length;
+    $('#pieces-note').textContent = !n ? '' : past
+      ? t('pieces.notePast', { n, from: state.year - HISTORY_WINDOW, to: Math.min(NOW_YEAR, state.year + HISTORY_WINDOW) })
+      : t('pieces.note', { n, ...result.tones });
+    $('#gap').hidden = n >= 2;
+    $('#gap-lead').textContent = t(past ? (n === 0 ? 'gap.emptyPast' : 'gap.onePast') : (n === 0 ? 'gap.empty' : 'gap.one'));
+    $('#gap-body').textContent = t(past ? 'gap.bodyPast' : 'gap.body');
   }
 
   function renderPath(result) {
+    $('#road-desc').textContent = t(result.past ? 'road.descPast' : 'road.desc');
     const items = result.path.map(f => {
-      const past = f.when?.year && f.when.year[1] < state.year;
+      const ended = !isHistory(f) && f.when?.year && f.when.year[1] < state.year;
       const title = textOf(f, 'title');
-      return h('li', { class: f.active ? 'active' : past ? 'past' : '' },
-        h('span', { class: 'ty' }, f.start <= NOW_YEAR ? t('road.now') : String(f.start)),
+      return h('li', { class: f.active ? 'active' : ended || isHistory(f) ? 'past' : '' },
+        h('span', { class: 'ty' }, !isHistory(f) && f.start <= NOW_YEAR ? t('road.now') : String(f.start)),
         h('span', { class: 'tl', 'aria-hidden': 'true' }),
-        h('div', { class: 'tb' }, h('b', { lang: langMeta(title.lang)?.html }, title.text), ' ', h('span', {}, `· ${past ? t('road.ended', { year: f.when.year[1] }) : who(f.author)}`)),
+        h('div', { class: 'tb' },
+          h('button', { type: 'button', class: 'linkish', lang: langMeta(title.lang)?.html, onclick: () => openPiece(f) }, title.text), ' ',
+          h('span', {}, `· ${ended ? t('road.ended', { year: f.when.year[1] }) : (f.domains || []).slice(0, 1).map(d => t(`domain.${d}`)).join('')}`)),
       );
     });
     items.push(h('li', { class: 'active' },
@@ -230,6 +291,49 @@ async function boot() {
       h('div', { class: 'end' }, t('road.here')),
     ));
     $('#path').replaceChildren(...items);
+  }
+
+  // ----- 분야별 연대기 -----
+  const firstFuture = eras.findIndex(([a]) => a > NOW_YEAR);
+  function renderChronicle(pieces) {
+    $('#chron-desc').replaceChildren(...rich(t('chron.desc', { n: domains.length })));
+    const rows = chronicle(pieces, state, eras, domains);
+    const here = eras.findIndex(([a, b]) => state.year >= a && state.year <= b);
+    const eraLabel = ([a, b]) => `${a}–${b}`;
+    const head1 = h('tr', {},
+      h('th', { class: 'corner', scope: 'col', rowspan: '2' }, t('chron.field')),
+      h('th', { class: 'band-past', colspan: String(firstFuture), scope: 'colgroup' }, t('chron.past')),
+      h('th', { class: 'band-future', colspan: String(eras.length - firstFuture), scope: 'colgroup' }, t('chron.future')));
+    const head2 = h('tr', {}, ...eras.map(([a, b], i) => h('th', { scope: 'col', class: `${i === here ? 'here' : ''}${i === firstFuture ? ' split' : ''}` },
+      h('button', {
+        type: 'button', class: 'era-btn', 'aria-label': t('chron.era', { from: a, to: b }),
+        onclick: () => {
+          const target = i < firstFuture ? Math.min(b, NOW_YEAR - 1) : Math.round((a + b) / 2);
+          state.year = clampTo(Math.round(target / yearCfg.step) * yearCfg.step, yearCfg.min, yearCfg.max);
+          if (i < firstFuture && state.year >= NOW_YEAR) state.year -= yearCfg.step;
+          render();
+          $('#imagine').scrollIntoView({ block: 'start' });
+        },
+      }, eraLabel([a, b])))));
+    const body = rows.map(r => h('tr', {},
+      h('th', { scope: 'row' }, h('span', { class: 'dname' }, t(`domain.${r.domain}`)), h('span', { class: 'dcount' }, String(r.cells.reduce((n, c) => n + c.length, 0)))),
+      ...r.cells.map((cell, i) => h('td', { class: `${i === here ? 'here' : ''}${i === firstFuture ? ' split' : ''}${i >= firstFuture ? ' fut' : ''}` },
+        cell.length
+          ? h('ul', {}, ...cell.map(f => {
+            const title = textOf(f, 'title');
+            return h('li', {}, h('button', { type: 'button', class: `piece tone-${f.tone}`, lang: langMeta(title.lang)?.html, onclick: () => openPiece(f) },
+              h('span', { class: 'py' }, String(startYear(f))), ' ', title.text));
+          }))
+          : h('button', {
+            type: 'button', class: 'add', 'aria-label': t('chron.add', { domain: t(`domain.${r.domain}`), era: eraLabel(eras[i]) }),
+            onclick: () => {
+              writer.prefill({ type: i < firstFuture ? 'history' : 'future', from: eras[i][0], to: eras[i][1], domain: r.domain });
+              $('#write').scrollIntoView({ block: 'start' });
+            },
+          }, '+'),
+      )),
+    ));
+    $('#chron').replaceChildren(h('thead', {}, head1, head2), h('tbody', {}, ...body));
   }
 
   // ----- 상상의 지도 -----
@@ -243,15 +347,15 @@ async function boot() {
   ay.value = 'tech';
   const fixAxes = changed => {
     if (ax.value === ay.value) (changed === ax ? ay : ax).value = conditions.find(c => c.id !== changed.value).id;
-    renderAtlas();
+    renderAtlas(pool());
   };
   ax.addEventListener('change', () => fixAxes(ax));
   ay.addEventListener('change', () => fixAxes(ay));
 
-  function renderAtlas() {
+  function renderAtlas(pieces) {
     const xk = ax.value;
     const yk = ay.value;
-    const cells = coverageGrid(model.futures, xk, yk, state, 5);
+    const cells = coverageGrid(pieces, xk, yk, state, 5);
     const max = Math.max(1, ...cells.map(c => c.count));
     const hx = Math.min(4, Math.floor(state[xk] / 20));
     const hy = Math.min(4, Math.floor(state[yk] / 20));
@@ -265,6 +369,7 @@ async function boot() {
         onclick: () => {
           state[xk] = c.x;
           state[yk] = c.y;
+          if (isPast(state.year)) state.year = yearCfg.default;
           render();
           $('#imagine').scrollIntoView({ block: 'start' });
         },
@@ -302,16 +407,17 @@ async function boot() {
     $('#langs-help').href = `${repoUrl}/blob/${site.branch}/${i18n.lang === 'ko' ? 'CONTRIBUTING.md#번역하기' : 'CONTRIBUTING.en.md#translating'}`;
   });
 
-  // ----- 미래 조각 쓰기 -----
-  const writer = setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl, tags, codes, condLabel, onChange: () => render() });
+  // ----- 조각 쓰기 -----
+  const writer = setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl, domains, regions, codes, condLabel, regionName, onChange: () => render() });
 
   // ----- 전체 그리기 -----
   function render() {
     syncControls();
     for (const { b, p } of presetButtons) b.setAttribute('aria-pressed', String(Object.entries(p.values).every(([k, v]) => state[k] === v)));
     writer.follow(state);
-    const draft = writer.previewFuture();
-    const result = imagine(draft ? { ...model, futures: [...model.futures, draft] } : model, state);
+    const draft = writer.previewPiece();
+    const pieces = draft ? [...pool(), draft] : pool();
+    const result = imagine({ ...model, futures: pieces }, state);
     scene.update(result.scene, state.year);
     const headline = t('headline.format', { year: state.year, place: t(`headline.${result.headline}`) });
     const sentences = result.sentences.map(id => t(`picture.${id}`)).join(' ');
@@ -324,7 +430,8 @@ async function boot() {
     )));
     renderPieces(result);
     renderPath(result);
-    renderAtlas();
+    renderChronicle(pieces);
+    renderAtlas(pieces);
     writer.refresh();
     try { history.replaceState(null, '', `?${shareQuery()}${location.hash}`); } catch { /* 주소를 못 바꾸는 환경 */ }
   }
@@ -345,24 +452,36 @@ async function boot() {
   setLanguage(i18n.lang);
 }
 
-// ---------- 미래 조각 쓰기 폼 ----------
-function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl, tags, codes, condLabel, onChange }) {
+// ---------- 조각 쓰기 폼 ----------
+function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl, domains, regions, codes, condLabel, regionName, onChange }) {
   const saved = store.get('htft:draft') || {};
-  const autoId = saved.autoId || `future-${Math.random().toString(36).slice(2, 7)}`;
+  const autoId = saved.autoId || `piece-${Math.random().toString(36).slice(2, 7)}`;
   const rows = {};
   let followConditions = !saved.when;
+  let followType = !saved.type;
+  const typeIs = () => ($('#f-type-history').checked ? 'history' : 'future');
+  if (saved.type === 'history') $('#f-type-history').checked = true;
 
   // 쓰는 언어
   const langSel = $('#f-lang');
   langSel.replaceChildren(...i18n.languages.map(l => h('option', { value: l.code }, l.name)));
   langSel.value = codes.includes(saved.lang) ? saved.lang : i18n.lang;
 
+  // 지역
+  const regionSel = $('#f-region');
+  const regionOpts = regions.map(r => h('option', { value: r.id }));
+  regionSel.replaceChildren(...regionOpts);
+  L(() => regionOpts.forEach((o, i) => { o.textContent = regions[i].id === 'world' ? t('region.world') : t(`region.${regions[i].id}`); }));
+  regionSel.value = regions.some(r => r.id === saved.region) ? saved.region : 'world';
+  regionSel.addEventListener('change', changed);
+
   // 조건 범위
-  const dims = [{ id: 'year', lo: NOW_YEAR, hi: yearCfg.max }, ...conditions.map(c => ({ id: c.id, lo: 0, hi: 100 }))];
+  const dims = [{ id: 'year' }, ...conditions.map(c => ({ id: c.id }))];
   for (const d of dims) {
     const use = h('input', { type: 'checkbox', id: `f-use-${d.id}` });
-    const min = h('input', { type: 'number', id: `f-min-${d.id}`, min: String(d.lo), max: String(d.hi), step: '5' });
-    const max = h('input', { type: 'number', id: `f-max-${d.id}`, min: String(d.lo), max: String(d.hi), step: '5' });
+    const min = h('input', { type: 'number', id: `f-min-${d.id}`, step: '1' });
+    const max = h('input', { type: 'number', id: `f-max-${d.id}`, step: '1' });
+    if (d.id !== 'year') { min.min = max.min = '0'; min.max = max.max = '100'; }
     const name = h('span', { 'data-i18n': d.id === 'year' ? 'f.year' : `cond.${d.id}.label` });
     const row = h('div', { class: 'when-row' }, h('label', { class: 'check', for: `f-use-${d.id}` }, use, name), min, h('span', { class: 'dash' }, '~'), max);
     L(() => {
@@ -374,19 +493,28 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
     $('#f-when').append(row);
   }
 
-  // 태그 (정해진 목록에서 5개까지)
-  const chosen = new Set((saved.tags || []).filter(id => tags.includes(id)));
-  const tagButtons = tags.map(id => {
-    const b = h('button', { type: 'button', class: 'chip', 'aria-pressed': String(chosen.has(id)), 'data-i18n': `tag.${id}` });
+  // 분야 (누른 순서대로, 첫 번째가 대표 분야)
+  const chosen = (saved.domains || []).filter(id => domains.includes(id)).slice(0, 3);
+  const domainButtons = new Map(domains.map(id => {
+    const b = h('button', { type: 'button', class: 'chip', 'aria-pressed': 'false', 'data-i18n': `domain.${id}` });
     b.addEventListener('click', () => {
-      if (chosen.has(id)) chosen.delete(id);
-      else if (chosen.size < 5) chosen.add(id);
-      for (const [tid, btn] of tagButtons) btn.setAttribute('aria-pressed', String(chosen.has(tid)));
+      const i = chosen.indexOf(id);
+      if (i >= 0) chosen.splice(i, 1);
+      else if (chosen.length < 3) chosen.push(id);
+      syncDomains();
       changed();
     });
-    $('#f-tags').append(b);
+    $('#f-domains').append(b);
     return [id, b];
-  });
+  }));
+  function syncDomains() {
+    for (const [id, b] of domainButtons) {
+      const i = chosen.indexOf(id);
+      b.setAttribute('aria-pressed', String(i >= 0));
+      b.dataset.order = i >= 0 ? String(i + 1) : '';
+    }
+  }
+  syncDomains();
 
   // 번역
   const trs = {};
@@ -431,6 +559,11 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
   }
   if (TONES.includes(saved.tone)) $(`#f-tone-${saved.tone}`).checked = true;
   document.querySelectorAll('input[name="tone"]').forEach(r => r.addEventListener('change', changed));
+  document.querySelectorAll('input[name="ptype"]').forEach(r => r.addEventListener('change', () => {
+    followType = false;
+    if (followConditions) fillFrom(state);
+    changed();
+  }));
   if (saved.when) {
     for (const [id, r] of Object.entries(rows)) {
       const v = saved.when[id];
@@ -440,27 +573,52 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
   }
   $('#f-preview').addEventListener('change', onChange);
 
+  /** 역사/미래에 따라 폼 모양을 바꾼다. */
+  function syncType() {
+    const history = typeIs() === 'history';
+    for (const [id, r] of Object.entries(rows)) r.row.hidden = history && id !== 'year';
+    const yr = rows.year;
+    yr.min.min = yr.max.min = String(history ? yearCfg.min : NOW_YEAR);
+    yr.min.max = yr.max.max = String(history ? NOW_YEAR : yearCfg.max);
+    if (history) yr.use.checked = true;
+    $('#f-history-hint').hidden = !history;
+    $('#f-when-hint').hidden = history;
+    $('#f-when-label').textContent = t(history ? 'f.whenHistory' : 'f.when');
+  }
+  L(syncType);
+
   function fillFrom(s) {
+    if (followType) (isPast(s.year) ? $('#f-type-history') : $('#f-type-future')).checked = true;
+    const history = typeIs() === 'history';
     for (const [id, r] of Object.entries(rows)) {
       const v = s[id];
       if (id === 'year') {
         r.use.checked = true;
-        r.min.value = Math.max(NOW_YEAR, v - 10);
-        r.max.value = yearCfg.max;
+        if (history) {
+          const y = Math.min(v, NOW_YEAR - 1);
+          r.min.value = Math.max(yearCfg.min, y - HISTORY_WINDOW);
+          r.max.value = Math.min(NOW_YEAR, y + HISTORY_WINDOW);
+        } else {
+          r.min.value = Math.max(NOW_YEAR, v - 10);
+          r.max.value = yearCfg.max;
+        }
       } else {
         r.use.checked = v < 35 || v > 65; // 가운데 값은 '상관없음'으로 둔다
         r.min.value = Math.max(0, v - 20);
         r.max.value = Math.min(100, v + 20);
       }
     }
+    syncType();
   }
   if (followConditions) fillFrom(state);
+  else syncType();
   $('#f-fill').addEventListener('click', () => { fillFrom(state); followConditions = true; changed(); });
   $('#gap-cta').addEventListener('click', () => { fillFrom(state); followConditions = true; changed(); setTimeout(() => $('#f-title').focus(), 300); });
 
   function readContribution() {
     const val = k => $(`#f-${k}`).value.trim();
     const wl = langSel.value;
+    const history = typeIs() === 'history';
     const title = { [wl]: val('title') };
     const story = { [wl]: val('story') };
     for (const [code, r] of Object.entries(trs)) {
@@ -471,8 +629,9 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
     }
     const when = {};
     for (const [id, r] of Object.entries(rows)) {
-      r.row.classList.toggle('off', !r.use.checked);
-      if (r.use.checked) when[id] = [Number(r.min.value), Number(r.max.value)];
+      const on = r.use.checked && (!history || id === 'year');
+      r.row.classList.toggle('off', !on);
+      if (on) when[id] = [Number(r.min.value), Number(r.max.value)];
     }
     const scene = {};
     for (const [k, { input, out }] of Object.entries(fx)) {
@@ -481,27 +640,25 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
       if (v !== 0) scene[k] = v;
     }
     const sources = val('sources').split('\n').map(s => s.trim()).filter(Boolean);
-    const future = {
-      id: val('id') || autoId,
-      title,
-      story,
-      when,
-      tone: document.querySelector('input[name="tone"]:checked')?.value || 'mixed',
-    };
-    if (chosen.size) future.tags = tags.filter(id => chosen.has(id));
-    if (Object.keys(scene).length) future.scene = scene;
-    if (sources.length) future.sources = sources;
-    return { author: val('author'), lang: wl, futures: [future] };
+    const piece = { id: val('id') || autoId };
+    if (history) piece.type = 'history';
+    Object.assign(piece, { title, story, when, tone: document.querySelector('input[name="tone"]:checked')?.value || 'mixed', domains: [...chosen] });
+    if (regionSel.value !== 'world') piece.region = regionSel.value;
+    if (Object.keys(scene).length) piece.scene = scene;
+    if (sources.length) piece.sources = sources;
+    return { author: val('author'), lang: wl, futures: [piece] };
   }
 
   function changed() {
+    syncType();
     const c = readContribution();
     const f = c.futures[0];
     const translations = {};
     for (const [code, r] of Object.entries(trs)) if (r.title.value || r.story.value) translations[code] = { title: r.title.value, story: r.story.value };
     store.set('htft:draft', {
       autoId, author: c.author, id: $('#f-id').value.trim(), lang: c.lang, title: $('#f-title').value, story: $('#f-story').value,
-      translations, tags: f.tags, sources: $('#f-sources').value, tone: f.tone, when: followConditions ? null : f.when, scene: f.scene,
+      translations, type: followType ? null : typeIs(), domains: f.domains, region: f.region, sources: $('#f-sources').value,
+      tone: f.tone, when: followConditions ? null : f.when, scene: f.scene,
     });
     onChange();
   }
@@ -523,12 +680,27 @@ function setupWriter({ conditions, yearCfg, config, model, state, site, repoUrl,
     follow(s) {
       if (followConditions) fillFrom(s);
     },
-    previewFuture() {
+    /** 연대기의 빈 칸에서: 그 칸의 시대와 분야로 폼을 채운다. */
+    prefill({ type, from, to, domain }) {
+      followType = false;
+      (type === 'history' ? $('#f-type-history') : $('#f-type-future')).checked = true;
+      fillFrom(state);
+      followConditions = false;
+      rows.year.use.checked = true;
+      rows.year.min.value = Math.max(type === 'history' ? yearCfg.min : NOW_YEAR, from);
+      rows.year.max.value = Math.min(type === 'history' ? NOW_YEAR : yearCfg.max, to);
+      chosen.splice(0, chosen.length, domain);
+      syncDomains();
+      changed();
+      setTimeout(() => $('#f-title').focus({ preventScroll: true }), 400);
+    },
+    previewPiece() {
       if (!$('#f-preview').checked) return null;
       const c = readContribution();
       const f = c.futures[0];
-      if (!f.title[c.lang] || f.story[c.lang].length < 5 || !Object.keys(f.when).length) return null;
-      return { ...f, lang: c.lang, author: c.author || '…', draft: true, file: null };
+      if (!f.title[c.lang] || f.story[c.lang].length < 5 || !f.when.year && !Object.keys(f.when).length) return null;
+      if (f.type === 'history' && !f.when.year) return null;
+      return { ...f, domains: f.domains.length ? f.domains : ['daily'], lang: c.lang, author: c.author || '…', draft: true, file: null };
     },
     refresh() {
       const c = readContribution();

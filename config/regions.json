@@ -1,0 +1,17 @@
+[
+  { "id": "world" },
+  { "id": "asia", "parent": "world" },
+  { "id": "east-asia", "parent": "asia" },
+  { "id": "korea", "parent": "east-asia" },
+  { "id": "japan", "parent": "east-asia" },
+  { "id": "china", "parent": "east-asia" },
+  { "id": "south-asia", "parent": "asia" },
+  { "id": "southeast-asia", "parent": "asia" },
+  { "id": "middle-east", "parent": "world" },
+  { "id": "europe", "parent": "world" },
+  { "id": "spain", "parent": "europe" },
+  { "id": "north-america", "parent": "world" },
+  { "id": "latin-america", "parent": "world" },
+  { "id": "africa", "parent": "world" },
+  { "id": "oceania", "parent": "world" }
+]

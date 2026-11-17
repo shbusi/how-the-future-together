@@ -1,17 +1,20 @@
 {
-  "year": { "min": 2030, "max": 2100, "step": 5, "default": 2060 },
+  "year": { "min": 1900, "max": 2100, "step": 5, "default": 2060 },
+  "eras": [[1900, 1944], [1945, 1969], [1970, 1989], [1990, 2009], [2010, 2026], [2027, 2050], [2051, 2075], [2076, 2100]],
   "conditions": [
     { "id": "climate", "default": 40 },
     { "id": "tech", "default": 70 },
     { "id": "solidarity", "default": 45 },
     { "id": "equality", "default": 35 },
-    { "id": "population", "default": 30 }
+    { "id": "population", "default": 30 },
+    { "id": "peace", "default": 50 },
+    { "id": "growth", "default": 50 }
   ],
   "presets": [
-    { "id": "now",      "values": { "year": 2050, "climate": 40, "tech": 60, "solidarity": 40, "equality": 35, "population": 25 } },
-    { "id": "green",    "values": { "year": 2070, "climate": 85, "tech": 60, "solidarity": 80, "equality": 75, "population": 45 } },
-    { "id": "towers",   "values": { "year": 2080, "climate": 35, "tech": 90, "solidarity": 20, "equality": 15, "population": 50 } },
-    { "id": "drowning", "values": { "year": 2100, "climate": 10, "tech": 30, "solidarity": 30, "equality": 30, "population": 20 } },
-    { "id": "slow",     "values": { "year": 2070, "climate": 70, "tech": 20, "solidarity": 75, "equality": 60, "population": 15 } }
+    { "id": "now",      "values": { "year": 2050, "climate": 40, "tech": 60, "solidarity": 40, "equality": 35, "population": 25, "peace": 50, "growth": 45 } },
+    { "id": "green",    "values": { "year": 2070, "climate": 85, "tech": 60, "solidarity": 80, "equality": 75, "population": 45, "peace": 75, "growth": 50 } },
+    { "id": "towers",   "values": { "year": 2080, "climate": 35, "tech": 90, "solidarity": 20, "equality": 15, "population": 50, "peace": 40, "growth": 75 } },
+    { "id": "drowning", "values": { "year": 2100, "climate": 10, "tech": 30, "solidarity": 30, "equality": 30, "population": 20, "peace": 25, "growth": 25 } },
+    { "id": "slow",     "values": { "year": 2070, "climate": 70, "tech": 20, "solidarity": 75, "equality": 60, "population": 15, "peace": 70, "growth": 25 } }
   ]
 }

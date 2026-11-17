@@ -5,7 +5,7 @@ import { readFile, writeFile, appendFile, readdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateContribution } from '../assets/validate.js';
-import { loadConfig, describeError } from './build.mjs';
+import { loadConfig, describeError, validationConfig } from './build.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -27,7 +27,7 @@ export function futureFromIssue(body, author, config) {
 async function main() {
   const { ISSUE_BODY = '', ISSUE_NUMBER, ISSUE_AUTHOR } = process.env;
   const cfg = await loadConfig();
-  const config = { conditions: cfg.conditions.conditions, year: cfg.conditions.year, languages: cfg.languages.map(l => l.code), tags: cfg.tags };
+  const config = validationConfig(cfg);
   const { contribution, errors } = futureFromIssue(ISSUE_BODY, ISSUE_AUTHOR, config);
 
   if (contribution && !errors.length) {

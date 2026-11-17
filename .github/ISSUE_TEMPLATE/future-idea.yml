@@ -1,13 +1,13 @@
-name: 미래 조각 제안 · Future piece idea
-description: 이런 조건에서는 이런 미래가 펼쳐질 것 같아요. · Under these conditions, I think this would happen.
-title: "[미래 조각] "
+name: 조각 제안 · Piece idea
+description: 이런 역사가 있었어요, 또는 이런 미래가 올 것 같아요. · Something that happened, or a future that could.
+title: "[조각] "
 labels: ["미래 조각 제안"]
 body:
   - type: markdown
     attributes:
       value: |
-        웹사이트의 **미래 조각 쓰기**에서 ‘아이디어로만 남기기’를 누르면 아래 칸이 자동으로 채워집니다. 어느 언어로 써도 됩니다.
-        Press **Just share the idea** under *Write a future piece* on the site and these fields are filled in for you. Any language is welcome.
+        웹사이트의 **조각 쓰기**에서 ‘아이디어로만 남기기’를 누르면 아래 칸이 자동으로 채워집니다. 어느 언어로 써도 됩니다. 역사라면 근거 자료를 꼭 적어 주세요.
+        Press **Just share the idea** under *Write a piece* on the site and these fields are filled in for you. Any language is welcome. For history, please include a source.
 
         다른 사람들이 👍와 댓글로 의견을 보태고, 관리자가 `채택` 라벨을 붙이면 Pull Request가 자동으로 만들어집니다.
         Others add 👍 and comments; when a maintainer adds the `채택` (accepted) label, a pull request is created automatically.
@@ -21,8 +21,8 @@ body:
   - type: textarea
     id: when
     attributes:
-      label: 어떤 조건에서 일어나나요? · Under which conditions?
-      description: "예: 기후 대응이 낮고(0~30), 2050년 이후 · e.g. low climate action (0–30), after 2050"
+      label: 언제, 어떤 조건에서? · When, under which conditions?
+      description: "역사: 연도와 근거 자료 · 미래: 예) 기후 대응이 낮고(0~30), 2050년 이후 — History: year and source · Future: e.g. low climate action (0–30), after 2050"
   - type: textarea
     id: future_json
     attributes:

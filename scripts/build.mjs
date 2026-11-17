@@ -17,10 +17,17 @@ export async function loadConfig() {
   return {
     site: await readJson('site.config.json'),
     conditions: await readJson('config/conditions.json'),
-    tags: await readJson('config/tags.json'),
+    domains: await readJson('config/domains.json'),
+    regions: await readJson('config/regions.json'),
     languages,
     locales,
   };
+}
+
+/** 검사기에 넘길 설정. */
+export function validationConfig(cfg) {
+  const c = cfg.conditions;
+  return { conditions: c.conditions, year: c.year, languages: cfg.languages.map(l => l.code), domains: cfg.domains, regions: cfg.regions };
 }
 
 /** 오류를 한국어와 영어로 함께 적는다. CI 기록은 여러 나라 기여자가 함께 본다. */
@@ -33,7 +40,7 @@ export function describeError(e, locales) {
 export async function loadModel() {
   const cfg = await loadConfig();
   const { conditions: c } = cfg;
-  const config = { conditions: c.conditions, year: c.year, languages: cfg.languages.map(l => l.code), tags: cfg.tags };
+  const config = validationConfig(cfg);
   const files = (await readdir(join(root, 'futures'))).filter(f => f.endsWith('.json')).sort();
 
   const problems = [];
@@ -80,7 +87,9 @@ export async function loadModel() {
       conditions: c.conditions,
       presets: c.presets,
       languages: cfg.languages,
-      tags: cfg.tags,
+      eras: c.eras,
+      domains: cfg.domains,
+      regions: cfg.regions,
       locales: cfg.locales,
       futures,
       contributors,
@@ -110,7 +119,8 @@ async function main() {
     if (keys.length) console.warn(`! locales/${code}.json: 번역이 빠진 문장 ${keys.length}개 (${keys.slice(0, 5).join(', ')}${keys.length > 5 ? ', …' : ''})`);
   }
   const translated = bundle.languages.map(({ code }) => `${code} ${bundle.futures.filter(f => f.title[code]).length}`).join(' · ');
-  const summary = `✔ 파일 ${fileCount}개, 미래 조각 ${bundle.futures.length}개, 기여자 ${bundle.contributors.length}명 — 모두 통과 (언어별 조각: ${translated})`;
+  const history = bundle.futures.filter(f => f.type === 'history').length;
+  const summary = `✔ 파일 ${fileCount}개, 조각 ${bundle.futures.length}개 (역사 ${history} · 미래 ${bundle.futures.length - history}), 기여자 ${bundle.contributors.length}명 — 모두 통과 (언어별: ${translated})`;
   console.log(summary);
   if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   if (checkOnly) return;

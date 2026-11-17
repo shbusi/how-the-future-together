@@ -4,119 +4,120 @@
   "futures": [
     {
       "id": "coastal-retreat",
-      "title": { "ko": "해안에서의 후퇴", "en": "Retreating from the coast", "ja": "海岸からの撤退", "zh": "从海岸撤退", "es": "Retirada de la costa" },
-      "story": { "ko": "해수면이 높아지자 해안 마을들이 하나둘 내륙으로 이사를 떠난다. 옛 해수욕장 자리에는 '이곳에 마을이 있었다'는 표지판만 남는다.", "en": "As sea levels rise, coastal villages move inland one by one. Where the old beaches used to be, only a sign remains: 'A village stood here.'", "ja": "海面が上がり、海辺の村が一つ、また一つと内陸へ移っていく。かつての海水浴場の跡には「ここに村があった」という看板だけが残る。", "zh": "海平面上升，沿海村庄一个接一个迁往内陆。昔日的海水浴场旧址上，只剩下一块写着“这里曾有一座村庄”的牌子。", "es": "Con la subida del nivel del mar, los pueblos costeros se mudan tierra adentro uno tras otro. Donde antes había playas, solo queda un cartel: «Aquí hubo un pueblo»." },
-      "when": { "climate": [0, 35], "year": [2055, 2100] },
+      "title": {"ko": "해안에서의 후퇴", "en": "Retreating from the coast", "ja": "海岸からの撤退", "zh": "从海岸撤退", "es": "Retirada de la costa"},
+      "story": {"ko": "해수면이 높아지자 해안 마을들이 하나둘 내륙으로 이사를 떠난다. 옛 해수욕장 자리에는 '이곳에 마을이 있었다'는 표지판만 남는다.", "en": "As sea levels rise, coastal villages move inland one by one. Where the old beaches used to be, only a sign remains: 'A village stood here.'", "ja": "海面が上がり、海辺の村が一つ、また一つと内陸へ移っていく。かつての海水浴場の跡には「ここに村があった」という看板だけが残る。", "zh": "海平面上升，沿海村庄一个接一个迁往内陆。昔日的海水浴场旧址上，只剩下一块写着“这里曾有一座村庄”的牌子。", "es": "Con la subida del nivel del mar, los pueblos costeros se mudan tierra adentro uno tras otro. Donde antes había playas, solo queda un cartel: «Aquí hubo un pueblo»."},
+      "when": {"climate": [0, 35], "year": [2055, 2100]},
       "tone": "dark",
-      "tags": ["climate", "migration"],
-      "scene": { "sea": 0.15, "decay": 0.1 }
+      "domains": ["environment", "population"],
+      "scene": {"sea": 0.15, "decay": 0.1}
     },
     {
       "id": "seawall-megaproject",
-      "title": { "ko": "거대 방조제의 시대", "en": "The age of giant seawalls", "ja": "巨大防潮堤の時代", "zh": "巨型海堤时代", "es": "La era de los diques gigantes" },
-      "story": { "ko": "물을 막을 수 있는 도시만 살아남는다. 높이 20미터의 방조제가 해안선을 따라 세워지고, 공사비를 누가 낼지를 두고 지역끼리 다툰다.", "en": "Only the cities that can hold back the water survive. Seawalls 20 meters high rise along the coastline, and regions fight over who will pay for their construction.", "ja": "水をせき止められる都市だけが生き残る。高さ20メートルの防潮堤が海岸線に沿って築かれ、工事費を誰が払うかをめぐって地域同士が争う。", "zh": "只有挡得住海水的城市才能存活下来。20米高的海堤沿着海岸线筑起，各地区为该由谁来承担工程费争执不下。", "es": "Solo sobreviven las ciudades capaces de contener el agua. A lo largo de la costa se levantan diques de 20 metros de altura, y las regiones se pelean por quién pagará las obras." },
-      "when": { "climate": [0, 45], "tech": [55, 100], "year": [2045, 2100] },
+      "title": {"ko": "거대 방조제의 시대", "en": "The age of giant seawalls", "ja": "巨大防潮堤の時代", "zh": "巨型海堤时代", "es": "La era de los diques gigantes"},
+      "story": {"ko": "물을 막을 수 있는 도시만 살아남는다. 높이 20미터의 방조제가 해안선을 따라 세워지고, 공사비를 누가 낼지를 두고 지역끼리 다툰다.", "en": "Only the cities that can hold back the water survive. Seawalls 20 meters high rise along the coastline, and regions fight over who will pay for their construction.", "ja": "水をせき止められる都市だけが生き残る。高さ20メートルの防潮堤が海岸線に沿って築かれ、工事費を誰が払うかをめぐって地域同士が争う。", "zh": "只有挡得住海水的城市才能存活下来。20米高的海堤沿着海岸线筑起，各地区为该由谁来承担工程费争执不下。", "es": "Solo sobreviven las ciudades capaces de contener el agua. A lo largo de la costa se levantan diques de 20 metros de altura, y las regiones se pelean por quién pagará las obras."},
+      "when": {"climate": [0, 45], "tech": [55, 100], "year": [2045, 2100]},
       "tone": "mixed",
-      "tags": ["climate", "city"],
-      "scene": { "divide": 0.1 }
+      "domains": ["environment", "cities"],
+      "scene": {"divide": 0.1}
     },
     {
       "id": "heat-night-life",
-      "title": { "ko": "밤에 사는 사람들", "en": "People who live by night", "ja": "夜に生きる人々", "zh": "在夜里生活的人们", "es": "La gente que vive de noche" },
-      "story": { "ko": "한낮 기온이 45도를 넘는 날이 이어지면서 학교와 시장은 해가 진 뒤에 문을 연다. 도시의 하루는 저녁 7시에 시작된다.", "en": "With midday temperatures topping 45°C day after day, schools and markets open only after sunset. The city's day begins at 7 p.m.", "ja": "日中の気温が45度を超える日が続き、学校や市場は日が沈んでから開くようになる。街の一日は午後7時に始まる。", "zh": "白天气温超过45摄氏度的日子接连不断，学校和市场改在日落之后才开门。城市的一天从晚上7点开始。", "es": "Con días seguidos en los que se superan los 45 grados al mediodía, las escuelas y los mercados abren después de la puesta de sol. El día de la ciudad empieza a las siete de la tarde." },
-      "when": { "climate": [0, 40], "year": [2045, 2100] },
+      "title": {"ko": "밤에 사는 사람들", "en": "People who live by night", "ja": "夜に生きる人々", "zh": "在夜里生活的人们", "es": "La gente que vive de noche"},
+      "story": {"ko": "한낮 기온이 45도를 넘는 날이 이어지면서 학교와 시장은 해가 진 뒤에 문을 연다. 도시의 하루는 저녁 7시에 시작된다.", "en": "With midday temperatures topping 45°C day after day, schools and markets open only after sunset. The city's day begins at 7 p.m.", "ja": "日中の気温が45度を超える日が続き、学校や市場は日が沈んでから開くようになる。街の一日は午後7時に始まる。", "zh": "白天气温超过45摄氏度的日子接连不断，学校和市场改在日落之后才开门。城市的一天从晚上7点开始。", "es": "Con días seguidos en los que se superan los 45 grados al mediodía, las escuelas y los mercados abren después de la puesta de sol. El día de la ciudad empieza a las siete de la tarde."},
+      "when": {"climate": [0, 40], "year": [2045, 2100]},
       "tone": "mixed",
-      "tags": ["climate", "daily-life"],
-      "scene": { "heat": 0.1 }
+      "domains": ["environment", "daily"],
+      "scene": {"heat": 0.1}
     },
     {
       "id": "green-corridor",
-      "title": { "ko": "도시를 가로지르는 숲길", "en": "A forest path across the city", "ja": "街を横切る森の小道", "zh": "穿城而过的林间小道", "es": "Una senda arbolada que cruza la ciudad" },
-      "story": { "ko": "차도 절반을 걷어낸 자리에 숲길이 이어진다. 여름 한낮에도 숲길 그늘 아래는 도심보다 4도 낮다.", "en": "Half the car lanes have been torn up, and a forest path runs in their place. Even at noon in summer, it is 4°C cooler in its shade than downtown.", "ja": "車道の半分を取り払った跡に、森の小道が続いている。夏の真昼でも、小道の木陰は都心より4度低い。", "zh": "拆掉一半车道后，原地延伸出一条林间小道。即使在夏日正午，小道的树荫下也比市中心低4摄氏度。", "es": "Donde antes estaba la mitad de los carriles para coches, ahora se extiende una senda arbolada. Incluso a mediodía en verano, a su sombra hace 4 grados menos que en el centro." },
-      "when": { "climate": [60, 100], "solidarity": [50, 100], "year": [2035, 2100] },
+      "title": {"ko": "도시를 가로지르는 숲길", "en": "A forest path across the city", "ja": "街を横切る森の小道", "zh": "穿城而过的林间小道", "es": "Una senda arbolada que cruza la ciudad"},
+      "story": {"ko": "차도 절반을 걷어낸 자리에 숲길이 이어진다. 여름 한낮에도 숲길 그늘 아래는 도심보다 4도 낮다.", "en": "Half the car lanes have been torn up, and a forest path runs in their place. Even at noon in summer, it is 4°C cooler in its shade than downtown.", "ja": "車道の半分を取り払った跡に、森の小道が続いている。夏の真昼でも、小道の木陰は都心より4度低い。", "zh": "拆掉一半车道后，原地延伸出一条林间小道。即使在夏日正午，小道的树荫下也比市中心低4摄氏度。", "es": "Donde antes estaba la mitad de los carriles para coches, ahora se extiende una senda arbolada. Incluso a mediodía en verano, a su sombra hace 4 grados menos que en el centro."},
+      "when": {"climate": [60, 100], "solidarity": [50, 100], "year": [2035, 2100]},
       "tone": "bright",
-      "tags": ["climate", "city"],
-      "scene": { "green": 0.15, "smog": -0.1 }
+      "domains": ["environment", "cities"],
+      "scene": {"green": 0.15, "smog": -0.1}
     },
     {
       "id": "rooftop-solar-coop",
-      "title": { "ko": "지붕 위 햇빛 협동조합", "en": "The rooftop sunshine co-op", "ja": "屋根の上の太陽光協同組合", "zh": "屋顶上的阳光合作社", "es": "La cooperativa del sol en el tejado" },
-      "story": { "ko": "아파트 단지마다 지붕 태양광 협동조합이 생긴다. 주민들은 매달 전기 요금 고지서 대신 배당금 통지서를 받는다.", "en": "Every apartment complex sets up its own rooftop solar co-op. Each month, residents get a dividend statement instead of an electricity bill.", "ja": "どの団地にも、屋根の太陽光発電の協同組合ができる。住民は毎月、電気料金の請求書の代わりに配当金の通知を受け取る。", "zh": "每个小区都成立了屋顶光伏合作社。居民每个月收到的不再是电费账单，而是分红通知。", "es": "En cada conjunto de viviendas nace una cooperativa solar en los tejados. Cada mes, los vecinos reciben un aviso de dividendos en lugar de la factura de la luz." },
-      "when": { "climate": [55, 100], "solidarity": [55, 100] },
+      "title": {"ko": "지붕 위 햇빛 협동조합", "en": "The rooftop sunshine co-op", "ja": "屋根の上の太陽光協同組合", "zh": "屋顶上的阳光合作社", "es": "La cooperativa del sol en el tejado"},
+      "story": {"ko": "아파트 단지마다 지붕 태양광 협동조합이 생긴다. 주민들은 매달 전기 요금 고지서 대신 배당금 통지서를 받는다.", "en": "Every apartment complex sets up its own rooftop solar co-op. Each month, residents get a dividend statement instead of an electricity bill.", "ja": "どの団地にも、屋根の太陽光発電の協同組合ができる。住民は毎月、電気料金の請求書の代わりに配当金の通知を受け取る。", "zh": "每个小区都成立了屋顶光伏合作社。居民每个月收到的不再是电费账单，而是分红通知。", "es": "En cada conjunto de viviendas nace una cooperativa solar en los tejados. Cada mes, los vecinos reciben un aviso de dividendos en lugar de la factura de la luz."},
+      "when": {"climate": [55, 100], "solidarity": [55, 100]},
       "tone": "bright",
-      "tags": ["energy", "community"],
-      "scene": { "solar": 0.15, "community": 0.1 }
+      "domains": ["energy", "daily"],
+      "scene": {"solar": 0.15, "community": 0.1}
     },
     {
       "id": "climate-refugee-welcome",
-      "title": { "ko": "기후 이주민을 맞는 동네", "en": "Welcoming climate migrants", "ja": "気候移住者を迎える町", "zh": "迎接气候移民的街区", "es": "Acoger a los migrantes climáticos" },
-      "story": { "ko": "남쪽에서 올라온 기후 이주민을 위해 빈집을 고쳐 내어 준다. 새 이웃이 들어오면서 사라져 가던 동네에 다시 아이 소리가 난다.", "en": "Empty houses are fixed up and given to climate migrants who have come up from the south. As new neighbors move in, children's voices are heard again in a neighborhood that was fading away.", "ja": "南からやって来た気候移住者のために、空き家を直して提供する。新しい隣人が移り住み、消えかけていた町に再び子どもの声が響く。", "zh": "人们把空房子修好，交给从南方北上的气候移民。新邻居搬进来后，原本日渐消失的街区又响起了孩子们的声音。", "es": "Se reparan casas vacías y se entregan a los migrantes climáticos que llegan desde el sur. Con los nuevos vecinos, en un barrio que se iba apagando vuelven a oírse voces de niños." },
-      "when": { "climate": [0, 40], "solidarity": [60, 100], "year": [2050, 2100] },
+      "title": {"ko": "기후 이주민을 맞는 동네", "en": "Welcoming climate migrants", "ja": "気候移住者を迎える町", "zh": "迎接气候移民的街区", "es": "Acoger a los migrantes climáticos"},
+      "story": {"ko": "남쪽에서 올라온 기후 이주민을 위해 빈집을 고쳐 내어 준다. 새 이웃이 들어오면서 사라져 가던 동네에 다시 아이 소리가 난다.", "en": "Empty houses are fixed up and given to climate migrants who have come up from the south. As new neighbors move in, children's voices are heard again in a neighborhood that was fading away.", "ja": "南からやって来た気候移住者のために、空き家を直して提供する。新しい隣人が移り住み、消えかけていた町に再び子どもの声が響く。", "zh": "人们把空房子修好，交给从南方北上的气候移民。新邻居搬进来后，原本日渐消失的街区又响起了孩子们的声音。", "es": "Se reparan casas vacías y se entregan a los migrantes climáticos que llegan desde el sur. Con los nuevos vecinos, en un barrio que se iba apagando vuelven a oírse voces de niños."},
+      "when": {"climate": [0, 40], "solidarity": [60, 100], "year": [2050, 2100]},
       "tone": "mixed",
-      "tags": ["climate", "migration"],
-      "scene": { "community": 0.1, "decay": -0.1 }
+      "domains": ["environment", "population"],
+      "scene": {"community": 0.1, "decay": -0.1}
     },
     {
       "id": "climate-checkpoints",
-      "title": { "ko": "출입증이 필요한 도시", "en": "Cities that require a pass", "ja": "通行証が必要な都市", "zh": "需要通行证的城市", "es": "Ciudades con pase de entrada" },
-      "story": { "ko": "기후 이주민이 늘어나자 도시들이 출입증을 발급하기 시작한다. 도시 입구의 검문소 앞에는 늘 긴 줄이 서 있다.", "en": "As the number of climate migrants grows, cities begin issuing entry passes. There is always a long line in front of the checkpoints at the city limits.", "ja": "気候移住者が増えると、都市は通行証を発行し始める。街の入り口にある検問所の前には、いつも長い列ができている。", "zh": "随着气候移民增多，各个城市开始发放通行证。城市入口的检查站前总是排着长队。", "es": "A medida que aumentan los migrantes climáticos, las ciudades empiezan a expedir pases de entrada. Frente a los controles a la entrada de cada ciudad siempre hay una larga fila." },
-      "when": { "climate": [0, 40], "solidarity": [0, 40], "year": [2050, 2100] },
+      "title": {"ko": "출입증이 필요한 도시", "en": "Cities that require a pass", "ja": "通行証が必要な都市", "zh": "需要通行证的城市", "es": "Ciudades con pase de entrada"},
+      "story": {"ko": "기후 이주민이 늘어나자 도시들이 출입증을 발급하기 시작한다. 도시 입구의 검문소 앞에는 늘 긴 줄이 서 있다.", "en": "As the number of climate migrants grows, cities begin issuing entry passes. There is always a long line in front of the checkpoints at the city limits.", "ja": "気候移住者が増えると、都市は通行証を発行し始める。街の入り口にある検問所の前には、いつも長い列ができている。", "zh": "随着气候移民增多，各个城市开始发放通行证。城市入口的检查站前总是排着长队。", "es": "A medida que aumentan los migrantes climáticos, las ciudades empiezan a expedir pases de entrada. Frente a los controles a la entrada de cada ciudad siempre hay una larga fila."},
+      "when": {"climate": [0, 40], "solidarity": [0, 40], "year": [2050, 2100]},
       "tone": "dark",
-      "tags": ["climate", "borders"],
-      "scene": { "divide": 0.2 }
+      "domains": ["environment", "peace"],
+      "scene": {"divide": 0.2}
     },
     {
       "id": "milky-way-returns",
-      "title": { "ko": "다시 보이는 은하수", "en": "The Milky Way returns", "ja": "また見える天の川", "zh": "银河重现", "es": "Vuelve la Vía Láctea" },
-      "story": { "ko": "석탄 발전소가 모두 멈춘 뒤 처음 맞는 겨울, 서울 하늘에서 은하수가 보였다는 소식이 뉴스 첫 줄을 장식한다.", "en": "In the first winter after every coal power plant has shut down, the news leads with a report that the Milky Way was seen in the sky over Seoul.", "ja": "石炭火力発電所がすべて止まってから初めての冬、ソウルの空に天の川が見えたというニュースがトップを飾る。", "zh": "所有燃煤电厂停运后的第一个冬天，“首尔夜空中出现了银河”的消息登上了新闻头条。", "es": "En el primer invierno tras el cierre de todas las centrales de carbón, la noticia de que se vio la Vía Láctea en el cielo de Seúl abre los informativos." },
-      "when": { "climate": [70, 100], "year": [2040, 2100] },
+      "title": {"ko": "다시 보이는 은하수", "en": "The Milky Way returns", "ja": "また見える天の川", "zh": "银河重现", "es": "Vuelve la Vía Láctea"},
+      "story": {"ko": "석탄 발전소가 모두 멈춘 뒤 처음 맞는 겨울, 서울 하늘에서 은하수가 보였다는 소식이 뉴스 첫 줄을 장식한다.", "en": "In the first winter after every coal power plant has shut down, the news leads with a report that the Milky Way was seen in the sky over Seoul.", "ja": "石炭火力発電所がすべて止まってから初めての冬、ソウルの空に天の川が見えたというニュースがトップを飾る。", "zh": "所有燃煤电厂停运后的第一个冬天，“首尔夜空中出现了银河”的消息登上了新闻头条。", "es": "En el primer invierno tras el cierre de todas las centrales de carbón, la noticia de que se vio la Vía Láctea en el cielo de Seúl abre los informativos."},
+      "when": {"climate": [70, 100], "year": [2040, 2100]},
       "tone": "bright",
-      "tags": ["climate", "sky"],
-      "scene": { "smog": -0.2 }
+      "domains": ["environment"],
+      "region": "korea",
+      "scene": {"smog": -0.2}
     },
     {
       "id": "dome-city",
-      "title": { "ko": "돔 아래의 삶", "en": "Life under the dome", "ja": "ドームの下の暮らし", "zh": "穹顶下的生活", "es": "La vida bajo la cúpula" },
-      "story": { "ko": "공기를 걸러 주는 거대한 돔이 도시를 덮는다. 돔 안의 하늘은 언제나 맑지만, 돔 밖으로 나가려면 허가가 필요하다.", "en": "A giant dome that filters the air covers the city. The sky inside is always clear, but leaving the dome requires a permit.", "ja": "空気をろ過する巨大なドームが都市を覆う。ドームの中の空はいつも晴れているが、外に出るには許可がいる。", "zh": "一座能过滤空气的巨大穹顶罩住了整座城市。穹顶里的天空永远晴朗，但要走出穹顶，必须先获得许可。", "es": "Una enorme cúpula que filtra el aire cubre la ciudad. Dentro, el cielo siempre está despejado, pero para salir de la cúpula hace falta un permiso." },
-      "when": { "climate": [0, 30], "tech": [65, 100], "year": [2070, 2100] },
+      "title": {"ko": "돔 아래의 삶", "en": "Life under the dome", "ja": "ドームの下の暮らし", "zh": "穹顶下的生活", "es": "La vida bajo la cúpula"},
+      "story": {"ko": "공기를 걸러 주는 거대한 돔이 도시를 덮는다. 돔 안의 하늘은 언제나 맑지만, 돔 밖으로 나가려면 허가가 필요하다.", "en": "A giant dome that filters the air covers the city. The sky inside is always clear, but leaving the dome requires a permit.", "ja": "空気をろ過する巨大なドームが都市を覆う。ドームの中の空はいつも晴れているが、外に出るには許可がいる。", "zh": "一座能过滤空气的巨大穹顶罩住了整座城市。穹顶里的天空永远晴朗，但要走出穹顶，必须先获得许可。", "es": "Una enorme cúpula que filtra el aire cubre la ciudad. Dentro, el cielo siempre está despejado, pero para salir de la cúpula hace falta un permiso."},
+      "when": {"climate": [0, 30], "tech": [65, 100], "year": [2070, 2100]},
       "tone": "dark",
-      "tags": ["climate", "technology"],
-      "scene": { "dome": 0.3, "divide": 0.1 }
+      "domains": ["environment", "technology"],
+      "scene": {"dome": 0.3, "divide": 0.1}
     },
     {
       "id": "rewilding-villages",
-      "title": { "ko": "야생으로 돌아간 마을", "en": "Villages returned to the wild", "ja": "野生に還った村", "zh": "回归荒野的村庄", "es": "Pueblos devueltos a la naturaleza" },
-      "story": { "ko": "사람이 떠난 산골 마을에 숲이 돌아오고, 반달가슴곰과 수달의 흔적이 다시 발견된다. 남은 주민들은 숲 해설가가 된다.", "en": "The forest returns to mountain villages that people have left, and traces of Asiatic black bears and otters are found again. The residents who stayed become forest guides.", "ja": "人が去った山あいの村に森が戻り、ツキノワグマやカワウソの痕跡が再び見つかる。残った住民たちは森の案内人になる。", "zh": "人们离开后的山村里，森林重新长了回来，亚洲黑熊和水獭的踪迹再次出现。留下来的村民当起了森林讲解员。", "es": "El bosque regresa a las aldeas de montaña que la gente abandonó, y vuelven a encontrarse rastros de osos negros asiáticos y nutrias. Los vecinos que se quedaron se hacen guías del bosque." },
-      "when": { "population": [0, 35], "climate": [50, 100], "year": [2045, 2100] },
+      "title": {"ko": "야생으로 돌아간 마을", "en": "Villages returned to the wild", "ja": "野生に還った村", "zh": "回归荒野的村庄", "es": "Pueblos devueltos a la naturaleza"},
+      "story": {"ko": "사람이 떠난 산골 마을에 숲이 돌아오고, 반달가슴곰과 수달의 흔적이 다시 발견된다. 남은 주민들은 숲 해설가가 된다.", "en": "The forest returns to mountain villages that people have left, and traces of Asiatic black bears and otters are found again. The residents who stayed become forest guides.", "ja": "人が去った山あいの村に森が戻り、ツキノワグマやカワウソの痕跡が再び見つかる。残った住民たちは森の案内人になる。", "zh": "人们离开后的山村里，森林重新长了回来，亚洲黑熊和水獭的踪迹再次出现。留下来的村民当起了森林讲解员。", "es": "El bosque regresa a las aldeas de montaña que la gente abandonó, y vuelven a encontrarse rastros de osos negros asiáticos y nutrias. Los vecinos que se quedaron se hacen guías del bosque."},
+      "when": {"population": [0, 35], "climate": [50, 100], "year": [2045, 2100]},
       "tone": "bright",
-      "tags": ["ecology", "regions"],
-      "scene": { "green": 0.2 }
+      "domains": ["environment", "cities"],
+      "scene": {"green": 0.2}
     },
     {
       "id": "water-rationing",
-      "title": { "ko": "물 배급의 여름", "en": "A summer of water rationing", "ja": "給水制限の夏", "zh": "限量供水的夏天", "es": "Un verano de racionamiento de agua" },
-      "story": { "ko": "가뭄이 이어지는 여름, 수돗물은 하루 네 시간만 나온다. 개인 정수 탱크를 살 수 있는 집과 없는 집의 여름은 전혀 다르다.", "en": "In a summer of endless drought, tap water runs only four hours a day. Summer looks completely different for households that can buy their own water-purifying tank and those that can't.", "ja": "日照りが続く夏、水道の水は1日4時間しか出ない。自前の浄水タンクを買える家と買えない家とでは、夏の過ごし方がまるで違う。", "zh": "干旱持续的夏天，自来水每天只供应四个小时。买得起私人净水箱的家庭和买不起的家庭，过的是完全不同的夏天。", "es": "En un verano de sequía sin fin, el agua del grifo sale solo cuatro horas al día. El verano es muy distinto para las casas que pueden comprarse un tanque de agua potable propio y para las que no." },
-      "when": { "climate": [0, 35], "equality": [0, 40], "year": [2040, 2100] },
+      "title": {"ko": "물 배급의 여름", "en": "A summer of water rationing", "ja": "給水制限の夏", "zh": "限量供水的夏天", "es": "Un verano de racionamiento de agua"},
+      "story": {"ko": "가뭄이 이어지는 여름, 수돗물은 하루 네 시간만 나온다. 개인 정수 탱크를 살 수 있는 집과 없는 집의 여름은 전혀 다르다.", "en": "In a summer of endless drought, tap water runs only four hours a day. Summer looks completely different for households that can buy their own water-purifying tank and those that can't.", "ja": "日照りが続く夏、水道の水は1日4時間しか出ない。自前の浄水タンクを買える家と買えない家とでは、夏の過ごし方がまるで違う。", "zh": "干旱持续的夏天，自来水每天只供应四个小时。买得起私人净水箱的家庭和买不起的家庭，过的是完全不同的夏天。", "es": "En un verano de sequía sin fin, el agua del grifo sale solo cuatro horas al día. El verano es muy distinto para las casas que pueden comprarse un tanque de agua potable propio y para las que no."},
+      "when": {"climate": [0, 35], "equality": [0, 40], "year": [2040, 2100]},
       "tone": "dark",
-      "tags": ["climate", "inequality"],
-      "scene": { "divide": 0.1, "green": -0.1 }
+      "domains": ["environment", "economy"],
+      "scene": {"divide": 0.1, "green": -0.1}
     },
     {
       "id": "heat-shelter-map",
-      "title": { "ko": "무더위 쉼터 지도", "en": "The heat-shelter map", "ja": "暑さ避難所マップ", "zh": "避暑点地图", "es": "El mapa de refugios contra el calor" },
-      "story": { "ko": "여름마다 무더위 쉼터 지도가 휴대폰 첫 화면에 뜬다. 은행과 도서관, 편의점이 돌아가며 쉼터 역할을 맡는다.", "en": "Every summer, a map of cooling shelters pops up on the first screen of everyone's phone. Banks, libraries and convenience stores take turns serving as shelters.", "ja": "夏になるたび、暑さ避難所のマップがスマホのトップ画面に表示される。銀行や図書館、コンビニが交代で避難所の役目を担う。", "zh": "每到夏天，避暑点地图就会出现在手机首屏上。银行、图书馆和便利店轮流充当避暑点。", "es": "Cada verano, el mapa de refugios contra el calor aparece en la pantalla de inicio de los teléfonos. Bancos, bibliotecas y tiendas de conveniencia se turnan para hacer de refugio." },
-      "when": { "climate": [0, 60], "year": [2026, 2045] },
+      "title": {"ko": "무더위 쉼터 지도", "en": "The heat-shelter map", "ja": "暑さ避難所マップ", "zh": "避暑点地图", "es": "El mapa de refugios contra el calor"},
+      "story": {"ko": "여름마다 무더위 쉼터 지도가 휴대폰 첫 화면에 뜬다. 은행과 도서관, 편의점이 돌아가며 쉼터 역할을 맡는다.", "en": "Every summer, a map of cooling shelters pops up on the first screen of everyone's phone. Banks, libraries and convenience stores take turns serving as shelters.", "ja": "夏になるたび、暑さ避難所のマップがスマホのトップ画面に表示される。銀行や図書館、コンビニが交代で避難所の役目を担う。", "zh": "每到夏天，避暑点地图就会出现在手机首屏上。银行、图书馆和便利店轮流充当避暑点。", "es": "Cada verano, el mapa de refugios contra el calor aparece en la pantalla de inicio de los teléfonos. Bancos, bibliotecas y tiendas de conveniencia se turnan para hacer de refugio."},
+      "when": {"climate": [0, 60], "year": [2026, 2045]},
       "tone": "mixed",
-      "tags": ["climate", "daily-life"]
+      "domains": ["environment", "daily"]
     },
     {
       "id": "green-gentrification",
-      "title": { "ko": "숲 공원 옆 집값", "en": "Home prices next to the park", "ja": "森の公園のそばの住宅価格", "zh": "森林公园旁的房价", "es": "El precio de vivir junto al parque" },
-      "story": { "ko": "강변에 숲 공원이 생기자 주변 집값이 두 배로 뛴다. 공원을 만들자고 했던 오래된 주민들은 더 이상 그 동네에 살지 못한다.", "en": "When a forest park opens along the river, nearby home prices double. The longtime residents who pushed for the park can no longer live in that neighborhood.", "ja": "川沿いに森の公園ができると、周辺の住宅価格が2倍に跳ね上がる。公園をつくろうと言い出した古くからの住民たちは、もうその町に住めない。", "zh": "河边建起森林公园后，周边房价翻了一倍。当初提议建公园的老住户，再也住不起那片街区了。", "es": "Cuando se abre un parque forestal junto al río, el precio de las viviendas cercanas se duplica. Los vecinos de toda la vida que pidieron el parque ya no pueden seguir viviendo en el barrio." },
-      "when": { "climate": [55, 100], "equality": [0, 35], "year": [2035, 2100] },
+      "title": {"ko": "숲 공원 옆 집값", "en": "Home prices next to the park", "ja": "森の公園のそばの住宅価格", "zh": "森林公园旁的房价", "es": "El precio de vivir junto al parque"},
+      "story": {"ko": "강변에 숲 공원이 생기자 주변 집값이 두 배로 뛴다. 공원을 만들자고 했던 오래된 주민들은 더 이상 그 동네에 살지 못한다.", "en": "When a forest park opens along the river, nearby home prices double. The longtime residents who pushed for the park can no longer live in that neighborhood.", "ja": "川沿いに森の公園ができると、周辺の住宅価格が2倍に跳ね上がる。公園をつくろうと言い出した古くからの住民たちは、もうその町に住めない。", "zh": "河边建起森林公园后，周边房价翻了一倍。当初提议建公园的老住户，再也住不起那片街区了。", "es": "Cuando se abre un parque forestal junto al río, el precio de las viviendas cercanas se duplica. Los vecinos de toda la vida que pidieron el parque ya no pueden seguir viviendo en el barrio."},
+      "when": {"climate": [55, 100], "equality": [0, 35], "year": [2035, 2100]},
       "tone": "mixed",
-      "tags": ["climate", "housing"],
-      "scene": { "green": 0.05, "divide": 0.1 }
+      "domains": ["environment", "cities"],
+      "scene": {"green": 0.05, "divide": 0.1}
     }
   ]
 }

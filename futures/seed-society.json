@@ -4,119 +4,120 @@
   "futures": [
     {
       "id": "citizens-assembly",
-      "title": { "ko": "추첨으로 뽑힌 시민의회", "en": "A citizens' assembly chosen by lot", "ja": "くじで選ばれた市民議会", "zh": "抽签选出的公民议会", "es": "Asamblea ciudadana por sorteo" },
-      "story": { "ko": "무작위 추첨으로 뽑힌 시민 200명이 기후와 주거 정책을 정한다. 이번 달 의장은 열아홉 살 대학생이다.", "en": "200 citizens chosen by random lottery decide climate and housing policy. This month's chair is a 19-year-old college student.", "ja": "無作為の抽選で選ばれた市民200人が、気候と住宅の政策を決める。今月の議長は19歳の大学生だ。", "zh": "通过随机抽签选出的200名公民决定气候和住房政策。本月的主席是一名19岁的大学生。", "es": "Un grupo de 200 ciudadanos elegidos por sorteo decide las políticas de clima y vivienda. Este mes, quien preside es un estudiante universitario de 19 años." },
-      "when": { "solidarity": [65, 100], "year": [2035, 2100] },
+      "title": {"ko": "추첨으로 뽑힌 시민의회", "en": "A citizens' assembly chosen by lot", "ja": "くじで選ばれた市民議会", "zh": "抽签选出的公民议会", "es": "Asamblea ciudadana por sorteo"},
+      "story": {"ko": "무작위 추첨으로 뽑힌 시민 200명이 기후와 주거 정책을 정한다. 이번 달 의장은 열아홉 살 대학생이다.", "en": "200 citizens chosen by random lottery decide climate and housing policy. This month's chair is a 19-year-old college student.", "ja": "無作為の抽選で選ばれた市民200人が、気候と住宅の政策を決める。今月の議長は19歳の大学生だ。", "zh": "通过随机抽签选出的200名公民决定气候和住房政策。本月的主席是一名19岁的大学生。", "es": "Un grupo de 200 ciudadanos elegidos por sorteo decide las políticas de clima y vivienda. Este mes, quien preside es un estudiante universitario de 19 años."},
+      "when": {"solidarity": [65, 100], "year": [2035, 2100]},
       "tone": "bright",
-      "tags": ["participation", "politics"],
-      "scene": { "community": 0.15 }
+      "domains": ["politics"],
+      "scene": {"community": 0.15}
     },
     {
       "id": "towers-above-clouds",
-      "title": { "ko": "구름 위의 단지", "en": "The complex above the clouds", "ja": "雲の上の居住区", "zh": "云层之上的小区", "es": "El complejo sobre las nubes" },
-      "story": { "ko": "구름다리로만 이어진 초고층 단지가 생긴다. 그 아래 거리에 사는 사람들은 단지 안의 공원을 사진으로만 본다.", "en": "A complex of supertall towers goes up, linked only by skybridges. People who live on the streets below see its parks only in photos.", "ja": "空中歩廊だけでつながった超高層の居住区ができる。その下の通りに住む人々は、居住区の中の公園を写真でしか知らない。", "zh": "一片只靠空中连廊相连的超高层小区拔地而起。住在下方街道上的人们，只在照片里见过小区里的公园。", "es": "Surge un complejo de rascacielos unidos solo por pasarelas aéreas. Quienes viven en las calles de abajo solo conocen sus parques por fotos." },
-      "when": { "equality": [0, 30], "year": [2040, 2100] },
+      "title": {"ko": "구름 위의 단지", "en": "The complex above the clouds", "ja": "雲の上の居住区", "zh": "云层之上的小区", "es": "El complejo sobre las nubes"},
+      "story": {"ko": "구름다리로만 이어진 초고층 단지가 생긴다. 그 아래 거리에 사는 사람들은 단지 안의 공원을 사진으로만 본다.", "en": "A complex of supertall towers goes up, linked only by skybridges. People who live on the streets below see its parks only in photos.", "ja": "空中歩廊だけでつながった超高層の居住区ができる。その下の通りに住む人々は、居住区の中の公園を写真でしか知らない。", "zh": "一片只靠空中连廊相连的超高层小区拔地而起。住在下方街道上的人们，只在照片里见过小区里的公园。", "es": "Surge un complejo de rascacielos unidos solo por pasarelas aéreas. Quienes viven en las calles de abajo solo conocen sus parques por fotos."},
+      "when": {"equality": [0, 30], "year": [2040, 2100]},
       "tone": "dark",
-      "tags": ["inequality", "housing"],
-      "scene": { "divide": 0.2, "density": 0.1 }
+      "domains": ["economy", "cities"],
+      "scene": {"divide": 0.2, "density": 0.1}
     },
     {
       "id": "village-kitchen",
-      "title": { "ko": "마을 부엌", "en": "The neighborhood kitchen", "ja": "まちの台所", "zh": "邻里厨房", "es": "La cocina del barrio" },
-      "story": { "ko": "아파트 1층마다 공동 부엌이 생겨 저녁을 함께 먹는다. 혼자 사는 노인과 맞벌이 가정의 아이가 같은 식탁에 앉는다.", "en": "Shared kitchens open on the ground floor of every apartment building, and neighbors eat dinner together. An elderly person who lives alone and a child from a dual-income family sit at the same table.", "ja": "マンションの1階ごとに共同の台所ができ、みんなで夕食を食べる。一人暮らしのお年寄りと共働き家庭の子どもが、同じ食卓につく。", "zh": "每栋公寓楼的一楼都有了公共厨房，大家一起吃晚饭。独居老人和双职工家庭的孩子坐在同一张餐桌旁。", "es": "En la planta baja de cada edificio de apartamentos abre una cocina común, y los vecinos cenan juntos. Una persona mayor que vive sola y el hijo de una familia en la que ambos padres trabajan se sientan a la misma mesa." },
-      "when": { "solidarity": [55, 100] },
+      "title": {"ko": "마을 부엌", "en": "The neighborhood kitchen", "ja": "まちの台所", "zh": "邻里厨房", "es": "La cocina del barrio"},
+      "story": {"ko": "아파트 1층마다 공동 부엌이 생겨 저녁을 함께 먹는다. 혼자 사는 노인과 맞벌이 가정의 아이가 같은 식탁에 앉는다.", "en": "Shared kitchens open on the ground floor of every apartment building, and neighbors eat dinner together. An elderly person who lives alone and a child from a dual-income family sit at the same table.", "ja": "マンションの1階ごとに共同の台所ができ、みんなで夕食を食べる。一人暮らしのお年寄りと共働き家庭の子どもが、同じ食卓につく。", "zh": "每栋公寓楼的一楼都有了公共厨房，大家一起吃晚饭。独居老人和双职工家庭的孩子坐在同一张餐桌旁。", "es": "En la planta baja de cada edificio de apartamentos abre una cocina común, y los vecinos cenan juntos. Una persona mayor que vive sola y el hijo de una familia en la que ambos padres trabajan se sientan a la misma mesa."},
+      "when": {"solidarity": [55, 100]},
       "tone": "bright",
-      "tags": ["community", "daily-life"],
-      "scene": { "community": 0.15 }
+      "domains": ["daily"],
+      "scene": {"community": 0.15}
     },
     {
       "id": "loneliness-market",
-      "title": { "ko": "외로움을 파는 시장", "en": "The loneliness market", "ja": "孤独を売る市場", "zh": "贩卖孤独的市场", "es": "El mercado de la soledad" },
-      "story": { "ko": "대화 상대가 되어 주는 AI 구독료가 월세 다음으로 큰 지출이 된다. 사람들은 옆집 이웃의 이름을 모른다.", "en": "Subscriptions to AI companions that keep you company in conversation become the biggest expense after rent. People don't know their next-door neighbor's name.", "ja": "話し相手になってくれるAIのサブスク代が、家賃の次に大きな出費になる。人々は隣に住む人の名前を知らない。", "zh": "陪人聊天的AI订阅费，成了仅次于房租的最大开销。人们不知道隔壁邻居叫什么名字。", "es": "La suscripción a una IA que hace compañía conversando se convierte en el mayor gasto después del alquiler. La gente no sabe cómo se llama su vecino de al lado." },
-      "when": { "solidarity": [0, 35], "year": [2035, 2100] },
+      "title": {"ko": "외로움을 파는 시장", "en": "The loneliness market", "ja": "孤独を売る市場", "zh": "贩卖孤独的市场", "es": "El mercado de la soledad"},
+      "story": {"ko": "대화 상대가 되어 주는 AI 구독료가 월세 다음으로 큰 지출이 된다. 사람들은 옆집 이웃의 이름을 모른다.", "en": "Subscriptions to AI companions that keep you company in conversation become the biggest expense after rent. People don't know their next-door neighbor's name.", "ja": "話し相手になってくれるAIのサブスク代が、家賃の次に大きな出費になる。人々は隣に住む人の名前を知らない。", "zh": "陪人聊天的AI订阅费，成了仅次于房租的最大开销。人们不知道隔壁邻居叫什么名字。", "es": "La suscripción a una IA que hace compañía conversando se convierte en el mayor gasto después del alquiler. La gente no sabe cómo se llama su vecino de al lado."},
+      "when": {"solidarity": [0, 35], "year": [2035, 2100]},
       "tone": "dark",
-      "tags": ["community", "technology"],
-      "scene": { "community": -0.15 }
+      "domains": ["daily", "technology"],
+      "scene": {"community": -0.15}
     },
     {
       "id": "housing-commons",
-      "title": { "ko": "집은 사는 곳", "en": "A home is for living in", "ja": "家は住むところ", "zh": "房子是用来住的", "es": "La casa es para vivir" },
-      "story": { "ko": "공공 임대와 협동조합 주택이 도시 주택의 절반을 넘는다. 집값 소식은 더 이상 저녁 뉴스의 첫 꼭지가 아니다.", "en": "Public rentals and co-op housing make up more than half of the city's homes. Housing prices are no longer the lead story on the evening news.", "ja": "公営の賃貸住宅と協同組合住宅が、都市の住宅の半分を超える。住宅価格のニュースは、もう夕方のニュースのトップではない。", "zh": "公共租赁住房和合作社住房占到城市住房的一半以上。房价新闻不再是晚间新闻的头条。", "es": "La vivienda pública de alquiler y las cooperativas de vivienda superan la mitad de las viviendas de la ciudad. El precio de la vivienda ya no es el titular principal de las noticias de la noche." },
-      "when": { "equality": [60, 100], "solidarity": [50, 100], "year": [2040, 2100] },
+      "title": {"ko": "집은 사는 곳", "en": "A home is for living in", "ja": "家は住むところ", "zh": "房子是用来住的", "es": "La casa es para vivir"},
+      "story": {"ko": "공공 임대와 협동조합 주택이 도시 주택의 절반을 넘는다. 집값 소식은 더 이상 저녁 뉴스의 첫 꼭지가 아니다.", "en": "Public rentals and co-op housing make up more than half of the city's homes. Housing prices are no longer the lead story on the evening news.", "ja": "公営の賃貸住宅と協同組合住宅が、都市の住宅の半分を超える。住宅価格のニュースは、もう夕方のニュースのトップではない。", "zh": "公共租赁住房和合作社住房占到城市住房的一半以上。房价新闻不再是晚间新闻的头条。", "es": "La vivienda pública de alquiler y las cooperativas de vivienda superan la mitad de las viviendas de la ciudad. El precio de la vivienda ya no es el titular principal de las noticias de la noche."},
+      "when": {"equality": [60, 100], "solidarity": [50, 100], "year": [2040, 2100]},
       "tone": "bright",
-      "tags": ["housing", "public"],
-      "scene": { "divide": -0.2, "community": 0.05 }
+      "domains": ["cities", "care"],
+      "scene": {"divide": -0.2, "community": 0.05}
     },
     {
       "id": "two-realities",
-      "title": { "ko": "두 개의 현실", "en": "Two realities", "ja": "二つの現実", "zh": "两种现实", "es": "Dos realidades" },
-      "story": { "ko": "사람마다 다른 뉴스, 다른 사실을 본다. 같은 날 같은 광장에서 서로를 믿지 않는 두 개의 집회가 열린다.", "en": "Everyone sees different news and different facts. On the same day, in the same square, two rallies are held by people who don't trust each other.", "ja": "人によって見るニュースも、事実も違う。同じ日、同じ広場で、互いを信じない二つの集会が開かれる。", "zh": "每个人看到的新闻不同，看到的事实也不同。同一天、同一个广场上，举行着两场互不信任的集会。", "es": "Cada persona ve noticias distintas y hechos distintos. El mismo día, en la misma plaza, se celebran dos concentraciones que desconfían una de la otra." },
-      "when": { "solidarity": [0, 30], "tech": [50, 100] },
+      "title": {"ko": "두 개의 현실", "en": "Two realities", "ja": "二つの現実", "zh": "两种现实", "es": "Dos realidades"},
+      "story": {"ko": "사람마다 다른 뉴스, 다른 사실을 본다. 같은 날 같은 광장에서 서로를 믿지 않는 두 개의 집회가 열린다.", "en": "Everyone sees different news and different facts. On the same day, in the same square, two rallies are held by people who don't trust each other.", "ja": "人によって見るニュースも、事実も違う。同じ日、同じ広場で、互いを信じない二つの集会が開かれる。", "zh": "每个人看到的新闻不同，看到的事实也不同。同一天、同一个广场上，举行着两场互不信任的集会。", "es": "Cada persona ve noticias distintas y hechos distintos. El mismo día, en la misma plaza, se celebran dos concentraciones que desconfían una de la otra."},
+      "when": {"solidarity": [0, 30], "tech": [50, 100]},
       "tone": "dark",
-      "tags": ["media", "politics"],
-      "scene": { "community": -0.1 }
+      "domains": ["media", "politics"],
+      "scene": {"community": -0.1}
     },
     {
       "id": "season-festivals",
-      "title": { "ko": "계절 축제의 부활", "en": "The return of seasonal festivals", "ja": "季節の祭りの復活", "zh": "季节节庆的复兴", "es": "El regreso de las fiestas estacionales" },
-      "story": { "ko": "동네마다 계절이 바뀔 때 축제를 연다. 축제를 준비하는 모임이 동네의 작은 의회 역할을 한다.", "en": "Every neighborhood holds a festival when the seasons change. The group that prepares the festival works as the neighborhood's small council.", "ja": "どの町でも、季節が変わるたびに祭りを開く。祭りを準備する集まりが、町の小さな議会の役割を果たす。", "zh": "每个街区都会在换季时举办节庆。筹备节庆的小组，成了街区里的小议会。", "es": "Cada barrio celebra una fiesta cuando cambian las estaciones. El grupo que la prepara funciona como un pequeño concejo del barrio." },
-      "when": { "solidarity": [60, 100], "climate": [50, 100] },
+      "title": {"ko": "계절 축제의 부활", "en": "The return of seasonal festivals", "ja": "季節の祭りの復活", "zh": "季节节庆的复兴", "es": "El regreso de las fiestas estacionales"},
+      "story": {"ko": "동네마다 계절이 바뀔 때 축제를 연다. 축제를 준비하는 모임이 동네의 작은 의회 역할을 한다.", "en": "Every neighborhood holds a festival when the seasons change. The group that prepares the festival works as the neighborhood's small council.", "ja": "どの町でも、季節が変わるたびに祭りを開く。祭りを準備する集まりが、町の小さな議会の役割を果たす。", "zh": "每个街区都会在换季时举办节庆。筹备节庆的小组，成了街区里的小议会。", "es": "Cada barrio celebra una fiesta cuando cambian las estaciones. El grupo que la prepara funciona como un pequeño concejo del barrio."},
+      "when": {"solidarity": [60, 100], "climate": [50, 100]},
       "tone": "bright",
-      "tags": ["community", "culture"],
-      "scene": { "community": 0.1, "green": 0.05 }
+      "domains": ["daily", "culture"],
+      "scene": {"community": 0.1, "green": 0.05}
     },
     {
       "id": "debt-generation",
-      "title": { "ko": "빚으로 시작하는 삶", "en": "A life that starts in debt", "ja": "借金から始まる人生", "zh": "从负债开始的人生", "es": "Una vida que empieza con deudas" },
-      "story": { "ko": "사회에 나오는 청년들은 학자금과 전세 대출을 함께 안고 시작한다. 결혼과 출산은 '여유가 생기면' 하는 일이 된다.", "en": "Young people starting out in life carry both student loans and a loan for their housing deposit. Marriage and children become things for “once we can afford it.”", "ja": "社会に出る若者たちは、学資ローンと住宅保証金のローンを両方抱えてスタートする。結婚や出産は「余裕ができたら」することになる。", "zh": "刚步入社会的年轻人，背着助学贷款和租房押金贷款起步。结婚和生孩子成了“等宽裕了再说”的事。", "es": "Los jóvenes que salen al mundo empiezan cargando a la vez préstamos estudiantiles y un préstamo para el depósito de su vivienda. Casarse y tener hijos se vuelve algo para “cuando haya margen”." },
-      "when": { "equality": [0, 35], "population": [0, 40], "year": [2026, 2080] },
+      "title": {"ko": "빚으로 시작하는 삶", "en": "A life that starts in debt", "ja": "借金から始まる人生", "zh": "从负债开始的人生", "es": "Una vida que empieza con deudas"},
+      "story": {"ko": "사회에 나오는 청년들은 학자금과 전세 대출을 함께 안고 시작한다. 결혼과 출산은 '여유가 생기면' 하는 일이 된다.", "en": "Young people starting out in life carry both student loans and a loan for their housing deposit. Marriage and children become things for “once we can afford it.”", "ja": "社会に出る若者たちは、学資ローンと住宅保証金のローンを両方抱えてスタートする。結婚や出産は「余裕ができたら」することになる。", "zh": "刚步入社会的年轻人，背着助学贷款和租房押金贷款起步。结婚和生孩子成了“等宽裕了再说”的事。", "es": "Los jóvenes que salen al mundo empiezan cargando a la vez préstamos estudiantiles y un préstamo para el depósito de su vivienda. Casarse y tener hijos se vuelve algo para “cuando haya margen”."},
+      "when": {"equality": [0, 35], "population": [0, 40], "year": [2026, 2080]},
       "tone": "dark",
-      "tags": ["youth", "inequality"],
-      "scene": { "decay": 0.05 }
+      "domains": ["family", "economy"],
+      "region": "korea",
+      "scene": {"decay": 0.05}
     },
     {
       "id": "universal-care",
-      "title": { "ko": "돌봄이 기본인 사회", "en": "A society where care is a given", "ja": "ケアが当たり前の社会", "zh": "照护有保障的社会", "es": "Los cuidados como servicio básico" },
-      "story": { "ko": "아이와 노인 돌봄이 무상 공공 서비스가 된다. 돌봄 노동자는 가장 존경받는 직업 3위 안에 든다.", "en": "Care for children and the elderly becomes a free public service. Care work ranks among the three most respected professions.", "ja": "子どもと高齢者のケアが無償の公共サービスになる。ケアワーカーは、最も尊敬される職業のトップ3に入る。", "zh": "儿童和老人的照护成为免费的公共服务。照护工作者跻身最受尊敬职业的前三名。", "es": "El cuidado de niños y personas mayores se convierte en un servicio público gratuito. Ser cuidador está entre las tres profesiones más respetadas." },
-      "when": { "equality": [55, 100], "solidarity": [55, 100], "year": [2035, 2100] },
+      "title": {"ko": "돌봄이 기본인 사회", "en": "A society where care is a given", "ja": "ケアが当たり前の社会", "zh": "照护有保障的社会", "es": "Los cuidados como servicio básico"},
+      "story": {"ko": "아이와 노인 돌봄이 무상 공공 서비스가 된다. 돌봄 노동자는 가장 존경받는 직업 3위 안에 든다.", "en": "Care for children and the elderly becomes a free public service. Care work ranks among the three most respected professions.", "ja": "子どもと高齢者のケアが無償の公共サービスになる。ケアワーカーは、最も尊敬される職業のトップ3に入る。", "zh": "儿童和老人的照护成为免费的公共服务。照护工作者跻身最受尊敬职业的前三名。", "es": "El cuidado de niños y personas mayores se convierte en un servicio público gratuito. Ser cuidador está entre las tres profesiones más respetadas."},
+      "when": {"equality": [55, 100], "solidarity": [55, 100], "year": [2035, 2100]},
       "tone": "bright",
-      "tags": ["care", "welfare"],
-      "scene": { "community": 0.1 }
+      "domains": ["care"],
+      "scene": {"community": 0.1}
     },
     {
       "id": "slow-village",
-      "title": { "ko": "화면 없는 날", "en": "Screen-free day", "ja": "画面のない日", "zh": "无屏幕日", "es": "Día sin pantallas" },
-      "story": { "ko": "마을 사람들은 일주일에 하루 '화면 없는 날'을 정한다. 장터와 마을 회관이 다시 동네 소식을 나누는 곳이 된다.", "en": "The villagers set aside one day a week as a “screen-free day.” The market and the village hall become places to share local news again.", "ja": "村の人々は、週に一日「画面のない日」を決める。市場と公民館が、再び地域の知らせを伝え合う場所になる。", "zh": "村里人约定每周有一天是“无屏幕日”。集市和村活动中心重新成了大家交流村里消息的地方。", "es": "Los vecinos del pueblo fijan un día a la semana como “día sin pantallas”. El mercado y la casa comunal vuelven a ser el lugar donde se comparten las noticias del pueblo." },
-      "when": { "tech": [0, 35], "solidarity": [55, 100] },
+      "title": {"ko": "화면 없는 날", "en": "Screen-free day", "ja": "画面のない日", "zh": "无屏幕日", "es": "Día sin pantallas"},
+      "story": {"ko": "마을 사람들은 일주일에 하루 '화면 없는 날'을 정한다. 장터와 마을 회관이 다시 동네 소식을 나누는 곳이 된다.", "en": "The villagers set aside one day a week as a “screen-free day.” The market and the village hall become places to share local news again.", "ja": "村の人々は、週に一日「画面のない日」を決める。市場と公民館が、再び地域の知らせを伝え合う場所になる。", "zh": "村里人约定每周有一天是“无屏幕日”。集市和村活动中心重新成了大家交流村里消息的地方。", "es": "Los vecinos del pueblo fijan un día a la semana como “día sin pantallas”. El mercado y la casa comunal vuelven a ser el lugar donde se comparten las noticias del pueblo."},
+      "when": {"tech": [0, 35], "solidarity": [55, 100]},
       "tone": "bright",
-      "tags": ["community", "daily-life"],
-      "scene": { "community": 0.1 }
+      "domains": ["daily"],
+      "scene": {"community": 0.1}
     },
     {
       "id": "repair-law",
-      "title": { "ko": "고쳐 쓸 권리", "en": "The right to repair", "ja": "修理する権利", "zh": "维修权", "es": "El derecho a reparar" },
-      "story": { "ko": "모든 전자 제품은 10년 동안 부품을 팔아야 한다는 법이 생긴다. 동네 수리 카페는 주말마다 붐빈다.", "en": "A new law requires spare parts for every electronic product to be sold for 10 years. The neighborhood repair café is packed every weekend.", "ja": "すべての電子製品について、10年間は部品を販売しなければならないという法律ができる。町のリペアカフェは週末ごとににぎわう。", "zh": "一项新法律规定，所有电子产品的零部件都必须供应10年。社区里的维修咖啡馆每到周末都人头攒动。", "es": "Se aprueba una ley que obliga a vender repuestos de todos los aparatos electrónicos durante 10 años. El café de reparación del barrio se llena cada fin de semana." },
-      "when": { "climate": [55, 100], "year": [2030, 2100] },
+      "title": {"ko": "고쳐 쓸 권리", "en": "The right to repair", "ja": "修理する権利", "zh": "维修权", "es": "El derecho a reparar"},
+      "story": {"ko": "모든 전자 제품은 10년 동안 부품을 팔아야 한다는 법이 생긴다. 동네 수리 카페는 주말마다 붐빈다.", "en": "A new law requires spare parts for every electronic product to be sold for 10 years. The neighborhood repair café is packed every weekend.", "ja": "すべての電子製品について、10年間は部品を販売しなければならないという法律ができる。町のリペアカフェは週末ごとににぎわう。", "zh": "一项新法律规定，所有电子产品的零部件都必须供应10年。社区里的维修咖啡馆每到周末都人头攒动。", "es": "Se aprueba una ley que obliga a vender repuestos de todos los aparatos electrónicos durante 10 años. El café de reparación del barrio se llena cada fin de semana."},
+      "when": {"climate": [55, 100], "year": [2030, 2100]},
       "tone": "bright",
-      "tags": ["circularity", "daily-life"],
-      "scene": { "community": 0.05 }
+      "domains": ["environment", "daily"],
+      "scene": {"community": 0.05}
     },
     {
       "id": "meat-for-holidays",
-      "title": { "ko": "고기는 명절에만", "en": "Meat only on holidays", "ja": "肉は特別な日だけ", "zh": "只有过节才吃肉", "es": "Carne solo en días de fiesta" },
-      "story": { "ko": "탄소 가격이 붙자 고기 값이 세 배로 오른다. 평소에는 콩과 버섯으로 만든 요리를 먹고, 고기는 명절 상에만 오른다.", "en": "Once carbon has a price, meat costs three times as much. On ordinary days people eat dishes made from beans and mushrooms, and meat appears only on the holiday table.", "ja": "炭素に価格がつくと、肉の値段は3倍に跳ね上がる。普段は豆やキノコで作った料理を食べ、肉は祝いの日の食卓にだけ並ぶ。", "zh": "碳定价实施后，肉价涨到了原来的三倍。人们平时吃豆类和蘑菇做的菜，肉只在节日的餐桌上出现。", "es": "Cuando se le pone precio al carbono, la carne pasa a costar el triple. A diario se comen platos de legumbres y hongos, y la carne solo llega a la mesa en los días de fiesta." },
-      "when": { "climate": [60, 100], "year": [2040, 2100] },
+      "title": {"ko": "고기는 명절에만", "en": "Meat only on holidays", "ja": "肉は特別な日だけ", "zh": "只有过节才吃肉", "es": "Carne solo en días de fiesta"},
+      "story": {"ko": "탄소 가격이 붙자 고기 값이 세 배로 오른다. 평소에는 콩과 버섯으로 만든 요리를 먹고, 고기는 명절 상에만 오른다.", "en": "Once carbon has a price, meat costs three times as much. On ordinary days people eat dishes made from beans and mushrooms, and meat appears only on the holiday table.", "ja": "炭素に価格がつくと、肉の値段は3倍に跳ね上がる。普段は豆やキノコで作った料理を食べ、肉は祝いの日の食卓にだけ並ぶ。", "zh": "碳定价实施后，肉价涨到了原来的三倍。人们平时吃豆类和蘑菇做的菜，肉只在节日的餐桌上出现。", "es": "Cuando se le pone precio al carbono, la carne pasa a costar el triple. A diario se comen platos de legumbres y hongos, y la carne solo llega a la mesa en los días de fiesta."},
+      "when": {"climate": [60, 100], "year": [2040, 2100]},
       "tone": "mixed",
-      "tags": ["food", "climate"]
+      "domains": ["food", "environment"]
     },
     {
       "id": "uncooled-classrooms",
-      "title": { "ko": "냉방 없는 교실", "en": "Classrooms without cooling", "ja": "冷房のない教室", "zh": "没有空调的教室", "es": "Aulas sin aire acondicionado" },
-      "story": { "ko": "폭염 경보가 내리면 냉방 시설이 없는 학교는 문을 닫는다. 같은 도시 안에서도 학교마다 수업 일수가 다르다.", "en": "When a heat wave warning is issued, schools without air conditioning close. Even within the same city, the number of school days differs from school to school.", "ja": "猛暑の警報が出ると、冷房設備のない学校は休校になる。同じ街の中でも、学校によって授業日数が違う。", "zh": "高温预警一发布，没有空调的学校就得停课。即使在同一座城市里，各个学校的上课天数也各不相同。", "es": "Cuando se emite una alerta por ola de calor, las escuelas sin aire acondicionado cierran. Incluso dentro de una misma ciudad, el número de días de clase varía de una escuela a otra." },
-      "when": { "climate": [0, 40], "equality": [0, 40], "year": [2035, 2100] },
+      "title": {"ko": "냉방 없는 교실", "en": "Classrooms without cooling", "ja": "冷房のない教室", "zh": "没有空调的教室", "es": "Aulas sin aire acondicionado"},
+      "story": {"ko": "폭염 경보가 내리면 냉방 시설이 없는 학교는 문을 닫는다. 같은 도시 안에서도 학교마다 수업 일수가 다르다.", "en": "When a heat wave warning is issued, schools without air conditioning close. Even within the same city, the number of school days differs from school to school.", "ja": "猛暑の警報が出ると、冷房設備のない学校は休校になる。同じ街の中でも、学校によって授業日数が違う。", "zh": "高温预警一发布，没有空调的学校就得停课。即使在同一座城市里，各个学校的上课天数也各不相同。", "es": "Cuando se emite una alerta por ola de calor, las escuelas sin aire acondicionado cierran. Incluso dentro de una misma ciudad, el número de días de clase varía de una escuela a otra."},
+      "when": {"climate": [0, 40], "equality": [0, 40], "year": [2035, 2100]},
       "tone": "dark",
-      "tags": ["education", "inequality"],
-      "scene": { "heat": 0.05, "divide": 0.05 }
+      "domains": ["education", "economy"],
+      "scene": {"heat": 0.05, "divide": 0.05}
     }
   ]
 }

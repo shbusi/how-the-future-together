@@ -5,7 +5,7 @@ import { SCENE_KEYS } from './engine.js';
 const W = 1200;
 const H = 640;
 const G = 470; // 지면 높이
-const KEYS = SCENE_KEYS;
+const KEYS = [...SCENE_KEYS, 'modern']; // modern: 건물 양식 (0 = 1900년의 낮은 집, 1 = 오늘의 도시)
 
 // ---------- 작은 도구들 ----------
 function rng(seed) {
@@ -45,7 +45,7 @@ function makeLayout(seed) {
       kind: r() < 0.3 ? 'tower' : r() < 0.7 ? 'block' : 'slab',
       rank: r(),
       tone: Math.floor(r() * 5),
-      greenP: r(), solarP: r(), techP: r(), decayP: r(), litSeed: Math.floor(r() * 1e6),
+      greenP: r(), solarP: r(), techP: r(), decayP: r(), litSeed: Math.floor(r() * 1e6), oldP: r(),
     });
     x += w + r() * 12;
   }
@@ -61,6 +61,7 @@ function makeLayout(seed) {
     plots: Array.from({ length: 4 }, () => ({ x: 60 + r() * 1000, y: 520 + r() * 70 })),
     boats: Array.from({ length: 3 }, () => ({ x: 100 + r() * 1000, ph: r() * 6 })),
     lights: { x: 140 + r() * 760 },
+    stacks: Array.from({ length: 4 }, () => ({ x: 60 + r() * 1080, h: 90 + r() * 70, w: 70 + r() * 50, ph: r() * 6 })),
   };
 }
 
@@ -141,13 +142,14 @@ function drawScene(ctx, L, p, time, year) {
   ctx.lineTo(W, G);
   ctx.fill();
 
+  drawFactories(ctx, L, p, time);
   drawCity(ctx, L, p, time);
 
   // 땅
   const land = mix(mix('#7FA36B', '#B59D6C', 1 - p.green + p.heat * 0.4), '#8D8A80', p.decay * 0.5);
   ctx.fillStyle = rgb(land);
   ctx.fillRect(0, G, W, H - G);
-  ctx.fillStyle = rgb(mix('#5B6267', '#6E6A62', p.decay));
+  ctx.fillStyle = rgb(mix(mix('#5B6267', '#6E6A62', p.decay), '#8C7656', 1 - smooth(0.2, 0.6, p.modern)));
   ctx.fillRect(0, G, W, 12);
 
   // 격차의 벽: 땅을 가로질러 앞까지 이어진다
@@ -340,6 +342,82 @@ function drawScene(ctx, L, p, time, year) {
   ctx.fillText(String(year), 40, H - 43);
 }
 
+// 옛 도시: 낮은 벽돌집, 나무집, 기와·초가 지붕
+const OLD_WALL = ['#9E5B44', '#8A6A4C', '#CDBFA6', '#A7714F', '#B9A487'];
+const OLD_ROOF = ['#4E4440', '#5B4636', '#A08550', '#3F3A3A', '#6B4B3A'];
+function drawOldHouse(ctx, b, p, broken, time) {
+  const h = (26 + b.h0 * 46) * (0.85 + p.density * 0.5);
+  const top = G - h;
+  const ruin = broken * (b.decayP < 0.7 ? 1 : 0.3);
+  ctx.fillStyle = rgb(mix(OLD_WALL[b.tone], '#6F6A62', ruin * 0.6));
+  ctx.fillRect(b.x, top, b.w, h);
+  // 창 두세 개
+  const n = Math.max(1, Math.floor(b.w / 18));
+  for (let i = 0; i < n; i++) {
+    const lit = ((b.litSeed >> i) & 3) === 0;
+    ctx.fillStyle = ruin > 0.5 && i % 2 ? 'rgba(30,30,30,0.85)' : lit ? 'rgba(255,214,130,0.9)' : 'rgba(55,60,62,0.6)';
+    ctx.fillRect(b.x + 6 + i * ((b.w - 12) / n), top + h * 0.35, 6, 8);
+  }
+  if (ruin > 0.45 && b.decayP < 0.55) {
+    // 무너진 지붕
+    ctx.fillStyle = rgb(OLD_ROOF[b.tone]);
+    ctx.beginPath();
+    ctx.moveTo(b.x - 3, top + 2); ctx.lineTo(b.x + b.w * 0.3, top - 8); ctx.lineTo(b.x + b.w * 0.45, top + 2);
+    ctx.fill();
+    return;
+  }
+  ctx.fillStyle = rgb(OLD_ROOF[b.tone]);
+  ctx.beginPath();
+  ctx.moveTo(b.x - 5, top + 3);
+  ctx.quadraticCurveTo(b.x + b.w / 2, top - 4 - b.w * 0.18, b.x + b.w + 5, top + 3);
+  ctx.lineTo(b.x + b.w / 2, top - 6 - b.w * 0.28);
+  ctx.fill();
+  // 굴뚝 연기 (집 몇 채만)
+  if (b.greenP < 0.3) {
+    ctx.fillStyle = '#5A4A42';
+    ctx.fillRect(b.x + b.w * 0.7, top - 14, 5, 12);
+    ctx.fillStyle = 'rgba(200,200,200,0.35)';
+    for (let k = 0; k < 3; k++) {
+      ctx.beginPath();
+      ctx.arc(b.x + b.w * 0.7 + 3 + k * 4 + Math.sin(time + k) * 2, top - 20 - k * 8, 3 + k * 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+}
+
+// 공장 굴뚝 (산업화 시대, 또는 기후 대응을 놓친 미래)
+function drawFactories(ctx, L, p, time) {
+  const n = Math.round(smooth(0.15, 0.85, p.industry) * L.stacks.length);
+  for (let i = 0; i < n; i++) {
+    const f = L.stacks[i];
+    const shed = mix('#7D7570', '#8A6A55', 1 - p.modern);
+    ctx.fillStyle = rgb(shed);
+    ctx.beginPath();
+    ctx.moveTo(f.x, G);
+    ctx.lineTo(f.x, G - 34);
+    for (let k = 0; k < 4; k++) {
+      ctx.lineTo(f.x + (f.w / 4) * k + f.w / 8, G - 48);
+      ctx.lineTo(f.x + (f.w / 4) * (k + 1), G - 34);
+    }
+    ctx.lineTo(f.x + f.w, G);
+    ctx.fill();
+    const sx = f.x + f.w * 0.75;
+    ctx.fillStyle = rgb(mix('#6C625C', '#8E4F3A', 1 - p.modern));
+    ctx.fillRect(sx, G - f.h, 10, f.h);
+    ctx.fillStyle = 'rgba(255,255,255,0.35)';
+    ctx.fillRect(sx, G - f.h + 12, 10, 3);
+    // 연기
+    for (let k = 0; k < 7; k++) {
+      const age = ((time * 0.35 + k / 7 + f.ph) % 1);
+      const r = 6 + age * 26;
+      ctx.fillStyle = `rgba(${Math.round(110 + age * 60)},${Math.round(104 + age * 50)},${Math.round(96 + age * 40)},${(1 - age) * 0.45})`;
+      ctx.beginPath();
+      ctx.arc(sx + 5 + age * 90, G - f.h - 8 - age * 70, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+}
+
 function drawCity(ctx, L, p, time) {
   const visible = Math.round(L.buildings.length * (0.35 + 0.65 * p.density));
   const split = smooth(0.3, 1, p.divide);
@@ -351,6 +429,7 @@ function drawCity(ctx, L, p, time) {
 
   for (const b of L.buildings) {
     if (b.rank > cutoff) continue;
+    if (b.oldP >= p.modern) { drawOldHouse(ctx, b, p, broken, time); continue; }
     const rich = b.x + b.w / 2 > W / 2;
     let h = (60 + b.h0 * 240) * (0.55 + 0.75 * p.density);
     let shack = false;
