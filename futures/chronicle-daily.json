@@ -1,0 +1,86 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "daily-1936-paid-holidays",
+      "type": "history",
+      "title": {"ko": "처음 생긴 유급 휴가", "en": "The first paid holidays", "ja": "初めての有給休暇", "zh": "第一次带薪休假", "es": "Las primeras vacaciones pagadas"},
+      "story": {"ko": "1936년 프랑스 인민전선 정부는 노동자에게 2주간의 유급 휴가를 주는 법을 만들었다. 그해 여름, 쉬는 날이라곤 일요일뿐이던 많은 노동자 가족이 처음으로 기차를 타고 바다와 시골로 휴가를 떠났다.", "en": "In 1936, France's Popular Front government passed a law giving workers two weeks of paid holiday. That summer, many working families whose only day off had been Sunday took the train to the sea or the countryside for their first vacation.", "ja": "1936年、フランスの人民戦線政府は、労働者に2週間の有給休暇を与える法律をつくった。その夏、休みといえば日曜日しかなかった多くの労働者の家族が、初めて汽車に乗って海や田舎へ休暇に出かけた。", "zh": "1936年，法国人民阵线政府通过法律，给予工人两周带薪休假。那年夏天，许多过去只有星期天才能休息的工人家庭，第一次坐上火车，到海边和乡下度假。", "es": "En 1936, el gobierno del Frente Popular francés aprobó una ley que daba a los trabajadores dos semanas de vacaciones pagadas. Ese verano, muchas familias obreras, que hasta entonces solo descansaban los domingos, tomaron el tren para ir por primera vez de vacaciones al mar o al campo."},
+      "when": {"year": [1936, 1936]},
+      "tone": "bright",
+      "domains": ["daily", "work"],
+      "region": "europe",
+      "sources": ["https://en.wikipedia.org/wiki/Matignon_Agreements_(1936)", "https://en.wikipedia.org/wiki/Popular_Front_(France)"]
+    },
+    {
+      "id": "daily-1950-home-appliances",
+      "type": "history",
+      "title": {"ko": "가전제품이 바꾼 살림", "en": "Appliances change housework", "ja": "家電が変えた家事", "zh": "家电改变家务", "es": "Los electrodomésticos llegan a casa"},
+      "story": {"ko": "1950~60년대 북미와 유럽, 일본의 가정에 냉장고와 세탁기, 텔레비전이 빠르게 퍼졌다. 매일 장을 보고 손으로 빨래하던 시간이 줄었고, 저녁이면 가족이 텔레비전 앞에 모였다.", "en": "In the 1950s and 1960s, refrigerators, washing machines and televisions spread quickly through homes in North America, Europe and Japan. Less time went to daily shopping and washing clothes by hand, and in the evenings families gathered in front of the TV.", "ja": "1950〜60年代、北米やヨーロッパ、日本の家庭に冷蔵庫や洗濯機、テレビが急速に広まった。毎日の買い物や手洗いの洗濯にかかる時間が減り、夜には家族がテレビの前に集まった。", "zh": "20世纪50至60年代，冰箱、洗衣机和电视机在北美、欧洲和日本的家庭中迅速普及。每天买菜、手洗衣服的时间少了，到了晚上，一家人围坐在电视机前。", "es": "En los años cincuenta y sesenta, los refrigeradores, las lavadoras y los televisores se extendieron rápidamente por los hogares de Norteamérica, Europa y Japón. Se dedicaba menos tiempo a la compra diaria y a lavar la ropa a mano, y por la noche las familias se reunían frente al televisor."},
+      "when": {"year": [1950, 1969]},
+      "tone": "bright",
+      "domains": ["daily", "technology", "family"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Home_appliance", "https://en.wikipedia.org/wiki/Washing_machine"]
+    },
+    {
+      "id": "daily-1979-iran-mandatory-hijab",
+      "type": "history",
+      "title": {"ko": "이란 혁명과 의무 히잡", "en": "Iran's revolution and the hijab", "ja": "イラン革命とヒジャブの義務化", "zh": "伊朗革命与强制戴头巾", "es": "La revolución iraní y el velo"},
+      "story": {"ko": "1979년 혁명으로 이란에 이슬람 공화국이 세워지면서 종교 율법이 일상의 규칙이 되었다. 여성은 공공장소에서 히잡을 써야 했고, 혁명 직후부터 이에 맞선 여성들의 항의가 거듭되었다.", "en": "After the 1979 revolution founded Iran's Islamic Republic, religious law became the rule of everyday life. Women were required to wear the hijab in public, and women's protests against it began right after the revolution and have recurred ever since.", "ja": "1979年の革命でイランにイスラム共和国が成立すると、宗教の掟が日常の規則となった。女性は公共の場でヒジャブの着用を義務づけられ、革命直後からそれに抗議する女性たちの声がくり返し上がった。", "zh": "1979年革命后，伊朗建立了伊斯兰共和国，宗教法成了日常生活的规矩。女性在公共场所必须戴头巾，革命刚结束就有女性起来抗议，此后抗议一再出现。", "es": "Tras la revolución de 1979, que fundó la República Islámica de Irán, la ley religiosa pasó a regir la vida cotidiana. Las mujeres quedaron obligadas a llevar el hiyab en público, y las protestas de mujeres contra esta norma empezaron justo después de la revolución y se han repetido desde entonces."},
+      "when": {"year": [1979, 1983]},
+      "tone": "dark",
+      "domains": ["daily", "rights"],
+      "region": "middle-east",
+      "sources": ["https://en.wikipedia.org/wiki/Hijab_in_Iran", "https://en.wikipedia.org/wiki/Iranian_Revolution"]
+    },
+    {
+      "id": "daily-2007-smartphone",
+      "type": "history",
+      "title": {"ko": "손안의 스마트폰", "en": "A smartphone in every hand", "ja": "手のひらのスマートフォン", "zh": "掌中的智能手机", "es": "El teléfono inteligente en la mano"},
+      "story": {"ko": "2007년 애플이 아이폰을 내놓은 뒤 손가락으로 화면을 만지는 스마트폰이 빠르게 퍼졌다. 몇 년 만에 세계 곳곳에서 사람들이 길 찾기와 은행 일, 친구와의 대화, 뉴스 보기를 손안의 화면 하나로 하게 되었다.", "en": "After Apple released the iPhone in 2007, touchscreen smartphones spread fast. Within a few years, people around the world were finding their way, banking, chatting with friends and reading the news on a single screen in their hand.", "ja": "2007年にアップルがiPhoneを発売すると、指で画面に触れて操作するスマートフォンが急速に広まった。数年のうちに世界中の人々が、道案内も銀行の用事も友人とのおしゃべりもニュースも、手の中の一つの画面で済ませるようになった。", "zh": "2007年苹果公司推出iPhone后，用手指触控屏幕的智能手机迅速普及。短短几年间，世界各地的人们开始用掌中的一块屏幕查路线、办银行业务、和朋友聊天、看新闻。", "es": "Después de que Apple lanzara el iPhone en 2007, los teléfonos inteligentes con pantalla táctil se extendieron con rapidez. En pocos años, gente de todo el mundo pasó a orientarse, hacer trámites bancarios, conversar con sus amigos y leer las noticias en una sola pantalla que cabía en la mano."},
+      "when": {"year": [2007, 2007]},
+      "tone": "mixed",
+      "domains": ["daily", "technology", "media"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/IPhone_(1st_generation)", "https://en.wikipedia.org/wiki/Smartphone"]
+    },
+    {
+      "id": "daily-2010-living-alone",
+      "type": "history",
+      "title": {"ko": "혼자 사는 사람들의 시대", "en": "The age of living alone", "ja": "一人で暮らす時代", "zh": "独自生活的时代", "es": "La era de vivir solo"},
+      "story": {"ko": "2010년대 한국에서 혼자 사는 1인 가구가 빠르게 늘었다. 혼자 밥을 먹는 ‘혼밥’, 혼자 술을 마시는 ‘혼술’ 같은 말이 생기고, 혼자 온 손님을 위한 식당과 코인 노래방이 늘었다.", "en": "In 2010s South Korea, the number of people living alone grew quickly. New words such as honbap (eating alone) and honsul (drinking alone) took hold, and restaurants for solo diners and coin karaoke rooms multiplied.", "ja": "2010年代の韓国で、一人で暮らす単身世帯が急速に増えた。一人で食べる「ホンバプ」、一人で飲む「ホンスル」といった言葉が生まれ、一人客向けの飲食店やコインカラオケが増えた。", "zh": "2010年代，韩国独自生活的单人户迅速增加。“一人食”“一个人喝酒”之类的新说法流行起来，面向独自用餐顾客的餐厅和投币式练歌房也多了起来。", "es": "En la Corea del Sur de la década de 2010, el número de personas que vivían solas creció con rapidez. Se popularizaron palabras como honbap (comer solo) y honsul (beber solo), y se multiplicaron los restaurantes para quienes comen solos y los karaokes que funcionan con monedas."},
+      "when": {"year": [2010, 2019]},
+      "tone": "mixed",
+      "domains": ["daily", "family", "population"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Honjok"]
+    },
+    {
+      "id": "daily-future-ai-housekeeper",
+      "title": {"ko": "살림을 맡은 AI", "en": "The AI that runs the house", "ja": "家事を任されたAI", "zh": "包揽家务的AI", "es": "La IA que lleva la casa"},
+      "story": {"ko": "집안의 AI가 장보기와 공과금, 병원 예약, 아이 학교 준비물까지 알아서 챙긴다. 저녁 시간은 넉넉해졌지만, 사람들은 자기 집 냉장고에 무엇이 들었는지, 이번 달에 돈을 얼마 썼는지 잘 모른다.", "en": "A home AI takes care of the groceries, the bills, doctor's appointments and even the kids' school supplies. Evenings are freer, but people barely know what is in their own fridge or how much they spent this month.", "ja": "家のAIが、買い物も公共料金も病院の予約も、子どもの学校の持ち物まで手配してくれる。夜の時間はゆったりしたが、人々は自分の家の冷蔵庫に何が入っているのか、今月いくら使ったのかをよく知らない。", "zh": "家里的AI会自动打理买菜、缴费、预约看病，连孩子上学要带的东西都替你备好。晚上的空闲多了，可人们却不太清楚自家冰箱里有什么、这个月花了多少钱。", "es": "La IA de casa se encarga de la compra, las facturas, las citas médicas y hasta del material escolar de los niños. Las tardes son más libres, pero la gente apenas sabe qué hay en su propio refrigerador o cuánto gastó este mes."},
+      "when": {"year": [2030, 2100], "tech": [65, 100]},
+      "tone": "mixed",
+      "domains": ["daily", "technology"]
+    },
+    {
+      "id": "daily-future-shared-sanctuaries",
+      "title": {"ko": "동네 사랑방이 된 예배당", "en": "Places of worship open to all", "ja": "まちの居間になった礼拝所", "zh": "成了街坊客厅的礼拜场所", "es": "Templos convertidos en salón del barrio"},
+      "story": {"ko": "신자가 줄어든 교회와 절, 성당이 동네 사랑방으로 쓰인다. 평일에는 노인 체조 교실과 아이 돌봄이 열리고, 주말에는 서로 다른 종교의 모임이 시간을 나눠 같은 공간을 쓴다.", "en": "Churches and temples with shrinking congregations become neighborhood living rooms. On weekdays they host exercise classes for older people and childcare, and on weekends different faiths take turns using the same space.", "ja": "信者が減った教会や寺が、まちの寄り合い所として使われる。平日はお年寄りの体操教室や子どもの預かりが開かれ、週末には異なる宗教の集まりが時間を分けて同じ場所を使う。", "zh": "信众日渐减少的教堂和寺庙，成了街坊们的聚会厅。平日里这里开老人健身操班、帮忙照看孩子，周末则由不同宗教的团体轮流使用同一个空间。", "es": "Iglesias y templos con cada vez menos fieles se convierten en el salón del barrio. Entre semana acogen clases de gimnasia para personas mayores y cuidado de niños, y los fines de semana distintas religiones se turnan para usar el mismo espacio."},
+      "when": {"year": [2051, 2100], "population": [0, 40], "solidarity": [55, 100]},
+      "tone": "bright",
+      "domains": ["daily", "culture", "care"],
+      "scene": {"community": 0.1}
+    },
+    {
+      "id": "daily-future-no-weekends",
+      "title": {"ko": "주말이 사라진 달력", "en": "The calendar without weekends", "ja": "週末が消えたカレンダー", "zh": "没有周末的日历", "es": "Un calendario sin fines de semana"},
+      "story": {"ko": "앱이 일감이 몰리는 시간마다 알림을 보내면서 ‘주말’이라는 말이 사라진다. 사람들은 하루에 세 가지 일을 오가고, 온 가족이 한 식탁에 둘러앉는 날은 명절뿐이다.", "en": "Apps send alerts whenever work piles up, and the word 'weekend' falls out of use. People juggle three jobs a day, and the only days the whole family sits down at one table are the big holidays.", "ja": "仕事が集中する時間になるたびにアプリが通知を送り、「週末」という言葉が消えていく。人々は一日に三つの仕事をかけもちし、家族全員が一つの食卓を囲むのは盆と正月くらいだ。", "zh": "每当活儿一多，应用程序就推送通知，“周末”这个词渐渐没人再用。人们一天在三份工作之间来回奔波，全家人围坐一桌吃饭的日子只剩下逢年过节。", "es": "Las aplicaciones envían avisos cada vez que se acumula el trabajo, y la expresión «fin de semana» cae en desuso. La gente alterna tres trabajos al día, y los únicos días en que toda la familia se sienta a la misma mesa son las grandes fiestas."},
+      "when": {"year": [2076, 2100], "equality": [0, 30], "solidarity": [0, 40]},
+      "tone": "dark",
+      "domains": ["daily", "work", "family"]
+    }
+  ]
+}

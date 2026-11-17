@@ -1,0 +1,87 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "cities-1919-red-vienna",
+      "type": "history",
+      "title": { "ko": "붉은 빈의 공공 주택", "en": "Red Vienna's public housing", "ja": "「赤いウィーン」の公営住宅", "zh": "“红色维也纳”的公共住房", "es": "La vivienda pública de la Viena Roja" },
+      "story": { "ko": "1919년부터 1934년까지 사회민주당이 이끈 오스트리아 빈 시는 누진 주택세와 사치세로 노동자를 위한 공공 주택을 대규모로 지었다. 비좁고 비싼 셋방에 살던 가족들이 싼 임대료로 안뜰과 놀이터, 공동 세탁장, 유치원을 갖춘 새 아파트에 들어갔다.", "en": "From 1919 to 1934, Vienna's Social Democratic city government used a progressive housing tax and luxury taxes to build public housing for workers on a large scale. Families from cramped, costly rented rooms moved into new low-rent apartments with courtyards, playgrounds, shared laundries and kindergartens.", "ja": "1919年から1934年まで社会民主党が率いたウィーン市は、累進的な住宅税とぜいたく税を財源に、労働者のための公営住宅を大量に建てた。狭くて高い間借り部屋に住んでいた家族が、安い家賃で、中庭や遊び場、共同洗濯場、幼稚園のある新しい集合住宅に移った。", "zh": "1919年至1934年，由社会民主党执政的维也纳市用累进住房税和奢侈品税大规模建造工人公共住房。原本挤在狭小昂贵出租屋里的家庭，以低廉的租金搬进了带庭院、游乐场、公共洗衣房和幼儿园的新公寓。", "es": "Entre 1919 y 1934, el gobierno socialdemócrata de Viena financió con un impuesto progresivo a la vivienda y tasas sobre el lujo la construcción masiva de viviendas públicas para obreros. Familias que vivían en cuartos estrechos y caros se mudaron a apartamentos nuevos de alquiler bajo, con patios, zonas de juego, lavaderos comunes y jardines de infancia." },
+      "when": { "year": [1919, 1934] },
+      "tone": "bright",
+      "domains": ["cities", "politics"],
+      "region": "europe",
+      "sources": ["https://en.wikipedia.org/wiki/Red_Vienna", "https://en.wikipedia.org/wiki/Karl-Marx-Hof"]
+    },
+    {
+      "id": "cities-1953-shek-kip-mei-fire",
+      "type": "history",
+      "title": { "ko": "판자촌 화재가 낳은 공공 주택", "en": "A shantytown fire and public housing", "ja": "バラック街の大火と公営住宅", "zh": "寮屋区大火催生的公屋", "es": "Un incendio que trajo vivienda pública" },
+      "story": { "ko": "1953년 성탄절 밤, 중국 본토에서 건너온 피란민이 모여 살던 홍콩 섹킵메이 판자촌에 큰불이 나 5만 명이 넘는 사람이 집을 잃었다. 이를 계기로 정부는 불과 홍수에 견디는 여러 층짜리 공공 주택을 짓기 시작했고, 공공 주택은 홍콩 서민의 대표적인 집이 되었다.", "en": "On Christmas night 1953, a fire swept through the Shek Kip Mei shantytown in Hong Kong, home to refugees from mainland China, leaving more than 50,000 people homeless. The government then began building multi-storey public housing that could withstand fire and floods, and public housing became the typical home of ordinary people in Hong Kong.", "ja": "1953年のクリスマスの夜、中国本土から逃れてきた人々が暮らす香港・石硤尾のバラック街で大火事が起き、5万人以上が家を失った。これをきっかけに政府は火事や洪水に強い多層階の公営住宅を建て始め、公営住宅は香港の庶民の代表的な住まいとなった。", "zh": "1953年圣诞夜，香港石硖尾一片住着内地难民的寮屋区发生大火，五万多人无家可归。政府以此为契机，开始兴建能抵御火灾和水灾的多层公共住房，公屋从此成为香港普通人最典型的住所。", "es": "La noche de Navidad de 1953, un incendio arrasó el asentamiento informal de Shek Kip Mei, en Hong Kong, donde vivían refugiados de China continental, y dejó sin hogar a más de 50.000 personas. El gobierno empezó entonces a construir viviendas públicas de varios pisos, resistentes al fuego y a las inundaciones, que se convirtieron en el hogar típico de la gente común de Hong Kong." },
+      "when": { "year": [1953, 1953] },
+      "tone": "mixed",
+      "domains": ["cities", "population"],
+      "region": "east-asia",
+      "sources": ["https://en.wikipedia.org/wiki/Shek_Kip_Mei_fire", "https://en.wikipedia.org/wiki/Public_housing_in_Hong_Kong"]
+    },
+    {
+      "id": "cities-1970-gangnam-apartments",
+      "type": "history",
+      "title": { "ko": "강남 개발과 아파트", "en": "Gangnam and the apartment dream", "ja": "江南開発とアパート団地", "zh": "江南开发与公寓梦", "es": "Gangnam y el sueño del apartamento" },
+      "story": { "ko": "1970년대 서울 한강 남쪽의 논밭이 ‘강남’으로 개발되었다. 대단지 아파트가 잇따라 들어서면서 아파트는 중산층이 꿈꾸는 집이자 재산을 불리는 수단이 되었고, 한국의 대표적인 주거 형태로 자리 잡기 시작했다.", "en": "In the 1970s, farmland south of Seoul's Han River was developed into Gangnam. As large apartment complexes went up one after another, the apartment became the middle class's dream home and a way to build wealth, and began to take hold as Korea's typical form of housing.", "ja": "1970年代、ソウルの漢江の南に広がる田畑が「江南」として開発された。大規模なアパート団地が次々に建ち、アパートは中産層のあこがれの住まいであり資産を増やす手段となって、韓国の代表的な住まいとして根づき始めた。", "zh": "20世纪70年代，首尔汉江以南的农田被开发成“江南”。大型公寓小区接连建成，公寓成了中产阶层梦想的住所和积累财富的手段，并开始成为韩国最典型的住房形式。", "es": "En los años setenta, los campos de cultivo al sur del río Han, en Seúl, se urbanizaron y nació Gangnam. Se levantaron grandes conjuntos de apartamentos uno tras otro, y el apartamento se convirtió en el hogar soñado de la clase media, en una forma de acumular patrimonio y, poco a poco, en la vivienda típica de Corea." },
+      "when": { "year": [1970, 1979] },
+      "tone": "mixed",
+      "domains": ["cities", "economy"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Gangnam_District", "https://en.wikipedia.org/wiki/Housing_in_South_Korea"]
+    },
+    {
+      "id": "cities-2007-urban-majority",
+      "type": "history",
+      "title": { "ko": "도시에 사는 사람이 절반을 넘다", "en": "Humanity becomes mostly urban", "ja": "都市に住む人が半数を超える", "zh": "城市人口首次过半", "es": "La humanidad se vuelve urbana" },
+      "story": { "ko": "유엔에 따르면 2007년 인류 역사상 처음으로 도시에 사는 사람이 세계 인구의 절반을 넘었다. 일자리를 찾아 도시로 온 사람 가운데 많은 이가 상하수도도 제대로 없는 빈민가에 자리를 잡았다.", "en": "According to the UN, in 2007 more than half of the world's population lived in cities for the first time in history. Many of those who moved to cities in search of work settled in slums without proper water or sanitation.", "ja": "国連によると、2007年、人類の歴史で初めて都市に住む人が世界人口の半分を超えた。仕事を求めて都市に来た人の多くは、上下水道も満足にないスラムに住みついた。", "zh": "据联合国统计，2007年，城市人口在人类历史上首次超过世界人口的一半。许多为找工作来到城市的人，落脚在缺乏像样供水和排水设施的贫民窟。", "es": "Según la ONU, en 2007 más de la mitad de la población mundial vivía en ciudades por primera vez en la historia. Muchas de las personas que llegaron a la ciudad en busca de trabajo se instalaron en barrios precarios sin agua corriente ni saneamiento adecuados." },
+      "when": { "year": [2007, 2007] },
+      "tone": "mixed",
+      "domains": ["cities", "population"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Urbanization", "https://en.wikipedia.org/wiki/Slum"]
+    },
+    {
+      "id": "cities-2020-covid-lockdowns",
+      "type": "history",
+      "title": { "ko": "멈춰 선 도시", "en": "Cities on lockdown", "ja": "止まった都市", "zh": "按下暂停键的城市", "es": "Ciudades confinadas" },
+      "story": { "ko": "2020년 코로나19가 번지자 세계 곳곳의 도시가 봉쇄되어, 4월 무렵에는 세계 인구의 절반가량이 집에 머물라는 요청이나 명령을 받았다. 도심의 사무실과 거리가 텅 비었고, 재택근무가 퍼지며 사람들이 일하고 사는 방식이 바뀌었다.", "en": "In 2020, as COVID-19 spread, cities around the world went into lockdown; by April, about half the world's population had been asked or ordered to stay home. Downtown offices and streets emptied, and the spread of remote work changed how people lived and worked.", "ja": "2020年、新型コロナウイルスが広がると世界各地の都市がロックダウンされ、4月ごろには世界人口のおよそ半分が家にとどまるよう求められるか命じられた。都心のオフィスや通りは空っぽになり、在宅勤務の広がりが人々の働き方と暮らし方を変えた。", "zh": "2020年，新冠疫情蔓延，世界各地的城市纷纷封锁；到4月，全球约一半人口被要求或被命令居家。市中心的办公室和街道空空荡荡，居家办公的普及改变了人们工作和生活的方式。", "es": "En 2020, con la expansión de la COVID-19, ciudades de todo el mundo se confinaron; hacia abril, cerca de la mitad de la población mundial había recibido la petición o la orden de quedarse en casa. Las oficinas y las calles del centro se vaciaron, y el teletrabajo cambió la forma de vivir y trabajar." },
+      "when": { "year": [2020, 2021] },
+      "tone": "mixed",
+      "domains": ["cities", "health", "work"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/COVID-19_lockdowns", "https://en.wikipedia.org/wiki/Remote_work"]
+    },
+    {
+      "id": "cities-future-offices-into-homes",
+      "title": { "ko": "사무실이었던 집", "en": "Homes that used to be offices", "ja": "元オフィスの住まい", "zh": "曾是办公楼的家", "es": "Casas que antes fueron oficinas" },
+      "story": { "ko": "재택근무와 불황으로 비어 버린 도심 오피스 빌딩이 집으로 바뀐다. 창문은 열리지 않고 방 안쪽은 어둡지만, 월세가 싸고 지하철역이 가까워 젊은이들이 줄을 선다.", "en": "Downtown office towers, emptied by remote work and a slump, are turned into homes. The windows don't open and the inner rooms are dark, but the rent is cheap and the subway is close, so young people line up to move in.", "ja": "在宅勤務と不況で空になった都心のオフィスビルが、住まいに生まれ変わる。窓は開かず部屋の奥は暗いが、家賃が安く駅にも近いので、若者が入居の列をつくる。", "zh": "因居家办公和经济不景气而空置的市中心写字楼被改造成住宅。窗户打不开，房间深处也很暗，但房租便宜、离地铁站近，年轻人排着队想住进去。", "es": "Los edificios de oficinas del centro, vaciados por el teletrabajo y la crisis, se convierten en viviendas. Las ventanas no se abren y el fondo de los apartamentos es oscuro, pero el alquiler es barato y el metro está cerca, así que los jóvenes hacen fila para mudarse." },
+      "when": { "year": [2030, 2070], "tech": [55, 100], "growth": [0, 45] },
+      "tone": "mixed",
+      "domains": ["cities", "work"]
+    },
+    {
+      "id": "cities-future-daily-priced-rent",
+      "title": { "ko": "매일 바뀌는 집세", "en": "Rent that changes every day", "ja": "毎日変わる家賃", "zh": "每天都在变的房租", "es": "Un alquiler que cambia cada día" },
+      "story": { "ko": "집주인의 알고리즘이 수요에 맞춰 집세를 날마다 새로 매긴다. 큰 축제나 경기가 열리는 주에는 세입자들이 방을 비워 주고, 그동안 찜질방이나 친척 집을 떠돈다.", "en": "Landlords' algorithms reprice rent every day to match demand. In weeks with big festivals or games, tenants have to give up their rooms and drift between cheap bathhouses and relatives' couches.", "ja": "家主のアルゴリズムが需要に合わせて家賃を毎日つけ直す。大きな祭りや試合がある週には、借り手は部屋を明け渡し、そのあいだサウナや親戚の家を転々とする。", "zh": "房东的算法根据需求每天重新给房租定价。每逢大型节庆或赛事的那一周，租客就得把房间腾出来，在汗蒸房和亲戚家之间辗转。", "es": "Los algoritmos de los propietarios recalculan el alquiler cada día según la demanda. En las semanas de grandes fiestas o partidos, los inquilinos tienen que dejar su cuarto y van de saunas baratas al sofá de algún pariente." },
+      "when": { "year": [2051, 2100], "tech": [60, 100], "equality": [0, 30] },
+      "tone": "dark",
+      "domains": ["cities", "economy"],
+      "scene": { "divide": 0.1 }
+    },
+    {
+      "id": "cities-future-border-twin-city",
+      "title": { "ko": "국경 위의 쌍둥이 도시", "en": "Twin cities across a border", "ja": "国境をまたぐ双子都市", "zh": "跨越国界的双子城", "es": "Ciudades gemelas en la frontera" },
+      "story": { "ko": "국경을 사이에 둔 두 도시가 트램 노선과 시의회를 함께 꾸린다. 아침마다 사람들이 여권 없이 다리를 건너 출근하고, 아이들은 두 언어로 수업하는 학교에 다닌다.", "en": "Two cities on either side of a border run a tram line and a city council together. Every morning people cross the bridge to work without a passport, and children go to schools that teach in two languages.", "ja": "国境を挟んだ二つの都市が、路面電車と市議会を共同で運営する。毎朝、人々はパスポートなしで橋を渡って通勤し、子どもたちは二つの言語で授業をする学校に通う。", "zh": "隔着国界的两座城市共同运营有轨电车线路和市议会。每天早上，人们不用护照就能过桥上班，孩子们在用两种语言授课的学校上学。", "es": "Dos ciudades separadas por una frontera comparten una línea de tranvía y un concejo municipal. Cada mañana la gente cruza el puente para ir a trabajar sin pasaporte, y los niños van a escuelas donde se enseña en dos idiomas." },
+      "when": { "year": [2076, 2100], "peace": [70, 100], "solidarity": [55, 100] },
+      "tone": "bright",
+      "domains": ["cities", "peace", "mobility"],
+      "scene": { "community": 0.1 }
+    }
+  ]
+}

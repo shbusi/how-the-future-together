@@ -1,0 +1,88 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "peace-1939-second-world-war",
+      "type": "history",
+      "title": {"ko": "제2차 세계대전", "en": "The Second World War", "ja": "第二次世界大戦", "zh": "第二次世界大战", "es": "La Segunda Guerra Mundial"},
+      "story": {"ko": "1939년 시작되어 1945년까지 이어진 제2차 세계대전으로 군인과 민간인 수천만 명이 목숨을 잃었다. 나치 독일은 유대인 약 600만 명을 학살했고, 1945년 히로시마와 나가사키에 원자폭탄이 떨어지면서 인류는 핵무기의 시대에 들어섰다.", "en": "The Second World War, which began in 1939 and lasted until 1945, killed tens of millions of soldiers and civilians. Nazi Germany murdered about six million Jews, and when atomic bombs fell on Hiroshima and Nagasaki in 1945, humanity entered the nuclear age.", "ja": "1939年に始まり1945年まで続いた第二次世界大戦で、兵士と民間人あわせて数千万人が命を落とした。ナチス・ドイツはユダヤ人約600万人を虐殺し、1945年に広島と長崎に原子爆弾が落とされたことで、人類は核兵器の時代に入った。", "zh": "1939年爆发、持续到1945年的第二次世界大战，夺走了数千万军人和平民的生命。纳粹德国屠杀了约600万犹太人；1945年原子弹落在广岛和长崎，人类从此进入核武器时代。", "es": "La Segunda Guerra Mundial, que comenzó en 1939 y duró hasta 1945, causó la muerte de decenas de millones de soldados y civiles. La Alemania nazi asesinó a unos seis millones de judíos, y con las bombas atómicas lanzadas sobre Hiroshima y Nagasaki en 1945 la humanidad entró en la era nuclear."},
+      "when": {"year": [1939, 1945]},
+      "tone": "dark",
+      "domains": ["peace", "rights"],
+      "region": "world",
+      "scene": {"decay": 0.2},
+      "sources": ["https://en.wikipedia.org/wiki/World_War_II", "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"]
+    },
+    {
+      "id": "peace-1953-korean-armistice",
+      "type": "history",
+      "title": {"ko": "정전 협정", "en": "The Korean Armistice", "ja": "朝鮮戦争の休戦協定", "zh": "朝鲜战争停战协定", "es": "El armisticio de Corea"},
+      "story": {"ko": "1953년 7월, 3년 넘게 이어진 한국전쟁의 정전 협정이 맺어졌다. 총성은 멈췄지만 평화 조약 없이 휴전선이 그어져, 많은 가족이 남과 북으로 나뉜 채 살게 되었다.", "en": "In July 1953, an armistice was signed in the Korean War, which had lasted more than three years. The guns fell silent, but with no peace treaty a ceasefire line was drawn, and many families were left living apart, divided between North and South.", "ja": "1953年7月、3年あまり続いた朝鮮戦争の休戦協定が結ばれた。銃声はやんだが、平和条約のないまま軍事境界線が引かれ、多くの家族が南北に引き裂かれたまま暮らすことになった。", "zh": "1953年7月，持续三年多的朝鲜战争签署了停战协定。枪声停了，但没有签订和平条约，一条停战线就此划下，许多家庭从此被分隔在南北两边。", "es": "En julio de 1953 se firmó el armisticio de la guerra de Corea, que había durado más de tres años. Los disparos cesaron, pero sin un tratado de paz se trazó una línea de alto el fuego, y muchas familias quedaron separadas entre el Norte y el Sur."},
+      "when": {"year": [1953, 1953]},
+      "tone": "mixed",
+      "domains": ["peace", "family"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Korean_Armistice_Agreement"]
+    },
+    {
+      "id": "peace-1970-npt",
+      "type": "history",
+      "title": {"ko": "핵무기 확산 금지 조약", "en": "The Nuclear Non-Proliferation Treaty", "ja": "核拡散防止条約", "zh": "《不扩散核武器条约》", "es": "El Tratado de No Proliferación Nuclear"},
+      "story": {"ko": "1970년 핵무기 확산 금지 조약(NPT)이 발효되었다. 핵무기를 가진 나라가 더 늘어나지 않도록 막고 핵 군축을 약속한 이 조약에는 이후 세계 대부분의 나라가 가입했다.", "en": "In 1970 the Treaty on the Non-Proliferation of Nuclear Weapons came into force. It aimed to stop more countries from getting nuclear weapons and committed its members to disarmament, and almost every country in the world later joined.", "ja": "1970年、核拡散防止条約(NPT)が発効した。核兵器を持つ国がこれ以上増えないようにし、核軍縮を約束したこの条約には、その後、世界のほとんどの国が加わった。", "zh": "1970年，《不扩散核武器条约》生效。条约旨在阻止更多国家拥有核武器，并承诺推进核裁军，此后世界上几乎所有国家都加入了它。", "es": "En 1970 entró en vigor el Tratado de No Proliferación Nuclear. Buscaba impedir que más países tuvieran armas nucleares y comprometía a sus miembros con el desarme, y luego casi todos los países del mundo se adhirieron."},
+      "when": {"year": [1970, 1970]},
+      "tone": "mixed",
+      "domains": ["peace", "politics"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons"]
+    },
+    {
+      "id": "peace-1994-rwandan-genocide",
+      "type": "history",
+      "title": {"ko": "르완다 집단 학살", "en": "The genocide in Rwanda", "ja": "ルワンダの虐殺", "zh": "卢旺达大屠杀", "es": "El genocidio de Ruanda"},
+      "story": {"ko": "1994년 4월부터 약 100일 동안 르완다에서 투치족과 온건파 후투족을 겨냥한 집단 학살이 벌어져 수십만 명이 목숨을 잃었다. 많은 희생자가 이웃의 손에 죽었고, 국제 사회는 학살을 막지 못했다.", "en": "For about 100 days from April 1994, a genocide targeting Tutsi and moderate Hutu took place in Rwanda, killing hundreds of thousands of people. Many victims were killed by their own neighbors, and the international community failed to stop the killing.", "ja": "1994年4月からおよそ100日間、ルワンダでツチの人々と穏健派のフツの人々を標的にした虐殺が起き、数十万人が命を奪われた。多くの犠牲者は隣人の手で殺され、国際社会は虐殺を止められなかった。", "zh": "1994年4月起的约100天里，卢旺达发生了针对图西族和温和派胡图族的种族灭绝，数十万人遇害。许多受害者死于邻居之手，国际社会未能阻止这场屠杀。", "es": "Durante unos cien días a partir de abril de 1994, en Ruanda se cometió un genocidio contra los tutsis y los hutus moderados que costó la vida a cientos de miles de personas. Muchas víctimas murieron a manos de sus propios vecinos, y la comunidad internacional no logró detener la matanza."},
+      "when": {"year": [1994, 1994]},
+      "tone": "dark",
+      "domains": ["peace", "rights"],
+      "region": "africa",
+      "sources": ["https://en.wikipedia.org/wiki/Rwandan_genocide"]
+    },
+    {
+      "id": "peace-2022-100-million-displaced",
+      "type": "history",
+      "title": {"ko": "집을 떠난 1억 명", "en": "100 million forced from home", "ja": "故郷を追われた1億人", "zh": "被迫离家的一亿人", "es": "Cien millones de desplazados"},
+      "story": {"ko": "2022년 말 전쟁과 박해, 폭력을 피해 집을 떠나야 했던 사람이 세계적으로 약 1억 명에 이르렀다. 러시아의 우크라이나 침공을 비롯해 시리아, 아프가니스탄 등지의 분쟁으로 많은 가족이 국경을 넘거나 자기 나라 안에서 피란 생활을 했다.", "en": "By the end of 2022, the number of people worldwide forced to flee war, persecution and violence had reached about 100 million. Conflicts including Russia's invasion of Ukraine and those in Syria and Afghanistan drove many families across borders or into displacement within their own countries.", "ja": "2022年末、戦争や迫害、暴力から逃れて家を離れざるをえなかった人が、世界で約1億人に達した。ロシアのウクライナ侵攻をはじめ、シリアやアフガニスタンなどの紛争で、多くの家族が国境を越え、あるいは自国の中で避難生活を送った。", "zh": "到2022年底，全球因战争、迫害和暴力被迫离开家园的人数达到约1亿。俄罗斯入侵乌克兰，以及叙利亚、阿富汗等地的冲突，迫使许多家庭越过国境，或在本国境内流离失所。", "es": "A finales de 2022, el número de personas en el mundo obligadas a huir de la guerra, la persecución y la violencia llegó a unos cien millones. Conflictos como la invasión rusa de Ucrania y los de Siria y Afganistán empujaron a muchas familias a cruzar fronteras o a desplazarse dentro de su propio país."},
+      "when": {"year": [2022, 2022]},
+      "tone": "dark",
+      "domains": ["peace", "population"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Forced_displacement", "https://en.wikipedia.org/wiki/Refugee"]
+    },
+    {
+      "id": "peace-future-seoul-berlin-train",
+      "title": {"ko": "서울발 베를린행 기차", "en": "The Seoul–Berlin train", "ja": "ソウル発ベルリン行きの列車", "zh": "首尔开往柏林的列车", "es": "El tren de Seúl a Berlín"},
+      "story": {"ko": "서울역 전광판에 ‘평양 경유 베를린행’이 뜬다. 옛 휴전선을 넘는 기차 안에서 이산가족의 손주들이 지도를 펴고 할아버지의 고향 마을 이름을 찾는다.", "en": "The departure board at Seoul Station reads 'Berlin, via Pyongyang.' On the train crossing the old ceasefire line, grandchildren of separated families spread out a map and look for the name of their grandfather's home village.", "ja": "ソウル駅の発車案内板に「平壌経由ベルリン行き」と表示される。かつての軍事境界線を越える列車の中で、離散家族の孫たちが地図を広げ、祖父のふるさとの村の名前を探す。", "zh": "首尔站的电子屏上显示着“经平壤开往柏林”。在穿越昔日停战线的列车上，离散家庭的孙辈摊开地图，寻找爷爷故乡村庄的名字。", "es": "En el panel de salidas de la estación de Seúl aparece «Berlín, vía Pionyang». En el tren que cruza la antigua línea del alto el fuego, los nietos de familias separadas despliegan un mapa y buscan el nombre del pueblo natal de su abuelo."},
+      "when": {"year": [2035, 2100], "peace": [75, 100]},
+      "tone": "bright",
+      "domains": ["peace", "mobility", "family"],
+      "region": "korea"
+    },
+    {
+      "id": "peace-future-drone-alerts",
+      "title": {"ko": "드론 경보가 울리는 하늘", "en": "Skies full of drone alerts", "ja": "ドローン警報の鳴る空", "zh": "无人机警报响起的天空", "es": "Cielos con alertas de drones"},
+      "story": {"ko": "국경 너머로 자율 무기 드론이 오가는 시대, 휴대전화의 공습 경보 앱은 날씨 앱보다 자주 울린다. 아이들은 자전거 타는 법보다 하늘에 낮게 뜬 점을 보면 몸을 숨기는 법을 먼저 배운다.", "en": "In an age when autonomous armed drones cross borders, the air-raid app on everyone's phone goes off more often than the weather app. Children learn to take cover when they see a low dot in the sky before they learn to ride a bike.", "ja": "自律型の兵器ドローンが国境を越えて行き交う時代、スマートフォンの空襲警報アプリは天気アプリより頻繁に鳴る。子どもたちは自転車の乗り方より先に、空に低く浮かぶ点を見たら身を隠す方法を覚える。", "zh": "在自主武器无人机越境往来的时代，手机上的空袭警报应用比天气应用响得还勤。孩子们还没学会骑自行车，就先学会了看见天上低飞的小黑点时如何躲藏。", "es": "En una época en que drones armados autónomos cruzan las fronteras, la aplicación de alertas aéreas del teléfono suena más que la del tiempo. Los niños aprenden a ponerse a cubierto al ver un punto bajo en el cielo antes que a andar en bicicleta."},
+      "when": {"year": [2051, 2100], "peace": [0, 25], "tech": [65, 100]},
+      "tone": "dark",
+      "domains": ["peace", "technology"],
+      "scene": {"decay": 0.1}
+    },
+    {
+      "id": "peace-future-last-warhead",
+      "title": {"ko": "마지막 핵탄두", "en": "The last warhead", "ja": "最後の核弾頭", "zh": "最后一枚核弹头", "es": "La última ojiva nuclear"},
+      "story": {"ko": "세계의 마지막 핵탄두가 해체되어 박물관 유리관 안에 놓인다. 줄어든 국방 예산으로 학교와 연구소가 생기지만, 군사 기지에 기대 살던 마을들은 새 일거리를 찾느라 몇 년째 애를 먹는다.", "en": "The world's last nuclear warhead is dismantled and put in a museum display case. Smaller defense budgets pay for new schools and research labs, but towns that lived off military bases spend years struggling to find new work.", "ja": "世界最後の核弾頭が解体され、博物館のガラスケースに収められる。減った国防予算で学校や研究所ができる一方、軍事基地に頼って暮らしていた町は、新しい仕事を探して何年も苦労する。", "zh": "世界上最后一枚核弹头被拆除，放进了博物馆的玻璃展柜。削减下来的国防预算建起了学校和研究所，但依靠军事基地为生的小镇，好几年都在为寻找新的生计发愁。", "es": "La última ojiva nuclear del mundo se desmantela y se expone en una vitrina de museo. Los presupuestos de defensa, ya más pequeños, financian escuelas y laboratorios, pero los pueblos que vivían de las bases militares pasan años buscando nuevos trabajos."},
+      "when": {"year": [2076, 2100], "peace": [80, 100]},
+      "tone": "mixed",
+      "domains": ["peace", "economy"]
+    }
+  ]
+}

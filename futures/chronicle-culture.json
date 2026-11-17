@@ -1,0 +1,86 @@
+{
+  "author": "seed",
+  "lang": "ko",
+  "futures": [
+    {
+      "id": "culture-1921-mexican-muralism",
+      "type": "history",
+      "title": { "ko": "멕시코 벽화 운동", "en": "Mexican muralism", "ja": "メキシコ壁画運動", "zh": "墨西哥壁画运动", "es": "El muralismo mexicano" },
+      "story": { "ko": "1920년대 혁명이 끝난 멕시코에서 정부가 학교와 관공서의 벽을 화가들에게 내주었다. 디에고 리베라 같은 화가들이 원주민과 농민, 노동자의 역사를 벽에 그리면서, 미술관에 가 본 적 없는 사람도 매일 지나는 벽에서 예술을 만났다.", "en": "In the 1920s, after the revolution, Mexico's government handed the walls of schools and public buildings over to painters. As artists such as Diego Rivera painted the history of Indigenous people, peasants and workers, people who had never set foot in a museum met art on walls they passed every day.", "ja": "1920年代、革命を終えたメキシコで、政府は学校や役所の壁を画家たちに開放した。ディエゴ・リベラらが先住民や農民、労働者の歴史を壁に描き、美術館に行ったことのない人々も、毎日通る壁で芸術に出会った。", "zh": "20世纪20年代，革命结束后的墨西哥政府把学校和政府机关的墙壁交给画家。迭戈·里维拉等画家在墙上描绘原住民、农民和工人的历史，从没进过美术馆的人，也能在每天经过的墙上遇见艺术。", "es": "En los años veinte, tras la Revolución, el gobierno de México cedió a los pintores los muros de escuelas y edificios públicos. Artistas como Diego Rivera pintaron la historia de los pueblos indígenas, los campesinos y los obreros, y quienes nunca habían pisado un museo encontraron el arte en las paredes por las que pasaban cada día." },
+      "when": { "year": [1921, 1929] },
+      "tone": "bright",
+      "domains": ["culture", "education"],
+      "region": "latin-america",
+      "sources": ["https://en.wikipedia.org/wiki/Mexican_muralism"]
+    },
+    {
+      "id": "culture-1966-cultural-revolution",
+      "type": "history",
+      "title": { "ko": "문화대혁명", "en": "The Cultural Revolution", "ja": "文化大革命", "zh": "文化大革命", "es": "La Revolución Cultural" },
+      "story": { "ko": "1966년 중국에서 문화대혁명이 시작되어 10년 동안 이어졌다. ‘낡은 것’을 없앤다며 사찰과 책, 문화재가 파괴되었고, 많은 교사와 예술가가 박해를 받았으며, 도시의 젊은이들은 농촌으로 보내졌다.", "en": "In 1966, the Cultural Revolution began in China and lasted ten years. In the name of wiping out 'old' things, temples, books and cultural relics were destroyed, many teachers and artists were persecuted, and young people from the cities were sent to the countryside.", "ja": "1966年、中国で文化大革命が始まり、10年にわたって続いた。「古いもの」をなくすという名目で寺院や書物、文化財が壊され、多くの教師や芸術家が迫害を受け、都市の若者たちは農村へ送られた。", "zh": "1966年，中国的文化大革命开始，持续了十年。在破除“旧”事物的名义下，寺庙、书籍和文物遭到破坏，许多教师和艺术家受到迫害，城市青年被下放到农村。", "es": "En 1966 comenzó en China la Revolución Cultural, que duró diez años. Con el pretexto de acabar con lo «viejo», se destruyeron templos, libros y bienes culturales, muchos maestros y artistas fueron perseguidos y los jóvenes de las ciudades fueron enviados al campo." },
+      "when": { "year": [1966, 1976] },
+      "tone": "dark",
+      "domains": ["culture", "politics", "education"],
+      "region": "china",
+      "sources": ["https://en.wikipedia.org/wiki/Cultural_Revolution", "https://en.wikipedia.org/wiki/Four_Olds"]
+    },
+    {
+      "id": "culture-1979-walkman",
+      "type": "history",
+      "title": { "ko": "워크맨과 나만의 음악", "en": "The Walkman and music on the go", "ja": "ウォークマンと持ち歩く音楽", "zh": "随身听：把音乐带在身边", "es": "El walkman: música para llevar" },
+      "story": { "ko": "1979년 일본 소니가 휴대용 카세트 플레이어 워크맨을 내놓았다. 1980년대 세계 곳곳에서 사람들이 헤드폰을 쓰고 걷거나 버스를 타며 자기가 고른 음악을 혼자 듣게 되었다.", "en": "In 1979, Japan's Sony released the Walkman, a portable cassette player. Through the 1980s, people around the world began walking and riding buses with headphones on, listening on their own to music they had chosen themselves.", "ja": "1979年、日本のソニーが携帯型カセットプレーヤー「ウォークマン」を発売した。1980年代には世界中で、人々がヘッドホンをつけて歩いたりバスに乗ったりしながら、自分で選んだ音楽を一人で聴くようになった。", "zh": "1979年，日本索尼公司推出便携式磁带播放器随身听（Walkman）。20世纪80年代，世界各地的人们开始戴着耳机走路、坐公交，独自听自己挑选的音乐。", "es": "En 1979, la japonesa Sony lanzó el walkman, un reproductor de casetes portátil. Durante los años ochenta, en todo el mundo la gente empezó a caminar y a viajar en autobús con auriculares, escuchando a solas la música que había elegido." },
+      "when": { "year": [1979, 1979] },
+      "tone": "bright",
+      "domains": ["culture", "technology", "daily"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Walkman"]
+    },
+    {
+      "id": "culture-1997-korean-wave",
+      "type": "history",
+      "title": { "ko": "한류의 시작", "en": "The start of the Korean Wave", "ja": "韓流の始まり", "zh": "韩流的开端", "es": "El comienzo de la ola coreana" },
+      "story": { "ko": "1997년 한국 드라마가 중국 텔레비전에서 큰 인기를 얻었고, 1999년 중국 언론은 이 현상을 ‘한류’라고 불렀다. 아시아 외환 위기 속에서 한국 대중문화가 처음으로 아시아 곳곳 사람들의 일상에 들어가기 시작했다.", "en": "In 1997, Korean TV dramas became hugely popular on Chinese television, and in 1999 Chinese media named the trend the 'Korean Wave'. Amid the Asian financial crisis, Korean pop culture began, for the first time, to become part of daily life for people across Asia.", "ja": "1997年、韓国ドラマが中国のテレビで大人気となり、1999年に中国のメディアはこの現象を「韓流」と呼んだ。アジア通貨危機のさなか、韓国の大衆文化が初めてアジア各地の人々の日常に入り始めた。", "zh": "1997年，韩国电视剧在中国电视上大受欢迎；1999年，中国媒体把这一现象称为“韩流”。在亚洲金融危机中，韩国流行文化第一次开始走进亚洲各地人们的日常生活。", "es": "En 1997, las series coreanas tuvieron un gran éxito en la televisión china, y en 1999 la prensa china llamó al fenómeno «ola coreana». En plena crisis financiera asiática, la cultura popular coreana empezó por primera vez a formar parte de la vida cotidiana de gente de toda Asia." },
+      "when": { "year": [1997, 1999] },
+      "tone": "bright",
+      "domains": ["culture", "media"],
+      "region": "korea",
+      "sources": ["https://en.wikipedia.org/wiki/Korean_wave"]
+    },
+    {
+      "id": "culture-2010-streaming",
+      "type": "history",
+      "title": { "ko": "소유에서 스트리밍으로", "en": "From owning to streaming", "ja": "所有からストリーミングへ", "zh": "从收藏唱片到在线播放", "es": "Del disco al streaming" },
+      "story": { "ko": "2010년대 음악과 영화를 음반이나 디스크로 사서 갖는 대신 인터넷으로 스트리밍해 즐기는 방식이 퍼졌다. 사람들은 월 구독료를 내고 휴대전화로 세계 곳곳의 노래와 드라마를 언제든 즐기게 되었지만, 창작자에게 돌아가는 몫이 너무 적다는 논란도 커졌다.", "en": "In the 2010s, instead of buying music and films on discs, more and more people streamed them over the internet. For a monthly subscription they could enjoy songs and dramas from all over the world on their phones at any time, while debate grew over how little of the money reached creators.", "ja": "2010年代、音楽や映画をCDやディスクで買って持つかわりに、インターネットでストリーミングして楽しむ方法が広がった。人々は月額料金を払い、世界中の歌やドラマをスマートフォンでいつでも楽しめるようになったが、作り手に届く取り分が少なすぎるという議論も大きくなった。", "zh": "2010年代，人们不再购买唱片和光盘来收藏音乐和电影，而是越来越多地通过网络在线播放。只要付月费，就能随时用手机欣赏世界各地的歌曲和电视剧；与此同时，创作者分到的收入太少也引发了越来越多的争议。", "es": "En la década de 2010, en lugar de comprar música y películas en disco, cada vez más gente empezó a escucharlas y verlas en streaming por internet. Con una suscripción mensual se podían disfrutar en el teléfono canciones y series de todo el mundo en cualquier momento, aunque creció el debate sobre lo poco que llegaba a los creadores." },
+      "when": { "year": [2010, 2019] },
+      "tone": "mixed",
+      "domains": ["culture", "media", "technology"],
+      "region": "world",
+      "sources": ["https://en.wikipedia.org/wiki/Streaming_media", "https://en.wikipedia.org/wiki/Music_streaming_service"]
+    },
+    {
+      "id": "culture-future-human-made-songs",
+      "title": { "ko": "사람이 부르는 노래", "en": "Songs sung by people", "ja": "人が歌う歌", "zh": "由人来唱的歌", "es": "Canciones cantadas por personas" },
+      "story": { "ko": "음원 차트 상위곡 대부분을 AI가 만든다. 그 대신 사람이 직접 연주하는 작은 공연장이 동네마다 다시 문을 열고, ‘사람이 만든 노래’라는 표시가 붙은 공연은 일찍 매진된다.", "en": "Most of the songs at the top of the charts are made by AI. In their place, small venues where people play live reopen in every neighborhood, and shows labeled 'made by humans' sell out early.", "ja": "音楽チャートの上位曲の大半をAIが作る。そのかわり、人が生で演奏する小さなライブハウスがまちごとに再び開き、「人がつくった歌」と表示された公演はすぐに売り切れる。", "zh": "音乐排行榜上排名靠前的歌曲大多由AI创作。与此同时，由真人现场演奏的小型演出场所在各个街区重新开张，标着“人类创作”的演出总是早早售罄。", "es": "La mayoría de las canciones que encabezan las listas las crea una IA. A cambio, en cada barrio vuelven a abrir pequeñas salas con música en vivo, y los conciertos con la etiqueta «hecho por personas» se agotan enseguida." },
+      "when": { "year": [2030, 2100], "tech": [65, 100] },
+      "tone": "mixed",
+      "domains": ["culture", "technology"]
+    },
+    {
+      "id": "culture-future-vanished-neighbor-songs",
+      "title": { "ko": "사라진 이웃 나라의 노래", "en": "The neighbor's songs disappear", "ja": "消えた隣国の歌", "zh": "消失的邻国歌曲", "es": "Desaparecen las canciones del vecino" },
+      "story": { "ko": "이웃 나라와의 갈등이 깊어지자 그 나라의 영화와 노래가 스트리밍 목록에서 한꺼번에 사라진다. 한때 모두 따라 부르던 노래를 아이들은 이제 이불 속에서 몰래 듣는다.", "en": "As the conflict with a neighboring country deepens, its films and songs vanish from streaming catalogs all at once. Children now listen in secret, under the covers, to songs everyone used to sing along to.", "ja": "隣の国との対立が深まると、その国の映画や歌が配信リストから一斉に消える。かつてみんなで口ずさんだ歌を、子どもたちは今、布団の中でこっそり聴く。", "zh": "与邻国的冲突加深后，那个国家的电影和歌曲一下子从流媒体片单上全部消失。孩子们如今只能躲在被窝里，偷偷听那些曾经人人都会跟着唱的歌。", "es": "Cuando se agrava el conflicto con un país vecino, sus películas y canciones desaparecen de golpe de las plataformas. Los niños escuchan ahora a escondidas, bajo las sábanas, canciones que antes todos cantaban." },
+      "when": { "year": [2051, 2100], "peace": [0, 25], "solidarity": [0, 45] },
+      "tone": "dark",
+      "domains": ["culture", "peace", "media"]
+    },
+    {
+      "id": "culture-future-amateur-stage",
+      "title": { "ko": "누구나 예술가인 동네", "en": "A neighborhood of artists", "ja": "誰もが芸術家のまち", "zh": "人人都是艺术家的街区", "es": "Un barrio de artistas" },
+      "story": { "ko": "일하는 날이 줄자 동네마다 아마추어 극단과 합창단, 공방이 생긴다. 토요일 저녁 광장 무대에는 버스 기사가 쓰고 이웃들이 연기하는 연극이 오르고, 객석은 늘 가득 찬다.", "en": "As working days grow fewer, amateur theater troupes, choirs and workshops spring up in every neighborhood. On Saturday evenings the stage in the square hosts a play written by a bus driver and performed by neighbors, and the seats are always full.", "ja": "働く日が減ると、まちごとにアマチュア劇団や合唱団、工房が生まれる。土曜の夕方、広場の舞台ではバスの運転手が書き、近所の人たちが演じる芝居がかかり、客席はいつも満員だ。", "zh": "工作日变少后，各个街区都出现了业余剧团、合唱团和手工坊。周六傍晚，广场舞台上演着公交司机编写、邻居们出演的话剧，观众席总是座无虚席。", "es": "Al reducirse los días de trabajo, en cada barrio surgen grupos de teatro aficionado, coros y talleres. Los sábados por la tarde, en el escenario de la plaza se representa una obra escrita por un conductor de autobús e interpretada por los vecinos, y las butacas siempre se llenan." },
+      "when": { "year": [2076, 2100], "tech": [55, 100], "equality": [55, 100] },
+      "tone": "bright",
+      "domains": ["culture", "daily"],
+      "scene": { "community": 0.1 }
+    }
+  ]
+}
