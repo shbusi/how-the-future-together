@@ -1,29 +1,30 @@
-name: 미래 조각에 의견 남기기
-description: 이미 있는 조각에 공감, 반론, 보완할 점, 근거 자료를 보탭니다.
+name: 미래 조각에 의견 남기기 · Comment on a future piece
+description: 공감, 반론, 보완할 점, 근거 자료, 번역 제안 · Agree, disagree, improve, add sources or suggest a translation
 title: "[의견] "
 labels: ["의견"]
 body:
   - type: input
     id: piece
     attributes:
-      label: 어떤 조각인가요?
-      description: 웹사이트의 ‘의견 남기기’를 누르면 자동으로 채워집니다.
+      label: 어떤 조각인가요? · Which piece?
+      description: 웹사이트의 ‘의견 남기기’를 누르면 자동으로 채워집니다. · Filled in when you press “Comment” on the site.
     validations:
       required: true
   - type: dropdown
     id: kind
     attributes:
-      label: 의견의 종류
+      label: 의견의 종류 · Kind of comment
       options:
-        - 공감해요
-        - 다르게 생각해요
-        - 이렇게 고치면 좋겠어요
-        - 근거 자료가 있어요
+        - 공감해요 · I agree
+        - 다르게 생각해요 · I see it differently
+        - 이렇게 고치면 좋겠어요 · Suggested edit
+        - 근거 자료가 있어요 · I have a source
+        - 번역을 제안해요 · Translation suggestion
     validations:
       required: true
   - type: textarea
     id: opinion
     attributes:
-      label: 의견
+      label: 의견 · Comment
     validations:
       required: true

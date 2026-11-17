@@ -53,9 +53,11 @@ jobs:
               issue_number: context.issue.number,
               body: [
                 '채택 라벨을 확인했지만 미래 조각 파일로 옮기지 못했어요.',
+                'The `채택` label was added, but this issue could not be turned into a future piece file.',
                 '',
                 process.env.ERRORS,
                 '',
                 "웹사이트의 '미래 조각 쓰기'에서 JSON을 만들어 이 이슈 본문의 '미래 조각 JSON' 칸에 붙인 뒤, 라벨을 다시 붙여 주세요.",
+                "Create the JSON with 'Write a future piece' on the site, paste it into the 'Future piece JSON' field of this issue, then add the label again.",
               ].join('\n'),
             });

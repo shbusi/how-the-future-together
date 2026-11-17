@@ -1,110 +1,111 @@
 {
   "author": "seed",
+  "lang": "ko",
   "futures": [
     {
       "id": "four-day-week",
-      "title": "주 4일, 그다음은 주 3일",
-      "story": "AI가 반복 업무를 맡으면서 법정 근로 시간이 주 4일로 줄어든다. 남은 사흘을 어떻게 보낼지가 사람들의 새 고민이 된다.",
+      "title": { "ko": "주 4일, 그다음은 주 3일", "en": "Four days a week, then three", "ja": "週4日、その次は週3日", "zh": "每周四天，然后三天", "es": "Cuatro días a la semana, luego tres" },
+      "story": { "ko": "AI가 반복 업무를 맡으면서 법정 근로 시간이 주 4일로 줄어든다. 남은 사흘을 어떻게 보낼지가 사람들의 새 고민이 된다.", "en": "As AI takes over repetitive work, the legal workweek shrinks to four days. How to spend the remaining three becomes a new worry for people.", "ja": "AIが繰り返しの仕事を引き受けるようになり、法定労働時間は週4日に減る。残りの3日をどう過ごすかが、人々の新しい悩みになる。", "zh": "随着AI接手重复性工作，法定工作时间缩短为每周四天。剩下的三天怎么过，成了人们新的烦恼。", "es": "A medida que la IA asume el trabajo repetitivo, la jornada laboral legal se reduce a cuatro días por semana. Cómo pasar los tres días restantes se convierte en la nueva preocupación de la gente." },
       "when": { "tech": [60, 100], "equality": [50, 100], "year": [2035, 2100] },
       "tone": "bright",
-      "tags": ["기술", "노동"],
+      "tags": ["technology", "work"],
       "scene": { "community": 0.05 }
     },
     {
       "id": "jobless-growth",
-      "title": "일자리 없는 성장",
-      "story": "기업의 이익은 사상 최고를 기록하지만 일자리는 줄어든다. 데이터센터는 24시간 불을 밝히고, 그 앞 거리에는 일감을 찾는 사람들이 모인다.",
+      "title": { "ko": "일자리 없는 성장", "en": "Growth without jobs", "ja": "雇用なき成長", "zh": "无就业增长", "es": "Crecimiento sin empleo" },
+      "story": { "ko": "기업의 이익은 사상 최고를 기록하지만 일자리는 줄어든다. 데이터센터는 24시간 불을 밝히고, 그 앞 거리에는 일감을 찾는 사람들이 모인다.", "en": "Corporate profits hit record highs, but jobs keep shrinking. Data centers stay lit around the clock, and people looking for work gather in the street outside.", "ja": "企業の利益は過去最高を記録するが、仕事は減っていく。データセンターは24時間明かりを灯し、その前の通りには仕事を探す人々が集まる。", "zh": "企业利润创下历史新高，工作岗位却越来越少。数据中心24小时灯火通明，门前的街道上聚集着找活干的人。", "es": "Las ganancias de las empresas alcanzan máximos históricos, pero el empleo se reduce. Los centros de datos están iluminados las 24 horas, y en la calle de enfrente se reúne gente que busca trabajo." },
       "when": { "tech": [65, 100], "equality": [0, 35], "year": [2035, 2100] },
       "tone": "dark",
-      "tags": ["기술", "노동"],
+      "tags": ["technology", "work"],
       "scene": { "divide": 0.15 }
     },
     {
       "id": "ai-dividend",
-      "title": "AI 배당",
-      "story": "자동화로 얻은 이익의 일부가 모든 시민에게 'AI 배당'으로 돌아간다. 사람들은 돌봄과 예술, 동네 일에 더 많은 시간을 쓴다.",
+      "title": { "ko": "AI 배당", "en": "The AI dividend", "ja": "AI配当", "zh": "AI分红", "es": "El dividendo de la IA" },
+      "story": { "ko": "자동화로 얻은 이익의 일부가 모든 시민에게 'AI 배당'으로 돌아간다. 사람들은 돌봄과 예술, 동네 일에 더 많은 시간을 쓴다.", "en": "Part of the profits from automation goes back to every citizen as an “AI dividend.” People spend more time on caregiving, art, and their neighborhoods.", "ja": "自動化で得た利益の一部が、すべての市民に「AI配当」として還元される。人々はケアや芸術、地域の仕事により多くの時間を使う。", "zh": "自动化带来的部分利润以“AI分红”的形式返还给每一位公民。人们把更多时间花在照护、艺术和社区事务上。", "es": "Parte de las ganancias de la automatización vuelve a cada ciudadano como un “dividendo de la IA”. La gente dedica más tiempo a los cuidados, al arte y a la vida del barrio." },
       "when": { "tech": [60, 100], "equality": [55, 100], "solidarity": [50, 100], "year": [2040, 2100] },
       "tone": "bright",
-      "tags": ["기술", "복지"],
+      "tags": ["technology", "welfare"],
       "scene": { "community": 0.1, "divide": -0.15 }
     },
     {
       "id": "sky-commute",
-      "title": "하늘로 출근하기",
-      "story": "자율 비행 택시가 아파트 옥상에서 사람들을 태운다. 꽉 막히던 도로 일부는 공원과 자전거 길로 바뀐다.",
+      "title": { "ko": "하늘로 출근하기", "en": "Commuting by air", "ja": "空を飛んで出勤", "zh": "飞着去上班", "es": "Ir al trabajo por el aire" },
+      "story": { "ko": "자율 비행 택시가 아파트 옥상에서 사람들을 태운다. 꽉 막히던 도로 일부는 공원과 자전거 길로 바뀐다.", "en": "Autonomous air taxis pick people up from apartment rooftops. Some of the roads that used to be jammed become parks and bike paths.", "ja": "自動運転の空飛ぶタクシーが、マンションの屋上で人々を乗せる。渋滞していた道路の一部は、公園や自転車道に変わる。", "zh": "自动驾驶的飞行出租车在公寓楼顶接上乘客。一些曾经拥堵不堪的道路变成了公园和自行车道。", "es": "Taxis aéreos autónomos recogen a la gente en las azoteas de los edificios. Algunas calles antes congestionadas se convierten en parques y carriles para bicicletas." },
       "when": { "tech": [70, 100], "year": [2045, 2100] },
       "tone": "bright",
-      "tags": ["기술", "교통"],
+      "tags": ["technology", "transport"],
       "scene": { "tech": 0.15 }
     },
     {
       "id": "watched-streets",
-      "title": "모두가 보이는 거리",
-      "story": "거리의 모든 카메라가 얼굴을 알아본다. 범죄는 줄었지만, 사람들은 집회에 나가기 전에 마스크부터 챙긴다.",
+      "title": { "ko": "모두가 보이는 거리", "en": "Streets where everyone is seen", "ja": "誰もが見られる街", "zh": "人人都被看见的街道", "es": "Calles donde todos son visibles" },
+      "story": { "ko": "거리의 모든 카메라가 얼굴을 알아본다. 범죄는 줄었지만, 사람들은 집회에 나가기 전에 마스크부터 챙긴다.", "en": "Every camera on the street recognizes faces. Crime has dropped, but before heading to a protest, people make sure to grab a mask first.", "ja": "街のすべてのカメラが顔を認識する。犯罪は減ったが、人々は集会に出かける前に、まずマスクを用意する。", "zh": "街上的每一台摄像头都能识别人脸。犯罪减少了，但人们出门参加集会前，总要先带上口罩。", "es": "Todas las cámaras de la calle reconocen rostros. La delincuencia ha bajado, pero antes de ir a una manifestación la gente se asegura primero de llevar mascarilla." },
       "when": { "tech": [60, 100], "solidarity": [0, 40] },
       "tone": "dark",
-      "tags": ["기술", "자유"],
+      "tags": ["technology", "freedom"],
       "scene": { "community": -0.1 }
     },
     {
       "id": "open-source-city",
-      "title": "시민이 고치는 도시",
-      "story": "도시의 교통, 에너지, 예산 데이터가 모두 공개된다. 고등학생 동아리가 만든 버스 노선 개선안이 실제 노선이 된다.",
+      "title": { "ko": "시민이 고치는 도시", "en": "A city fixed by its citizens", "ja": "市民が直す街", "zh": "市民动手改进的城市", "es": "La ciudad que arreglan sus ciudadanos" },
+      "story": { "ko": "도시의 교통, 에너지, 예산 데이터가 모두 공개된다. 고등학생 동아리가 만든 버스 노선 개선안이 실제 노선이 된다.", "en": "All of the city's transit, energy, and budget data is made public. A bus route proposal drawn up by a high school club becomes a real route.", "ja": "街の交通、エネルギー、予算のデータがすべて公開される。高校生の部活が作ったバス路線の改善案が、実際の路線になる。", "zh": "城市的交通、能源和预算数据全部公开。一个高中生社团提出的公交线路改进方案，成了真正的线路。", "es": "Todos los datos de transporte, energía y presupuesto de la ciudad se hacen públicos. Una propuesta de mejora de líneas de autobús, hecha por un club de estudiantes de secundaria, se convierte en una línea real." },
       "when": { "tech": [50, 100], "solidarity": [60, 100], "year": [2035, 2100] },
       "tone": "bright",
-      "tags": ["기술", "참여"],
+      "tags": ["technology", "participation"],
       "scene": { "community": 0.1, "tech": 0.05 }
     },
     {
       "id": "repair-shops-return",
-      "title": "멈춰 선 혁신, 돌아온 수리점",
-      "story": "새로운 기술은 좀처럼 나오지 않는다. 사람들은 고쳐 쓰는 법을 배우고, 동네마다 수리 가게가 다시 문을 연다.",
+      "title": { "ko": "멈춰 선 혁신, 돌아온 수리점", "en": "Innovation stalls, repair shops return", "ja": "止まった革新、戻ってきた修理屋", "zh": "创新停滞，修理铺回来了", "es": "Innovación en pausa, talleres de vuelta" },
+      "story": { "ko": "새로운 기술은 좀처럼 나오지 않는다. 사람들은 고쳐 쓰는 법을 배우고, 동네마다 수리 가게가 다시 문을 연다.", "en": "New technology rarely comes along. People learn to fix what they have, and repair shops reopen in every neighborhood.", "ja": "新しい技術はめったに生まれない。人々は直して使う方法を学び、町ごとに修理屋が再び店を開ける。", "zh": "新技术迟迟不见出现。人们学着把东西修好继续用，各个街区的修理铺又重新开张。", "es": "Casi no aparecen tecnologías nuevas. La gente aprende a reparar lo que tiene, y en cada barrio vuelven a abrir los talleres de reparación." },
       "when": { "tech": [0, 25], "year": [2035, 2100] },
       "tone": "mixed",
-      "tags": ["기술", "일상"],
+      "tags": ["technology", "daily-life"],
       "scene": { "community": 0.05 }
     },
     {
       "id": "longevity-gap",
-      "title": "수명의 격차",
-      "story": "노화를 늦추는 치료가 나오지만 값이 비싸다. 부유한 동네의 평균 수명은 다른 동네보다 15년 길다.",
+      "title": { "ko": "수명의 격차", "en": "The lifespan gap", "ja": "寿命の格差", "zh": "寿命差距", "es": "La brecha de la longevidad" },
+      "story": { "ko": "노화를 늦추는 치료가 나오지만 값이 비싸다. 부유한 동네의 평균 수명은 다른 동네보다 15년 길다.", "en": "Treatments that slow aging arrive, but they are expensive. Average life expectancy in wealthy neighborhoods is 15 years longer than elsewhere.", "ja": "老化を遅らせる治療が登場するが、値段が高い。裕福な地区の平均寿命は、ほかの地区より15年長い。", "zh": "延缓衰老的疗法问世了，但价格昂贵。富裕街区的平均寿命比其他街区长15年。", "es": "Llegan tratamientos que retrasan el envejecimiento, pero son caros. En los barrios ricos, la esperanza de vida media es 15 años mayor que en los demás." },
       "when": { "tech": [70, 100], "equality": [0, 35], "year": [2050, 2100] },
       "tone": "dark",
-      "tags": ["기술", "건강"],
+      "tags": ["technology", "health"],
       "scene": { "divide": 0.15 }
     },
     {
       "id": "machine-forest",
-      "title": "기계 숲",
-      "story": "탄소를 빨아들이는 기계 나무가 고속도로를 따라 늘어선다. 아이들은 진짜 나무와 기계 나무를 구별하는 숙제를 한다.",
+      "title": { "ko": "기계 숲", "en": "The machine forest", "ja": "機械の森", "zh": "机械森林", "es": "El bosque de máquinas" },
+      "story": { "ko": "탄소를 빨아들이는 기계 나무가 고속도로를 따라 늘어선다. 아이들은 진짜 나무와 기계 나무를 구별하는 숙제를 한다.", "en": "Mechanical trees that suck up carbon line the highways. Children get homework on telling real trees from machine trees.", "ja": "炭素を吸い込む機械の木が、高速道路沿いに立ち並ぶ。子どもたちは、本物の木と機械の木を見分ける宿題をする。", "zh": "吸收碳的机械树沿着高速公路排成一排。孩子们的作业是分辨哪些是真树，哪些是机械树。", "es": "Árboles mecánicos que absorben carbono bordean las autopistas. Los niños tienen como tarea distinguir los árboles de verdad de los árboles mecánicos." },
       "when": { "climate": [40, 100], "tech": [65, 100], "year": [2050, 2100] },
       "tone": "mixed",
-      "tags": ["기술", "기후"],
+      "tags": ["technology", "climate"],
       "scene": { "smog": -0.1 }
     },
     {
       "id": "ai-coworker",
-      "title": "AI 동료",
-      "story": "회사마다 AI 동료가 한 자리씩 차지한다. 신입 사원의 첫 업무는 AI가 쓴 보고서를 검토하는 일이다.",
+      "title": { "ko": "AI 동료", "en": "The AI coworker", "ja": "AIの同僚", "zh": "AI同事", "es": "El colega IA" },
+      "story": { "ko": "회사마다 AI 동료가 한 자리씩 차지한다. 신입 사원의 첫 업무는 AI가 쓴 보고서를 검토하는 일이다.", "en": "Every office has a desk set aside for an AI coworker. A new hire's first task is reviewing the reports the AI wrote.", "ja": "どの会社にも、AIの同僚の席がひとつずつある。新入社員の最初の仕事は、AIが書いた報告書をチェックすることだ。", "zh": "每家公司都给AI同事留了一个位置。新员工的第一项工作，是审阅AI写的报告。", "es": "Cada oficina tiene un puesto reservado para un colega IA. La primera tarea de un empleado nuevo es revisar los informes que escribió la IA." },
       "when": { "tech": [40, 100], "year": [2026, 2040] },
       "tone": "mixed",
-      "tags": ["기술", "노동"]
+      "tags": ["technology", "work"]
     },
     {
       "id": "ai-tutor",
-      "title": "한 명 한 명의 선생님",
-      "story": "모든 학생에게 AI 튜터가 붙는다. 교사는 진도를 나가는 대신 아이들과 토론하고 함께 프로젝트를 한다.",
+      "title": { "ko": "한 명 한 명의 선생님", "en": "A teacher for every student", "ja": "一人ひとりの先生", "zh": "每人一位老师", "es": "Un maestro para cada alumno" },
+      "story": { "ko": "모든 학생에게 AI 튜터가 붙는다. 교사는 진도를 나가는 대신 아이들과 토론하고 함께 프로젝트를 한다.", "en": "Every student gets an AI tutor. Instead of working through the syllabus, teachers hold discussions with the kids and do projects together.", "ja": "すべての生徒にAIチューターがつく。教師は授業を先に進める代わりに、子どもたちと議論し、一緒にプロジェクトに取り組む。", "zh": "每个学生都配有一位AI导师。老师不再忙着赶教学进度，而是和孩子们一起讨论、一起做项目。", "es": "Cada estudiante tiene un tutor de IA. En lugar de avanzar con el temario, los docentes debaten con los niños y hacen proyectos con ellos." },
       "when": { "tech": [55, 100], "equality": [45, 100], "year": [2035, 2100] },
       "tone": "bright",
-      "tags": ["기술", "교육"]
+      "tags": ["technology", "education"]
     },
     {
       "id": "blackout-schedule",
-      "title": "정전 시간표",
-      "story": "폭염으로 전력망이 자주 멈춘다. 사람들은 아침마다 정전 시간표를 확인하고 하루 일정을 짠다.",
+      "title": { "ko": "정전 시간표", "en": "The blackout schedule", "ja": "停電スケジュール", "zh": "停电时间表", "es": "El horario de apagones" },
+      "story": { "ko": "폭염으로 전력망이 자주 멈춘다. 사람들은 아침마다 정전 시간표를 확인하고 하루 일정을 짠다.", "en": "Heat waves keep bringing the power grid down. Every morning, people check the blackout schedule and plan their day around it.", "ja": "猛暑で電力網がたびたび止まる。人々は毎朝、停電スケジュールを確認してから一日の予定を立てる。", "zh": "酷暑让电网频繁瘫痪。人们每天早上先查看停电时间表，再安排一天的日程。", "es": "Por las olas de calor, la red eléctrica se cae a menudo. Cada mañana, la gente consulta el horario de apagones y organiza su día." },
       "when": { "climate": [0, 35], "tech": [0, 45], "year": [2045, 2100] },
       "tone": "dark",
-      "tags": ["에너지", "일상"],
+      "tags": ["energy", "daily-life"],
       "scene": { "decay": 0.1 }
     }
   ]

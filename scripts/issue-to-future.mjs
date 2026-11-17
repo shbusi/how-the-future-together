@@ -5,29 +5,29 @@ import { readFile, writeFile, appendFile, readdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateContribution } from '../assets/validate.js';
+import { loadConfig, describeError } from './build.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 export function futureFromIssue(body, author, config) {
-  const section = body.split(/^###\s+/m).find(s => s.startsWith('미래 조각 JSON'));
-  const raw = section?.match(/```(?:json)?\s*([\s\S]*?)```/)?.[1] ?? section?.replace(/^미래 조각 JSON\s*/, '');
-  if (!raw || !raw.trim() || raw.trim() === '_No response_') {
-    return { errors: ['이슈에 "미래 조각 JSON"이 없습니다. 웹사이트의 "미래 조각 쓰기"에서 만든 JSON을 붙여 주세요.'] };
-  }
+  const section = body.split(/^###\s+/m).find(s => /^(미래 조각 JSON|Future piece JSON)/.test(s));
+  const raw = section?.match(/```(?:json)?\s*([\s\S]*?)```/)?.[1] ?? section?.replace(/^.*\n/, '');
+  if (!raw || !raw.trim() || raw.trim() === '_No response_') return { errors: [{ code: 'issueNoJson', params: {} }] };
   let data;
   try {
     data = JSON.parse(raw);
-  } catch (err) {
-    return { errors: [`JSON을 읽지 못했습니다: ${err.message}`] };
+  } catch (e) {
+    return { errors: [{ code: 'issueBadJson', params: { message: e.message } }] };
   }
   // 이슈를 연 사람을 작성자로 기록한다.
-  const contribution = { author, futures: data.futures };
+  const contribution = { author, lang: data?.lang, futures: data?.futures };
   return { contribution, errors: validateContribution(contribution, config) };
 }
 
 async function main() {
   const { ISSUE_BODY = '', ISSUE_NUMBER, ISSUE_AUTHOR } = process.env;
-  const config = JSON.parse(await readFile(join(root, 'config/conditions.json'), 'utf8'));
+  const cfg = await loadConfig();
+  const config = { conditions: cfg.conditions.conditions, year: cfg.conditions.year, languages: cfg.languages.map(l => l.code), tags: cfg.tags };
   const { contribution, errors } = futureFromIssue(ISSUE_BODY, ISSUE_AUTHOR, config);
 
   if (contribution && !errors.length) {
@@ -36,10 +36,10 @@ async function main() {
       const data = JSON.parse(await readFile(join(root, 'futures', file), 'utf8'));
       for (const f of data.futures || []) taken.add(f.id);
     }
-    for (const f of contribution.futures) if (taken.has(f.id)) errors.push(`id "${f.id}"는 이미 쓰이고 있습니다.`);
+    for (const f of contribution.futures) if (taken.has(f.id)) errors.push({ code: 'dupGlobal', params: { id: f.id, file: 'futures/' } });
   }
   if (errors.length) {
-    const msg = errors.map(e => `- ${e}`).join('\n');
+    const msg = errors.map(e => `- ${describeError(e, cfg.locales).replace(/\n\s+/, '\n  ')}`).join('\n');
     console.error(msg);
     if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `errors<<EOF\n${msg}\nEOF\n`);
     process.exit(1);

@@ -5,7 +5,7 @@ import { SCENE_KEYS } from './engine.js';
 const W = 1200;
 const H = 640;
 const G = 470; // 지면 높이
-const KEYS = Object.keys(SCENE_KEYS);
+const KEYS = SCENE_KEYS;
 
 // ---------- 작은 도구들 ----------
 function rng(seed) {

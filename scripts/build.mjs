@@ -1,17 +1,39 @@
-// 미래 조각(futures/*.json)을 검사하고, 웹사이트를 dist/로 묶는다.
+// 미래 조각(futures/*.json)과 번역(locales/*.json)을 검사하고, 웹사이트를 dist/로 묶는다.
 //   node scripts/build.mjs          검사 + 빌드
 //   node scripts/build.mjs --check  검사만
 import { readFile, readdir, writeFile, mkdir, rm, cp, appendFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { validateContribution } from '../assets/validate.js';
+import { validateContribution, normalizeContribution, formatError } from '../assets/validate.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const checkOnly = process.argv.includes('--check');
+const readJson = async path => JSON.parse(await readFile(join(root, path), 'utf8'));
+
+export async function loadConfig() {
+  const languages = await readJson('config/languages.json');
+  const locales = {};
+  for (const { code } of languages) locales[code] = await readJson(`locales/${code}.json`);
+  return {
+    site: await readJson('site.config.json'),
+    conditions: await readJson('config/conditions.json'),
+    tags: await readJson('config/tags.json'),
+    languages,
+    locales,
+  };
+}
+
+/** 오류를 한국어와 영어로 함께 적는다. CI 기록은 여러 나라 기여자가 함께 본다. */
+export function describeError(e, locales) {
+  const ko = formatError(e, locales.ko);
+  const en = formatError(e, locales.en, { withAt: false });
+  return ko === en ? ko : `${ko}\n     ${en}`;
+}
 
 export async function loadModel() {
-  const site = JSON.parse(await readFile(join(root, 'site.config.json'), 'utf8'));
-  const config = JSON.parse(await readFile(join(root, 'config/conditions.json'), 'utf8'));
+  const cfg = await loadConfig();
+  const { conditions: c } = cfg;
+  const config = { conditions: c.conditions, year: c.year, languages: cfg.languages.map(l => l.code), tags: cfg.tags };
   const files = (await readdir(join(root, 'futures'))).filter(f => f.endsWith('.json')).sort();
 
   const problems = [];
@@ -22,19 +44,23 @@ export async function loadModel() {
     let data;
     try {
       data = JSON.parse(await readFile(join(root, 'futures', file), 'utf8'));
-    } catch (err) {
-      problems.push({ file, errors: [`JSON 문법 오류: ${err.message}. 쉼표나 따옴표가 빠지지 않았는지 확인해 주세요.`] });
+    } catch (e) {
+      problems.push({ file, errors: [{ code: 'json', params: { message: e.message } }] });
       continue;
     }
     const errors = validateContribution(data, config);
     for (const f of data.futures || []) {
       if (!f || typeof f.id !== 'string') continue;
-      if (owner.has(f.id)) errors.push(`id "${f.id}"는 이미 ${owner.get(f.id)}에서 쓰고 있습니다. 다른 id를 골라 주세요.`);
+      if (owner.has(f.id)) errors.push({ code: 'dupGlobal', params: { id: f.id, file: owner.get(f.id) } });
       else owner.set(f.id, file);
     }
     if (errors.length) problems.push({ file, errors });
-    else for (const f of data.futures) futures.push({ ...f, author: data.author, file });
+    else futures.push(...normalizeContribution(data, file));
   }
+
+  // 번역 파일: 한국어를 기준으로 빠진 문장을 찾는다 (빠지면 화면에서 영어 → 한국어 순으로 대신 보인다)
+  const base = Object.keys(cfg.locales.ko);
+  const missing = Object.fromEntries(cfg.languages.map(({ code }) => [code, base.filter(k => !(k in cfg.locales[code]))]));
 
   const contributors = [...futures.reduce((m, f) => m.set(f.author, (m.get(f.author) || 0) + 1), new Map())]
     .map(([author, count]) => ({ author, count }))
@@ -42,16 +68,20 @@ export async function loadModel() {
 
   return {
     problems,
+    missing,
+    locales: cfg.locales,
     bundle: {
       site: {
-        title: site.title,
-        repo: process.env.GITHUB_REPOSITORY || site.repo,
-        branch: process.env.SITE_BRANCH || site.branch,
+        repo: process.env.GITHUB_REPOSITORY || cfg.site.repo,
+        branch: process.env.SITE_BRANCH || cfg.site.branch,
       },
       generatedAt: new Date().toISOString(),
-      year: config.year,
-      conditions: config.conditions,
-      presets: config.presets,
+      year: c.year,
+      conditions: c.conditions,
+      presets: c.presets,
+      languages: cfg.languages,
+      tags: cfg.tags,
+      locales: cfg.locales,
       futures,
       contributors,
     },
@@ -59,24 +89,28 @@ export async function loadModel() {
   };
 }
 
-async function report(problems) {
-  const lines = problems.flatMap(p => [`✖ futures/${p.file}`, ...p.errors.map(e => `   - ${e}`)]);
-  console.error(lines.join('\n'));
+async function report(problems, locales) {
+  console.error(problems.flatMap(p => [`✖ futures/${p.file}`, ...p.errors.map(e => `   - ${describeError(e, locales)}`)]).join('\n'));
   if (process.env.GITHUB_STEP_SUMMARY) {
-    const md = ['## 미래 조각 검사에서 고칠 점이 있어요', '',
-      ...problems.flatMap(p => [`### \`futures/${p.file}\``, ...p.errors.map(e => `- ${e}`), '']),
-      '고친 뒤 다시 커밋하면 검사가 자동으로 다시 돌아갑니다. 형식은 CONTRIBUTING.md를 참고해 주세요.'];
+    const md = ['## 미래 조각 검사에서 고칠 점이 있어요 · Some future pieces need fixing', '',
+      ...problems.flatMap(p => [`### \`futures/${p.file}\``,
+        ...p.errors.map(e => `- ${formatError(e, locales.ko)}<br>${formatError(e, locales.en, { withAt: false })}`), '']),
+      '고친 뒤 다시 커밋하면 검사가 다시 돌아갑니다. Push a fix and the check runs again. → CONTRIBUTING.md'];
     await appendFile(process.env.GITHUB_STEP_SUMMARY, md.join('\n') + '\n');
   }
 }
 
 async function main() {
-  const { problems, bundle, fileCount } = await loadModel();
+  const { problems, missing, locales, bundle, fileCount } = await loadModel();
   if (problems.length) {
-    await report(problems);
+    await report(problems, locales);
     process.exit(1);
   }
-  const summary = `✔ 파일 ${fileCount}개, 미래 조각 ${bundle.futures.length}개, 기여자 ${bundle.contributors.length}명 — 모두 통과`;
+  for (const [code, keys] of Object.entries(missing)) {
+    if (keys.length) console.warn(`! locales/${code}.json: 번역이 빠진 문장 ${keys.length}개 (${keys.slice(0, 5).join(', ')}${keys.length > 5 ? ', …' : ''})`);
+  }
+  const translated = bundle.languages.map(({ code }) => `${code} ${bundle.futures.filter(f => f.title[code]).length}`).join(' · ');
+  const summary = `✔ 파일 ${fileCount}개, 미래 조각 ${bundle.futures.length}개, 기여자 ${bundle.contributors.length}명 — 모두 통과 (언어별 조각: ${translated})`;
   console.log(summary);
   if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `${summary}\n`);
   if (checkOnly) return;

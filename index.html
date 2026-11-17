@@ -8,43 +8,51 @@
 <meta name="description" content="조건을 고르면 그 미래의 풍경이 그려지고, 풍경 속 이야기는 모두가 함께 씁니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 <script type="module" src="assets/app.js"></script>
 </head>
 <body>
+<!-- data-i18n="키" 가 붙은 글은 locales/*.json에서 바뀐다. 여기 적힌 한국어는 스크립트가 돌기 전 기본값. -->
 <header class="masthead">
   <div class="wrap masthead-row">
     <a class="brand" href="#top">
-      <span class="brand-ko">함께 그리는 미래</span>
-      <span class="brand-en">How the Future Together</span>
+      <span class="brand-ko" data-i18n="brand.name">함께 그리는 미래</span>
+      <span class="brand-en" data-i18n="brand.sub">How the Future Together</span>
     </a>
-    <nav class="nav" aria-label="바로가기">
-      <a href="#imagine">미래 보기</a>
-      <a href="#write">조각 쓰기</a>
-      <a href="#people">함께 그린 사람들</a>
-    </nav>
+    <div class="masthead-end">
+      <nav class="nav" data-i18n-aria="nav.label" aria-label="바로가기">
+        <a href="#imagine" data-i18n="nav.imagine">미래 보기</a>
+        <a href="#write" data-i18n="nav.write">조각 쓰기</a>
+        <a href="#people" data-i18n="nav.people">함께 그린 사람들</a>
+      </nav>
+      <label class="lang-pick">
+        <span class="visually-hidden" data-i18n="lang.label">언어</span>
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h16M10 2c2.5 2.2 3.8 5 3.8 8s-1.3 5.8-3.8 8c-2.5-2.2-3.8-5-3.8-8S7.5 4.2 10 2z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <select id="lang"></select>
+      </label>
+    </div>
   </div>
 </header>
 
 <main id="top">
   <section class="wrap intro">
-    <p class="lede">조건을 고르면 그 미래의 풍경이 그려집니다. 풍경 속 이야기 하나하나는 사람들이 직접 써서 보탠 <strong>미래 조각</strong>입니다.</p>
-    <p class="stat" id="stat">미래 조각을 불러오는 중…</p>
+    <p class="lede" data-i18n="intro.lede">조건을 고르면 그 미래의 풍경이 그려집니다. 풍경 속 이야기 하나하나는 사람들이 직접 써서 보탠 <strong>미래 조각</strong>입니다.</p>
+    <p class="stat" id="stat" data-i18n="intro.loading">미래 조각을 불러오는 중…</p>
   </section>
 
-  <section class="wrap studio" id="imagine" aria-label="미래 그리기">
+  <section class="wrap studio" id="imagine" data-i18n-aria="studio.label" aria-label="미래 그리기">
     <figure class="window">
       <canvas id="scene" role="img" aria-label="미래 풍경"></canvas>
     </figure>
-    <aside class="controls" aria-label="조건 고르기">
+    <aside class="controls" data-i18n-aria="controls.label" aria-label="조건 고르기">
       <div class="controls-head">
-        <h2 class="eyebrow">조건</h2>
-        <div class="presets" id="presets" role="group" aria-label="미리 정해 둔 조건"></div>
+        <h2 class="eyebrow" data-i18n="controls.title">조건</h2>
+        <div class="presets" id="presets" role="group" data-i18n-aria="controls.presets" aria-label="미리 정해 둔 조건"></div>
       </div>
       <div class="year-control">
         <div class="year-row">
-          <label for="c-year" id="year-label">언제의 미래인가요?</label>
+          <label for="c-year" data-i18n="year.label">언제의 미래인가요?</label>
           <output id="year-out" class="year-out" for="c-year">2060</output>
         </div>
         <input type="range" id="c-year" min="2030" max="2100" step="5" value="2060">
@@ -52,15 +60,14 @@
       </div>
       <div class="sliders" id="sliders"></div>
     </aside>
-
     <div class="view">
       <div class="view-tools">
-        <button type="button" class="btn ghost" id="reroll">다른 도시로 그리기</button>
-        <button type="button" class="btn ghost" id="save">그림 저장</button>
-        <button type="button" class="btn ghost" id="share">이 미래 링크 복사</button>
+        <button type="button" class="btn ghost" id="reroll" data-i18n="tools.reroll">다른 도시로 그리기</button>
+        <button type="button" class="btn ghost" id="save" data-i18n="tools.save">그림 저장</button>
+        <button type="button" class="btn ghost" id="share" data-i18n="tools.share">이 미래 링크 복사</button>
         <span class="toast" id="toast" role="status" aria-live="polite"></span>
       </div>
-      <h2 class="headline" id="headline">미래를 그리는 중…</h2>
+      <h2 class="headline" id="headline" data-i18n="headline.loading">미래를 그리는 중…</h2>
       <p class="picture" id="picture"></p>
       <div class="metrics" id="metrics"></div>
     </div>
@@ -68,20 +75,20 @@
 
   <section class="wrap block" id="pieces" aria-labelledby="pieces-title">
     <div class="section-head">
-      <h2 id="pieces-title">이 미래의 조각들</h2>
+      <h2 id="pieces-title" data-i18n="pieces.title">이 미래의 조각들</h2>
       <p id="pieces-note" class="muted"></p>
     </div>
     <ol class="cards" id="now"></ol>
     <div class="gap" id="gap" hidden>
-      <p><strong>이 조건의 미래는 아직 비어 있어요.</strong> 이런 세상에서는 어떤 일이 일어날까요? 첫 번째 조각을 써 주세요.</p>
-      <a class="btn" href="#write" id="gap-cta">이 조건으로 조각 쓰기</a>
+      <p><strong id="gap-lead"></strong> <span data-i18n="gap.body">이런 세상에서는 어떤 일이 일어날까요? 다음 조각을 써 주세요.</span></p>
+      <a class="btn" href="#write" id="gap-cta" data-i18n="gap.cta">이 조건으로 조각 쓰기</a>
     </div>
   </section>
 
   <section class="wrap block" id="road" aria-labelledby="road-title">
     <div class="section-head">
-      <h2 id="road-title">여기까지 오는 길</h2>
-      <p class="muted">지금(2026년)부터 고른 해까지, 같은 조건에서 차례로 일어나는 일들입니다. 이미 지나간 일은 흐리게 표시됩니다.</p>
+      <h2 id="road-title" data-i18n="road.title">여기까지 오는 길</h2>
+      <p class="muted" data-i18n="road.desc">지금(2026년)부터 고른 해까지, 같은 조건에서 차례로 일어나는 일들입니다. 이미 지나간 일은 흐리게 표시됩니다.</p>
     </div>
     <ol class="timeline" id="path"></ol>
   </section>
@@ -89,67 +96,76 @@
   <section class="band" id="write" aria-labelledby="write-title">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="write-title">미래 조각 쓰기</h2>
-        <p class="muted">어떤 조건에서 어떤 일이 일어날지 한 장면으로 써 주세요. 쓴 조각은 GitHub에서 함께 검토한 뒤 이 웹사이트에 합쳐지고, 같은 조건을 고르는 모든 사람의 풍경에 나타납니다.</p>
+        <h2 id="write-title" data-i18n="write.title">미래 조각 쓰기</h2>
+        <p class="muted" data-i18n="write.desc">어떤 조건에서 어떤 일이 일어날지 한 장면으로 써 주세요.</p>
       </div>
       <form class="writer" id="writer" novalidate>
         <div class="writer-fields">
-          <div class="field-row">
+          <div class="field-row three">
             <div class="field">
-              <label for="f-author">GitHub 아이디</label>
+              <label for="f-author" data-i18n="f.author">GitHub 아이디</label>
               <input id="f-author" name="author" autocomplete="username" placeholder="my-github-id" spellcheck="false">
             </div>
             <div class="field">
-              <label for="f-id">조각 이름 (영문)</label>
+              <label for="f-id" data-i18n="f.id">조각 이름 (영문)</label>
               <input id="f-id" name="id" placeholder="night-markets" spellcheck="false">
             </div>
+            <div class="field">
+              <label for="f-lang" data-i18n="f.lang">쓰는 언어</label>
+              <select id="f-lang" name="lang"></select>
+            </div>
           </div>
           <div class="field">
-            <label for="f-title">제목</label>
-            <input id="f-title" name="title" maxlength="40" placeholder="예: 밤에 여는 시장">
+            <label for="f-title" data-i18n="f.title">제목</label>
+            <input id="f-title" name="title" maxlength="40" data-i18n-ph="f.titlePh" placeholder="예: 밤에 여는 시장">
           </div>
           <div class="field">
-            <label for="f-story">이야기 <span class="counter" id="f-story-count">0 / 400</span></label>
-            <textarea id="f-story" name="story" rows="4" maxlength="400" placeholder="그 미래의 한 장면을 구체적으로 보여 주세요. 누가, 어디서, 무엇을 하고 있나요?"></textarea>
+            <label for="f-story"><span data-i18n="f.story">이야기</span> <span class="counter" id="f-story-count">0 / 400</span></label>
+            <textarea id="f-story" name="story" rows="4" maxlength="400" data-i18n-ph="f.storyPh" placeholder="그 미래의 한 장면을 구체적으로 보여 주세요."></textarea>
           </div>
           <fieldset class="field">
-            <legend>분위기</legend>
+            <legend data-i18n="f.tone">분위기</legend>
             <div class="tone-pick">
-              <label><input type="radio" name="tone" value="bright" id="f-tone-bright"> 밝은 미래</label>
-              <label><input type="radio" name="tone" value="mixed" id="f-tone-mixed" checked> 양면적인 미래</label>
-              <label><input type="radio" name="tone" value="dark" id="f-tone-dark"> 어두운 미래</label>
+              <label><input type="radio" name="tone" value="bright" id="f-tone-bright"> <span data-i18n="tone.bright">밝은 미래</span></label>
+              <label><input type="radio" name="tone" value="mixed" id="f-tone-mixed" checked> <span data-i18n="tone.mixed">양면적인 미래</span></label>
+              <label><input type="radio" name="tone" value="dark" id="f-tone-dark"> <span data-i18n="tone.dark">어두운 미래</span></label>
             </div>
           </fieldset>
           <fieldset class="field">
-            <legend>언제 일어나나요? <button type="button" class="link-btn" id="f-fill">지금 고른 조건으로 채우기</button></legend>
-            <p class="hint">체크한 조건이 모두 맞을 때 이 조각이 나타납니다. 범위를 좁힐수록 구체적인 미래가 됩니다.</p>
+            <legend><span data-i18n="f.when">언제 일어나나요?</span> <button type="button" class="link-btn" id="f-fill" data-i18n="f.fill">지금 고른 조건으로 채우기</button></legend>
+            <p class="hint" data-i18n="f.whenHint">체크한 조건이 모두 맞을 때 이 조각이 나타납니다.</p>
             <div class="when-rows" id="f-when"></div>
           </fieldset>
-          <div class="field">
-            <label for="f-tags">태그 <span class="hint-inline">쉼표로 구분, 5개까지</span></label>
-            <input id="f-tags" name="tags" placeholder="예: 일상, 기후">
-          </div>
-          <details class="field scene-fx">
-            <summary>그림에 주는 변화 (선택)</summary>
-            <p class="hint">이 조각이 펼쳐질 때 풍경을 얼마나 바꿀지 정합니다. 0이면 바꾸지 않습니다.</p>
+          <fieldset class="field">
+            <legend><span data-i18n="f.tags">태그</span> <span class="hint-inline" data-i18n="f.tagsHint">5개까지</span></legend>
+            <div class="tag-pick" id="f-tags"></div>
+          </fieldset>
+          <details class="field fold" id="f-tr-box">
+            <summary data-i18n="f.translations">다른 언어로도 쓰기 (선택)</summary>
+            <p class="hint" data-i18n="f.translationsHint">여러 언어를 쓸 수 있다면 번역도 함께 넣어 주세요.</p>
+            <div class="tr-rows" id="f-tr"></div>
+          </details>
+          <details class="field fold">
+            <summary data-i18n="f.scene">그림에 주는 변화 (선택)</summary>
+            <p class="hint" data-i18n="f.sceneHint">이 조각이 펼쳐질 때 풍경을 얼마나 바꿀지 정합니다.</p>
             <div class="fx-rows" id="f-scene"></div>
           </details>
           <div class="field">
-            <label for="f-sources">근거 자료 <span class="hint-inline">선택, 한 줄에 주소 하나</span></label>
+            <label for="f-sources"><span data-i18n="f.sources">근거 자료</span> <span class="hint-inline" data-i18n="f.sourcesHint">선택, 한 줄에 주소 하나</span></label>
             <textarea id="f-sources" name="sources" rows="2" placeholder="https://"></textarea>
           </div>
         </div>
 
         <div class="writer-side">
-          <label class="check"><input type="checkbox" id="f-preview" checked> 위 풍경에 미리 넣어 보기</label>
+          <label class="check"><input type="checkbox" id="f-preview" checked> <span data-i18n="f.preview">위 풍경에 미리 넣어 보기</span></label>
           <div class="check-list" id="f-status" aria-live="polite"></div>
           <div class="send">
-            <a class="btn" id="send-pr" href="#" target="_blank" rel="noopener">GitHub에 조각 보내기</a>
-            <a class="btn ghost" id="send-issue" href="#" target="_blank" rel="noopener">아이디어로만 남기기</a>
-            <button type="button" class="btn ghost" id="copy-json">JSON 복사</button>
+            <a class="btn" id="send-pr" href="#write" target="_blank" rel="noopener" data-i18n="send.pr">GitHub에 조각 보내기</a>
+            <a class="btn ghost" id="send-issue" href="#write" target="_blank" rel="noopener" data-i18n="send.issue">아이디어로만 남기기</a>
+            <button type="button" class="btn ghost" id="copy-json" data-i18n="send.copy">JSON 복사</button>
           </div>
-          <p class="hint" id="send-hint">‘GitHub에 조각 보내기’를 누르면 파일이 채워진 GitHub 화면이 열립니다. 아래쪽 <b>Propose changes</b> → <b>Create pull request</b>를 누르면 끝입니다. GitHub 계정이 필요합니다.</p>
-          <pre class="json" id="f-json" tabindex="0" aria-label="미래 조각 JSON 미리보기"></pre>
+          <p class="hint" data-i18n="send.hint">‘GitHub에 조각 보내기’를 누르면 파일이 채워진 GitHub 화면이 열립니다.</p>
+          <pre class="json" id="f-json" tabindex="0" data-i18n-aria="send.jsonLabel" aria-label="미래 조각 JSON 미리보기"></pre>
         </div>
       </form>
     </div>
@@ -157,23 +173,31 @@
 
   <section class="wrap block" id="people" aria-labelledby="people-title">
     <div class="section-head">
-      <h2 id="people-title">함께 그린 사람들</h2>
+      <h2 id="people-title" data-i18n="people.title">함께 그린 사람들</h2>
       <p class="muted" id="people-note"></p>
     </div>
     <div class="people-grid">
-      <ul class="contributors" id="contributors"></ul>
+      <div class="people-col">
+        <ul class="contributors" id="contributors"></ul>
+        <div class="langs">
+          <h3 data-i18n="langs.title">언어별 번역 현황</h3>
+          <p class="muted" data-i18n="langs.desc">조각은 한 언어로만 써도 됩니다.</p>
+          <ul class="lang-bars" id="lang-bars"></ul>
+          <a id="langs-help" href="#" target="_blank" rel="noopener" data-i18n="langs.help">번역 돕는 방법</a>
+        </div>
+      </div>
       <div class="atlas">
         <div class="atlas-head">
-          <h3>상상의 지도</h3>
-          <p class="muted">나머지 조건은 지금 그대로 두고 두 조건만 바꿨을 때, 칸마다 몇 개의 조각이 펼쳐지는지 보여 줍니다. <b>?</b> 칸은 아직 아무도 그리지 않은 미래입니다. 칸을 누르면 그 조건으로 이동합니다.</p>
+          <h3 data-i18n="atlas.title">상상의 지도</h3>
+          <p class="muted" data-i18n="atlas.desc">나머지 조건은 지금 그대로 두고 두 조건만 바꿨을 때, 칸마다 몇 개의 조각이 펼쳐지는지 보여 줍니다.</p>
           <div class="atlas-axes">
-            <label>가로 <select id="atlas-x"></select></label>
-            <label>세로 <select id="atlas-y"></select></label>
+            <label><span data-i18n="atlas.x">가로</span> <select id="atlas-x"></select></label>
+            <label><span data-i18n="atlas.y">세로</span> <select id="atlas-y"></select></label>
           </div>
         </div>
         <div class="atlas-frame">
           <span class="atlas-ylabel" id="atlas-ylabel"></span>
-          <div class="atlas-grid" id="atlas" role="grid"></div>
+          <div class="atlas-grid" id="atlas"></div>
           <span class="atlas-xlabel" id="atlas-xlabel"></span>
         </div>
       </div>
@@ -184,15 +208,15 @@
 <footer class="footer">
   <div class="wrap footer-grid">
     <div>
-      <h2 class="eyebrow">이 웹사이트가 자라는 방법</h2>
+      <h2 class="eyebrow" data-i18n="how.title">이 웹사이트가 자라는 방법</h2>
       <ol class="how">
-        <li><b>상상하기</b> 조건을 바꿔 가며 여러 미래를 둘러봅니다.</li>
-        <li><b>조각 쓰기</b> 빠진 장면이 보이면 미래 조각을 써서 GitHub로 보냅니다.</li>
-        <li><b>함께 다듬기</b> 다른 사람들이 의견을 달고 고쳐 쓴 뒤 합칩니다.</li>
-        <li><b>다시 그리기</b> 합쳐진 조각은 자동으로 웹사이트에 반영됩니다.</li>
+        <li data-i18n="how.1"><b>상상하기</b> 조건을 바꿔 가며 여러 미래를 둘러봅니다.</li>
+        <li data-i18n="how.2"><b>조각 쓰기</b> 빠진 장면이 보이면 미래 조각을 써서 GitHub로 보냅니다.</li>
+        <li data-i18n="how.3"><b>함께 다듬기</b> 다른 사람들이 의견을 달고, 고쳐 쓰고, 번역한 뒤 합칩니다.</li>
+        <li data-i18n="how.4"><b>다시 그리기</b> 합쳐진 조각은 자동으로 웹사이트에 반영됩니다.</li>
       </ol>
     </div>
-    <p class="muted small">이 풍경은 예측이 아니라 함께 쓰는 상상입니다. 모든 미래 조각과 그림 규칙은 <a id="repo-link" href="#">GitHub 저장소</a>에 공개되어 있습니다.</p>
+    <p class="muted small"><span data-i18n="footer.note">이 풍경은 예측이 아니라 함께 쓰는 상상입니다.</span> <a id="repo-link" href="#" data-i18n="footer.repo">GitHub 저장소 열기</a></p>
   </div>
 </footer>
 </body>
